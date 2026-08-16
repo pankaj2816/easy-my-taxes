@@ -2,18 +2,18 @@
  * EASY MY TAXES - APPLICATION CONTROLLER & INTERACTION MANAGER
  */
 
-// Master Services Data
+// Master Services Data (2026 Edition)
 const servicesCatalog = [
   {
     id: 'itr-salaried',
     category: 'direct-tax',
     icon: '📝',
-    title: 'Salaried Individual ITR Filing',
+    title: 'Salaried Individual ITR (AY 2026-27)',
     shortDesc: 'Complete tax return filing for salaried professionals with Single/Multiple Form 16, ESOPs, and allowances.',
-    fullDesc: 'Expert CA-assisted ITR filing tailored to maximize your tax deductions under Sections 80C, 80D, HRA, and home loans while ensuring 100% compliance with AIS and TIS reconciliation.',
+    fullDesc: 'Expert CA-assisted ITR filing for Assessment Year 2026-27 tailored to maximize deductions under 80C, 80D, HRA, and home loans with 100% AIS and TIS 2026 reconciliation.',
     price: 'Starting at ₹999',
     deliverables: [
-      'AIS (Annual Information Statement) & 26AS Reconciliation',
+      'AIS & 26AS Tax Credit Matching (AY 2026-27)',
       'Old vs New Regime comparative tax optimization',
       'Deductions verification (80C, 80D, 80CCD, HRA, Sec 24)',
       'Computation Sheet & Official ITR-V E-Verification acknowledgement'
@@ -24,9 +24,9 @@ const servicesCatalog = [
     id: 'itr-capital-gains',
     category: 'direct-tax',
     icon: '📈',
-    title: 'Capital Gains & Trading ITR',
+    title: 'Capital Gains & Trading (AY 2026-27)',
     shortDesc: 'Accurate tax computation for Stocks, Mutual Funds, Crypto (VDA), Futures & Options (F&O), and Real Estate.',
-    fullDesc: 'Comprehensive calculation of Short-Term (STCG) and Long-Term (LTCG) Capital Gains with set-off and carry forward of business and trading losses across all brokers.',
+    fullDesc: 'Comprehensive calculation of Short-Term (STCG) and Long-Term (LTCG) Capital Gains with set-off and carry forward of business and trading losses across all brokers for FY 2025-26.',
     price: 'Starting at ₹2,499',
     deliverables: [
       'P&L statement consolidation from Zerodha, Groww, Upstox, etc.',
@@ -40,7 +40,7 @@ const servicesCatalog = [
     id: 'itr-nri',
     category: 'direct-tax',
     icon: '✈️',
-    title: 'NRI Taxation & Foreign Assets',
+    title: 'NRI Taxation & Foreign Assets (2026)',
     shortDesc: 'Specialized cross-border tax advisory, DTAA benefits, Form 15CA/CB, and FEMA compliance for non-residents.',
     fullDesc: 'End-to-end tax filing for Non-Resident Indians (NRIs) with Indian rental income, capital gains, NRE/NRO accounts, and Foreign Bank and Financial Accounts (FBAR) reporting.',
     price: 'Starting at ₹4,999',
@@ -58,7 +58,7 @@ const servicesCatalog = [
     icon: '⚖️',
     title: 'Tax Notice & Scrutiny Resolution',
     shortDesc: 'Professional legal drafting and representation for notices under Section 143(1), 139(9), 148, or 156.',
-    fullDesc: 'Handled directly by Senior Chartered Accountants to draft strong technical responses, rectify defective returns, and prevent unnecessary penalties or litigation.',
+    fullDesc: 'Handled directly by Senior Chartered Accountant CA Pradeep Agarwal to draft strong technical responses, rectify defective returns, and prevent unnecessary penalties or litigation.',
     price: 'Custom Quote',
     deliverables: [
       'In-depth notice analysis and root cause diagnostic',
@@ -72,7 +72,7 @@ const servicesCatalog = [
     id: 'gst-returns',
     category: 'gst',
     icon: '📑',
-    title: 'Monthly & Quarterly GST Returns',
+    title: 'Monthly & Quarterly GST Returns 2026',
     shortDesc: 'Error-free filing of GSTR-1, GSTR-3B, GSTR-4, and complete 2B Input Tax Credit (ITC) reconciliation.',
     fullDesc: 'Automated 100% invoice matching with GSTR-2B to ensure maximum ITC claim without notices or penalties. Includes e-way bills and e-invoicing support.',
     price: 'Starting at ₹1,499/mo',

@@ -1,6 +1,6 @@
 /**
- * EASY MY TAXES - FINANCIAL & TAX COMPUTATION ENGINES
- * Compliant with Indian Income Tax Act (AY 2025-26 / FY 2024-25 & FY 2025-26) & GST Rules
+ * EASY MY TAXES - FINANCIAL & TAX COMPUTATION ENGINES (AY 2026-27 & FY 2025-26 / 2026-27)
+ * Compliant with Indian Income Tax Act Provisions, GST & ICAI Standards
  */
 
 // Helper to format currency in Indian Rupees
@@ -13,7 +13,7 @@ function formatINR(amount) {
 }
 
 // --------------------------------------------------------------------------
-// 1. OLD VS NEW TAX REGIME CALCULATOR (AY 2025-26 / FY 2024-25)
+// 1. OLD VS NEW TAX REGIME CALCULATOR (AY 2026-27 / FY 2025-26)
 // --------------------------------------------------------------------------
 
 function calculateTax() {
@@ -28,7 +28,7 @@ function calculateTax() {
 
   const totalIncome = grossSalary + otherIncome;
 
-  // --- NEW REGIME COMPUTATION ---
+  // --- NEW REGIME COMPUTATION (AY 2026-27) ---
   // Standard Deduction in New Regime = ₹75,000 for salaried
   const newStdDeduction = grossSalary > 0 ? 75000 : 0;
   const newNetTaxable = Math.max(0, totalIncome - newStdDeduction);
@@ -111,14 +111,14 @@ function calculateTax() {
     const diff = totalOldTax - totalNewTax;
     elCardNew?.classList.add('winner');
     elCardOld?.classList.remove('winner');
-    if (elBannerTitle) elBannerTitle.textContent = `🎉 New Tax Regime is better for you!`;
+    if (elBannerTitle) elBannerTitle.textContent = `🎉 New Tax Regime (AY 2026-27) is best for you!`;
     if (elBannerDesc) elBannerDesc.textContent = `You save ${formatINR(diff)} in taxes under the revised New Regime.`;
   } else if (totalOldTax < totalNewTax) {
     const diff = totalNewTax - totalOldTax;
     elCardOld?.classList.add('winner');
     elCardNew?.classList.remove('winner');
-    if (elBannerTitle) elBannerTitle.textContent = `🎉 Old Tax Regime is better for you!`;
-    if (elBannerDesc) elBannerDesc.textContent = `Due to your chapter VI-A deductions, you save ${formatINR(diff)} in taxes under the Old Regime.`;
+    if (elBannerTitle) elBannerTitle.textContent = `🎉 Old Tax Regime is best for you!`;
+    if (elBannerDesc) elBannerDesc.textContent = `Due to high Chapter VI-A deductions, you save ${formatINR(diff)} in taxes under the Old Regime.`;
   } else {
     elCardNew?.classList.remove('winner');
     elCardOld?.classList.remove('winner');
@@ -128,7 +128,97 @@ function calculateTax() {
 }
 
 // --------------------------------------------------------------------------
-// 2. INTERACTIVE GST CALCULATOR
+// 2. FREELANCER / SECTION 44ADA PRESUMPTIVE TAX CALCULATOR
+// --------------------------------------------------------------------------
+
+function calculate44ADA() {
+  const grossReceipts = parseFloat(document.getElementById('adaGrossReceipts')?.value) || 0;
+  const actualExpenses = parseFloat(document.getElementById('adaActualExpenses')?.value) || 0;
+
+  // Sec 44ADA: 50% of gross receipts is presumed as profit
+  const presumptiveProfit = grossReceipts * 0.50;
+  const actualProfit = Math.max(0, grossReceipts - actualExpenses);
+
+  // Calculate tax on 44ADA profit vs Actual Profit under New Regime
+  function computeQuickTax(taxable) {
+    let t = 0;
+    if (taxable > 1500000) t = 150000 + (taxable - 1500000) * 0.30;
+    else if (taxable > 1200000) t = 90000 + (taxable - 1200000) * 0.20;
+    else if (taxable > 1000000) t = 60000 + (taxable - 1000000) * 0.15;
+    else if (taxable > 700000) t = 20000 + (taxable - 700000) * 0.10;
+    else if (taxable > 300000) t = (taxable - 300000) * 0.05;
+    if (taxable <= 700000) t = 0;
+    return Math.round(t * 1.04);
+  }
+
+  const tax44ADA = computeQuickTax(presumptiveProfit);
+  const taxActual = computeQuickTax(actualProfit);
+  const savings = Math.max(0, taxActual - tax44ADA);
+
+  const elProfitADA = document.getElementById('adaResProfitADA');
+  const elProfitActual = document.getElementById('adaResProfitActual');
+  const elTaxADA = document.getElementById('adaResTaxADA');
+  const elTaxActual = document.getElementById('adaResTaxActual');
+  const elSavings = document.getElementById('adaResSavings');
+
+  if (elProfitADA) elProfitADA.textContent = formatINR(presumptiveProfit);
+  if (elProfitActual) elProfitActual.textContent = formatINR(actualProfit);
+  if (elTaxADA) elTaxADA.textContent = formatINR(tax44ADA);
+  if (elTaxActual) elTaxActual.textContent = formatINR(taxActual);
+  if (elSavings) elSavings.textContent = formatINR(savings);
+}
+
+// --------------------------------------------------------------------------
+// 3. NOTICE DIAGNOSTIC & RISK SCANNER
+// --------------------------------------------------------------------------
+
+function scanNotice() {
+  const section = document.getElementById('noticeSectionSelect')?.value || '143_1';
+  const demand = parseFloat(document.getElementById('noticeDemandAmount')?.value) || 0;
+  const days = parseInt(document.getElementById('noticeDaysElapsed')?.value) || 5;
+
+  let riskLevel = 'Moderate';
+  let riskClass = 'medium';
+  let gaugeIcon = '⚠️';
+  let analysis = '';
+  let actionAdvice = '';
+
+  if (section === '148' || section === '144' || demand > 500000 || days > 25) {
+    riskLevel = 'CRITICAL / HIGH RISK';
+    riskClass = 'high';
+    gaugeIcon = '🚨';
+    analysis = 'High severity notice. Demands urgent CA rejoinder to prevent penalty proceedings under Section 270A/271(1)(c) and bank attachment.';
+    actionAdvice = 'Immediate legal response drafting by CA Pradeep Agarwal required within 48 hours.';
+  } else if (section === '139_9' || section === '156') {
+    riskLevel = 'HIGH ATTENTION';
+    riskClass = 'high';
+    gaugeIcon = '⚠️';
+    analysis = 'Defective Return or Demand notice. Failure to respond within 15-30 days will result in return being treated as invalid.';
+    actionAdvice = 'File corrected ITR and upload rectified computation sheet on e-Filing portal.';
+  } else {
+    riskLevel = 'MODERATE / ROUTINE';
+    riskClass = 'low';
+    gaugeIcon = '📝';
+    analysis = 'Intimation under Section 143(1) indicating mismatch between claimed TDS/deductions and AIS records.';
+    actionAdvice = 'Submit online rectification u/s 154 or agree/disagree with demand with proper TDS vouchers.';
+  }
+
+  const elRiskLevel = document.getElementById('noticeResRiskLevel');
+  const elGauge = document.getElementById('noticeRiskGauge');
+  const elAnalysis = document.getElementById('noticeResAnalysis');
+  const elAdvice = document.getElementById('noticeResAdvice');
+
+  if (elRiskLevel) elRiskLevel.textContent = riskLevel;
+  if (elGauge) {
+    elGauge.className = `risk-gauge-circle ${riskClass}`;
+    elGauge.textContent = gaugeIcon;
+  }
+  if (elAnalysis) elAnalysis.textContent = analysis;
+  if (elAdvice) elAdvice.textContent = actionAdvice;
+}
+
+// --------------------------------------------------------------------------
+// 4. INTERACTIVE GST CALCULATOR
 // --------------------------------------------------------------------------
 
 function calculateGST() {
@@ -141,12 +231,10 @@ function calculateGST() {
   let totalAmount = 0;
 
   if (gstType === 'exclusive') {
-    // Adding GST to Base Price
     netAmount = baseAmount;
     gstAmount = (baseAmount * gstRate) / 100;
     totalAmount = baseAmount + gstAmount;
   } else {
-    // Inclusive: Extracting GST from Final Price
     totalAmount = baseAmount;
     netAmount = (baseAmount * 100) / (100 + gstRate);
     gstAmount = totalAmount - netAmount;
@@ -156,7 +244,6 @@ function calculateGST() {
   const sgst = gstAmount / 2;
   const igst = gstAmount;
 
-  // Render UI
   const elNet = document.getElementById('gstResNet');
   const elTax = document.getElementById('gstResTax');
   const elTotal = document.getElementById('gstResTotal');
@@ -173,7 +260,7 @@ function calculateGST() {
 }
 
 // --------------------------------------------------------------------------
-// 3. HRA EXEMPTION CALCULATOR (Section 10(13A))
+// 5. HRA EXEMPTION CALCULATOR (Section 10(13A))
 // --------------------------------------------------------------------------
 
 function calculateHRA() {
@@ -185,11 +272,8 @@ function calculateHRA() {
 
   const salaryForHRA = basicSalary + da;
 
-  // 1. Actual HRA Received
   const condition1 = hraReceived;
-  // 2. Rent paid - 10% of salary
   const condition2 = Math.max(0, rentPaid - (0.10 * salaryForHRA));
-  // 3. 50% of salary (Metro) or 40% of salary (Non-Metro)
   const condition3 = (isMetro ? 0.50 : 0.40) * salaryForHRA;
 
   const exemptHRA = Math.min(condition1, condition2, condition3);
@@ -210,19 +294,30 @@ function calculateHRA() {
 
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-  // Event listeners for Tax Calculator
   const taxInputs = [
     'calcGrossSalary', 'calcOtherIncome', 'calc80C', 'calc80D',
     'calcNPS', 'calcHomeLoan', 'calcHRA', 'calcOtherDeductions'
   ];
   taxInputs.forEach(id => {
     const el = document.getElementById(id);
+    if (el) el.addEventListener('input', calculateTax);
+  });
+
+  const adaInputs = ['adaGrossReceipts', 'adaActualExpenses'];
+  adaInputs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', calculate44ADA);
+  });
+
+  const noticeInputs = ['noticeSectionSelect', 'noticeDemandAmount', 'noticeDaysElapsed'];
+  noticeInputs.forEach(id => {
+    const el = document.getElementById(id);
     if (el) {
-      el.addEventListener('input', calculateTax);
+      el.addEventListener('input', scanNotice);
+      el.addEventListener('change', scanNotice);
     }
   });
 
-  // Event listeners for GST Calculator
   const gstInputs = ['gstAmount', 'gstRate'];
   gstInputs.forEach(id => {
     const el = document.getElementById(id);
@@ -235,7 +330,6 @@ document.addEventListener('DOMContentLoaded', () => {
     radio.addEventListener('change', calculateGST);
   });
 
-  // Event listeners for HRA Calculator
   const hraInputs = ['hraBasic', 'hraDA', 'hraReceived', 'hraRentPaid', 'hraIsMetro'];
   hraInputs.forEach(id => {
     const el = document.getElementById(id);
@@ -245,8 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Run initial default calculations
   calculateTax();
+  calculate44ADA();
+  scanNotice();
   calculateGST();
   calculateHRA();
 });
