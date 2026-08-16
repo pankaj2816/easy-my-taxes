@@ -115,6 +115,9 @@
           <a href="#checklist" class="nav-link">Doc Checklist</a>
         </div>
         <div class="nav-item">
+          <a href="#about-ca" class="nav-link">About Lead CA</a>
+        </div>
+        <div class="nav-item">
           <a href="#pricing" class="nav-link">Pricing Plans</a>
         </div>
         <div class="nav-item">
@@ -124,11 +127,11 @@
 
       <!-- Header CTAs -->
       <div class="header-actions">
-        <button class="btn btn-outline btn-sm" onclick="openWhatsAppInquiry('General Inquiry')">
+        <button class="btn btn-outline btn-sm" onclick="openWhatsAppInquiry('Consultation with CA Pradeep Agarwal')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          <span>Ask a CA</span>
+          <span>Ask CA Pradeep</span>
         </button>
-        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('New Client Onboarding')">
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Consultation with CA Pradeep Agarwal')">
           Book Consultation
         </button>
         <button class="mobile-toggle" id="mobileNavToggle" aria-label="Open Mobile Menu">
@@ -152,16 +155,17 @@
       <a href="#calculators" class="mobile-drawer-link">Tax Calculators (Old vs New)</a>
       <a href="#calendar" class="mobile-drawer-link">Compliance Due Date Calendar</a>
       <a href="#checklist" class="mobile-drawer-link">Document Checklist Helper</a>
+      <a href="#about-ca" class="mobile-drawer-link">About CA Pradeep Agarwal</a>
       <a href="#pricing" class="mobile-drawer-link">Pricing &amp; Retainers</a>
       <a href="#testimonials" class="mobile-drawer-link">Client Reviews</a>
       <a href="#faq" class="mobile-drawer-link">FAQs</a>
       <a href="#contact" class="mobile-drawer-link">Contact Office</a>
     </div>
     <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
-      <button class="btn btn-whatsapp" onclick="openWhatsAppInquiry()">
+      <button class="btn btn-whatsapp" onclick="openWhatsAppInquiry('Consultation with CA Pradeep Agarwal')">
         WhatsApp Advisory
       </button>
-      <button class="btn btn-primary" onclick="openConsultationModal('Mobile Quick Booking')">
+      <button class="btn btn-primary" onclick="openConsultationModal('Mobile Quick Booking - CA Pradeep Agarwal')">
         Book CA Consultation
       </button>
     </div>
@@ -176,18 +180,18 @@
         <div class="hero-content">
           <div class="hero-trust-tag">
             <span style="color: var(--emerald-600);">●</span>
-            <span>ICAI Certified Chartered Accountants &amp; Corporate Advisors</span>
+            <span>Led by <strong>CA Pradeep Agarwal (FCA, DISA)</strong> &amp; ICAI Partner Network</span>
           </div>
           <h1 class="hero-title">
             Precision Tax, Audit &amp; <span class="highlight">Financial Growth</span> for You &amp; Your Business.
           </h1>
           <p class="hero-description">
-            Effortless Income Tax Return (ITR) filing, GST compliance, Startup Incorporation, and Virtual CFO management. Save maximum taxes legally with 100% notice protection.
+            Effortless Income Tax Return (ITR) filing, GST compliance, Startup Incorporation, and Virtual CFO management. Save maximum taxes legally with 100% notice protection under direct CA oversight.
           </p>
 
           <div class="hero-cta-group">
-            <button class="btn btn-primary btn-lg" onclick="openConsultationModal('Hero Immediate Filing')">
-              <span>File Your Taxes with a CA</span>
+            <button class="btn btn-primary btn-lg" onclick="openConsultationModal('Consultation with CA Pradeep Agarwal')">
+              <span>Consult CA Pradeep Agarwal</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </button>
             <a href="#calculators" class="btn btn-outline btn-lg">
@@ -938,15 +942,110 @@
     </section>
 
     <!-- =========================================================================
-         10. CLIENT TESTIMONIALS & REVIEWS
+         10. MEET THE LEAD CHARTERED ACCOUNTANT: CA PRADEEP AGARWAL
          ========================================================================= -->
-    <section id="testimonials" class="section-py bg-slate">
+    <section id="about-ca" class="section-py bg-slate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Leadership &amp; Expertise</span>
+          <h2 class="section-title">Meet Your Lead Chartered Accountant</h2>
+          <p class="section-desc">
+            Direct, senior partner-level involvement in your taxation strategy, scrutiny assessments, and corporate structuring.
+          </p>
+        </div>
+
+        <div class="ca-profile-card">
+          <!-- Photo Container (Ready for client's picture upload) -->
+          <div class="ca-photo-container">
+            <!-- 
+              NOTE FOR CLIENT / USER:
+              To update with the actual photo of CA Pradeep Agarwal:
+              Place your image in the 'assets/' folder named 'ca-pradeep-agarwal.jpg' (or .png)
+              and update the src attribute below if needed.
+            -->
+            <img 
+              id="caProfilePhoto" 
+              src="assets/ca-pradeep-agarwal.svg" 
+              alt="CA Pradeep Agarwal - Managing Partner &amp; Lead Chartered Accountant" 
+              class="ca-photo-img"
+            >
+            <div class="ca-experience-floating-badge">
+              <div>
+                <div class="ca-exp-num">15+</div>
+                <div class="ca-exp-text">Years of CA Practice</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 0.8125rem; font-weight: 700; color: #fff;">FCA, DISA (ICAI)</div>
+                <div class="ca-exp-text">Senior Managing Partner</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Details -->
+          <div class="ca-profile-info">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span class="section-tag" style="margin-bottom: 0;">Verified Chartered Accountant</span>
+              <span class="ca-qualification-tag">ICAI Reg. Fellow Member</span>
+              <span class="ca-qualification-tag">Information Systems Auditor (DISA)</span>
+            </div>
+
+            <h3>CA Pradeep Agarwal</h3>
+            <div class="ca-designation">
+              <span>Managing Partner &amp; Chief Tax Strategist</span>
+              <span>•</span>
+              <span style="color: var(--text-subtle); font-size: 0.9375rem; font-weight: 500;">Easy My Taxes</span>
+            </div>
+
+            <p class="ca-bio-text">
+              <strong>CA Pradeep Agarwal</strong> is a distinguished Fellow Chartered Accountant (FCA) with over 15 years of comprehensive experience in Direct Tax Litigation, Corporate Restructuring, GST Audits, Cross-Border NRI Taxation, and Startup Advisory.
+            </p>
+
+            <div class="ca-quote-box">
+              "Our mission at Easy My Taxes is simple: to provide individuals and growing businesses with top-tier, transparent, and proactive CA advisory—protecting them against compliance notices while maximizing their legal tax savings."
+            </div>
+
+            <div class="ca-expertise-grid">
+              <div class="ca-expertise-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Direct Tax Scrutiny &amp; Appeals</span>
+              </div>
+              <div class="ca-expertise-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Startup Structuring &amp; 80-IAC</span>
+              </div>
+              <div class="ca-expertise-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>NRI 15CA/CB &amp; Foreign Assets</span>
+              </div>
+              <div class="ca-expertise-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Statutory Audit &amp; Virtual CFO</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="openConsultationModal('Personal Consultation with CA Pradeep Agarwal')">
+                Schedule 1-on-1 with CA Pradeep Agarwal &rarr;
+              </button>
+              <button class="btn btn-whatsapp" onclick="openWhatsAppInquiry('Direct Advisory Request for CA Pradeep Agarwal')">
+                Connect on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. CLIENT TESTIMONIALS & REVIEWS
+         ========================================================================= -->
+    <section id="testimonials" class="section-py bg-white">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Client Trust &amp; Success</span>
           <h2 class="section-title">Trusted by 15,000+ Individuals &amp; Businesses</h2>
           <p class="section-desc">
-            See what salaried executives, tech startup founders, and NRIs say about our speed, precision, and tax savings.
+            See what salaried executives, tech startup founders, and NRIs say about our speed, precision, and tax savings under CA Pradeep Agarwal's guidance.
           </p>
         </div>
 
@@ -1178,7 +1277,7 @@
         <div class="footer-brand">
           <img src="assets/logo.svg" alt="Easy My Taxes Logo" style="filter: brightness(0) invert(1); height: 42px;">
           <p>
-            Easy My Taxes is a premier technology-driven Chartered Accountancy and financial consultancy platform delivering precision ITR filings, corporate compliances, statutory audits, and virtual CFO leadership.
+            Easy My Taxes is a premier technology-driven Chartered Accountancy and financial consultancy platform led by <strong>CA Pradeep Agarwal (FCA, DISA)</strong>, delivering precision ITR filings, corporate compliances, statutory audits, and virtual CFO leadership.
           </p>
           <div style="display: flex; gap: 0.75rem;">
             <span style="font-size: 0.8125rem; background: rgba(255,255,255,0.08); padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); color: var(--emerald-400);">

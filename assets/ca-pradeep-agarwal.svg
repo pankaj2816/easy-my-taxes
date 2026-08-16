@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" fill="none" class="ca-photo-placeholder">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="400" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Pattern -->
+  <rect width="400" height="480" rx="20" fill="url(#bgGrad)"/>
+  <circle cx="200" cy="180" r="130" fill="rgba(255,255,255,0.03)"/>
+  <circle cx="340" cy="80" r="80" fill="rgba(16,185,129,0.05)"/>
+  
+  <!-- Professional Silhouette -->
+  <g fill="#334155">
+    <!-- Head -->
+    <circle cx="200" cy="160" r="60" fill="#475569"/>
+    <!-- Suit Shoulders -->
+    <path d="M100 380 C100 270, 150 240, 200 240 C250 240, 300 270, 300 380 Z" fill="#334155"/>
+    <!-- Shirt & Tie -->
+    <path d="M185 240 L200 310 L215 240 Z" fill="#ffffff"/>
+    <path d="M196 260 L204 260 L207 330 L200 345 L193 330 Z" fill="#059669"/>
+    <!-- Lapels -->
+    <path d="M155 240 L185 330 L160 380 L115 380 Z" fill="#1e293b"/>
+    <path d="M245 240 L215 330 L240 380 L285 380 Z" fill="#1e293b"/>
+  </g>
+
+  <!-- Photo Upload Placeholder Indicator -->
+  <rect x="50" y="380" width="300" height="65" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="200" y="408" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
+    📸 Photo of CA Pradeep Agarwal
+  </text>
+  <text x="200" y="428" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">
+    (Replace with ca-pradeep-agarwal.jpg)
+  </text>
+  
+  <!-- Top Badge -->
+  <rect x="25" y="25" width="145" height="30" rx="15" fill="url(#goldGrad)"/>
+  <text x="97" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="800" fill="#000000" text-anchor="middle" letter-spacing="0.5">
+    ★ MANAGING PARTNER
+  </text>
+</svg>

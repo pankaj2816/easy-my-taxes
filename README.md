@@ -28,7 +28,11 @@ A state-of-the-art, high-converting, professional Chartered Accountant & Tax Con
 ### 4. 📁 Interactive Document Checklist Helper
 - Dynamic selector for Salaried ITR, Capital Gains, GST Registration, Pvt Ltd Company, and NRI 15CA/CB with one-click print feature.
 
-### 5. 🎯 Client Booking & Conversion
+### 5. 👨‍💼 Meet Lead CA — CA Pradeep Agarwal (FCA, DISA)
+- Dedicated profile showcase for **CA Pradeep Agarwal**, Senior Managing Partner with 15+ years of practice in Direct Tax Litigation, Corporate Audits, NRI Tax, and Virtual CFO advisory.
+- **Photo Upload Slot**: A styled, responsive photo frame (`#caProfilePhoto`) is set up. Simply save the photo in `assets/ca-pradeep-agarwal.jpg` or `assets/ca-pradeep-agarwal.png` and update the `src` attribute in `index.html`.
+
+### 6. 🎯 Client Booking & Conversion
 - Multi-step CA Consultation Booking Modal with automatic WhatsApp desk integration.
 - Instant Callback & Free Tax Savings Assessment widget.
 - Transparent pricing tiers with feature checklists.

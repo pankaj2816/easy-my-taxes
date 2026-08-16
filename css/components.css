@@ -1013,3 +1013,149 @@
 .toast-notice.show {
   transform: translateX(-50%) translateY(0);
 }
+
+/* ==========================================================================
+   9. CA PROFILE & LEADERSHIP SECTION
+   ========================================================================== */
+
+.ca-profile-card {
+  background-color: var(--surface-0);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .ca-profile-card {
+    grid-template-columns: 380px 1fr;
+    padding: 3.5rem;
+  }
+}
+
+.ca-photo-container {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  background-color: var(--primary-900);
+}
+
+.ca-photo-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.ca-experience-floating-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ca-exp-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--emerald-400);
+  line-height: 1;
+}
+
+.ca-exp-text {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  line-height: 1.3;
+}
+
+.ca-profile-info h3 {
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: var(--primary-950);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.ca-designation {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--emerald-600);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ca-qualification-tag {
+  background: var(--surface-100);
+  color: var(--primary-800);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-200);
+}
+
+.ca-bio-text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.ca-expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .ca-expertise-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ca-expertise-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-800);
+  background-color: var(--surface-50);
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-200);
+}
+
+.ca-expertise-item svg {
+  color: var(--emerald-600);
+  flex-shrink: 0;
+}
+
+.ca-quote-box {
+  background-color: var(--emerald-50);
+  border-left: 4px solid var(--emerald-500);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: var(--primary-900);
+}
