@@ -537,8 +537,8 @@ function handleConsultationSubmit(e) {
 
 // WhatsApp Direct Connect
 function openWhatsAppInquiry(serviceName = 'General CA Consultation') {
-  const phone = "919876543210"; // Sample official contact number
-  const message = encodeURIComponent(`Hi Easy My Taxes team, I am interested in your CA services for: ${serviceName}. Please assist me with the process and fee quote.`);
+  const phone = "919891495092"; // Official CA Pradeep Agarwal Advisory Helpline
+  const message = encodeURIComponent(`Hi CA Pradeep Agarwal / Easy My Taxes team, I would like to consult regarding: ${serviceName}. Please share the process and fee details.`);
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
 }
 

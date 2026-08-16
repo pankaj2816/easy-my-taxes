@@ -14,26 +14,25 @@ A state-of-the-art, high-converting, professional Chartered Accountant & Tax Con
 - **Statutory & Tax Audit**: Section 44AB audits, Form 3CA/3CD, Internal controls review, and balance sheet certification.
 - **Registrations & Licenses**: Trademark (™/®), MSME/Udyam, Import Export Code (IEC), 12A & 80G for NGOs.
 
-### 2. ⚡ Live Interactive Financial Engines & Calculators
-- **Old vs New Tax Regime Comparator (AY 2025-26 / FY 2024-25 & FY 2025-26)**:
-  - Supports Standard Deduction (₹75,000 New vs ₹50,000 Old), 80C, 80D, 80CCD(1B) NPS, Section 24 Home Loan Interest, and HRA.
-  - Automatically identifies and highlights the best regime with exact tax savings amount.
-- **Interactive GST Calculator**: Forward & Reverse tax calculations across 5%, 12%, 18%, and 28% slabs with CGST, SGST, and IGST breakdowns.
-- **HRA Exemption Calculator**: Section 10(13A) compliance engine calculating exempt vs taxable HRA for Metro and Non-Metro cities.
+### 2. ⚡ Live Interactive Financial Engines (AY 2026-27 Updated)
+- **Old vs New Tax Regime Comparator (AY 2026-27)**: Real-time tax comparison with ₹75,000 standard deduction, revised slabs, and automated recommendation.
+- **Freelancer 44ADA Calculator**: 50% presumptive profit tax savings calculator.
+- **Notice Diagnostic Scanner**: Instant risk severity meter for Section 143(1), 139(9), 148, and 156 notices.
+- **GST Forward & Reverse Calculator**: Multi-slab calculations with CGST, SGST, and IGST breakdowns.
+- **HRA Exemption Calculator**: Section 10(13A) compliance engine.
 
-### 3. 📅 Statutory Due Dates & Compliance Calendar 2025–2026
-- Real-time Indian compliance calendar covering ITR, GST, Advance Tax instalments (Q1-Q4), TDS/TCS quarterly filings, and ROC Annual Filings (DIR-3 KYC, AOC-4, MGT-7).
-- Categorized filters and direct assistance booking.
+### 3. 📅 Statutory Due Dates & Compliance Calendar 2026–2027
+- Real-time Indian compliance calendar covering ITR, GST, Advance Tax instalments (Q1-Q4 for FY 2026-27), TDS/TCS quarterly filings, and ROC Annual Filings with 1-Click Google Calendar Sync.
 
 ### 4. 📁 Interactive Document Checklist Helper
 - Dynamic selector for Salaried ITR, Capital Gains, GST Registration, Pvt Ltd Company, and NRI 15CA/CB with one-click print feature.
 
 ### 5. 👨‍💼 Meet Lead CA — CA Pradeep Agarwal (FCA, DISA)
-- Dedicated profile showcase for **CA Pradeep Agarwal**, Senior Managing Partner with 15+ years of practice in Direct Tax Litigation, Corporate Audits, NRI Tax, and Virtual CFO advisory.
-- **Photo Upload Slot**: A styled, responsive photo frame (`#caProfilePhoto`) is set up. Simply save the photo in `assets/ca-pradeep-agarwal.jpg` or `assets/ca-pradeep-agarwal.png` and update the `src` attribute in `index.html`.
+- Dedicated profile showcase for **CA Pradeep Agarwal**, Senior Managing Partner with 15+ years of practice. Official Helpline: **+91 98914 95092**.
+- **Photo Upload Slot**: A styled, responsive photo frame (`#caProfilePhoto`) is set up (`assets/ca-pradeep-agarwal.jpg`).
 
 ### 6. 🎯 Client Booking & Conversion
-- Multi-step CA Consultation Booking Modal with automatic WhatsApp desk integration.
+- Multi-step CA Consultation Booking Modal with direct WhatsApp integration (+91 98914 95092).
 - Instant Callback & Free Tax Savings Assessment widget.
 - Transparent pricing tiers with feature checklists.
 - ICAI Ethical Guidelines disclaimer.

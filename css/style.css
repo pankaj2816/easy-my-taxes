@@ -288,26 +288,28 @@ button {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+  gap: 1.5rem;
 }
 
 .brand-link {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .brand-link img {
-  height: 50px;
+  height: 46px;
   width: auto;
 }
 
 .main-nav {
   display: none;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1080px) {
   .main-nav {
     display: flex;
   }
@@ -318,13 +320,15 @@ button {
 }
 
 .nav-link {
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 0.9125rem;
+  font-weight: 700;
   color: var(--primary-800);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   padding: 0.5rem 0;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
   transition: color var(--trans-fast);
 }
 
@@ -343,7 +347,7 @@ button {
   position: absolute;
   top: 100%;
   left: -20px;
-  min-width: 300px;
+  min-width: 320px;
   background: var(--surface-0);
   border: 1px solid var(--surface-200);
   border-radius: var(--radius-md);
@@ -351,45 +355,54 @@ button {
   padding: 0.85rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+  transform: translateY(8px);
   transition: all var(--trans-base);
   z-index: 110;
-}
-
-.dropdown-link {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.7rem 0.85rem;
-  border-radius: var(--radius-sm);
-  color: var(--primary-850);
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all var(--trans-fast);
-}
-
-.dropdown-link:hover {
-  background-color: var(--surface-50);
-  color: var(--emerald-600);
-  transform: translateX(3px);
-}
-
-.dropdown-icon {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  background-color: var(--emerald-50);
-  color: var(--emerald-600);
-  border-radius: var(--radius-sm);
-  font-size: 1.15rem;
-  flex-shrink: 0;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* Smart Nav Phone Badge */
+.nav-phone-badge {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background: var(--surface-100);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-950);
+  transition: all var(--trans-fast);
+  white-space: nowrap;
+}
+
+@media (min-width: 1240px) {
+  .nav-phone-badge {
+    display: inline-flex;
+  }
+}
+
+.nav-phone-badge:hover {
+  background: var(--emerald-50);
+  border-color: var(--emerald-200);
+  color: var(--emerald-700);
+  transform: translateY(-1px);
+}
+
+.phone-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--emerald-500);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px var(--emerald-100);
 }
 
 /* Mobile Toggle */
@@ -414,7 +427,7 @@ button {
   transition: all var(--trans-base);
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1080px) {
   .mobile-toggle {
     display: none;
   }
