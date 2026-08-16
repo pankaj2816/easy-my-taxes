@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none" class="brand-logo">
+  <g class="logo-mark">
+    <!-- Shield / Balance Scale & Rupee Emblem -->
+    <rect x="4" y="6" width="52" height="52" rx="14" fill="url(#brandGrad)" />
+    <path d="M30 16V48M20 23H40M22 30H38M20 30L16 42C16 43.1 16.9 44 18 44H26C27.1 44 28 43.1 28 42L24 30M36 30L32 42C32 43.1 32.9 44 34 44H42C43.1 44 44 43.1 44 42L40 30" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="46" cy="14" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />
+  </g>
+  <text x="68" y="32" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" fill="#0F172A" letter-spacing="-0.5">
+    Easy<tspan fill="#059669">My</tspan>Taxes
+  </text>
+  <text x="68" y="49" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="600" font-size="10.5" fill="#64748B" letter-spacing="1.5">
+    CHARTERED ACCOUNTANTS &amp; ADVISORS
+  </text>
+  <defs>
+    <linearGradient id="brandGrad" x1="4" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A" />
+      <stop offset="1" stop-color="#1E3A8A" />
+    </linearGradient>
+  </defs>
+</svg>

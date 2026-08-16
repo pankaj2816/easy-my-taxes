@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy My Taxes | Chartered Accountants, Tax Advisory & Corporate Compliance</title>
+  <meta name="description" content="Easy My Taxes is a premier Chartered Accountancy & Tax Advisory firm providing ITR Filing, GST Compliance, Company Incorporation, Virtual CFO, and Tax Notice Resolution.">
+  <meta name="keywords" content="Chartered Accountant, CA Near Me, Income Tax Return, ITR Filing, GST Registration, Old vs New Tax Regime Calculator, Company Incorporation, Startup India, Virtual CFO">
+  <meta name="author" content="Easy My Taxes">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Easy My Taxes | Premier CA & Tax Advisory Services">
+  <meta property="og:description" content="Precision tax filing, statutory audits, GST returns, and corporate compliance for individuals, startups & enterprises.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. TOP NOTIFICATION BAR
+       ========================================================================= -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="badge-live">Live Alert</span>
+        <span>📢 ITR Filing AY 2025-26 is now open. File before 31st July to avoid Section 234F penalties!</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:+919876543210" class="top-bar-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+91 98765 43210</span>
+        </a>
+        <a href="mailto:support@easymytaxes.com" class="top-bar-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>support@easymytaxes.com</span>
+        </a>
+        <span class="top-bar-link" style="color: var(--emerald-400); font-weight: 600;">
+          🕒 Mon - Sat: 9:00 AM - 7:30 PM
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. MAIN NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-link" aria-label="Easy My Taxes Home">
+        <img src="assets/logo.svg" alt="Easy My Taxes Logo">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <div class="nav-item has-dropdown">
+          <a href="#services" class="nav-link">
+            <span>CA Services</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#services" class="dropdown-link" onclick="initServiceGrid('direct-tax')">
+              <span class="dropdown-icon">📝</span>
+              <div>
+                <strong>Income Tax &amp; ITR</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Salaried, Capital Gains, NRI &amp; Notices</p>
+              </div>
+            </a>
+            <a href="#services" class="dropdown-link" onclick="initServiceGrid('gst')">
+              <span class="dropdown-icon">📑</span>
+              <div>
+                <strong>GST Compliance</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Registration, GSTR-1, 3B &amp; Refunds</p>
+              </div>
+            </a>
+            <a href="#services" class="dropdown-link" onclick="initServiceGrid('incorporation')">
+              <span class="dropdown-icon">🚀</span>
+              <div>
+                <strong>Startup &amp; Company Setup</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Pvt Ltd, LLP, DPIIT &amp; 80-IAC</p>
+              </div>
+            </a>
+            <a href="#services" class="dropdown-link" onclick="initServiceGrid('accounting')">
+              <span class="dropdown-icon">📊</span>
+              <div>
+                <strong>Virtual CFO &amp; Accounting</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Zoho/Tally Books, Payroll &amp; MIS</p>
+              </div>
+            </a>
+            <a href="#services" class="dropdown-link" onclick="initServiceGrid('audit')">
+              <span class="dropdown-icon">🔍</span>
+              <div>
+                <strong>Statutory &amp; Tax Audit</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Sec 44AB, Stock Audit &amp; 3CD</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#calculators" class="nav-link">Tax Calculators</a>
+        </div>
+        <div class="nav-item">
+          <a href="#calendar" class="nav-link">Due Date Calendar</a>
+        </div>
+        <div class="nav-item">
+          <a href="#checklist" class="nav-link">Doc Checklist</a>
+        </div>
+        <div class="nav-item">
+          <a href="#pricing" class="nav-link">Pricing Plans</a>
+        </div>
+        <div class="nav-item">
+          <a href="#testimonials" class="nav-link">Reviews</a>
+        </div>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header-actions">
+        <button class="btn btn-outline btn-sm" onclick="openWhatsAppInquiry('General Inquiry')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span>Ask a CA</span>
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('New Client Onboarding')">
+          Book Consultation
+        </button>
+        <button class="mobile-toggle" id="mobileNavToggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <img src="assets/logo.svg" alt="Easy My Taxes" style="height: 38px;">
+      <button id="mobileNavClose" style="font-size: 1.5rem; color: var(--primary-900);">✕</button>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="#services" class="mobile-drawer-link">All CA Services</a>
+      <a href="#calculators" class="mobile-drawer-link">Tax Calculators (Old vs New)</a>
+      <a href="#calendar" class="mobile-drawer-link">Compliance Due Date Calendar</a>
+      <a href="#checklist" class="mobile-drawer-link">Document Checklist Helper</a>
+      <a href="#pricing" class="mobile-drawer-link">Pricing &amp; Retainers</a>
+      <a href="#testimonials" class="mobile-drawer-link">Client Reviews</a>
+      <a href="#faq" class="mobile-drawer-link">FAQs</a>
+      <a href="#contact" class="mobile-drawer-link">Contact Office</a>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+      <button class="btn btn-whatsapp" onclick="openWhatsAppInquiry()">
+        WhatsApp Advisory
+      </button>
+      <button class="btn btn-primary" onclick="openConsultationModal('Mobile Quick Booking')">
+        Book CA Consultation
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- =========================================================================
+         3. HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-trust-tag">
+            <span style="color: var(--emerald-600);">●</span>
+            <span>ICAI Certified Chartered Accountants &amp; Corporate Advisors</span>
+          </div>
+          <h1 class="hero-title">
+            Precision Tax, Audit &amp; <span class="highlight">Financial Growth</span> for You &amp; Your Business.
+          </h1>
+          <p class="hero-description">
+            Effortless Income Tax Return (ITR) filing, GST compliance, Startup Incorporation, and Virtual CFO management. Save maximum taxes legally with 100% notice protection.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" onclick="openConsultationModal('Hero Immediate Filing')">
+              <span>File Your Taxes with a CA</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#calculators" class="btn btn-outline btn-lg">
+              <span>Compare Old vs New Tax</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-num" data-target="15000" data-suffix="+">15,000+</span>
+              <span class="stat-label">Tax Returns Filed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="99.8" data-suffix="%">99.8%</span>
+              <span class="stat-label">On-Time Accuracy</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="4.9" data-suffix="★">4.9★</span>
+              <span class="stat-label">Google Rating (1,200+ Reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Quick Assessment Widget -->
+        <div class="hero-card">
+          <div class="hero-card-badge">Instant CA Match</div>
+          <h3 class="hero-card-title">Free Tax Savings Assessment</h3>
+          <p class="hero-card-desc">Find the exact CA service and discover how much tax you can save this financial year.</p>
+
+          <form id="heroQuickForm" class="quick-finder-form">
+            <div class="form-group">
+              <label class="form-label" for="heroClientType">I Am An</label>
+              <select id="heroClientType" class="form-control" required>
+                <option value="Salaried Employee">Salaried Professional (IT, MNC, Banking)</option>
+                <option value="Freelancer / Consultant">Freelancer / Doctor / Consultant (Sec 44ADA)</option>
+                <option value="Trader / Investor">Stock / Crypto Trader / Investor</option>
+                <option value="Startup Founder">Startup Founder / SME Business Owner</option>
+                <option value="NRI">Non-Resident Indian (NRI / Foreign Income)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="heroServiceSelect">Required CA Service</label>
+              <select id="heroServiceSelect" class="form-control" required>
+                <option value="Income Tax Return (ITR) Filing">Income Tax Return (ITR) Filing (AY 2025-26)</option>
+                <option value="GST Registration & Monthly Filing">GST Registration &amp; Returns</option>
+                <option value="Company / LLP Incorporation">Company / LLP Incorporation</option>
+                <option value="Notice & Scrutiny Management">Income Tax Notice Resolution</option>
+                <option value="Virtual CFO & Complete Accounting">Virtual CFO &amp; Bookkeeping</option>
+                <option value="Statutory / Tax Audit">Statutory / Tax Audit</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="heroIncomeBracket">Approximate Annual Gross Income</label>
+              <select id="heroIncomeBracket" class="form-control">
+                <option value="Below 10 Lakhs">Up to ₹10 Lakhs</option>
+                <option value="10 Lakhs to 25 Lakhs">₹10 Lakhs - ₹25 Lakhs</option>
+                <option value="25 Lakhs to 50 Lakhs">₹25 Lakhs - ₹50 Lakhs</option>
+                <option value="Above 50 Lakhs">₹50 Lakhs+ (Surcharge &amp; High Net Worth)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              Get Instant CA Callback &rarr;
+            </button>
+            <p style="font-size: 0.75rem; text-align: center; color: var(--text-subtle); margin-top: 0.25rem;">
+              🔒 100% Confidential. NDA backed. No spam guarantee.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. TRUST & ICAI COMPLIANCE STRIP
+         ========================================================================= -->
+    <div class="trust-strip">
+      <div class="container trust-strip-inner">
+        <span class="trust-label">Our Compliance Standards</span>
+        <div class="trust-badges-grid">
+          <div class="trust-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>ICAI Code of Ethics Compliant</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>256-Bit Bank Grade Encryption</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Guaranteed Filing Within 24-48 Hours</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>UDIN Generated Certified Reports</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         5. COMPREHENSIVE CA SERVICES SECTION
+         ========================================================================= -->
+    <section id="services" class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Chartered Accountant Services</span>
+          <h2 class="section-title">End-to-End Financial, Tax &amp; Corporate Solutions</h2>
+          <p class="section-desc">
+            Explore our specialized practice areas. Every filing is individually reviewed by senior Chartered Accountants to ensure maximum tax savings and zero compliance risk.
+          </p>
+        </div>
+
+        <!-- Filter Nav -->
+        <div class="services-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Services</button>
+          <button class="filter-btn" data-filter="direct-tax">Direct Tax &amp; ITR</button>
+          <button class="filter-btn" data-filter="gst">GST Compliance</button>
+          <button class="filter-btn" data-filter="incorporation">Company &amp; Startup</button>
+          <button class="filter-btn" data-filter="accounting">Virtual CFO &amp; Books</button>
+          <button class="filter-btn" data-filter="audit">Audit &amp; Assurance</button>
+          <button class="filter-btn" data-filter="registrations">Registrations &amp; IP</button>
+        </div>
+
+        <!-- Dynamic Service Grid -->
+        <div id="servicesGridContainer" class="services-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. INTERACTIVE FINANCIAL CALCULATORS SUITE
+         ========================================================================= -->
+    <section id="calculators" class="section-py bg-slate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag amber">Live Tax Engines</span>
+          <h2 class="section-title">Interactive Tax &amp; Financial Calculators</h2>
+          <p class="section-desc">
+            Accurate, real-time calculations updated with the latest Union Budget provisions for AY 2025-26.
+          </p>
+        </div>
+
+        <!-- Calculator Tabs -->
+        <div class="calc-tabs-wrapper">
+          <div class="calc-tab-nav">
+            <button class="calc-tab-btn active" data-target="calcOldNewPane">
+              ⚡ Old vs New Tax Regime
+            </button>
+            <button class="calc-tab-btn" data-target="calcGstPane">
+              📑 GST Forward &amp; Reverse
+            </button>
+            <button class="calc-tab-btn" data-target="calcHraPane">
+              🏠 HRA Exemption Sec 10(13A)
+            </button>
+          </div>
+        </div>
+
+        <!-- PANE 1: OLD VS NEW REGIME -->
+        <div id="calcOldNewPane" class="calc-pane active">
+          <div class="calc-grid">
+            <!-- Inputs -->
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-900); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                Enter Your Annual Income &amp; Deductions (AY 2025-26)
+              </h3>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcGrossSalary">Gross Annual Salary / Income</label>
+                  <span class="calc-help">Form 16 / CTC</span>
+                </div>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="calcGrossSalary" class="calc-field" value="1200000" step="10000">
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcOtherIncome">Other Income (Interest, Rental, Dividends)</label>
+                </div>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="calcOtherIncome" class="calc-field" value="50000" step="5000">
+                </div>
+              </div>
+
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--emerald-700); margin-top: 0.5rem;">
+                Deductions (Applicable for Old Tax Regime):
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calc80C">Section 80C (Max ₹1.5L)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calc80C" class="calc-field" value="150000" max="150000" step="5000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calc80D">Section 80D (Health Ins)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calc80D" class="calc-field" value="25000" step="5000">
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calcNPS">NPS 80CCD(1B) (Max ₹50k)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calcNPS" class="calc-field" value="50000" max="50000" step="5000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calcHomeLoan">Home Loan Interest Sec 24</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calcHomeLoan" class="calc-field" value="0" max="200000" step="10000">
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcHRA">HRA Exemption / Rent Paid Sec 10(13A)</label>
+                </div>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="calcHRA" class="calc-field" value="120000" step="5000">
+                </div>
+              </div>
+            </div>
+
+            <!-- Results Column -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--primary-900); margin-bottom: 1rem;">
+                  Tax Computation Comparison
+                </h3>
+
+                <div class="regime-comparison-cards">
+                  <!-- New Regime Card -->
+                  <div id="cardNewRegime" class="regime-card winner">
+                    <span class="regime-badge">Revised</span>
+                    <div class="regime-name">New Tax Regime</div>
+                    <div class="regime-tax-val" id="resNewTax">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Std. Ded: ₹75,000</span>
+                  </div>
+
+                  <!-- Old Regime Card -->
+                  <div id="cardOldRegime" class="regime-card">
+                    <div class="regime-name">Old Tax Regime</div>
+                    <div class="regime-tax-val" id="resOldTax">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Std. Ded: ₹50,000</span>
+                  </div>
+                </div>
+
+                <!-- Recommendation Banner -->
+                <div class="recommendation-banner">
+                  <h4 id="recBannerTitle">Comparing Regimes...</h4>
+                  <p id="recBannerDesc">Loading recommendation...</p>
+                </div>
+
+                <!-- Breakdown Table -->
+                <table class="breakdown-table">
+                  <tr>
+                    <td>Taxable Income (New Regime)</td>
+                    <td id="resNewTaxable">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Taxable Income (Old Regime)</td>
+                    <td id="resOldTaxable">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Total Deductions Claimed (New)</td>
+                    <td id="resNewDed">₹75,000</td>
+                  </tr>
+                  <tr>
+                    <td>Total Deductions Claimed (Old)</td>
+                    <td id="resOldDed">₹0</td>
+                  </tr>
+                </table>
+              </div>
+
+              <button class="btn btn-primary" onclick="openConsultationModal('Tax Optimization Plan')">
+                Have a CA Optimize &amp; File This &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 2: GST CALCULATOR -->
+        <div id="calcGstPane" class="calc-pane">
+          <div class="calc-grid">
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-900); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                Calculate Goods &amp; Services Tax (GST)
+              </h3>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="gstAmount">Enter Transaction Amount</label>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="gstAmount" class="calc-field" value="50000" step="1000">
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="gstRate">Select Applicable GST Slab</label>
+                <select id="gstRate" class="form-control" style="font-weight: 600;">
+                  <option value="5">5% (Essential Goods, Transport, Basic Foods)</option>
+                  <option value="12">12% (Standard Goods, Business Services, Apparel)</option>
+                  <option value="18" selected>18% (IT Services, Software, CA/Consulting, Telecom)</option>
+                  <option value="28">28% (Luxury Items, Automobiles, Aerated Drinks)</option>
+                </select>
+              </div>
+
+              <div class="calc-input-group">
+                <label class="calc-label">GST Calculation Mode</label>
+                <div style="display: flex; gap: 1.5rem; margin-top: 0.35rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; cursor: pointer;">
+                    <input type="radio" name="gstType" value="exclusive" checked style="accent-color: var(--emerald-600);">
+                    <span><strong>GST Exclusive</strong> (Add GST to base price)</span>
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; cursor: pointer;">
+                    <input type="radio" name="gstType" value="inclusive" style="accent-color: var(--emerald-600);">
+                    <span><strong>GST Inclusive</strong> (Extract GST from MRP)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- GST Results -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--primary-900); margin-bottom: 1.5rem;">
+                  GST Tax Breakup
+                </h3>
+
+                <table class="breakdown-table">
+                  <tr>
+                    <td>Net / Base Amount</td>
+                    <td id="gstResNet" style="font-size: 1.125rem;">₹50,000</td>
+                  </tr>
+                  <tr>
+                    <td>Total GST Tax Amount</td>
+                    <td id="gstResTax" style="font-size: 1.125rem; color: var(--emerald-600);">₹9,000</td>
+                  </tr>
+                  <tr style="background: var(--surface-100);">
+                    <td style="font-weight: 800; font-size: 1rem; color: var(--primary-900); padding: 0.85rem 0.5rem;">Total Final Invoice Amount</td>
+                    <td id="gstResTotal" style="font-weight: 800; font-size: 1.25rem; color: var(--primary-900); padding: 0.85rem 0.5rem;">₹59,000</td>
+                  </tr>
+                  <tr>
+                    <td>CGST (Central GST)</td>
+                    <td id="gstResCgst">₹4,500</td>
+                  </tr>
+                  <tr>
+                    <td>SGST (State GST)</td>
+                    <td id="gstResSgst">₹4,500</td>
+                  </tr>
+                  <tr>
+                    <td>IGST (Interstate Supply)</td>
+                    <td id="gstResIgst">₹9,000</td>
+                  </tr>
+                </table>
+              </div>
+
+              <button class="btn btn-primary" onclick="openConsultationModal('GST Return Filing Assistance')">
+                Get CA Support for GST Filing &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 3: HRA EXEMPTION -->
+        <div id="calcHraPane" class="calc-pane">
+          <div class="calc-grid">
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-900); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                House Rent Allowance (HRA) Exemption Sec 10(13A)
+              </h3>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraBasic">Basic Salary (Annual)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraBasic" class="calc-field" value="600000" step="10000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraDA">Dearness Allowance (DA)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraDA" class="calc-field" value="0" step="5000">
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraReceived">HRA Received from Employer</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraReceived" class="calc-field" value="240000" step="5000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraRentPaid">Total Rent Paid Annually</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraRentPaid" class="calc-field" value="300000" step="5000">
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="hraIsMetro">City of Residence</label>
+                <select id="hraIsMetro" class="form-control">
+                  <option value="metro">Metro City (Delhi, Mumbai, Kolkata, Chennai - 50% Basic)</option>
+                  <option value="non-metro">Non-Metro City (Bangalore, Hyderabad, Pune, etc. - 40% Basic)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- HRA Results -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--primary-900); margin-bottom: 1rem;">
+                  HRA Exemption Summary
+                </h3>
+
+                <div class="regime-comparison-cards" style="margin-bottom: 1.5rem;">
+                  <div class="regime-card winner">
+                    <div class="regime-name" style="color: var(--emerald-700);">Exempt HRA</div>
+                    <div class="regime-tax-val" id="hraResExempt" style="color: var(--emerald-600);">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Tax-Free Allowance</span>
+                  </div>
+                  <div class="regime-card">
+                    <div class="regime-name">Taxable HRA</div>
+                    <div class="regime-tax-val" id="hraResTaxable">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Added to Salary</span>
+                  </div>
+                </div>
+
+                <table class="breakdown-table">
+                  <tr>
+                    <td>1. Actual HRA Received</td>
+                    <td id="hraCond1">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>2. Rent Paid - 10% of Salary</td>
+                    <td id="hraCond2">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>3. 50% / 40% of Salary</td>
+                    <td id="hraCond3">₹0</td>
+                  </tr>
+                </table>
+              </div>
+
+              <button class="btn btn-primary" onclick="openConsultationModal('HRA & Rent Proof Advisory')">
+                Consult CA on Landlord PAN &amp; Proofs &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. STATUTORY DUE DATES & COMPLIANCE CALENDAR
+         ========================================================================= -->
+    <section id="calendar" class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag blue">Statutory Due Dates</span>
+          <h2 class="section-title">Indian Tax Compliance Calendar 2025–2026</h2>
+          <p class="section-desc">
+            Stay ahead of government deadlines. Avoid interest under Sections 234A/B/C and late filing fees with our tracked statutory calendar.
+          </p>
+        </div>
+
+        <div class="calendar-wrapper">
+          <div class="calendar-top-strip">
+            <div class="closest-deadline-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <div class="closest-deadline-title">Next Major Statutory Deadline</div>
+                <div class="closest-deadline-name">31st July 2025 — ITR Filing for Individuals &amp; Salaried Assessees</div>
+              </div>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="calendar-category-filters">
+              <button class="cal-pill active" data-cat="all">All Deadlines</button>
+              <button class="cal-pill" data-cat="itr">Income Tax (ITR)</button>
+              <button class="cal-pill" data-cat="gst">GST Returns</button>
+              <button class="cal-pill" data-cat="advance-tax">Advance Tax</button>
+              <button class="cal-pill" data-cat="tds">TDS / TCS</button>
+              <button class="cal-pill" data-cat="roc">MCA / ROC</button>
+            </div>
+          </div>
+
+          <div class="cal-table-responsive">
+            <table class="compliance-table">
+              <thead>
+                <tr>
+                  <th>Due Date</th>
+                  <th>Statutory Obligation &amp; Description</th>
+                  <th>Form / Return</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="complianceCalendarBody">
+                <!-- Rendered dynamically by calendar-data.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. INTERACTIVE DOCUMENT CHECKLIST GENERATOR
+         ========================================================================= -->
+    <section id="checklist" class="section-py bg-slate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Document Readiness Helper</span>
+          <h2 class="section-title">Interactive Tax Document Checklist</h2>
+          <p class="section-desc">
+            Select your service type below to generate an exact, printable checklist of required papers. No back-and-forth delays!
+          </p>
+        </div>
+
+        <div class="checklist-builder">
+          <div class="checklist-selector-bar">
+            <button class="checklist-btn active" data-type="salaried">
+              <span style="font-size: 1.5rem;">👔</span>
+              <span>Salaried ITR (16)</span>
+            </button>
+            <button class="checklist-btn" data-type="capitalGains">
+              <span style="font-size: 1.5rem;">📈</span>
+              <span>Capital Gains &amp; Crypto</span>
+            </button>
+            <button class="checklist-btn" data-type="gstReg">
+              <span style="font-size: 1.5rem;">🏢</span>
+              <span>GST Registration</span>
+            </button>
+            <button class="checklist-btn" data-type="incorporation">
+              <span style="font-size: 1.5rem;">🚀</span>
+              <span>Pvt Ltd Incorporation</span>
+            </button>
+            <button class="checklist-btn" data-type="nri">
+              <span style="font-size: 1.5rem;">✈️</span>
+              <span>NRI / 15CA &amp; 15CB</span>
+            </button>
+          </div>
+
+          <div id="checklistContainer">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. TRANSPARENT PRICING PLANS
+         ========================================================================= -->
+    <section id="pricing" class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag amber">Clear &amp; Transparent</span>
+          <h2 class="section-title">Transparent Service Packages</h2>
+          <p class="section-desc">
+            No hidden charges, no surprises. Direct CA oversight, comprehensive review, and post-filing support included.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1 -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-tier">Salaried Individual</h3>
+              <p class="pricing-for">For professionals with Form 16, interest income, and deductions.</p>
+              <div class="pricing-price-wrap">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">999</span>
+                <span class="price-frequency">/ filing</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Single / Multiple Form 16</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Old vs New Regime Optimization</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>House Property &amp; HRA Claims</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AIS &amp; 26AS Tax Credit Check</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>E-Verification &amp; ITR-V Ack</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;" onclick="openConsultationModal('Salaried Individual Plan (₹999)')">
+              Select Plan
+            </button>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="pricing-card featured">
+            <span class="featured-pill">Most Popular</span>
+            <div class="pricing-header">
+              <h3 class="pricing-tier">Trader &amp; Capital Gains</h3>
+              <p class="pricing-for">For stock traders, crypto investors, mutual funds, &amp; property sellers.</p>
+              <div class="pricing-price-wrap">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">2,499</span>
+                <span class="price-frequency">/ filing</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>All Salaried Features Included</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Zerodha / Groww P&amp;L Import</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>F&amp;O and Intraday Trading P&amp;L</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Loss Carry Forward Setup</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Foreign Stocks (RSU / ESPP)</span>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" onclick="openConsultationModal('Capital Gains Plan (₹2,499)')">
+              Select Plan
+            </button>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-tier">Freelancers &amp; Presumptive</h3>
+              <p class="pricing-for">For software consultants, doctors, architects (Sec 44ADA / 44AD).</p>
+              <div class="pricing-price-wrap">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">3,999</span>
+                <span class="price-frequency">/ filing</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Section 44ADA 50% Profit Claim</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Domestic &amp; Export Invoicing Review</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>LUT Filing for Zero GST on Exports</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Advance Tax Schedule Planning</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated CA Call Session</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;" onclick="openConsultationModal('Freelancer Plan (₹3,999)')">
+              Select Plan
+            </button>
+          </div>
+
+          <!-- Tier 4 -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-tier">Startup &amp; Enterprise Retainer</h3>
+              <p class="pricing-for">Complete Virtual CFO, GST, ROC and monthly books for companies.</p>
+              <div class="pricing-price-wrap">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">9,999</span>
+                <span class="price-frequency">/ month</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Monthly GSTR-1 &amp; GSTR-3B Filings</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Complete Cloud Bookkeeping (Zoho/Tally)</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>TDS Returns &amp; Payroll Computation</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Monthly Executive MIS Reports</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Statutory Audit Coordination</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" style="width: 100%;" onclick="openConsultationModal('Enterprise Retainer (₹9,999/mo)')">
+              Talk to Virtual CFO
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. CLIENT TESTIMONIALS & REVIEWS
+         ========================================================================= -->
+    <section id="testimonials" class="section-py bg-slate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Client Trust &amp; Success</span>
+          <h2 class="section-title">Trusted by 15,000+ Individuals &amp; Businesses</h2>
+          <p class="section-desc">
+            See what salaried executives, tech startup founders, and NRIs say about our speed, precision, and tax savings.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "I had complicated stock options (ESOPs) from a US tech employer and crypto gains. Easy My Taxes assigned a senior CA who reconciled my Schedule FA and saved me over ₹1.4 Lakhs in taxes legally. Highly recommended!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RG</div>
+              <div class="author-meta">
+                <h5>Rahul Gambhir</h5>
+                <p>Principal Software Engineer, Microsoft</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Incorporating our AI startup and obtaining DPIIT 80-IAC tax exemption was completed within 10 days. Their Virtual CFO package takes care of our monthly GST, TDS, and investor MIS seamlessly."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background-color: var(--emerald-600);">SM</div>
+              <div class="author-meta">
+                <h5>Sneha Menon</h5>
+                <p>Co-Founder &amp; CEO, NeuralStack Labs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "As an NRI living in Dubai with rental income and ancestral property sales in Bangalore, filing 15CA/CB was daunting. Easy My Taxes managed the entire repatriation certificate without me having to travel to India."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background-color: var(--amber-600);">VK</div>
+              <div class="author-meta">
+                <h5>Vikram Kulkarni</h5>
+                <p>Non-Resident Investor (Dubai, UAE)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. FREQUENTLY ASKED QUESTIONS (FAQ)
+         ========================================================================= -->
+    <section id="faq" class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Frequently Asked Questions</span>
+          <h2 class="section-title">Clear Answers to Your Tax Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about tax regimes, deductions, deadlines, and working with our Chartered Accountants.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item open">
+            <button class="faq-header">
+              <span>Which tax regime is better for me in AY 2025-26 (Old or New)?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body">
+              The revised New Tax Regime offers standard deduction of ₹75,000 and zero tax up to ₹7.75 Lakhs total income. However, if you have substantial investments under 80C (₹1.5L), 80D (₹25k-₹50k), HRA (₹1L+), and Home Loan Interest under Section 24(b) (up to ₹2L), the Old Regime might save you more. You can test both with our free Old vs New Calculator above or have our CA calculate your exact break-even point.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>What happens if I miss the 31st July ITR deadline?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body">
+              If you miss the 31st July deadline, you can file a Belated Return under Section 139(4) until 31st December. However, you will incur a late fee of ₹5,000 under Section 234F (₹1,000 if income is below ₹5 Lakhs), 1% per month interest on unpaid taxes under Section 234A, and you will lose the benefit of carrying forward business or capital losses.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>How does Easy My Taxes protect my confidential financial data?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body">
+              All client documents, bank statements, and PAN cards are stored in 256-bit encrypted secure cloud repositories. We adhere strictly to ICAI professional ethics and nondisclosure agreements (NDA). Your data is never sold, shared, or indexed for commercial advertising.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>I received an Income Tax Notice u/s 143(1) or 139(9). Can you help?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body">
+              Yes, our dedicated Tax Litigation &amp; Notice Department handles notices under Section 143(1) (Intimation of tax demand), 139(9) (Defective return), 148 (Income escaping assessment), and AIS/TIS mismatches. We draft formal legal rejoinders and upload them directly to the e-Filing portal.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>How do Virtual CFO services work for startups and SMEs?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-body">
+              Under our Virtual CFO model, an experienced Chartered Accountant acts as your dedicated head of finance. We manage daily bookkeeping in Zoho Books/Tally, ensure automated GST &amp; TDS filings, provide monthly investor MIS reports, cash runway forecasts, and unit economics analysis at a fraction of a full-time CFO's salary.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         12. CONTACT & BOOKING FORM SECTION
+         ========================================================================= -->
+    <section id="contact" class="section-py bg-dark">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: center;" class="contact-grid-wrapper">
+          <div style="max-width: 600px;">
+            <span class="section-tag amber">Schedule a Session</span>
+            <h2 class="section-title" style="color: #ffffff;">Ready to Simplify Your Taxes &amp; Compliance?</h2>
+            <p class="section-desc" style="color: var(--surface-300); margin-bottom: 2rem;">
+              Connect with our partner Chartered Accountants today. Fill in the form or reach out directly on WhatsApp for an immediate consultation.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(255,255,255,0.08); display: grid; place-items: center; color: var(--emerald-400);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--text-light);">Direct Phone Support</div>
+                  <div style="font-size: 1.125rem; font-weight: 700; color: #fff;">+91 98765 43210 / +91 98765 43211</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(255,255,255,0.08); display: grid; place-items: center; color: var(--emerald-400);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--text-light);">Email Advisory Desk</div>
+                  <div style="font-size: 1.125rem; font-weight: 700; color: #fff;">advisory@easymytaxes.com</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(255,255,255,0.08); display: grid; place-items: center; color: var(--emerald-400);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--text-light);">Headquarters</div>
+                  <div style="font-size: 0.9375rem; color: #fff;">Financial District, Cyber City, Phase II, Gurugram / New Delhi - 122002</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Form Card -->
+          <div style="background: var(--surface-0); border-radius: var(--radius-xl); padding: 2.5rem; color: var(--text-main); box-shadow: var(--shadow-xl);">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.35rem;">
+              Request a Free 15-Minute CA Consultation
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              Leave your contact details and our designated tax expert will connect with you.
+            </p>
+
+            <form onsubmit="handleConsultationSubmit(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="contactFullName">Full Name *</label>
+                  <input type="text" id="contactFullName" class="form-control" placeholder="e.g. Amit Sharma" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactPhone">Phone / WhatsApp *</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="+91 98765 XXXXX" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Work / Personal Email *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="amit@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactServicePref">Service Required</label>
+                <select id="contactServicePref" class="form-control">
+                  <option value="ITR Filing (Salaried / Trader)">ITR Filing (Salaried / Trader / Capital Gains)</option>
+                  <option value="GST Registration & Returns">GST Registration &amp; Monthly Filing</option>
+                  <option value="Company Incorporation & ROC">Company / LLP Incorporation &amp; ROC</option>
+                  <option value="Tax Notice Reply">Income Tax Notice Reply</option>
+                  <option value="Virtual CFO / Retainer">Virtual CFO / Bookkeeping Retainer</option>
+                  <option value="NRI Taxation">NRI Taxation &amp; 15CA/CB</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Brief Query / Details (Optional)</label>
+                <textarea id="contactMessage" class="form-control" rows="3" placeholder="Tell us about your tax scenario or requirements..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                Submit &amp; Schedule Call &rarr;
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       13. FOOTER & LEGAL COMPLIANCE
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Easy My Taxes Logo" style="filter: brightness(0) invert(1); height: 42px;">
+          <p>
+            Easy My Taxes is a premier technology-driven Chartered Accountancy and financial consultancy platform delivering precision ITR filings, corporate compliances, statutory audits, and virtual CFO leadership.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <span style="font-size: 0.8125rem; background: rgba(255,255,255,0.08); padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); color: var(--emerald-400);">
+              ✓ Registered CA Network
+            </span>
+            <span style="font-size: 0.8125rem; background: rgba(255,255,255,0.08); padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); color: var(--amber-400);">
+              ✓ 256-Bit SSL Encrypted
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h4>CA Practice Areas</h4>
+          <div class="footer-links">
+            <a href="#services" onclick="initServiceGrid('direct-tax')">Salaried &amp; Individual ITR</a>
+            <a href="#services" onclick="initServiceGrid('direct-tax')">Capital Gains &amp; Crypto</a>
+            <a href="#services" onclick="initServiceGrid('direct-tax')">NRI Tax Advisory</a>
+            <a href="#services" onclick="initServiceGrid('gst')">GST Registration &amp; Returns</a>
+            <a href="#services" onclick="initServiceGrid('incorporation')">Pvt Ltd &amp; LLP Registration</a>
+            <a href="#services" onclick="initServiceGrid('accounting')">Virtual CFO Retainer</a>
+            <a href="#services" onclick="initServiceGrid('audit')">Statutory &amp; Tax Audits</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Quick Links & Tools -->
+        <div class="footer-col">
+          <h4>Tools &amp; Resources</h4>
+          <div class="footer-links">
+            <a href="#calculators">Old vs New Tax Calculator</a>
+            <a href="#calculators">GST Forward/Reverse Calc</a>
+            <a href="#calculators">HRA Exemption Calculator</a>
+            <a href="#calendar">Compliance Due Dates 2025-26</a>
+            <a href="#checklist">Document Checklist Helper</a>
+            <a href="#pricing">Transparent Pricing Plans</a>
+            <a href="#faq">Tax FAQ Knowledge Base</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Reach Us -->
+        <div class="footer-col">
+          <h4>Direct Connect</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <strong>+91 98765 43210</strong><br>
+              <span style="font-size: 0.75rem; color: var(--text-light);">Direct Advisory Helpline</span>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div>
+              <strong>support@easymytaxes.com</strong><br>
+              <span style="font-size: 0.75rem; color: var(--text-light);">Document Submissions</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <button class="btn btn-whatsapp btn-sm" style="width: 100%;" onclick="openWhatsAppInquiry()">
+              Instant WhatsApp Desk
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ICAI Mandatory Disclaimer -->
+      <div class="footer-disclaimer-box">
+        <strong>ICAI Compliance &amp; Regulatory Disclaimer:</strong> As per the Chartered Accountants Act, 1949, and guidelines issued by the Institute of Chartered Accountants of India (ICAI), this website is designed solely for providing informational and educational resources regarding taxation, corporate compliance, and accounting services. It does not constitute advertising, solicitation, or inducement of professional engagement. By accessing this platform, users acknowledge that they are seeking information voluntarily.
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2025 Easy My Taxes. All Rights Reserved. Built with precision for individuals, startups &amp; enterprises.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Engagement</a>
+          <a href="#">Security &amp; Encryption</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       14. FLOATING WHATSAPP BUTTON
+       ========================================================================= -->
+  <a href="javascript:void(0)" class="floating-whatsapp" onclick="openWhatsAppInquiry()" aria-label="Chat with CA on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.37C9.37 7.37 9.1 7.43 8.88 7.68C8.65 7.92 8.02 8.51 8.02 9.73C8.02 10.95 8.91 12.12 9.03 12.28C9.15 12.45 10.77 14.94 13.25 16C13.84 16.26 14.3 16.41 14.66 16.53C15.26 16.72 15.8 16.69 16.23 16.63C16.71 16.56 17.71 16.02 17.92 15.43C18.13 14.84 18.13 14.34 18.07 14.23C18.01 14.12 17.85 14.06 17.6 13.94C17.36 13.82 16.14 13.22 15.91 13.14C15.69 13.06 15.53 13.02 15.36 13.26C15.19 13.51 14.72 14.06 14.57 14.23C14.43 14.4 14.28 14.42 14.04 14.3C13.8 14.18 12.78 13.85 11.58 12.77C10.64 11.93 10.01 10.9 9.89 10.68C9.76 10.47 9.87 10.35 10 10.23C10.11 10.12 10.24 9.94 10.36 9.8C10.49 9.66 10.53 9.55 10.61 9.39C10.69 9.22 10.65 9.08 10.59 8.96C10.53 8.83 10.04 7.63 9.84 7.13C9.64 6.64 9.44 6.71 9.29 6.71C9.15 6.71 8.99 6.71 8.83 6.71L9.53 7.37Z" />
+    </svg>
+  </a>
+
+  <!-- =========================================================================
+       15. SERVICE DETAIL MODAL DRAWER
+       ========================================================================= -->
+  <div class="modal-backdrop" id="serviceDetailModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeServiceModal()" aria-label="Close Modal">✕</button>
+      <h3 class="modal-title" id="serviceModalTitle">Service Name</h3>
+      <div id="serviceModalBody">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       16. CONSULTATION BOOKING MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="consultationModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeConsultationModal()" aria-label="Close Modal">✕</button>
+      <h3 class="modal-title">Book Chartered Accountant Consultation</h3>
+      <p class="modal-subtitle">Direct, one-on-one session with our senior tax specialists.</p>
+
+      <form id="consultationForm" onsubmit="handleConsultationSubmit(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="hidden" id="consultationService" value="General CA Consultation">
+
+        <div class="form-group">
+          <label class="form-label" for="cName">Your Full Name *</label>
+          <input type="text" id="cName" class="form-control" placeholder="e.g. Ramesh Verma" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="cPhone">Mobile / WhatsApp *</label>
+            <input type="tel" id="cPhone" class="form-control" placeholder="+91 98765 XXXXX" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cEmail">Email Address *</label>
+            <input type="email" id="cEmail" class="form-control" placeholder="ramesh@gmail.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cSlot">Preferred Consultation Time Slot</label>
+          <select id="cSlot" class="form-control">
+            <option value="Today - Urgent Slot (Next 2 Hours)">⚡ Urgent - Next 2 Hours</option>
+            <option value="Morning (10:00 AM - 1:00 PM)">🌅 Morning (10:00 AM - 1:00 PM)</option>
+            <option value="Afternoon (2:00 PM - 5:00 PM)">☀️ Afternoon (2:00 PM - 5:00 PM)</option>
+            <option value="Evening (5:00 PM - 8:00 PM)">🌆 Evening (5:00 PM - 8:00 PM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cNotes">Specific Questions / Case Notes (Optional)</label>
+          <textarea id="cNotes" class="form-control" rows="3" placeholder="E.g., I have 2 Form 16s and some stock trading losses to declare..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+          Confirm Booking &rarr;
+        </button>
+        <p style="font-size: 0.75rem; text-align: center; color: var(--text-subtle);">
+          🔒 Guaranteed zero spam. Free initial case assessment.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/calculators.js"></script>
+  <script src="js/calendar-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
