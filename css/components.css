@@ -1263,3 +1263,591 @@
 .toast-notice.show {
   transform: translateX(-50%) translateY(0);
 }
+
+/* ==========================================================================
+   11. LIVE STATUTORY COUNTDOWN TICKER (AY 2026-27)
+   ========================================================================== */
+
+.countdown-banner {
+  background: linear-gradient(135deg, #091224, #132442);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.countdown-info {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.countdown-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--danger-500);
+  box-shadow: 0 0 10px var(--danger-500);
+  animation: pulseAlarm 1.5s infinite;
+}
+
+@keyframes pulseAlarm {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 14px var(--danger-500); }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.countdown-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.countdown-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.countdown-timer-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.countdown-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.65rem;
+  text-align: center;
+  min-width: 48px;
+}
+
+.countdown-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--amber-400);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.countdown-unit {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.countdown-sep {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.countdown-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--emerald-400);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  transition: all var(--trans-fast);
+}
+
+.countdown-cta:hover {
+  background: var(--emerald-500);
+  color: #fff;
+  border-color: var(--emerald-500);
+}
+
+/* ==========================================================================
+   12. PERSISTENT MOBILE BOTTOM ACTION BAR
+   ========================================================================== */
+
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(11, 21, 40, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 450;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+  
+  body {
+    padding-bottom: 64px;
+  }
+
+  .floating-whatsapp {
+    bottom: 76px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.mobile-bar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  color: var(--text-light);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  height: 100%;
+  transition: all var(--trans-fast);
+  text-decoration: none;
+}
+
+.mobile-bar-btn svg {
+  color: inherit;
+}
+
+.mobile-bar-btn:active, .mobile-bar-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-bar-btn.highlight-green {
+  color: var(--emerald-400);
+}
+
+.mobile-bar-btn.primary-cta {
+  background: linear-gradient(135deg, var(--emerald-600), #047857);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   13. "HUMAN CA VS DIY BOT PORTALS" COMPARISON MATRIX
+   ========================================================================== */
+
+.comparison-wrapper {
+  background: var(--surface-0);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-top: 2rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparison-table th {
+  padding: 1.35rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 800;
+}
+
+.comparison-table th.col-feature {
+  background: var(--surface-100);
+  color: var(--primary-950);
+  width: 40%;
+}
+
+.comparison-table th.col-ca {
+  background: linear-gradient(135deg, #0b1528, #172a4d);
+  color: #ffffff;
+  width: 32%;
+  position: relative;
+}
+
+.comparison-table th.col-diy {
+  background: var(--surface-50);
+  color: var(--text-muted);
+  width: 28%;
+}
+
+.comp-badge-pro {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: var(--emerald-500);
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  margin-left: 0.5rem;
+}
+
+.comparison-table td {
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid var(--surface-200);
+  font-size: 0.875rem;
+}
+
+.comparison-table tr:hover td {
+  background-color: var(--surface-50);
+}
+
+.comparison-table td.col-ca-cell {
+  background-color: rgba(16, 185, 129, 0.04);
+  font-weight: 700;
+  color: var(--primary-900);
+  border-left: 2px solid var(--emerald-500);
+}
+
+.comparison-table td.col-diy-cell {
+  color: var(--text-muted);
+}
+
+.comp-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--emerald-600);
+}
+
+.comp-cross {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--danger-500);
+}
+
+@media (max-width: 768px) {
+  .comparison-wrapper {
+    overflow-x: auto;
+  }
+  .comparison-table {
+    min-width: 620px;
+  }
+}
+
+/* ==========================================================================
+   14. INTERACTIVE 4-STEP CLIENT PROCESS ("HOW WE WORK")
+   ========================================================================== */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.process-card {
+  background: var(--surface-0);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-lg);
+  padding: 1.85rem;
+  position: relative;
+  transition: all var(--trans-smooth);
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--emerald-400);
+  box-shadow: var(--shadow-lg);
+}
+
+.process-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.process-step-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--emerald-600);
+  background: var(--emerald-50);
+  border: 1px solid var(--emerald-200);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.process-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--surface-100), var(--surface-200));
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+
+.process-card-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--primary-950);
+  margin-bottom: 0.5rem;
+}
+
+.process-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   15. SALARY PRESET CHIPS & ADVANCE TAX CALCULATOR ADDITIONS
+   ========================================================================== */
+
+.salary-presets-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.preset-chip {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-800);
+  background-color: var(--surface-100);
+  border: 1px solid var(--surface-200);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--trans-fast);
+}
+
+.preset-chip:hover {
+  background-color: var(--surface-200);
+  border-color: var(--surface-300);
+  color: var(--primary-950);
+}
+
+.preset-chip.active {
+  background: var(--primary-900);
+  color: #fff;
+  border-color: var(--primary-900);
+}
+
+.whatsapp-export-card {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.08), rgba(16, 185, 129, 0.12));
+  border: 1px dashed var(--emerald-400);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.adv-tax-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.adv-tax-box {
+  background: var(--surface-50);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.adv-tax-quarter {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 0.35rem;
+}
+
+.adv-tax-amount {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-950);
+  margin-bottom: 0.25rem;
+}
+
+.adv-tax-date {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--emerald-700);
+}
+
+/* ==========================================================================
+   16. ENHANCED NOTICE DIAGNOSTIC & RESOLUTION ROADMAP
+   ========================================================================== */
+
+.resolution-roadmap-box {
+  background: var(--surface-0);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-top: 2rem;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .roadmap-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.roadmap-item {
+  background: var(--surface-50);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  position: relative;
+}
+
+.roadmap-num {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--primary-900);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.roadmap-title {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: var(--primary-950);
+  margin-bottom: 0.35rem;
+}
+
+.roadmap-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   17. FILTERABLE CASE STUDIES / TESTIMONIALS & OUTCOME BADGES
+   ========================================================================== */
+
+.testimonial-filter-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.test-filter-btn {
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--primary-700);
+  background-color: var(--surface-0);
+  border: 1px solid var(--surface-200);
+  transition: all var(--trans-fast);
+}
+
+.test-filter-btn:hover {
+  background-color: var(--surface-100);
+}
+
+.test-filter-btn.active {
+  background: var(--primary-900);
+  color: #ffffff;
+  border-color: var(--primary-900);
+}
+
+.test-outcome-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--emerald-800);
+  background-color: var(--emerald-100);
+  border: 1px solid var(--emerald-300);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   18. LIVE SEARCH BAR IN PRACTICE AREAS & COMPLIANCE CALENDAR
+   ========================================================================== */
+
+.search-bar-wrap {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto 2.25rem auto;
+}
+
+.search-input-field {
+  width: 100%;
+  padding: 0.85rem 1.25rem 0.85rem 2.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--surface-300);
+  background-color: var(--surface-0);
+  font-size: 0.9375rem;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--trans-base);
+}
+
+.search-input-field:focus {
+  outline: none;
+  border-color: var(--emerald-500);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.search-icon-prefix {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+

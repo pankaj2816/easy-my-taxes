@@ -16,6 +16,17 @@ function formatINR(amount) {
 // 1. OLD VS NEW TAX REGIME CALCULATOR (AY 2026-27 / FY 2025-26)
 // --------------------------------------------------------------------------
 
+let currentTaxState = {
+  grossSalary: 1250000,
+  otherIncome: 50000,
+  totalNewTax: 0,
+  totalOldTax: 0,
+  diff: 0,
+  winner: 'new',
+  newNetTaxable: 0,
+  oldNetTaxable: 0
+};
+
 function calculateTax() {
   const grossSalary = parseFloat(document.getElementById('calcGrossSalary')?.value) || 0;
   const otherIncome = parseFloat(document.getElementById('calcOtherIncome')?.value) || 0;
@@ -48,13 +59,13 @@ function calculateTax() {
     newTaxBeforeRebate = 0;
   }
 
-  // Section 87A Rebate in New Regime (Income up to ₹7,00,000 is tax free, rebate up to ₹25,000)
+  // Section 87A Rebate in New Regime (Taxable income up to ₹7,00,000 has zero net tax, rebate up to ₹25k)
   let newTaxAfterRebate = newTaxBeforeRebate;
   if (newNetTaxable <= 700000) {
     newTaxAfterRebate = 0;
   }
 
-  // Surcharge (if applicable) & 4% Health & Education Cess
+  // 4% Health & Education Cess
   const newCess = newTaxAfterRebate * 0.04;
   const totalNewTax = Math.round(newTaxAfterRebate + newCess);
 
@@ -75,7 +86,7 @@ function calculateTax() {
     oldTaxBeforeRebate = 0;
   }
 
-  // Section 87A Rebate in Old Regime (Income up to ₹5,00,000 is tax free, rebate up to ₹12,500)
+  // Section 87A Rebate in Old Regime (Taxable income up to ₹5,00,000 has zero net tax)
   let oldTaxAfterRebate = oldTaxBeforeRebate;
   if (oldNetTaxable <= 500000) {
     oldTaxAfterRebate = 0;
@@ -83,6 +94,18 @@ function calculateTax() {
 
   const oldCess = oldTaxAfterRebate * 0.04;
   const totalOldTax = Math.round(oldTaxAfterRebate + oldCess);
+
+  // Store state for WhatsApp export
+  currentTaxState = {
+    grossSalary,
+    otherIncome,
+    totalNewTax,
+    totalOldTax,
+    diff: Math.abs(totalOldTax - totalNewTax),
+    winner: totalNewTax <= totalOldTax ? 'New Tax Regime' : 'Old Tax Regime',
+    newNetTaxable,
+    oldNetTaxable
+  };
 
   // --- UPDATE UI RESULTS ---
   const elNewTax = document.getElementById('resNewTax');
@@ -106,29 +129,81 @@ function calculateTax() {
   if (elNewDed) elNewDed.textContent = formatINR(newStdDeduction);
   if (elOldDed) elOldDed.textContent = formatINR(totalOldDeductions);
 
-  // Recommendation
+  // Recommendation Banner
   if (totalNewTax < totalOldTax) {
     const diff = totalOldTax - totalNewTax;
     elCardNew?.classList.add('winner');
     elCardOld?.classList.remove('winner');
     if (elBannerTitle) elBannerTitle.textContent = `🎉 New Tax Regime (AY 2026-27) is best for you!`;
-    if (elBannerDesc) elBannerDesc.textContent = `You save ${formatINR(diff)} in taxes under the revised New Regime.`;
+    if (elBannerDesc) elBannerDesc.textContent = `You save ${formatINR(diff)} in taxes under the revised New Regime with ₹75k Standard Deduction.`;
   } else if (totalOldTax < totalNewTax) {
     const diff = totalNewTax - totalOldTax;
     elCardOld?.classList.add('winner');
     elCardNew?.classList.remove('winner');
     if (elBannerTitle) elBannerTitle.textContent = `🎉 Old Tax Regime is best for you!`;
-    if (elBannerDesc) elBannerDesc.textContent = `Due to high Chapter VI-A deductions, you save ${formatINR(diff)} in taxes under the Old Regime.`;
+    if (elBannerDesc) elBannerDesc.textContent = `Due to substantial Chapter VI-A deductions, you save ${formatINR(diff)} in taxes under the Old Regime.`;
   } else {
     elCardNew?.classList.remove('winner');
     elCardOld?.classList.remove('winner');
-    if (elBannerTitle) elBannerTitle.textContent = `⚖️ Both Regimes result in equal tax`;
+    if (elBannerTitle) elBannerTitle.textContent = `⚖️ Both Regimes result in equal tax liability`;
     if (elBannerDesc) elBannerDesc.textContent = `Your tax liability is identical in both options (${formatINR(totalNewTax)}).`;
+  }
+
+  // Also update advance tax if present
+  calculateAdvanceTax(Math.min(totalNewTax, totalOldTax));
+}
+
+// Preset Salary Chip Click Handler
+function setSalaryPreset(amount, btnElement) {
+  const salaryInput = document.getElementById('calcGrossSalary');
+  if (salaryInput) {
+    salaryInput.value = amount;
+    calculateTax();
+  }
+
+  document.querySelectorAll('.preset-chip').forEach(chip => chip.classList.remove('active'));
+  if (btnElement) {
+    btnElement.classList.add('active');
   }
 }
 
+// WhatsApp Calculation Bridge
+function sendTaxSummaryToWhatsApp() {
+  const phone = "919891495092";
+  const { grossSalary, totalNewTax, totalOldTax, diff, winner } = currentTaxState;
+  
+  const text = `Hi CA Pradeep Agarwal & Easy My Taxes team,%0A%0A*AY 2026-27 Tax Calculation Summary:*%0A• Gross Annual Salary: ${formatINR(grossSalary)}%0A• New Regime Tax: ${formatINR(totalNewTax)}%0A• Old Regime Tax: ${formatINR(totalOldTax)}%0A• Recommended Choice: *${winner}*%0A• Estimated Tax Saved: *${formatINR(diff)}*%0A%0APlease review my Form 16 / investment proofs and help me optimize and file my return.`;
+  
+  window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+}
+
 // --------------------------------------------------------------------------
-// 2. FREELANCER / SECTION 44ADA PRESUMPTIVE TAX CALCULATOR
+// 2. ADVANCE TAX SCHEDULE ENGINE (FY 2026-27)
+// --------------------------------------------------------------------------
+
+function calculateAdvanceTax(estimatedAnnualTax) {
+  const baseTax = estimatedAnnualTax !== undefined 
+    ? estimatedAnnualTax 
+    : (parseFloat(document.getElementById('advTaxAnnualAmount')?.value) || 120000);
+
+  const q1 = Math.round(baseTax * 0.15);
+  const q2 = Math.round(baseTax * 0.45);
+  const q3 = Math.round(baseTax * 0.75);
+  const q4 = baseTax;
+
+  const elQ1 = document.getElementById('advResQ1');
+  const elQ2 = document.getElementById('advResQ2');
+  const elQ3 = document.getElementById('advResQ3');
+  const elQ4 = document.getElementById('advResQ4');
+
+  if (elQ1) elQ1.textContent = formatINR(q1);
+  if (elQ2) elQ2.textContent = formatINR(q2);
+  if (elQ3) elQ3.textContent = formatINR(q3);
+  if (elQ4) elQ4.textContent = formatINR(q4);
+}
+
+// --------------------------------------------------------------------------
+// 3. FREELANCER / SECTION 44ADA PRESUMPTIVE TAX CALCULATOR
 // --------------------------------------------------------------------------
 
 function calculate44ADA() {
@@ -139,7 +214,7 @@ function calculate44ADA() {
   const presumptiveProfit = grossReceipts * 0.50;
   const actualProfit = Math.max(0, grossReceipts - actualExpenses);
 
-  // Calculate tax on 44ADA profit vs Actual Profit under New Regime
+  // Compute tax on 44ADA profit vs Actual Profit under New Regime
   function computeQuickTax(taxable) {
     let t = 0;
     if (taxable > 1500000) t = 150000 + (taxable - 1500000) * 0.30;
@@ -169,56 +244,171 @@ function calculate44ADA() {
 }
 
 // --------------------------------------------------------------------------
-// 3. NOTICE DIAGNOSTIC & RISK SCANNER
+// 4. NOTICE DIAGNOSTIC & RISK SCANNER WITH 4-STEP RESOLUTION ROADMAP
 // --------------------------------------------------------------------------
+
+const noticeDatabase = {
+  '143_1': {
+    name: 'Section 143(1) - Intimation of Tax Demand or Mismatch',
+    risk: 'MODERATE RISK',
+    badgeClass: 'medium',
+    icon: '⚠️',
+    analysis: 'Intimation received regarding mismatch between reported income/TDS in ITR and 26AS/AIS records, resulting in an automated demand or reduced refund.',
+    advice: 'Submit online response on IT Portal, verify AIS mismatch, and file Section 154 Rectification or revise ITR.',
+    roadmap: [
+      { title: 'AIS & 26AS Trace', desc: 'Perform deep line-by-line reconciliation of employer TDS, bank interest & AIS data.' },
+      { title: 'Mismatch Identification', desc: 'Pinpoint exact difference between portal calculations and your filed computation.' },
+      { title: 'Draft Technical Rejoinder', desc: 'Draft legal response with TDS certificates and bank reconciliation.' },
+      { title: 'Rectification u/s 154', desc: 'Submit electronic rectification to wipe off illegitimate demand.' }
+    ]
+  },
+  '143_1_a': {
+    name: 'Section 143(1)(a) - Proposed Adjustment Notice',
+    risk: 'HIGH ATTENTION',
+    badgeClass: 'high',
+    icon: '⚡',
+    analysis: 'Automated notification proposing disallowance of Chapter VI-A deductions, late filing loss carry-forward, or 80-IAC claims. 30-day response window.',
+    advice: 'File objection under e-Proceedings portal with documentary evidence before department issues final demand order.',
+    roadmap: [
+      { title: 'Notice Clause Breakdown', desc: 'Analyze exact variance claimed by Centralized Processing Center (CPC).' },
+      { title: 'Document Collation', desc: 'Compile investment receipts, Form 10-IEA proof, and audit reports.' },
+      { title: 'Online Objection Filing', desc: 'Submit disagreement rejoinder under e-Proceedings portal.' },
+      { title: 'Demand Neutralization', desc: 'Ensure CPC accepts explanation without generating tax liability.' }
+    ]
+  },
+  '139_9': {
+    name: 'Section 139(9) - Notice for Defective Return',
+    risk: 'HIGH URGENCY',
+    badgeClass: 'high',
+    icon: '⚠️',
+    analysis: 'ITR declared defective due to missing balance sheet (for F&O / Freelancers), gross revenue mismatches, or unpaid self-assessment tax. Strict 15-day deadline.',
+    advice: 'File Defective Return Response under Section 139(9) along with rectified XML/JSON return immediately.',
+    roadmap: [
+      { title: 'Defect Error Diagnosis', desc: 'Identify structural errors causing CPC invalidation (e.g. Schedule P&L omitted).' },
+      { title: 'Prepare Rectified ITR', desc: 'Re-compute correct schedules, Profit & Loss, and balance sheet.' },
+      { title: 'Upload Defective Reply', desc: 'Submit response u/s 139(9) with fresh digital signature.' },
+      { title: 'Ack Verification', desc: 'Obtain valid e-verification acknowledgement from Income Tax Department.' }
+    ]
+  },
+  '148': {
+    name: 'Section 148 - Reopening & Income Escaping Assessment',
+    risk: 'CRITICAL / SEVERE RISK',
+    badgeClass: 'high',
+    icon: '🚨',
+    analysis: 'Assessing Officer (AO) has initiated reassessment proceedings for past financial years based on high-value transaction data (Insights Portal / Cash / Property / Crypto).',
+    advice: 'Requires direct senior legal drafting by CA Pradeep Agarwal and filing formal objection challenging jurisdiction.',
+    roadmap: [
+      { title: 'Reason to Believe Review', desc: 'Scrutinize AO recorded reasons and validity under Section 148A.' },
+      { title: 'Jurisdiction Challenge', desc: 'Check limitation periods (3 years / 10 years threshold rules).' },
+      { title: 'Comprehensive Legal Submission', desc: 'Draft comprehensive reply with fund flow statements and purchase deeds.' },
+      { title: 'Appellate Representation', desc: 'Represent before Faceless Assessment Officer / CIT (Appeals).' }
+    ]
+  },
+  '148A': {
+    name: 'Section 148A - Show Cause Notice before Reassessment',
+    risk: 'CRITICAL ATTENTION',
+    badgeClass: 'high',
+    icon: '🚨',
+    analysis: 'Pre-reopening enquiry giving you 7-30 days to explain why your case should NOT be reopened under Section 148.',
+    advice: 'Immediate submission of documentary trail explaining source of funds to prevent reassessment order.',
+    roadmap: [
+      { title: 'Enquiry Scope Analysis', desc: 'Analyze information flagged by Risk Management System (RMS).' },
+      { title: 'Source of Funds Trail', desc: 'Build verifiable bank trail, gift deeds, or audited financials.' },
+      { title: 'Reply to Show Cause', desc: 'Submit reasoned argument proving income has not escaped assessment.' },
+      { title: 'Drop Proceedings Order', desc: 'Aim to obtain Section 148A(d) favorable order dropping the case.' }
+    ]
+  },
+  '156': {
+    name: 'Section 156 - Notice of Demand (Tax Payable)',
+    risk: 'HIGH RISK',
+    badgeClass: 'high',
+    icon: '⚠️',
+    analysis: 'Official order requiring payment of outstanding tax, interest under Sec 234A/B/C, or penalties within 30 days of service.',
+    advice: 'Review computational validity before paying; file appeal before CIT(A) or rectification u/s 154 if demand is erroneous.',
+    roadmap: [
+      { title: 'Challan Audit', desc: 'Verify if advance tax or TDS credits were missed by department software.' },
+      { title: 'Interest Verification', desc: 'Recalculate 234A/B/C interest to check for excess computation.' },
+      { title: 'Stay of Demand / Rectification', desc: 'Apply for stay of demand or submit rectification petition.' },
+      { title: 'Clearance Certificate', desc: 'Secure clean IT clearance without recovery action or bank freezing.' }
+    ]
+  },
+  '68': {
+    name: 'Section 68 / 69 - Unexplained Cash Credits & Investments',
+    risk: 'CRITICAL / LITIGATION',
+    badgeClass: 'high',
+    icon: '🚨',
+    analysis: 'Unexplained cash deposits, unexplained credits, or luxury purchases attracting penal tax rate of 78% (60% tax + 25% surcharge + cess u/s 115BBE).',
+    advice: 'Senior CA representation required to establish Identity, Creditworthiness, and Genuineness of transaction.',
+    roadmap: [
+      { title: '3-Pillar Audit', desc: 'Establish identity, creditworthiness, and genuineness of lender/investor.' },
+      { title: 'ITR & Bank Evidence', desc: 'Collate audited ITRs and bank statements of counter-parties.' },
+      { title: 'Legal Jurisprudence Drafting', desc: 'Draft legal rejoinder supported by relevant Supreme Court & High Court rulings.' },
+      { title: 'Faceless Defence', desc: 'Submit exhaustive paperbook to prevent punitive Section 115BBE assessment.' }
+    ]
+  }
+};
 
 function scanNotice() {
   const section = document.getElementById('noticeSectionSelect')?.value || '143_1';
   const demand = parseFloat(document.getElementById('noticeDemandAmount')?.value) || 0;
   const days = parseInt(document.getElementById('noticeDaysElapsed')?.value) || 5;
 
-  let riskLevel = 'Moderate';
-  let riskClass = 'medium';
-  let gaugeIcon = '⚠️';
-  let analysis = '';
-  let actionAdvice = '';
+  const data = noticeDatabase[section] || noticeDatabase['143_1'];
 
-  if (section === '148' || section === '144' || demand > 500000 || days > 25) {
-    riskLevel = 'CRITICAL / HIGH RISK';
+  let riskLevel = data.risk;
+  let riskClass = data.badgeClass;
+  let gaugeIcon = data.icon;
+
+  if (demand > 500000 || days > 20) {
+    riskLevel = 'CRITICAL / IMMEDIATE CA ACTION REQUIRED';
     riskClass = 'high';
     gaugeIcon = '🚨';
-    analysis = 'High severity notice. Demands urgent CA rejoinder to prevent penalty proceedings under Section 270A/271(1)(c) and bank attachment.';
-    actionAdvice = 'Immediate legal response drafting by CA Pradeep Agarwal required within 48 hours.';
-  } else if (section === '139_9' || section === '156') {
-    riskLevel = 'HIGH ATTENTION';
-    riskClass = 'high';
-    gaugeIcon = '⚠️';
-    analysis = 'Defective Return or Demand notice. Failure to respond within 15-30 days will result in return being treated as invalid.';
-    actionAdvice = 'File corrected ITR and upload rectified computation sheet on e-Filing portal.';
-  } else {
-    riskLevel = 'MODERATE / ROUTINE';
-    riskClass = 'low';
-    gaugeIcon = '📝';
-    analysis = 'Intimation under Section 143(1) indicating mismatch between claimed TDS/deductions and AIS records.';
-    actionAdvice = 'Submit online rectification u/s 154 or agree/disagree with demand with proper TDS vouchers.';
   }
 
   const elRiskLevel = document.getElementById('noticeResRiskLevel');
   const elGauge = document.getElementById('noticeRiskGauge');
   const elAnalysis = document.getElementById('noticeResAnalysis');
   const elAdvice = document.getElementById('noticeResAdvice');
+  const roadmapContainer = document.getElementById('noticeRoadmapContainer');
 
   if (elRiskLevel) elRiskLevel.textContent = riskLevel;
   if (elGauge) {
     elGauge.className = `risk-gauge-circle ${riskClass}`;
     elGauge.textContent = gaugeIcon;
   }
-  if (elAnalysis) elAnalysis.textContent = analysis;
-  if (elAdvice) elAdvice.textContent = actionAdvice;
+  if (elAnalysis) elAnalysis.textContent = data.analysis;
+  if (elAdvice) elAdvice.textContent = data.advice;
+
+  // Render 4-Step Resolution Roadmap
+  if (roadmapContainer && data.roadmap) {
+    roadmapContainer.innerHTML = `
+      <div class="roadmap-grid">
+        ${data.roadmap.map((step, idx) => `
+          <div class="roadmap-item">
+            <div class="roadmap-num">${idx + 1}</div>
+            <div class="roadmap-title">${step.title}</div>
+            <div class="roadmap-desc">${step.desc}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+}
+
+function sendNoticeToWhatsApp() {
+  const phone = "919891495092";
+  const section = document.getElementById('noticeSectionSelect')?.value || '143_1';
+  const demand = parseFloat(document.getElementById('noticeDemandAmount')?.value) || 0;
+  const days = parseInt(document.getElementById('noticeDaysElapsed')?.value) || 0;
+  const data = noticeDatabase[section] || noticeDatabase['143_1'];
+
+  const text = `Hi CA Pradeep Agarwal & Easy My Taxes litigation desk,%0A%0A*Income Tax Notice Consultation Request:*%0A• Notice Section: *${data.name}*%0A• Demand Amount: ${formatINR(demand)}%0A• Days Elapsed: ${days} days%0A%0AI would like your office to review my notice and draft an official reply on the Income Tax portal.`;
+
+  window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
 }
 
 // --------------------------------------------------------------------------
-// 4. INTERACTIVE GST CALCULATOR
+// 5. INTERACTIVE GST CALCULATOR
 // --------------------------------------------------------------------------
 
 function calculateGST() {
@@ -260,7 +450,7 @@ function calculateGST() {
 }
 
 // --------------------------------------------------------------------------
-// 5. HRA EXEMPTION CALCULATOR (Section 10(13A))
+// 6. HRA EXEMPTION CALCULATOR (Section 10(13A))
 // --------------------------------------------------------------------------
 
 function calculateHRA() {
@@ -303,6 +493,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el) el.addEventListener('input', calculateTax);
   });
 
+  const advTaxInput = document.getElementById('advTaxAnnualAmount');
+  if (advTaxInput) {
+    advTaxInput.addEventListener('input', () => calculateAdvanceTax());
+  }
+
   const adaInputs = ['adaGrossReceipts', 'adaActualExpenses'];
   adaInputs.forEach(id => {
     const el = document.getElementById(id);
@@ -344,4 +539,5 @@ document.addEventListener('DOMContentLoaded', () => {
   scanNotice();
   calculateGST();
   calculateHRA();
+  calculateAdvanceTax();
 });

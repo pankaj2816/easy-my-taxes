@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Easy My Taxes | CA Pradeep Agarwal &amp; Chartered Accountants | Tax Advisory 2026</title>
-  <meta name="description" content="Easy My Taxes, led by CA Pradeep Agarwal (FCA, DISA), is a premier Chartered Accountancy firm providing ITR Filing AY 2026-27, GST Compliance, Startup Incorporation, and Virtual CFO services.">
-  <meta name="keywords" content="Easy My Taxes, CA Pradeep Agarwal, Chartered Accountant, ITR Filing AY 2026-27, Old vs New Tax Regime AY 2026-27, GST Returns, Section 44ADA, Virtual CFO, Income Tax Notice Resolution">
+  <title>Easy My Taxes | CA Pradeep Agarwal &amp; Chartered Accountants | Tax Advisory AY 2026-27</title>
+  <meta name="description" content="Easy My Taxes, led by CA Pradeep Agarwal (FCA, DISA), is a premier Chartered Accountancy firm providing ITR Filing AY 2026-27, GST Compliance, Startup Incorporation, Tax Notice Resolution, and Virtual CFO services.">
+  <meta name="keywords" content="Easy My Taxes, CA Pradeep Agarwal, Chartered Accountant, ITR Filing AY 2026-27, Old vs New Tax Regime AY 2026-27, GST Returns, Section 44ADA, Virtual CFO, Income Tax Notice Resolution, 15CA 15CB">
   <meta name="author" content="Easy My Taxes">
   
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Easy My Taxes | Premier CA &amp; Tax Advisory Services 2026">
+  <meta property="og:title" content="Easy My Taxes | Premier CA &amp; Tax Advisory Services AY 2026-27">
   <meta property="og:description" content="Precision tax filing, statutory audits, GST returns, and corporate compliance for individuals, startups &amp; enterprises.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/logo.svg">
@@ -26,7 +26,7 @@
 <body>
 
   <!-- =========================================================================
-       1. TOP NOTIFICATION BAR (2026 EDITION)
+       1. TOP NOTIFICATION BAR
        ========================================================================= -->
   <div class="top-bar">
     <div class="container top-bar-inner">
@@ -43,15 +43,58 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           <span>easymytaxes@gmail.com</span>
         </a>
-        <span class="top-bar-link" style="color: var(--emerald-400); font-weight: 600;">
-          🕒 Advisory Desk Active
+        <span class="top-bar-link" style="color: var(--emerald-400); font-weight: 700; display: flex; align-items: center; gap: 0.35rem;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--emerald-400);"></span>
+          CA Advisory Desk Online
         </span>
       </div>
     </div>
   </div>
 
   <!-- =========================================================================
-       2. MAIN NAVIGATION HEADER
+       2. LIVE STATUTORY DUE DATE COUNTDOWN BANNER (AY 2026-27)
+       ========================================================================= -->
+  <div class="countdown-banner">
+    <div class="container countdown-inner">
+      <div class="countdown-info">
+        <div class="countdown-pulse-dot"></div>
+        <div>
+          <div class="countdown-title">⏳ Statutory ITR Deadline (AY 2026-27): 31st July 2026</div>
+          <div class="countdown-subtitle">For Salaried Individuals, Consultants &amp; Non-Audit Taxpayers</div>
+        </div>
+      </div>
+
+      <div class="countdown-timer-group">
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdDays">00</div>
+          <div class="countdown-unit">Days</div>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdHours">00</div>
+          <div class="countdown-unit">Hours</div>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdMins">00</div>
+          <div class="countdown-unit">Mins</div>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdSecs">00</div>
+          <div class="countdown-unit">Secs</div>
+        </div>
+
+        <button class="countdown-cta" onclick="openConsultationModal('AY 2026-27 Priority Filing')">
+          <span>File Before Deadline</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       3. MAIN NAVIGATION HEADER
        ========================================================================= -->
   <header class="site-header">
     <div class="container nav-container">
@@ -143,6 +186,12 @@
         </div>
 
         <div class="nav-item">
+          <a href="#how-it-works" class="nav-link">Process</a>
+        </div>
+        <div class="nav-item">
+          <a href="#vs-diy" class="nav-link">Why CA</a>
+        </div>
+        <div class="nav-item">
           <a href="#notice-scanner" class="nav-link">Notice Scanner</a>
         </div>
         <div class="nav-item">
@@ -186,6 +235,8 @@
     </div>
     <div class="mobile-drawer-links">
       <a href="#services" class="mobile-drawer-link">All CA Services</a>
+      <a href="#how-it-works" class="mobile-drawer-link">How We Work (4 Steps)</a>
+      <a href="#vs-diy" class="mobile-drawer-link">Human CA vs DIY Portals</a>
       <a href="#calculators" class="mobile-drawer-link">Tax Calculators (AY 2026-27)</a>
       <a href="#notice-scanner" class="mobile-drawer-link">Notice Diagnostic Scanner</a>
       <a href="#calendar" class="mobile-drawer-link">Compliance Due Dates 2026-27</a>
@@ -208,7 +259,7 @@
 
   <main>
     <!-- =========================================================================
-         3. HERO SECTION (2026 EDITION)
+         4. HERO SECTION
          ========================================================================= -->
     <section class="hero-section">
       <div class="container hero-grid">
@@ -302,7 +353,7 @@
     </section>
 
     <!-- =========================================================================
-         4. TRUST & ICAI COMPLIANCE STRIP
+         5. TRUST & ICAI COMPLIANCE STRIP
          ========================================================================= -->
     <div class="trust-strip">
       <div class="container trust-strip-inner">
@@ -329,16 +380,163 @@
     </div>
 
     <!-- =========================================================================
-         5. COMPREHENSIVE CA SERVICES SECTION
+         6. HOW WE WORK: 4-STEP CLIENT ONBOARDING PROCESS
+         ========================================================================= -->
+    <section id="how-it-works" class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Seamless &amp; Transparent</span>
+          <h2 class="section-title">How We Work With You in 4 Simple Steps</h2>
+          <p class="section-desc">
+            No endless paperwork or confusing jargon. Experience a frictionless, certified Chartered Accountant workflow designed for speed and complete legal safety.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-header-row">
+              <span class="process-step-num">Step 01</span>
+              <div class="process-icon-circle">📂</div>
+            </div>
+            <h3 class="process-card-title">Share Documents Safely</h3>
+            <p class="process-card-desc">
+              Upload your Form 16, bank statements, or broker P&amp;L via WhatsApp or encrypted portal. Backed by 256-bit bank-grade encryption and NDA.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-header-row">
+              <span class="process-step-num">Step 02</span>
+              <div class="process-icon-circle">🔍</div>
+            </div>
+            <h3 class="process-card-title">100% AIS &amp; TIS CA Audit</h3>
+            <p class="process-card-desc">
+              CA Pradeep Agarwal and senior partners reconcile your 26AS, AIS, and foreign assets to uncover hidden tax deductions and eliminate notice triggers.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-header-row">
+              <span class="process-step-num">Step 03</span>
+              <div class="process-icon-circle">📊</div>
+            </div>
+            <h3 class="process-card-title">Draft Review &amp; Optimization</h3>
+            <p class="process-card-desc">
+              We present a clear computation sheet comparing Old vs New Regimes, showing your exact refund or minimal payable tax before final submission.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-header-row">
+              <span class="process-step-num">Step 04</span>
+              <div class="process-icon-circle">🛡️</div>
+            </div>
+            <h3 class="process-card-title">E-Filing &amp; Year-Round Shield</h3>
+            <p class="process-card-desc">
+              Instant ITR-V e-verification receipt provided within 24–48 hours, along with 365 days of active notice defense and year-round CA advisory.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. "HUMAN CA VS DIY BOT PORTALS" COMPARISON MATRIX
+         ========================================================================= -->
+    <section id="vs-diy" class="section-py bg-slate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag amber">Why Choose A Chartered Accountant</span>
+          <h2 class="section-title">Human CA Expertise vs Generic DIY Filing Apps</h2>
+          <p class="section-desc">
+            See why high-earning professionals, startup founders, and investors trust **CA Pradeep Agarwal** over automated bot portals (like ClearTax or Quicko).
+          </p>
+        </div>
+
+        <div class="comparison-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="col-feature">Key Taxation &amp; Compliance Pillar</th>
+                <th class="col-ca">
+                  Easy My Taxes (CA Pradeep Agarwal)
+                  <span class="comp-badge-pro">ICAI Certified</span>
+                </th>
+                <th class="col-diy">Generic DIY Filing Apps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Annual Information Statement (AIS) Reconciliation</strong></td>
+                <td class="col-ca-cell">
+                  <span class="comp-check">✓ 100% Line-by-line manual audit by a Chartered Accountant</span>
+                </td>
+                <td class="col-diy-cell">
+                  <span class="comp-cross">✕ Auto-pulled blindly by bots (causes mismatches)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Income Tax Notice Defense (Sec 143/139/148)</strong></td>
+                <td class="col-ca-cell">
+                  <span class="comp-check">✓ Full legal drafting &amp; representation before IT Dept included</span>
+                </td>
+                <td class="col-diy-cell">
+                  <span class="comp-cross">✕ Zero notice defense (leaves you to fight penalties alone)</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Complex Assets (ESOPs, F&amp;O Trading, Crypto, NRI)</strong></td>
+                <td class="col-ca-cell">
+                  <span class="comp-check">✓ Bespoke loss carry-forward, DTAA, and Schedule FA structuring</span>
+                </td>
+                <td class="col-diy-cell">
+                  <span class="comp-cross">✕ Rigid templates prone to severe misclassification</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Direct Partner-Level Support</strong></td>
+                <td class="col-ca-cell">
+                  <span class="comp-check">✓ 1-on-1 Phone &amp; WhatsApp access to CA Pradeep &amp; team</span>
+                </td>
+                <td class="col-diy-cell">
+                  <span class="comp-cross">✕ Automated chatbots and delayed ticketing queues</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Proactive Year-Round Tax Planning</strong></td>
+                <td class="col-ca-cell">
+                  <span class="comp-check">✓ Proactive advance tax schedules &amp; legal restructuring</span>
+                </td>
+                <td class="col-diy-cell">
+                  <span class="comp-cross">✕ Only available for 2 weeks during July rush</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. COMPREHENSIVE CA SERVICES SECTION WITH LIVE SEARCH
          ========================================================================= -->
     <section id="services" class="section-py bg-white">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Chartered Accountant Services</span>
+          <span class="section-tag">Chartered Accountant Practice</span>
           <h2 class="section-title">End-to-End Financial, Tax &amp; Corporate Solutions</h2>
           <p class="section-desc">
-            Explore our specialized practice areas for 2026. Every filing is individually audited by <strong>CA Pradeep Agarwal</strong> and team to ensure optimal deductions and zero notice risk.
+            Explore our specialized practice areas for 2026. Every filing is individually audited by <strong>CA Pradeep Agarwal</strong> and senior specialists.
           </p>
+        </div>
+
+        <!-- Live Services Search Bar -->
+        <div class="search-bar-wrap">
+          <svg class="search-icon-prefix" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="servicesSearchInput" class="search-input-field" placeholder="Search services (e.g. crypto, 15CA, 44ADA, GST, notice, startup)...">
         </div>
 
         <!-- Filter Nav -->
@@ -360,7 +558,7 @@
     </section>
 
     <!-- =========================================================================
-         6. INTERACTIVE FINANCIAL CALCULATORS SUITE (AY 2026-27 UPDATED)
+         9. INTERACTIVE FINANCIAL CALCULATORS SUITE (AY 2026-27 UPDATED)
          ========================================================================= -->
     <section id="calculators" class="section-py bg-slate">
       <div class="container">
@@ -377,6 +575,9 @@
           <div class="calc-tab-nav">
             <button class="calc-tab-btn active" data-target="calcOldNewPane">
               ⚡ Old vs New Tax (AY 2026-27)
+            </button>
+            <button class="calc-tab-btn" data-target="calcAdvTaxPane">
+              📅 Advance Tax Schedule 2026-27
             </button>
             <button class="calc-tab-btn" data-target="calcAdaPane">
               💼 Freelancer 44ADA vs Normal
@@ -398,6 +599,21 @@
               <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
                 Annual Income &amp; Deductions (AY 2026-27)
               </h3>
+
+              <!-- Quick Salary Preset Chips -->
+              <div style="margin-top: 0.75rem;">
+                <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase;">
+                  ⚡ Quick Test Salary Presets:
+                </label>
+                <div class="salary-presets-row">
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(800000, this)">₹8 Lakhs</button>
+                  <button type="button" class="preset-chip active" onclick="setSalaryPreset(1250000, this)">₹12.5 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(1800000, this)">₹18 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(2500000, this)">₹25 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(5000000, this)">₹50 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(10000000, this)">₹1 Crore</button>
+                </div>
+              </div>
 
               <div class="calc-input-group">
                 <div class="calc-label-row">
@@ -520,16 +736,95 @@
                     <td id="resOldDed">₹0</td>
                   </tr>
                 </table>
+
+                <!-- WhatsApp Calculation Export Card -->
+                <div class="whatsapp-export-card">
+                  <div>
+                    <strong style="font-size: 0.875rem; color: var(--primary-950); display: block;">📲 Need CA Pradeep to Review This?</strong>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Send these exact calculations to WhatsApp for free review.</span>
+                  </div>
+                  <button class="btn btn-whatsapp btn-sm" onclick="sendTaxSummaryToWhatsApp()">
+                    Send Calculation to WhatsApp
+                  </button>
+                </div>
               </div>
 
-              <button class="btn btn-primary" onclick="openConsultationModal('Tax Optimization Plan AY 2026-27')">
+              <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openConsultationModal('Tax Optimization Plan AY 2026-27')">
                 Have CA Pradeep Optimize &amp; File This &rarr;
               </button>
             </div>
           </div>
         </div>
 
-        <!-- PANE 2: FREELANCER 44ADA CALCULATOR -->
+        <!-- PANE 2: ADVANCE TAX SCHEDULE 2026-27 -->
+        <div id="calcAdvTaxPane" class="calc-pane">
+          <div class="calc-grid">
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                Advance Tax Instalment Calculator (FY 2026-27)
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">
+                Required if your net annual income tax liability exceeds ₹10,000. Avoid 1% monthly penal interest under Section 234B &amp; 234C.
+              </p>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="advTaxAnnualAmount">Estimated Total Annual Tax Liability (FY 2026-27)</label>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="advTaxAnnualAmount" class="calc-field" value="120000" step="5000">
+                </div>
+              </div>
+
+              <div style="background: var(--surface-100); border-radius: var(--radius-md); padding: 1.25rem; margin-top: 1.25rem;">
+                <h4 style="font-size: 0.9375rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.5rem;">⚠️ Section 234C Penalty Rule</h4>
+                <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;">
+                  Failure to pay quarterly installments on or before statutory due dates triggers mandatory 1% simple interest per month on the shortfall amount.
+                </p>
+              </div>
+            </div>
+
+            <!-- Advance Tax Results -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1rem;">
+                  Quarterly Payment Schedule (FY 2026-27)
+                </h3>
+
+                <div class="adv-tax-grid">
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">1st Installment (15%)</div>
+                    <div class="adv-tax-amount" id="advResQ1">₹18,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th June 2026</div>
+                  </div>
+
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">2nd Installment (45%)</div>
+                    <div class="adv-tax-amount" id="advResQ2">₹54,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th Sept 2026</div>
+                  </div>
+
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">3rd Installment (75%)</div>
+                    <div class="adv-tax-amount" id="advResQ3">₹90,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th Dec 2026</div>
+                  </div>
+
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">4th Installment (100%)</div>
+                    <div class="adv-tax-amount" id="advResQ4">₹1,20,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th Mar 2027</div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" style="margin-top: 1.25rem;" onclick="openConsultationModal('Advance Tax Schedule Advisory')">
+                Have CA Pradeep Manage Advance Tax &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 3: FREELANCER 44ADA CALCULATOR -->
         <div id="calcAdaPane" class="calc-pane">
           <div class="calc-grid">
             <div class="calc-inputs-col">
@@ -603,7 +898,7 @@
           </div>
         </div>
 
-        <!-- PANE 3: GST CALCULATOR -->
+        <!-- PANE 4: GST CALCULATOR -->
         <div id="calcGstPane" class="calc-pane">
           <div class="calc-grid">
             <div class="calc-inputs-col">
@@ -686,7 +981,7 @@
           </div>
         </div>
 
-        <!-- PANE 4: HRA EXEMPTION -->
+        <!-- PANE 5: HRA EXEMPTION -->
         <div id="calcHraPane" class="calc-pane">
           <div class="calc-grid">
             <div class="calc-inputs-col">
@@ -786,7 +1081,7 @@
     </section>
 
     <!-- =========================================================================
-         7. NOTICE DIAGNOSTIC & RISK SCANNER ("SCAN MY NOTICE")
+         10. NOTICE DIAGNOSTIC & RISK SCANNER WITH 4-STEP RESOLUTION ROADMAP
          ========================================================================= -->
     <section id="notice-scanner" class="section-py bg-white">
       <div class="container">
@@ -794,7 +1089,7 @@
           <span class="section-tag amber">Instant Risk Assessment</span>
           <h2 class="section-title">Received a Tax Notice? Scan Severity in 30 Seconds</h2>
           <p class="section-desc">
-            Diagnose your Income Tax Notice under Section 143(1), 139(9), 148, or 156. Understand the legal implications before responding.
+            Diagnose your Income Tax Notice under Section 143(1), 143(1)(a), 139(9), 148, 148A, 156, or 68. Understand legal implications and see our exact CA resolution roadmap.
           </p>
         </div>
 
@@ -804,11 +1099,13 @@
               <div class="form-group">
                 <label class="form-label" for="noticeSectionSelect">Select Income Tax Notice Section</label>
                 <select id="noticeSectionSelect" class="form-control">
-                  <option value="143_1">Section 143(1) - Intimation of Tax Demand or TDS Mismatch</option>
-                  <option value="139_9">Section 139(9) - Notice for Defective Return</option>
+                  <option value="143_1">Section 143(1) - Intimation of Tax Demand or AIS/TDS Mismatch</option>
+                  <option value="143_1_a">Section 143(1)(a) - Proposed Adjustment Notice (CPC Variance)</option>
+                  <option value="139_9">Section 139(9) - Notice for Defective Return (15 Days Deadline)</option>
+                  <option value="148A">Section 148A - Show Cause Notice before Reassessment</option>
                   <option value="148">Section 148 - Income Escaping Assessment / Reopening</option>
-                  <option value="156">Section 156 - Notice of Demand (Tax Payable)</option>
-                  <option value="144">Section 144 - Best Judgment Assessment</option>
+                  <option value="156">Section 156 - Notice of Demand (Tax &amp; 234 Interest Payable)</option>
+                  <option value="68">Section 68 / 69 - Unexplained Cash Deposits or Investments (78% Tax)</option>
                 </select>
               </div>
 
@@ -822,9 +1119,11 @@
                 <input type="number" id="noticeDaysElapsed" class="form-control" value="8" min="1" max="90">
               </div>
 
-              <p style="font-size: 0.8125rem; color: var(--text-subtle);">
-                ⏱️ Most notices have a strict 15–30 day deadline. Delayed responses lead to penalties under Sec 270A.
-              </p>
+              <div style="background: rgba(220, 38, 38, 0.06); border: 1px solid rgba(220, 38, 38, 0.2); border-radius: var(--radius-md); padding: 0.85rem;">
+                <p style="font-size: 0.8125rem; color: var(--danger-600); font-weight: 600; margin: 0;">
+                  ⏱️ Most notices carry a strict 15–30 day limitation period. Delayed replies lead to bank accounts freeze and 200% penalties under Section 270A.
+                </p>
+              </div>
             </div>
 
             <!-- Risk Meter Output -->
@@ -837,15 +1136,34 @@
               <p id="noticeResAnalysis" style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
                 Analyzing notice parameters...
               </p>
-              <div style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 1.5rem;">
-                <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary-900); margin-bottom: 0.2rem;">Recommended CA Action:</div>
+              <div style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 1.25rem;">
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary-900); margin-bottom: 0.2rem;">Recommended CA Legal Action:</div>
                 <div id="noticeResAdvice" style="font-size: 0.8125rem; color: var(--emerald-700); font-weight: 600;">
                   Draft formal legal reply on IT Portal.
                 </div>
               </div>
-              <button class="btn btn-primary" style="width: 100%;" onclick="openConsultationModal('Tax Notice Scrutiny Resolution - CA Pradeep Agarwal')">
-                Have CA Pradeep Agarwal Draft Reply &rarr;
-              </button>
+
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button class="btn btn-whatsapp btn-sm" style="flex: 1;" onclick="sendNoticeToWhatsApp()">
+                  Send Notice on WhatsApp
+                </button>
+                <button class="btn btn-primary btn-sm" style="flex: 1;" onclick="openConsultationModal('Tax Notice Scrutiny Resolution - CA Pradeep Agarwal')">
+                  Draft Legal Reply &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic 4-Step Resolution Roadmap -->
+          <div class="resolution-roadmap-box">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.25rem;">
+              🗺️ CA Pradeep Agarwal's 4-Step Notice Resolution Roadmap
+            </h4>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">
+              Our proven legal workflow to neutralize demands and protect you against tax penalties.
+            </p>
+            <div id="noticeRoadmapContainer">
+              <!-- Rendered dynamically by calculators.js -->
             </div>
           </div>
         </div>
@@ -853,7 +1171,7 @@
     </section>
 
     <!-- =========================================================================
-         8. STATUTORY DUE DATES & COMPLIANCE CALENDAR (2026–2027)
+         11. STATUTORY DUE DATES & COMPLIANCE CALENDAR (2026–2027) WITH SEARCH
          ========================================================================= -->
     <section id="calendar" class="section-py bg-slate">
       <div class="container">
@@ -875,12 +1193,17 @@
               </div>
             </div>
 
+            <!-- Calendar Search Bar -->
+            <div style="width: 100%; max-width: 360px;">
+              <input type="text" id="calendarSearchInput" class="form-control" style="font-size: 0.875rem;" placeholder="🔍 Filter due dates (e.g. GST, ITR, TDS, ROC)...">
+            </div>
+
             <!-- Category Filter Pills -->
             <div class="calendar-category-filters">
               <button class="cal-pill active" data-cat="all">All Deadlines</button>
               <button class="cal-pill" data-cat="itr">Income Tax (ITR 2026)</button>
-              <button class="cal-pill" data-cat="gst">GST Returns 2026</button>
               <button class="cal-pill" data-cat="advance-tax">Advance Tax 2026-27</button>
+              <button class="cal-pill" data-cat="gst">GST Returns 2026</button>
               <button class="cal-pill" data-cat="tds">TDS / TCS</button>
               <button class="cal-pill" data-cat="roc">MCA / ROC 2026</button>
             </div>
@@ -907,7 +1230,7 @@
     </section>
 
     <!-- =========================================================================
-         9. INTERACTIVE DOCUMENT CHECKLIST GENERATOR (2026 EDITION)
+         12. INTERACTIVE DOCUMENT CHECKLIST GENERATOR
          ========================================================================= -->
     <section id="checklist" class="section-py bg-white">
       <div class="container">
@@ -951,7 +1274,7 @@
     </section>
 
     <!-- =========================================================================
-         10. TRANSPARENT PRICING PLANS (2026 EDITION)
+         13. TRANSPARENT PRICING PLANS
          ========================================================================= -->
     <section id="pricing" class="section-py bg-slate">
       <div class="container">
@@ -1029,7 +1352,7 @@
               </div>
               <div class="pricing-feature-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Loss Carry Forward Setup</span>
+                <span>Loss Carry Forward Setup (8 Years)</span>
               </div>
               <div class="pricing-feature-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1121,7 +1444,7 @@
     </section>
 
     <!-- =========================================================================
-         11. MEET THE LEAD CHARTERED ACCOUNTANT: CA PRADEEP AGARWAL
+         14. MEET THE LEAD CHARTERED ACCOUNTANT: CA PRADEEP AGARWAL
          ========================================================================= -->
     <section id="about-ca" class="section-py bg-white">
       <div class="container">
@@ -1134,14 +1457,8 @@
         </div>
 
         <div class="ca-profile-card">
-          <!-- Photo Container (Ready for client's picture upload) -->
+          <!-- Photo Container -->
           <div class="ca-photo-container">
-            <!-- 
-              NOTE FOR CLIENT / USER:
-              To update with the actual photo of CA Pradeep Agarwal:
-              Place your image in the 'assets/' folder named 'ca-pradeep-agarwal.jpg' (or .png)
-              and update the src attribute below if needed.
-            -->
             <img 
               id="caProfilePhoto" 
               src="assets/ca-pradeep-agarwal.svg" 
@@ -1216,72 +1533,38 @@
     </section>
 
     <!-- =========================================================================
-         12. CLIENT TESTIMONIALS & REVIEWS
+         15. FILTERABLE CLIENT REVIEWS & VERIFIED CASE STUDIES
          ========================================================================= -->
     <section id="testimonials" class="section-py bg-slate">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Client Trust &amp; Success 2026</span>
-          <h2 class="section-title">Trusted by 18,000+ Individuals &amp; Businesses</h2>
+          <h2 class="section-title">Trusted by 18,000+ Individuals &amp; Growing Businesses</h2>
           <p class="section-desc">
-            See what salaried executives, tech startup founders, and NRIs say about our speed, precision, and tax savings under CA Pradeep Agarwal's guidance.
+            Real outcomes achieved for salaried tech executives, F&amp;O traders, startup founders, and NRIs under CA Pradeep Agarwal's direct guidance.
           </p>
         </div>
 
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">
-                "I had complicated stock options (ESOPs) from a US tech employer and crypto gains. Easy My Taxes assigned a senior CA under CA Pradeep who reconciled my Schedule FA and saved me over ₹1.8 Lakhs in taxes legally. Seamless experience!"
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">RG</div>
-              <div class="author-meta">
-                <h5>Rahul Gambhir</h5>
-                <p>Principal Software Engineer, Microsoft</p>
-              </div>
-            </div>
-          </div>
+        <!-- Filter Nav for Testimonials -->
+        <div class="testimonial-filter-nav">
+          <button class="test-filter-btn active" data-filter="all">All Success Stories</button>
+          <button class="test-filter-btn" data-filter="salaried">Salaried Tech (ESOPs)</button>
+          <button class="test-filter-btn" data-filter="startup">Startup &amp; Virtual CFO</button>
+          <button class="test-filter-btn" data-filter="nri">NRI Repatriation</button>
+          <button class="test-filter-btn" data-filter="trader">F&amp;O &amp; Crypto Traders</button>
+          <button class="test-filter-btn" data-filter="notice">Notice Resolution</button>
+          <button class="test-filter-btn" data-filter="freelancer">Freelancers (44ADA)</button>
+        </div>
 
-          <div class="testimonial-card">
-            <div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">
-                "Incorporating our AI startup and obtaining DPIIT 80-IAC 100% tax exemption was completed effortlessly. Their Virtual CFO package takes care of our monthly GST, TDS, and investor MIS reporting without a hitch."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background-color: var(--emerald-600);">SM</div>
-              <div class="author-meta">
-                <h5>Sneha Menon</h5>
-                <p>Co-Founder &amp; CEO, NeuralStack Labs</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">
-                "As an NRI living in Dubai with rental income and ancestral property sales in Bangalore, filing 15CA/CB was daunting. CA Pradeep Agarwal managed the entire repatriation certificate smoothly and quickly."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background-color: var(--amber-600);">VK</div>
-              <div class="author-meta">
-                <h5>Vikram Kulkarni</h5>
-                <p>Non-Resident Investor (Dubai, UAE)</p>
-              </div>
-            </div>
-          </div>
+        <!-- Dynamic Testimonials Grid -->
+        <div id="testimonialsGridContainer" class="testimonials-grid">
+          <!-- Populated dynamically by app.js -->
         </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         13. FREQUENTLY ASKED QUESTIONS (FAQ - AY 2026-27)
+         16. FREQUENTLY ASKED QUESTIONS (FAQ - AY 2026-27)
          ========================================================================= -->
     <section id="faq" class="section-py bg-white">
       <div class="container">
@@ -1348,7 +1631,7 @@
     </section>
 
     <!-- =========================================================================
-         14. CONTACT & BOOKING FORM SECTION
+         17. CONTACT & BOOKING FORM SECTION
          ========================================================================= -->
     <section id="contact" class="section-py bg-dark">
       <div class="container">
@@ -1404,7 +1687,7 @@
               Leave your details and CA Pradeep Agarwal's office will connect with you.
             </p>
 
-            <form onsubmit="handleConsultationSubmit(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+            <form id="contactDirectForm" onsubmit="handleConsultationSubmit(event)" style="display: flex; flex-direction: column; gap: 1rem;">
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                 <div class="form-group">
                   <label class="form-label" for="contactFullName">Full Name *</label>
@@ -1450,7 +1733,7 @@
   </main>
 
   <!-- =========================================================================
-       15. FOOTER & LEGAL COMPLIANCE
+       18. FOOTER & LEGAL COMPLIANCE
        ========================================================================= -->
   <footer class="site-footer">
     <div class="container">
@@ -1490,6 +1773,7 @@
           <h4>Tools &amp; Resources 2026</h4>
           <div class="footer-links">
             <a href="#calculators">Old vs New Tax Calculator (AY 2026-27)</a>
+            <a href="#calculators">Advance Tax Schedule Calculator</a>
             <a href="#calculators">Freelancer 44ADA Calculator</a>
             <a href="#notice-scanner">Notice Diagnostic Scanner</a>
             <a href="#calculators">GST Forward/Reverse Calc</a>
@@ -1547,7 +1831,7 @@
   </footer>
 
   <!-- =========================================================================
-       16. FLOATING WHATSAPP BUTTON
+       19. FLOATING WHATSAPP BUTTON
        ========================================================================= -->
   <a href="javascript:void(0)" class="floating-whatsapp" onclick="openWhatsAppInquiry('Consultation with CA Pradeep Agarwal')" aria-label="Chat with CA on WhatsApp">
     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
@@ -1556,7 +1840,27 @@
   </a>
 
   <!-- =========================================================================
-       17. SERVICE DETAIL MODAL DRAWER
+       20. PERSISTENT MOBILE BOTTOM ACTION BAR
+       ========================================================================= -->
+  <div class="mobile-bottom-bar" aria-label="Mobile Quick Action Bar">
+    <a href="tel:+919891495092" class="mobile-bar-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>Call CA</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-bar-btn highlight-green" onclick="openWhatsAppInquiry('AY 2026-27 Client Advisory')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.37C9.37 7.37 9.1 7.43 8.88 7.68C8.65 7.92 8.02 8.51 8.02 9.73C8.02 10.95 8.91 12.12 9.03 12.28C9.15 12.45 10.77 14.94 13.25 16C13.84 16.26 14.3 16.41 14.66 16.53C15.26 16.72 15.8 16.69 16.23 16.63C16.71 16.56 17.71 16.02 17.92 15.43C18.13 14.84 18.13 14.34 18.07 14.23C18.01 14.12 17.85 14.06 17.6 13.94C17.36 13.82 16.14 13.22 15.91 13.14C15.69 13.06 15.53 13.02 15.36 13.26C15.19 13.51 14.72 14.06 14.57 14.23C14.43 14.4 14.28 14.42 14.04 14.3C13.8 14.18 12.78 13.85 11.58 12.77C10.64 11.93 10.01 10.9 9.89 10.68C9.76 10.47 9.87 10.35 10 10.23C10.11 10.12 10.24 9.94 10.36 9.8C10.49 9.66 10.53 9.55 10.61 9.39C10.69 9.22 10.65 9.08 10.59 8.96C10.53 8.83 10.04 7.63 9.84 7.13C9.64 6.64 9.44 6.71 9.29 6.71C9.15 6.71 8.99 6.71 8.83 6.71L9.53 7.37Z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-bar-btn primary-cta" onclick="openConsultationModal('Mobile Floating Booking - AY 2026-27')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Book CA</span>
+    </a>
+  </div>
+
+  <!-- =========================================================================
+       21. SERVICE DETAIL MODAL DRAWER
        ========================================================================= -->
   <div class="modal-backdrop" id="serviceDetailModal">
     <div class="modal-card">
@@ -1569,7 +1873,7 @@
   </div>
 
   <!-- =========================================================================
-       18. CONSULTATION BOOKING MODAL
+       22. CONSULTATION BOOKING MODAL
        ========================================================================= -->
   <div class="modal-backdrop" id="consultationModal">
     <div class="modal-card">

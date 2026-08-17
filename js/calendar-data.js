@@ -169,14 +169,42 @@ function getGoogleCalendarUrl(item) {
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${d}T090000Z/${d}T180000Z&details=${details}&location=${location}`;
 }
 
+let activeCalCategory = 'all';
+let activeCalSearch = '';
+
 // Render calendar items into the table
-function renderComplianceCalendar(filter = 'all') {
+function renderComplianceCalendar(filter = 'all', searchQuery = '') {
   const container = document.getElementById('complianceCalendarBody');
   if (!container) return;
 
-  const filtered = filter === 'all' 
-    ? complianceCalendarData 
-    : complianceCalendarData.filter(item => item.category === filter);
+  activeCalCategory = filter;
+  activeCalSearch = searchQuery.toLowerCase().trim();
+
+  let filtered = complianceCalendarData;
+
+  if (activeCalCategory !== 'all') {
+    filtered = filtered.filter(item => item.category === activeCalCategory);
+  }
+
+  if (activeCalSearch) {
+    filtered = filtered.filter(item => 
+      item.title.toLowerCase().includes(activeCalSearch) ||
+      item.form.toLowerCase().includes(activeCalSearch) ||
+      item.description.toLowerCase().includes(activeCalSearch) ||
+      item.period.toLowerCase().includes(activeCalSearch)
+    );
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <tr>
+        <td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+          🔍 No compliance deadlines found matching "<strong>${searchQuery}</strong>". Try searching for "ITR", "GST", "TDS", or "ROC".
+        </td>
+      </tr>
+    `;
+    return;
+  }
 
   container.innerHTML = filtered.map(item => {
     const d = new Date(item.dueDate);
@@ -237,9 +265,9 @@ function renderComplianceCalendar(filter = 'all') {
   }).join('');
 }
 
-// Attach calendar filters
+// Attach calendar filters and search
 document.addEventListener('DOMContentLoaded', () => {
-  renderComplianceCalendar('all');
+  renderComplianceCalendar('all', '');
 
   const calPills = document.querySelectorAll('.cal-pill');
   calPills.forEach(pill => {
@@ -247,7 +275,14 @@ document.addEventListener('DOMContentLoaded', () => {
       calPills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       const cat = pill.getAttribute('data-cat') || 'all';
-      renderComplianceCalendar(cat);
+      renderComplianceCalendar(cat, activeCalSearch);
     });
   });
+
+  const searchInput = document.getElementById('calendarSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      renderComplianceCalendar(activeCalCategory, e.target.value);
+    });
+  }
 });

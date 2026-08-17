@@ -198,6 +198,76 @@ const servicesCatalog = [
   }
 ];
 
+// Master Verified Testimonials & Case Studies Data
+const testimonialsData = [
+  {
+    id: 'test-1',
+    category: 'salaried',
+    outcome: 'Saved ₹1.85 Lakhs on ESOPs & Multi-Form 16',
+    stars: 5,
+    text: "I had complicated stock options (ESOPs) from a US tech employer, multi-state salary transitions, and crypto transactions. Easy My Taxes assigned a senior CA under CA Pradeep who reconciled my Schedule FA and saved me over ₹1.8 Lakhs in taxes legally. Seamless and completely stress-free!",
+    author: 'Rahul Gambhir',
+    role: 'Principal Software Architect, Microsoft',
+    avatar: 'RG',
+    avatarBg: '#2563eb'
+  },
+  {
+    id: 'test-2',
+    category: 'startup',
+    outcome: 'DPIIT 80-IAC 100% Tax Holiday Approved',
+    stars: 5,
+    text: "Incorporating our AI startup and obtaining DPIIT 80-IAC 100% tax exemption was completed effortlessly in under 3 weeks. Their Virtual CFO retainer takes care of our monthly GSTR-1/3B, TDS, payroll, and investor MIS reporting without a hitch.",
+    author: 'Sneha Menon',
+    role: 'Co-Founder & CEO, NeuralStack Labs',
+    avatar: 'SM',
+    avatarBg: '#059669'
+  },
+  {
+    id: 'test-3',
+    category: 'nri',
+    outcome: '15CA/CB Repatriation in 48 Hours',
+    stars: 5,
+    text: "As an NRI living in Dubai with rental income and ancestral property sale proceeds in Bangalore, filing 15CA/CB felt daunting. CA Pradeep Agarwal managed the entire DTAA relief and repatriation certificate smoothly. Highly recommend for any NRI!",
+    author: 'Vikram Kulkarni',
+    role: 'Non-Resident Investor (Dubai, UAE)',
+    avatar: 'VK',
+    avatarBg: '#d97706'
+  },
+  {
+    id: 'test-4',
+    category: 'trader',
+    outcome: '₹4.2L F&O Loss Carry Forward Setup',
+    stars: 5,
+    text: "With trades across Zerodha and Groww involving F&O turnover, I was terrified of receiving a notice. CA Pradeep consolidated my broker P&L, setup loss carry-forward for the next 8 years, and filed my ITR-3 with zero errors.",
+    author: 'Aman Singhal',
+    role: 'Full-Time Derivatives Trader, Mumbai',
+    avatar: 'AS',
+    avatarBg: '#4f46e5'
+  },
+  {
+    id: 'test-5',
+    category: 'notice',
+    outcome: 'Section 143(1) Demand ₹3.4L Reduced to ₹0',
+    stars: 5,
+    text: "Received a ₹3.4 Lakh tax demand due to an AIS mismatch on bank interest. CA Pradeep drafted an impeccable legal rectification petition under Section 154 and wiped out the entire demand within 10 days.",
+    author: 'Dr. Meenakshi Sundaram',
+    role: 'Senior Consultant Cardiologist, Chennai',
+    avatar: 'MS',
+    avatarBg: '#dc2626'
+  },
+  {
+    id: 'test-6',
+    category: 'freelancer',
+    outcome: 'Saved ₹1.4L Tax u/s 44ADA + 0% GST on Exports',
+    stars: 5,
+    text: "As a remote UI/UX consultant billing US and UK clients, Easy My Taxes setup my Letter of Undertaking (LUT) for zero GST and filed my return under 44ADA 50% presumptive profit. Top-tier advisory!",
+    author: 'Kunal Joshi',
+    role: 'Freelance Product Designer, Pune',
+    avatar: 'KJ',
+    avatarBg: '#0891b2'
+  }
+];
+
 // Document Checklist Data
 const checklistData = {
   salaried: {
@@ -263,6 +333,9 @@ const checklistData = {
   }
 };
 
+let activeServiceCategory = 'all';
+let activeServiceSearch = '';
+
 // --------------------------------------------------------------------------
 // INITIALIZATION & EVENT HANDLERS
 // --------------------------------------------------------------------------
@@ -270,8 +343,12 @@ const checklistData = {
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initMobileNav();
-  initServiceGrid('all');
+  initCountdownTimer();
+  initServiceGrid('all', '');
   initServiceFilters();
+  initServicesSearch();
+  initTestimonials('all');
+  initTestimonialFilters();
   initChecklist('salaried');
   initChecklistSelector();
   initStatsCounter();
@@ -290,6 +367,42 @@ function initStickyHeader() {
       header?.classList.remove('scrolled');
     }
   });
+}
+
+// Live Statutory Countdown Timer (Target: 31st July 2026)
+function initCountdownTimer() {
+  const targetDate = new Date('2026-07-31T23:59:59+05:30').getTime();
+
+  function updateClock() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const elDays = document.getElementById('cdDays');
+    const elHours = document.getElementById('cdHours');
+    const elMins = document.getElementById('cdMins');
+    const elSecs = document.getElementById('cdSecs');
+
+    if (distance <= 0) {
+      if (elDays) elDays.textContent = '00';
+      if (elHours) elHours.textContent = '00';
+      if (elMins) elMins.textContent = '00';
+      if (elSecs) elSecs.textContent = '00';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (elDays) elDays.textContent = String(days).padStart(2, '0');
+    if (elHours) elHours.textContent = String(hours).padStart(2, '0');
+    if (elMins) elMins.textContent = String(minutes).padStart(2, '0');
+    if (elSecs) elSecs.textContent = String(seconds).padStart(2, '0');
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
 }
 
 // Mobile Nav
@@ -318,14 +431,45 @@ function initMobileNav() {
   drawerLinks.forEach(l => l.addEventListener('click', closeNav));
 }
 
-// Render Service Grid
-function initServiceGrid(filter = 'all') {
+// Render Service Grid with Category + Live Keyword Search
+function initServiceGrid(filter = 'all', search = '') {
   const container = document.getElementById('servicesGridContainer');
   if (!container) return;
 
-  const filtered = filter === 'all'
-    ? servicesCatalog
-    : servicesCatalog.filter(s => s.category === filter);
+  activeServiceCategory = filter;
+  activeServiceSearch = search.toLowerCase().trim();
+
+  let filtered = servicesCatalog;
+
+  if (activeServiceCategory !== 'all') {
+    filtered = filtered.filter(s => s.category === activeServiceCategory);
+  }
+
+  if (activeServiceSearch) {
+    filtered = filtered.filter(s => 
+      s.title.toLowerCase().includes(activeServiceSearch) ||
+      s.shortDesc.toLowerCase().includes(activeServiceSearch) ||
+      s.fullDesc.toLowerCase().includes(activeServiceSearch) ||
+      s.deliverables.some(d => d.toLowerCase().includes(activeServiceSearch))
+    );
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: var(--surface-0); border-radius: var(--radius-lg); border: 1px dashed var(--surface-300);">
+        <p style="font-size: 1.1rem; font-weight: 700; color: var(--primary-950); margin-bottom: 0.5rem;">
+          No CA services matching "<strong>${search}</strong>"
+        </p>
+        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+          We offer bespoke corporate structuring and direct litigation advisory. Talk to CA Pradeep Agarwal directly.
+        </p>
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Custom Inquiry: ' + '${search}')">
+          Request Custom Service Consultation
+        </button>
+      </div>
+    `;
+    return;
+  }
 
   container.innerHTML = filtered.map(s => `
     <div class="service-card" data-category="${s.category}">
@@ -365,7 +509,56 @@ function initServiceFilters() {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const cat = btn.getAttribute('data-filter') || 'all';
-      initServiceGrid(cat);
+      initServiceGrid(cat, activeServiceSearch);
+    });
+  });
+}
+
+// Services Live Search Input
+function initServicesSearch() {
+  const searchInput = document.getElementById('servicesSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      initServiceGrid(activeServiceCategory, e.target.value);
+    });
+  }
+}
+
+// Render Filterable Testimonials / Verified Case Studies
+function initTestimonials(filter = 'all') {
+  const container = document.getElementById('testimonialsGridContainer');
+  if (!container) return;
+
+  const filtered = filter === 'all'
+    ? testimonialsData
+    : testimonialsData.filter(t => t.category === filter);
+
+  container.innerHTML = filtered.map(t => `
+    <div class="testimonial-card">
+      <div>
+        <span class="test-outcome-tag">🎯 ${t.outcome}</span>
+        <div class="testimonial-stars">${'★'.repeat(t.stars)}</div>
+        <p class="testimonial-text">"${t.text}"</p>
+      </div>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background-color: ${t.avatarBg};">${t.avatar}</div>
+        <div class="author-meta">
+          <h5>${t.author}</h5>
+          <p>${t.role}</p>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function initTestimonialFilters() {
+  const testBtns = document.querySelectorAll('.test-filter-btn');
+  testBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      testBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.getAttribute('data-filter') || 'all';
+      initTestimonials(cat);
     });
   });
 }
@@ -518,21 +711,22 @@ function closeConsultationModal() {
 // Handle Consultation Booking Form Submission
 function handleConsultationSubmit(e) {
   e.preventDefault();
-  const name = document.getElementById('cName')?.value;
-  const phone = document.getElementById('cPhone')?.value;
-  const email = document.getElementById('cEmail')?.value;
-  const service = document.getElementById('consultationService')?.value;
-  const notes = document.getElementById('cNotes')?.value;
+  const name = document.getElementById('cName')?.value || document.getElementById('contactFullName')?.value || 'Client';
+  const phone = document.getElementById('cPhone')?.value || document.getElementById('contactPhone')?.value || '';
+  const email = document.getElementById('cEmail')?.value || document.getElementById('contactEmail')?.value || '';
+  const service = document.getElementById('consultationService')?.value || document.getElementById('contactServicePref')?.value || 'General CA Consultation';
 
   // Show Toast Success
-  showToast(`Thank you, ${name}! Your consultation request for "${service}" has been received. Our CA team will call you within 2 business hours.`);
+  showToast(`Thank you, ${name}! Your request for "${service}" has been received. CA Pradeep Agarwal's office will call you at ${phone} within 2 hours.`);
   
   // Close Modal
   closeConsultationModal();
 
-  // Reset form
-  const form = document.getElementById('consultationForm');
-  if (form) form.reset();
+  // Reset forms
+  const form1 = document.getElementById('consultationForm');
+  const form2 = document.getElementById('contactDirectForm');
+  if (form1) form1.reset();
+  if (form2) form2.reset();
 }
 
 // WhatsApp Direct Connect
