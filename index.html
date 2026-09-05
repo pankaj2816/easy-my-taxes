@@ -195,7 +195,7 @@
           <a href="#notice-scanner" class="nav-link">Notice Scanner</a>
         </div>
         <div class="nav-item">
-          <a href="#calendar" class="nav-link">Due Dates</a>
+          <a href="due-dates.html" class="nav-link">Due Dates 2026-27</a>
         </div>
         <div class="nav-item">
           <a href="#about-ca" class="nav-link">About CA</a>
@@ -239,7 +239,7 @@
       <a href="#vs-diy" class="mobile-drawer-link">Human CA vs DIY Portals</a>
       <a href="#calculators" class="mobile-drawer-link">Tax Calculators (AY 2026-27)</a>
       <a href="#notice-scanner" class="mobile-drawer-link">Notice Diagnostic Scanner</a>
-      <a href="#calendar" class="mobile-drawer-link">Compliance Due Dates 2026-27</a>
+      <a href="due-dates.html" class="mobile-drawer-link" style="color: var(--emerald-600); font-weight: 700;">Compliance Due Dates 2026-27</a>
       <a href="#checklist" class="mobile-drawer-link">Document Checklist Helper</a>
       <a href="#about-ca" class="mobile-drawer-link">About CA Pradeep Agarwal</a>
       <a href="#pricing" class="mobile-drawer-link">Pricing &amp; Retainers</a>
@@ -1171,59 +1171,61 @@
     </section>
 
     <!-- =========================================================================
-         11. STATUTORY DUE DATES & COMPLIANCE CALENDAR (2026–2027) WITH SEARCH
+         11. STATUTORY COMPLIANCE DEADLINES PREVIEW & CALENDAR HUB
          ========================================================================= -->
     <section id="calendar" class="section-py bg-slate">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag blue">Statutory Due Dates 2026–2027</span>
-          <h2 class="section-title">Indian Tax Compliance Calendar 2026–2027</h2>
+          <span class="section-tag blue">Statutory Compliance 2026–2027</span>
+          <h2 class="section-title">Never Miss an Indian Tax Deadline</h2>
           <p class="section-desc">
-            Stay ahead of government deadlines for <strong>FY 2025-26 &amp; FY 2026-27</strong>. Avoid Section 234A/B/C interest and sync reminders directly to your Google Calendar.
+            Stay on top of statutory obligations for <strong>FY 2025-26 &amp; FY 2026-27</strong>. Avoid Section 234A/B/C interest, Section 234F ₹5,000 late fees, and sync reminders directly to Google Calendar.
           </p>
         </div>
 
-        <div class="calendar-wrapper">
-          <div class="calendar-top-strip">
-            <div class="closest-deadline-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <div>
-                <div class="closest-deadline-title">Major Upcoming Statutory Deadline</div>
-                <div class="closest-deadline-name">31st July 2026 — ITR Filing for Individuals &amp; Salaried Assessees (AY 2026-27)</div>
-              </div>
-            </div>
-
-            <!-- Calendar Search Bar -->
-            <div style="width: 100%; max-width: 360px;">
-              <input type="text" id="calendarSearchInput" class="form-control" style="font-size: 0.875rem;" placeholder="🔍 Filter due dates (e.g. GST, ITR, TDS, ROC)...">
-            </div>
-
-            <!-- Category Filter Pills -->
-            <div class="calendar-category-filters">
-              <button class="cal-pill active" data-cat="all">All Deadlines</button>
-              <button class="cal-pill" data-cat="itr">Income Tax (ITR 2026)</button>
-              <button class="cal-pill" data-cat="advance-tax">Advance Tax 2026-27</button>
-              <button class="cal-pill" data-cat="gst">GST Returns 2026</button>
-              <button class="cal-pill" data-cat="tds">TDS / TCS</button>
-              <button class="cal-pill" data-cat="roc">MCA / ROC 2026</button>
+        <div style="background: var(--surface-0); border: 1px solid var(--surface-200); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-lg);">
+          <div class="closest-deadline-box" style="margin-bottom: 2rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div>
+              <div class="closest-deadline-title">Major Upcoming Statutory Peak</div>
+              <div class="closest-deadline-name" style="font-size: 1.15rem;">31st July 2026 — ITR Filing for Individuals &amp; Salaried Assessees (AY 2026-27)</div>
             </div>
           </div>
 
-          <div class="cal-table-responsive">
-            <table class="compliance-table">
-              <thead>
-                <tr>
-                  <th>Due Date &amp; Sync</th>
-                  <th>Statutory Obligation &amp; Description</th>
-                  <th>Form / Return</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="complianceCalendarBody">
-                <!-- Rendered dynamically by calendar-data.js with Google Calendar sync links -->
-              </tbody>
-            </table>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+            <div style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-lg); padding: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 800; color: var(--emerald-600); text-transform: uppercase; margin-bottom: 0.35rem;">Direct Tax &amp; ITR</div>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.5rem;">31st July &amp; 31st Oct</h4>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+                ITR-1/2/4 for non-audit individuals by July 31; Section 44AB corporate tax audits by October 31.
+              </p>
+            </div>
+
+            <div style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-lg); padding: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 800; color: var(--amber-600); text-transform: uppercase; margin-bottom: 0.35rem;">Advance Tax (Q1 - Q4)</div>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.5rem;">15 Jun | 15 Sep | 15 Dec | 15 Mar</h4>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+                Quarterly installments (15%, 45%, 75%, 100%) to prevent penal interest u/s 234B &amp; 234C.
+              </p>
+            </div>
+
+            <div style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-lg); padding: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 800; color: var(--indigo-600); text-transform: uppercase; margin-bottom: 0.35rem;">GST, TDS &amp; MCA/ROC</div>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.5rem;">Monthly &amp; Quarterly Cycles</h4>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+                GSTR-1 (11th), GSTR-3B (20th), Quarterly TDS (Form 24Q/26Q), and annual DIR-3 KYC &amp; AOC-4.
+              </p>
+            </div>
+          </div>
+
+          <div style="text-align: center; padding-top: 1.25rem; border-top: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="text-align: left;">
+              <strong style="color: var(--primary-950); font-size: 0.95rem; display: block;">Looking for the full master calendar with 1-click Google Calendar sync?</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-subtle);">Access interactive filters for ITR, GST, Advance Tax, TDS, and MCA due dates on our dedicated calendar page.</span>
+            </div>
+            <a href="due-dates.html" class="btn btn-primary btn-lg">
+              <span>View Full 2026–2027 Calendar &amp; Sync &rarr;</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1776,11 +1778,11 @@
             <a href="#calculators">Advance Tax Schedule Calculator</a>
             <a href="#calculators">Freelancer 44ADA Calculator</a>
             <a href="#notice-scanner">Notice Diagnostic Scanner</a>
-            <a href="#calculators">GST Forward/Reverse Calc</a>
-            <a href="#calculators">HRA Exemption Calculator</a>
-            <a href="#calendar">Compliance Due Dates 2026-27</a>
-            <a href="#checklist">Document Checklist Helper</a>
-            <a href="#pricing">Transparent Pricing Plans</a>
+            <a href="index.html#calculators">GST Forward/Reverse Calc</a>
+            <a href="index.html#calculators">HRA Exemption Calculator</a>
+            <a href="due-dates.html">Compliance Due Dates 2026-27</a>
+            <a href="index.html#checklist">Document Checklist Helper</a>
+            <a href="index.html#pricing">Transparent Pricing Plans</a>
           </div>
         </div>
 
