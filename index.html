@@ -83,33 +83,40 @@
         </div>
 
         <div class="nav-item has-dropdown">
-          <a href="#calculators" class="nav-link">
+          <a href="calculators.html" class="nav-link">
             <span>Calculators</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </a>
           <div class="nav-dropdown">
-            <a href="#calculators" class="dropdown-link">
+            <a href="calculators.html#calcOldNewPane" class="dropdown-link">
               <span class="dropdown-icon">⚡</span>
               <div>
                 <strong>Old vs New Tax Regime</strong>
                 <p style="font-size: 0.75rem; color: var(--text-subtle);">AY 2026-27 Slabs &amp; ₹75k Std Ded</p>
               </div>
             </a>
-            <a href="#calculators" class="dropdown-link">
+            <a href="calculators.html#calcAdvTaxPane" class="dropdown-link">
+              <span class="dropdown-icon">📅</span>
+              <div>
+                <strong>Advance Tax Schedule 2026-27</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Quarterly Dates &amp; Sec 234C Guard</p>
+              </div>
+            </a>
+            <a href="calculators.html#calcAdaPane" class="dropdown-link">
               <span class="dropdown-icon">💼</span>
               <div>
                 <strong>Freelancer 44ADA Calculator</strong>
                 <p style="font-size: 0.75rem; color: var(--text-subtle);">50% Presumptive Tax Scheme</p>
               </div>
             </a>
-            <a href="#calculators" class="dropdown-link">
+            <a href="calculators.html#calcGstPane" class="dropdown-link">
               <span class="dropdown-icon">📑</span>
               <div>
                 <strong>GST Forward &amp; Reverse Calc</strong>
                 <p style="font-size: 0.75rem; color: var(--text-subtle);">CGST, SGST &amp; IGST Breakdown</p>
               </div>
             </a>
-            <a href="#calculators" class="dropdown-link">
+            <a href="calculators.html#calcHraPane" class="dropdown-link">
               <span class="dropdown-icon">🏠</span>
               <div>
                 <strong>HRA Exemption Sec 10(13A)</strong>
@@ -154,7 +161,7 @@
     </div>
     <div class="mobile-drawer-links">
       <a href="#services" class="mobile-drawer-link">All CA Services</a>
-      <a href="#calculators" class="mobile-drawer-link">Tax Calculators (AY 2026-27)</a>
+      <a href="calculators.html" class="mobile-drawer-link">Tax Calculators (AY 2026-27)</a>
       <a href="due-dates.html" class="mobile-drawer-link" style="color: var(--emerald-600); font-weight: 700;">Compliance Due Dates 2026-27</a>
       <a href="#checklist" class="mobile-drawer-link">Document Checklist Helper</a>
       <a href="about-ca.html" class="mobile-drawer-link" style="color: var(--emerald-600); font-weight: 700;">About CA Pradeep Agarwal</a>
@@ -194,7 +201,7 @@
               <span>File AY 2026-27 Taxes with a CA</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </button>
-            <a href="#calculators" class="btn btn-outline btn-lg">
+            <a href="calculators.html" class="btn btn-outline btn-lg">
               <span>Compare Old vs New Tax 2026</span>
             </a>
           </div>
@@ -333,523 +340,149 @@
       </div>
     </section>
 
-    <!-- =========================================================================
-         9. INTERACTIVE FINANCIAL CALCULATORS SUITE (AY 2026-27 UPDATED)
+        <!-- =========================================================================
+         9. SMART TAX COMPUTATION & ENGINES HUB PREVIEW (AY 2026-27)
          ========================================================================= -->
     <section id="calculators" class="section-py bg-slate">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag amber">Live Tax Engines 2026</span>
-          <h2 class="section-title">Interactive Tax &amp; Financial Calculators</h2>
+          <span class="section-tag amber">Live Tax Engines (AY 2026-27)</span>
+          <h2 class="section-title">Smart Tax Engines &amp; Instant Decision Hub</h2>
           <p class="section-desc">
-            Accurate, real-time calculations updated with the latest provisions for <strong>Assessment Year 2026-27 (FY 2025-26 &amp; FY 2026-27)</strong>.
+            Make informed financial decisions with our instant, statutory calculation engines calibrated for <strong>Assessment Year 2026-27 (FY 2025-26 &amp; FY 2026-27)</strong>. Fast, accurate, and completely free.
           </p>
         </div>
 
-        <!-- Calculator Tabs -->
-        <div class="calc-tabs-wrapper">
-          <div class="calc-tab-nav">
-            <button class="calc-tab-btn active" data-target="calcOldNewPane">
-              ⚡ Old vs New Tax (AY 2026-27)
-            </button>
-            <button class="calc-tab-btn" data-target="calcAdvTaxPane">
-              📅 Advance Tax Schedule 2026-27
-            </button>
-            <button class="calc-tab-btn" data-target="calcAdaPane">
-              💼 Freelancer 44ADA vs Normal
-            </button>
-            <button class="calc-tab-btn" data-target="calcGstPane">
-              📑 GST Forward &amp; Reverse
-            </button>
-            <button class="calc-tab-btn" data-target="calcHraPane">
-              🏠 HRA Exemption Sec 10(13A)
-            </button>
-          </div>
-        </div>
-
-        <!-- PANE 1: OLD VS NEW REGIME (AY 2026-27) -->
-        <div id="calcOldNewPane" class="calc-pane active">
-          <div class="calc-grid">
-            <!-- Inputs -->
-            <div class="calc-inputs-col">
-              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
-                Annual Income &amp; Deductions (AY 2026-27)
-              </h3>
-
-              <!-- Quick Salary Preset Chips -->
-              <div style="margin-top: 0.75rem;">
-                <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase;">
-                  ⚡ Quick Test Salary Presets:
-                </label>
-                <div class="salary-presets-row">
-                  <button type="button" class="preset-chip" onclick="setSalaryPreset(800000, this)">₹8 Lakhs</button>
-                  <button type="button" class="preset-chip active" onclick="setSalaryPreset(1250000, this)">₹12.5 Lakhs</button>
-                  <button type="button" class="preset-chip" onclick="setSalaryPreset(1800000, this)">₹18 Lakhs</button>
-                  <button type="button" class="preset-chip" onclick="setSalaryPreset(2500000, this)">₹25 Lakhs</button>
-                  <button type="button" class="preset-chip" onclick="setSalaryPreset(5000000, this)">₹50 Lakhs</button>
-                  <button type="button" class="preset-chip" onclick="setSalaryPreset(10000000, this)">₹1 Crore</button>
-                </div>
-              </div>
-
-              <div class="calc-input-group">
-                <div class="calc-label-row">
-                  <label class="calc-label" for="calcGrossSalary">Gross Annual Salary / Income</label>
-                  <span class="calc-help">Form 16 / CTC</span>
-                </div>
-                <div class="calc-input-wrap">
-                  <span class="currency-symbol">₹</span>
-                  <input type="number" id="calcGrossSalary" class="calc-field" value="1250000" step="10000">
-                </div>
-              </div>
-
-              <div class="calc-input-group">
-                <div class="calc-label-row">
-                  <label class="calc-label" for="calcOtherIncome">Other Income (Interest, Rental, Dividends)</label>
-                </div>
-                <div class="calc-input-wrap">
-                  <span class="currency-symbol">₹</span>
-                  <input type="number" id="calcOtherIncome" class="calc-field" value="50000" step="5000">
-                </div>
-              </div>
-
-              <div style="font-size: 0.875rem; font-weight: 700; color: var(--emerald-700); margin-top: 0.5rem;">
-                Deductions (Applicable for Old Tax Regime):
-              </div>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="calc-input-group">
-                  <label class="calc-label" for="calc80C">Section 80C (Max ₹1.5L)</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="calc80C" class="calc-field" value="150000" max="150000" step="5000">
-                  </div>
-                </div>
-
-                <div class="calc-input-group">
-                  <label class="calc-label" for="calc80D">Section 80D (Health Ins)</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="calc80D" class="calc-field" value="25000" step="5000">
-                  </div>
-                </div>
-              </div>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="calc-input-group">
-                  <label class="calc-label" for="calcNPS">NPS 80CCD(1B) (Max ₹50k)</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="calcNPS" class="calc-field" value="50000" max="50000" step="5000">
-                  </div>
-                </div>
-
-                <div class="calc-input-group">
-                  <label class="calc-label" for="calcHomeLoan">Home Loan Interest Sec 24</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="calcHomeLoan" class="calc-field" value="0" max="200000" step="10000">
-                  </div>
-                </div>
-              </div>
-
-              <div class="calc-input-group">
-                <div class="calc-label-row">
-                  <label class="calc-label" for="calcHRA">HRA Exemption / Rent Paid Sec 10(13A)</label>
-                </div>
-                <div class="calc-input-wrap">
-                  <span class="currency-symbol">₹</span>
-                  <input type="number" id="calcHRA" class="calc-field" value="120000" step="5000">
-                </div>
-              </div>
+        <!-- Smart Calculator Showcase Grid -->
+        <div class="smart-calc-grid">
+          <!-- Card 1: Old vs New Regime -->
+          <div class="smart-calc-card featured">
+            <div class="smart-calc-header">
+              <div class="smart-calc-icon">⚡</div>
+              <span class="smart-calc-badge gold">AY 2026-27 Ready</span>
             </div>
+            <h3 class="smart-calc-title">Old vs New Tax Regime Comparator</h3>
+            <p class="smart-calc-desc">
+              Compare your tax under the revised New Regime (₹75,000 Standard Deduction &amp; Sec 87A rebate) against the Old Regime with 80C, 80D, NPS, and Home Loan interest deductions.
+            </p>
+            <div class="smart-calc-metrics">
+              <span class="metric-tag">⚡ ₹75k Std Deduction</span>
+              <span class="metric-tag">💰 Slabs up to ₹15L+</span>
+              <span class="metric-tag">📲 WhatsApp Summary</span>
+            </div>
+            <div class="smart-calc-actions">
+              <a href="calculators.html#calcOldNewPane" class="btn btn-primary btn-sm">Launch Regime Calculator &rarr;</a>
+            </div>
+          </div>
 
-            <!-- Results Column -->
-            <div class="calc-results-col">
-              <div>
-                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1rem;">
-                  Tax Computation Comparison (AY 2026-27)
-                </h3>
+          <!-- Card 2: Advance Tax Planner -->
+          <div class="smart-calc-card">
+            <div class="smart-calc-header">
+              <div class="smart-calc-icon">📅</div>
+              <span class="smart-calc-badge blue">FY 2026-27 Schedule</span>
+            </div>
+            <h3 class="smart-calc-title">Advance Tax Schedule Planner</h3>
+            <p class="smart-calc-desc">
+              Mandatory quarterly installment calculator (15%, 45%, 75%, 100%) for taxpayers with net annual liability over ₹10,000. Safeguard against Section 234C 1% monthly penal interest.
+            </p>
+            <div class="smart-calc-metrics">
+              <span class="metric-tag">🗓️ 4 Quarterly Milestones</span>
+              <span class="metric-tag">⚠️ Section 234C Shield</span>
+            </div>
+            <div class="smart-calc-actions">
+              <a href="calculators.html#calcAdvTaxPane" class="btn btn-outline btn-sm">Plan Instalments &rarr;</a>
+            </div>
+          </div>
 
-                <div class="regime-comparison-cards">
-                  <!-- New Regime Card -->
-                  <div id="cardNewRegime" class="regime-card winner">
-                    <span class="regime-badge">AY 2026-27</span>
-                    <div class="regime-name">New Tax Regime</div>
-                    <div class="regime-tax-val" id="resNewTax">₹0</div>
-                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Std. Ded: ₹75,000</span>
-                  </div>
+          <!-- Card 3: Freelancer 44ADA -->
+          <div class="smart-calc-card">
+            <div class="smart-calc-header">
+              <div class="smart-calc-icon">💼</div>
+              <span class="smart-calc-badge emerald">Up to ₹75 Lakhs</span>
+            </div>
+            <h3 class="smart-calc-title">Freelancer &amp; Professional 44ADA</h3>
+            <p class="smart-calc-desc">
+              For IT developers, doctors, designers, architects &amp; consultants. Declare flat 50% presumptive profit, save on taxes, and bypass burdensome tax audits.
+            </p>
+            <div class="smart-calc-metrics">
+              <span class="metric-tag">💡 50% Presumed Profit</span>
+              <span class="metric-tag">🛡️ Zero Audit Burden</span>
+            </div>
+            <div class="smart-calc-actions">
+              <a href="calculators.html#calcAdaPane" class="btn btn-outline btn-sm">Compute 44ADA Savings &rarr;</a>
+            </div>
+          </div>
 
-                  <!-- Old Regime Card -->
-                  <div id="cardOldRegime" class="regime-card">
-                    <div class="regime-name">Old Tax Regime</div>
-                    <div class="regime-tax-val" id="resOldTax">₹0</div>
-                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Std. Ded: ₹50,000</span>
-                  </div>
-                </div>
+          <!-- Card 4: GST Calculator -->
+          <div class="smart-calc-card">
+            <div class="smart-calc-header">
+              <div class="smart-calc-icon">📑</div>
+              <span class="smart-calc-badge purple">GST Slabs 2026</span>
+            </div>
+            <h3 class="smart-calc-title">GST Forward &amp; Reverse Calculator</h3>
+            <p class="smart-calc-desc">
+              Compute inclusive and exclusive GST across 5%, 12%, 18%, and 28% slabs with automatic 50:50 CGST/SGST intrastate split and IGST interstate breakdown.
+            </p>
+            <div class="smart-calc-metrics">
+              <span class="metric-tag">🔄 Inclusive / Exclusive</span>
+              <span class="metric-tag">⚖️ CGST / SGST / IGST</span>
+            </div>
+            <div class="smart-calc-actions">
+              <a href="calculators.html#calcGstPane" class="btn btn-outline btn-sm">Calculate GST &rarr;</a>
+            </div>
+          </div>
 
-                <!-- Recommendation Banner -->
-                <div class="recommendation-banner">
-                  <h4 id="recBannerTitle">Comparing Regimes...</h4>
-                  <p id="recBannerDesc">Loading recommendation...</p>
-                </div>
+          <!-- Card 5: HRA Exemption -->
+          <div class="smart-calc-card">
+            <div class="smart-calc-header">
+              <div class="smart-calc-icon">🏠</div>
+              <span class="smart-calc-badge amber">Section 10(13A)</span>
+            </div>
+            <h3 class="smart-calc-title">HRA Exemption Calculator</h3>
+            <p class="smart-calc-desc">
+              Calculate maximum allowable rent tax exemption based on actual rent paid, basic salary, and Metro (50%) vs Non-Metro (40%) location parameters.
+            </p>
+            <div class="smart-calc-metrics">
+              <span class="metric-tag">🏙️ Metro 50% / Non 40%</span>
+              <span class="metric-tag">📉 3 Statutory Conditions</span>
+            </div>
+            <div class="smart-calc-actions">
+              <a href="calculators.html#calcHraPane" class="btn btn-outline btn-sm">Calculate Exemption &rarr;</a>
+            </div>
+          </div>
 
-                <!-- Breakdown Table -->
-                <table class="breakdown-table">
-                  <tr>
-                    <td>Taxable Income (New Regime)</td>
-                    <td id="resNewTaxable">₹0</td>
-                  </tr>
-                  <tr>
-                    <td>Taxable Income (Old Regime)</td>
-                    <td id="resOldTaxable">₹0</td>
-                  </tr>
-                  <tr>
-                    <td>Total Deductions Claimed (New)</td>
-                    <td id="resNewDed">₹75,000</td>
-                  </tr>
-                  <tr>
-                    <td>Total Deductions Claimed (Old)</td>
-                    <td id="resOldDed">₹0</td>
-                  </tr>
-                </table>
-
-                <!-- WhatsApp Calculation Export Card -->
-                <div class="whatsapp-export-card">
-                  <div>
-                    <strong style="font-size: 0.875rem; color: var(--primary-950); display: block;">📲 Need CA Pradeep to Review This?</strong>
-                    <span style="font-size: 0.75rem; color: var(--text-muted);">Send these exact calculations to WhatsApp for free review.</span>
-                  </div>
-                  <button class="btn btn-whatsapp btn-sm" onclick="sendTaxSummaryToWhatsApp()">
-                    Send Calculation to WhatsApp
-                  </button>
-                </div>
-              </div>
-
-              <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openConsultationModal('Tax Optimization Plan AY 2026-27')">
-                Have CA Pradeep Optimize &amp; File This &rarr;
-              </button>
+          <!-- Card 6: Hub Showcase CTA -->
+          <div class="smart-calc-card cta-card">
+            <div class="smart-calc-header">
+              <div class="smart-calc-icon">🎯</div>
+              <span class="smart-calc-badge green">Expert CA Review</span>
+            </div>
+            <h3 class="smart-calc-title">Need Tailored Tax Planning?</h3>
+            <p class="smart-calc-desc">
+              Our seasoned Chartered Accountants evaluate complex capital gains, foreign assets, and business books to maximize refunds with 100% statutory precision.
+            </p>
+            <div class="smart-calc-metrics">
+              <span class="metric-tag">📋 Free Initial Assessment</span>
+              <span class="metric-tag">🔒 Zero Penalty Assurance</span>
+            </div>
+            <div class="smart-calc-actions">
+              <a href="calculators.html" class="btn btn-primary btn-sm">Open Full Calculators Hub &rarr;</a>
             </div>
           </div>
         </div>
 
-        <!-- PANE 2: ADVANCE TAX SCHEDULE 2026-27 -->
-        <div id="calcAdvTaxPane" class="calc-pane">
-          <div class="calc-grid">
-            <div class="calc-inputs-col">
-              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
-                Advance Tax Instalment Calculator (FY 2026-27)
-              </h3>
-              <p style="font-size: 0.875rem; color: var(--text-muted);">
-                Required if your net annual income tax liability exceeds ₹10,000. Avoid 1% monthly penal interest under Section 234B &amp; 234C.
-              </p>
-
-              <div class="calc-input-group">
-                <label class="calc-label" for="advTaxAnnualAmount">Estimated Total Annual Tax Liability (FY 2026-27)</label>
-                <div class="calc-input-wrap">
-                  <span class="currency-symbol">₹</span>
-                  <input type="number" id="advTaxAnnualAmount" class="calc-field" value="120000" step="5000">
-                </div>
-              </div>
-
-              <div style="background: var(--surface-100); border-radius: var(--radius-md); padding: 1.25rem; margin-top: 1.25rem;">
-                <h4 style="font-size: 0.9375rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.5rem;">⚠️ Section 234C Penalty Rule</h4>
-                <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;">
-                  Failure to pay quarterly installments on or before statutory due dates triggers mandatory 1% simple interest per month on the shortfall amount.
-                </p>
-              </div>
-            </div>
-
-            <!-- Advance Tax Results -->
-            <div class="calc-results-col">
-              <div>
-                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1rem;">
-                  Quarterly Payment Schedule (FY 2026-27)
-                </h3>
-
-                <div class="adv-tax-grid">
-                  <div class="adv-tax-box">
-                    <div class="adv-tax-quarter">1st Installment (15%)</div>
-                    <div class="adv-tax-amount" id="advResQ1">₹18,000</div>
-                    <div class="adv-tax-date">🗓️ On or before 15th June 2026</div>
-                  </div>
-
-                  <div class="adv-tax-box">
-                    <div class="adv-tax-quarter">2nd Installment (45%)</div>
-                    <div class="adv-tax-amount" id="advResQ2">₹54,000</div>
-                    <div class="adv-tax-date">🗓️ On or before 15th Sept 2026</div>
-                  </div>
-
-                  <div class="adv-tax-box">
-                    <div class="adv-tax-quarter">3rd Installment (75%)</div>
-                    <div class="adv-tax-amount" id="advResQ3">₹90,000</div>
-                    <div class="adv-tax-date">🗓️ On or before 15th Dec 2026</div>
-                  </div>
-
-                  <div class="adv-tax-box">
-                    <div class="adv-tax-quarter">4th Installment (100%)</div>
-                    <div class="adv-tax-amount" id="advResQ4">₹1,20,000</div>
-                    <div class="adv-tax-date">🗓️ On or before 15th Mar 2027</div>
-                  </div>
-                </div>
-              </div>
-
-              <button class="btn btn-primary" style="margin-top: 1.25rem;" onclick="openConsultationModal('Advance Tax Schedule Advisory')">
-                Have CA Pradeep Manage Advance Tax &rarr;
-              </button>
+        <!-- Hub Bottom Banner -->
+        <div class="calc-hub-banner">
+          <div class="calc-hub-banner-content">
+            <div class="calc-hub-banner-icon">⚡</div>
+            <div>
+              <h4 class="calc-hub-banner-title">Want to run complete computations with all 5 interactive engines?</h4>
+              <p class="calc-hub-banner-desc">Switch seamlessly between salary comparison, advance tax installments, 44ADA relief, GST splits, and HRA on our dedicated full-screen suite.</p>
             </div>
           </div>
-        </div>
-
-        <!-- PANE 3: FREELANCER 44ADA CALCULATOR -->
-        <div id="calcAdaPane" class="calc-pane">
-          <div class="calc-grid">
-            <div class="calc-inputs-col">
-              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
-                Freelancer / Professional 44ADA Presumptive Tax
-              </h3>
-              <p style="font-size: 0.875rem; color: var(--text-muted);">
-                For Software Consultants, Doctors, Architects, Lawyers &amp; Designers with gross receipts up to ₹75 Lakhs.
-              </p>
-
-              <div class="calc-input-group">
-                <label class="calc-label" for="adaGrossReceipts">Total Gross Professional Receipts / Revenue</label>
-                <div class="calc-input-wrap">
-                  <span class="currency-symbol">₹</span>
-                  <input type="number" id="adaGrossReceipts" class="calc-field" value="2500000" step="50000">
-                </div>
-              </div>
-
-              <div class="calc-input-group">
-                <label class="calc-label" for="adaActualExpenses">Estimated Actual Annual Expenses (Rent, Software, Internet, Travel)</label>
-                <div class="calc-input-wrap">
-                  <span class="currency-symbol">₹</span>
-                  <input type="number" id="adaActualExpenses" class="calc-field" value="400000" step="20000">
-                </div>
-              </div>
-            </div>
-
-            <!-- 44ADA Results -->
-            <div class="calc-results-col">
-              <div>
-                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1.25rem;">
-                  Section 44ADA Benefits Summary
-                </h3>
-
-                <div class="regime-comparison-cards">
-                  <div class="regime-card winner">
-                    <span class="regime-badge">No Audit Needed</span>
-                    <div class="regime-name" style="color: var(--emerald-700);">44ADA 50% Profit</div>
-                    <div class="regime-tax-val" id="adaResTaxADA" style="color: var(--emerald-600);">₹0</div>
-                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Tax on 50% Presumed Income</span>
-                  </div>
-
-                  <div class="regime-card">
-                    <div class="regime-name">Normal Bookkeeping</div>
-                    <div class="regime-tax-val" id="adaResTaxActual">₹0</div>
-                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Tax on Actual Profit</span>
-                  </div>
-                </div>
-
-                <div class="recommendation-banner" style="background: linear-gradient(135deg, #059669, #047857);">
-                  <h4 style="color: #fff;">💡 Potential Tax Saving: <span id="adaResSavings">₹0</span></h4>
-                  <p style="color: #d1fae5;">Claim 50% standard expense deduction without keeping complex receipts or tax audit.</p>
-                </div>
-
-                <table class="breakdown-table">
-                  <tr>
-                    <td>Presumed Taxable Profit (50% u/s 44ADA)</td>
-                    <td id="adaResProfitADA">₹0</td>
-                  </tr>
-                  <tr>
-                    <td>Actual Taxable Profit</td>
-                    <td id="adaResProfitActual">₹0</td>
-                  </tr>
-                </table>
-              </div>
-
-              <button class="btn btn-primary" onclick="openConsultationModal('Freelancer 44ADA Advisory')">
-                Consult CA Pradeep on 44ADA &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PANE 4: GST CALCULATOR -->
-        <div id="calcGstPane" class="calc-pane">
-          <div class="calc-grid">
-            <div class="calc-inputs-col">
-              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
-                Calculate Goods &amp; Services Tax (GST 2026)
-              </h3>
-
-              <div class="calc-input-group">
-                <label class="calc-label" for="gstAmount">Enter Transaction Amount</label>
-                <div class="calc-input-wrap">
-                  <span class="currency-symbol">₹</span>
-                  <input type="number" id="gstAmount" class="calc-field" value="50000" step="1000">
-                </div>
-              </div>
-
-              <div class="calc-input-group">
-                <label class="calc-label" for="gstRate">Select Applicable GST Slab</label>
-                <select id="gstRate" class="form-control" style="font-weight: 600;">
-                  <option value="5">5% (Essential Goods, Transport, Basic Foods)</option>
-                  <option value="12">12% (Standard Goods, Business Services, Apparel)</option>
-                  <option value="18" selected>18% (IT Services, Software, CA/Consulting, Telecom)</option>
-                  <option value="28">28% (Luxury Items, Automobiles, Aerated Drinks)</option>
-                </select>
-              </div>
-
-              <div class="calc-input-group">
-                <label class="calc-label">GST Calculation Mode</label>
-                <div style="display: flex; gap: 1.5rem; margin-top: 0.35rem;">
-                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; cursor: pointer;">
-                    <input type="radio" name="gstType" value="exclusive" checked style="accent-color: var(--emerald-600);">
-                    <span><strong>GST Exclusive</strong> (Add GST to base price)</span>
-                  </label>
-                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; cursor: pointer;">
-                    <input type="radio" name="gstType" value="inclusive" style="accent-color: var(--emerald-600);">
-                    <span><strong>GST Inclusive</strong> (Extract GST from MRP)</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <!-- GST Results -->
-            <div class="calc-results-col">
-              <div>
-                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1.5rem;">
-                  GST Tax Breakup (2026)
-                </h3>
-
-                <table class="breakdown-table">
-                  <tr>
-                    <td>Net / Base Amount</td>
-                    <td id="gstResNet" style="font-size: 1.125rem;">₹50,000</td>
-                  </tr>
-                  <tr>
-                    <td>Total GST Tax Amount</td>
-                    <td id="gstResTax" style="font-size: 1.125rem; color: var(--emerald-600);">₹9,000</td>
-                  </tr>
-                  <tr style="background: var(--surface-100);">
-                    <td style="font-weight: 800; font-size: 1rem; color: var(--primary-950); padding: 0.85rem 0.5rem;">Total Final Invoice Amount</td>
-                    <td id="gstResTotal" style="font-weight: 800; font-size: 1.25rem; color: var(--primary-950); padding: 0.85rem 0.5rem;">₹59,000</td>
-                  </tr>
-                  <tr>
-                    <td>CGST (Central GST)</td>
-                    <td id="gstResCgst">₹4,500</td>
-                  </tr>
-                  <tr>
-                    <td>SGST (State GST)</td>
-                    <td id="gstResSgst">₹4,500</td>
-                  </tr>
-                  <tr>
-                    <td>IGST (Interstate Supply)</td>
-                    <td id="gstResIgst">₹9,000</td>
-                  </tr>
-                </table>
-              </div>
-
-              <button class="btn btn-primary" onclick="openConsultationModal('GST Return Filing Assistance 2026')">
-                Get CA Support for GST Filing &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PANE 5: HRA EXEMPTION -->
-        <div id="calcHraPane" class="calc-pane">
-          <div class="calc-grid">
-            <div class="calc-inputs-col">
-              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
-                House Rent Allowance (HRA) Exemption Sec 10(13A)
-              </h3>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="calc-input-group">
-                  <label class="calc-label" for="hraBasic">Basic Salary (Annual)</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="hraBasic" class="calc-field" value="600000" step="10000">
-                  </div>
-                </div>
-
-                <div class="calc-input-group">
-                  <label class="calc-label" for="hraDA">Dearness Allowance (DA)</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="hraDA" class="calc-field" value="0" step="5000">
-                  </div>
-                </div>
-              </div>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="calc-input-group">
-                  <label class="calc-label" for="hraReceived">HRA Received from Employer</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="hraReceived" class="calc-field" value="240000" step="5000">
-                  </div>
-                </div>
-
-                <div class="calc-input-group">
-                  <label class="calc-label" for="hraRentPaid">Total Rent Paid Annually</label>
-                  <div class="calc-input-wrap">
-                    <span class="currency-symbol">₹</span>
-                    <input type="number" id="hraRentPaid" class="calc-field" value="300000" step="5000">
-                  </div>
-                </div>
-              </div>
-
-              <div class="calc-input-group">
-                <label class="calc-label" for="hraIsMetro">City of Residence</label>
-                <select id="hraIsMetro" class="form-control">
-                  <option value="metro">Metro City (Delhi, Mumbai, Kolkata, Chennai - 50% Basic)</option>
-                  <option value="non-metro">Non-Metro City (Bangalore, Hyderabad, Pune, etc. - 40% Basic)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- HRA Results -->
-            <div class="calc-results-col">
-              <div>
-                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1rem;">
-                  HRA Exemption Summary (AY 2026-27)
-                </h3>
-
-                <div class="regime-comparison-cards" style="margin-bottom: 1.5rem;">
-                  <div class="regime-card winner">
-                    <div class="regime-name" style="color: var(--emerald-700);">Exempt HRA</div>
-                    <div class="regime-tax-val" id="hraResExempt" style="color: var(--emerald-600);">₹0</div>
-                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Tax-Free Allowance</span>
-                  </div>
-                  <div class="regime-card">
-                    <div class="regime-name">Taxable HRA</div>
-                    <div class="regime-tax-val" id="hraResTaxable">₹0</div>
-                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Added to Salary</span>
-                  </div>
-                </div>
-
-                <table class="breakdown-table">
-                  <tr>
-                    <td>1. Actual HRA Received</td>
-                    <td id="hraCond1">₹0</td>
-                  </tr>
-                  <tr>
-                    <td>2. Rent Paid - 10% of Salary</td>
-                    <td id="hraCond2">₹0</td>
-                  </tr>
-                  <tr>
-                    <td>3. 50% / 40% of Salary</td>
-                    <td id="hraCond3">₹0</td>
-                  </tr>
-                </table>
-              </div>
-
-              <button class="btn btn-primary" onclick="openConsultationModal('HRA & Rent Proof Advisory')">
-                Consult CA on Landlord PAN &amp; Proofs &rarr;
-              </button>
-            </div>
+          <div class="calc-hub-banner-actions">
+            <a href="calculators.html" class="btn btn-primary">Launch Complete Calculator Suite &rarr;</a>
+            <button class="btn btn-outline" onclick="openConsultationModal('Tax Engine Advisory AY 2026-27')">Book CA Advisory</button>
           </div>
         </div>
 
@@ -1245,11 +878,11 @@
         <div class="footer-col">
           <h4>Tools &amp; Resources 2026</h4>
           <div class="footer-links">
-            <a href="#calculators">Old vs New Tax Calculator (AY 2026-27)</a>
-            <a href="#calculators">Advance Tax Schedule Calculator</a>
-            <a href="#calculators">Freelancer 44ADA Calculator</a>
-            <a href="#calculators">GST Forward/Reverse Calc</a>
-            <a href="#calculators">HRA Exemption Calculator</a>
+            <a href="calculators.html#calcOldNewPane">Old vs New Tax Calculator (AY 2026-27)</a>
+            <a href="calculators.html#calcAdvTaxPane">Advance Tax Schedule Calculator</a>
+            <a href="calculators.html#calcAdaPane">Freelancer 44ADA Calculator</a>
+            <a href="calculators.html#calcGstPane">GST Forward/Reverse Calc</a>
+            <a href="calculators.html#calcHraPane">HRA Exemption Calculator</a>
             <a href="due-dates.html">Compliance Due Dates 2026-27</a>
             <a href="about-ca.html">About CA Pradeep Agarwal</a>
             <a href="#checklist">Document Checklist Helper</a>

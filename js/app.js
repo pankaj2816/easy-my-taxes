@@ -737,21 +737,66 @@ function openWhatsAppInquiry(serviceName = 'General CA Consultation') {
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
 }
 
-// Calculator Tab Navigation
+// Calculator Tab Navigation with Hash Deep Linking
 function initCalcTabs() {
   const tabs = document.querySelectorAll('.calc-tab-btn');
   const panes = document.querySelectorAll('.calc-pane');
+  if (!tabs.length) return;
+
+  function activateTab(targetId) {
+    if (!targetId) return;
+    const cleanId = targetId.replace('#', '');
+    
+    // Map friendly aliases if any
+    const aliasMap = {
+      'old-vs-new': 'calcOldNewPane',
+      'regime': 'calcOldNewPane',
+      'advance-tax': 'calcAdvTaxPane',
+      'freelancer': 'calcAdaPane',
+      '44ada': 'calcAdaPane',
+      'gst': 'calcGstPane',
+      'hra': 'calcHraPane'
+    };
+    const finalId = aliasMap[cleanId] || cleanId;
+
+    const targetPane = document.getElementById(finalId);
+    const targetTab = Array.from(tabs).find(t => t.getAttribute('data-target') === finalId);
+
+    if (targetPane && targetTab) {
+      tabs.forEach(t => t.classList.remove('active'));
+      panes.forEach(p => p.classList.remove('active'));
+
+      targetTab.classList.add('active');
+      targetPane.classList.add('active');
+    }
+  }
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const targetId = tab.getAttribute('data-target');
-      tabs.forEach(t => t.classList.remove('active'));
-      panes.forEach(p => p.classList.remove('active'));
-
-      tab.classList.add('active');
-      const targetPane = document.getElementById(targetId);
-      if (targetPane) targetPane.classList.add('active');
+      activateTab(targetId);
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, null, '#' + targetId);
+      }
     });
+  });
+
+  // Activate tab from URL hash on load
+  if (window.location.hash) {
+    activateTab(window.location.hash);
+    const targetEl = document.getElementById(window.location.hash.replace('#', ''));
+    if (targetEl) {
+      setTimeout(() => {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }
+  }
+
+  // Listen to hash changes
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash) {
+      activateTab(window.location.hash);
+    }
   });
 }
 

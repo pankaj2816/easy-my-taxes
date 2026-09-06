@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Tax &amp; Financial Calculators Suite (AY 2026-27) | Easy My Taxes &amp; CA Pradeep Agarwal</title>
+  <meta name="description" content="Free Indian Tax Calculators AY 2026-27 &amp; FY 2026-27. Accurate computation engines for Old vs New Tax Regime, Advance Tax Schedule, Freelancer 44ADA, GST Forward/Reverse, and HRA Exemption Sec 10(13A).">
+  <meta name="keywords" content="Tax Calculator AY 2026-27, Old vs New Tax Regime AY 2026-27, Advance Tax Calculator 2026-27, Section 44ADA Calculator, GST Calculator India, HRA Exemption Sec 10(13A), CA Pradeep Agarwal">
+  <meta name="author" content="Easy My Taxes">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Interactive Tax &amp; Financial Calculators Suite (AY 2026-27) | Easy My Taxes">
+  <meta property="og:description" content="Accurate Indian tax calculation engines for AY 2026-27: Old vs New Regime, Advance Tax 4-Quarter Schedule, 44ADA Freelancer Presumptive Tax, GST, and HRA Exemption.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. MAIN NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Easy My Taxes Home">
+        <img src="assets/logo.png" alt="Easy My Taxes Logo">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <div class="nav-item has-dropdown">
+          <a href="index.html#services" class="nav-link">
+            <span>Services</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="index.html#services" class="dropdown-link">
+              <span class="dropdown-icon">📝</span>
+              <div>
+                <strong>Income Tax &amp; ITR (AY 2026-27)</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Salaried, Capital Gains, NRI &amp; Notices</p>
+              </div>
+            </a>
+            <a href="index.html#services" class="dropdown-link">
+              <span class="dropdown-icon">📑</span>
+              <div>
+                <strong>GST Compliance 2026</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Registration, GSTR-1, 3B &amp; Refunds</p>
+              </div>
+            </a>
+            <a href="index.html#services" class="dropdown-link">
+              <span class="dropdown-icon">🚀</span>
+              <div>
+                <strong>Startup &amp; Company Setup</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Pvt Ltd, LLP, DPIIT &amp; 80-IAC</p>
+              </div>
+            </a>
+            <a href="index.html#services" class="dropdown-link">
+              <span class="dropdown-icon">📊</span>
+              <div>
+                <strong>Virtual CFO &amp; Accounting</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Zoho/Tally Books, Payroll &amp; MIS</p>
+              </div>
+            </a>
+            <a href="index.html#services" class="dropdown-link">
+              <span class="dropdown-icon">🔍</span>
+              <div>
+                <strong>Statutory &amp; Tax Audit</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Sec 44AB, Stock Audit &amp; 3CD</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <a href="calculators.html" class="nav-link active" style="color: var(--emerald-600); font-weight: 800;">
+            <span>Calculators</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="calculators.html#calcOldNewPane" class="dropdown-link">
+              <span class="dropdown-icon">⚡</span>
+              <div>
+                <strong>Old vs New Tax Regime</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">AY 2026-27 Slabs &amp; ₹75k Std Ded</p>
+              </div>
+            </a>
+            <a href="calculators.html#calcAdvTaxPane" class="dropdown-link">
+              <span class="dropdown-icon">📅</span>
+              <div>
+                <strong>Advance Tax Schedule 2026-27</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Quarterly Dates &amp; Sec 234C Guard</p>
+              </div>
+            </a>
+            <a href="calculators.html#calcAdaPane" class="dropdown-link">
+              <span class="dropdown-icon">💼</span>
+              <div>
+                <strong>Freelancer 44ADA Calculator</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">50% Presumptive Tax Scheme</p>
+              </div>
+            </a>
+            <a href="calculators.html#calcGstPane" class="dropdown-link">
+              <span class="dropdown-icon">📑</span>
+              <div>
+                <strong>GST Forward &amp; Reverse Calc</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">CGST, SGST &amp; IGST Breakdown</p>
+              </div>
+            </a>
+            <a href="calculators.html#calcHraPane" class="dropdown-link">
+              <span class="dropdown-icon">🏠</span>
+              <div>
+                <strong>HRA Exemption Sec 10(13A)</strong>
+                <p style="font-size: 0.75rem; color: var(--text-subtle);">Metro &amp; Non-Metro Rent Exemption</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="due-dates.html" class="nav-link">Due Dates 2026-27</a>
+        </div>
+        <div class="nav-item">
+          <a href="about-ca.html" class="nav-link">About CA</a>
+        </div>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header-actions">
+        <a href="tel:+919891495092" class="nav-phone-badge" title="Direct Phone Support">
+          <span class="phone-dot"></span>
+          <span>+91 98914 95092</span>
+        </a>
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Tax Engine Consultation AY 2026-27')">
+          Book Consultation
+        </button>
+        <button class="mobile-toggle" id="mobileNavToggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <img src="assets/logo.png" alt="Easy My Taxes" style="height: 40px;">
+      <button id="mobileNavClose" style="font-size: 1.5rem; color: var(--primary-900);">✕</button>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">Home</a>
+      <a href="index.html#services" class="mobile-drawer-link">All CA Services</a>
+      <a href="calculators.html" class="mobile-drawer-link" style="color: var(--emerald-600); font-weight: 800;">Tax Calculators (AY 2026-27)</a>
+      <a href="due-dates.html" class="mobile-drawer-link">Compliance Due Dates 2026-27</a>
+      <a href="about-ca.html" class="mobile-drawer-link">About CA Pradeep Agarwal</a>
+      <a href="index.html#checklist" class="mobile-drawer-link">Document Checklist Helper</a>
+    </div>
+    <div style="padding: 1.5rem; border-top: 1px solid var(--surface-200); margin-top: auto;">
+      <a href="tel:+919891495092" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--primary-900); margin-bottom: 1rem; text-decoration: none;">
+        📞 +91 98914 95092
+      </a>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openConsultationModal('Mobile Drawer Tax Calculators')">
+        Book CA Consultation
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- =========================================================================
+         2. BREADCRUMB & HERO BANNER
+         ========================================================================= -->
+    <section class="section-py bg-dark" style="padding: 4rem 0 3.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--surface-300); margin-bottom: 1.5rem;">
+          <a href="index.html" style="color: var(--emerald-400); font-weight: 600; text-decoration: none;">Home</a>
+          <span>/</span>
+          <span style="color: #ffffff; font-weight: 700;">Tax Calculators Suite (AY 2026-27)</span>
+        </nav>
+
+        <div style="max-width: 860px;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); padding: 0.35rem 0.85rem; border-radius: var(--radius-full); margin-bottom: 1.25rem;">
+            <span style="color: var(--emerald-400); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">
+              ⚡ Statutory Computation Engines AY 2026-27
+            </span>
+          </div>
+
+          <h1 style="font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 800; color: #ffffff; line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 1.25rem;">
+            Interactive Indian Tax &amp; Financial Calculators <span class="highlight">(AY 2026-27)</span>
+          </h1>
+
+          <p style="font-size: 1.1rem; color: var(--surface-300); line-height: 1.7; margin-bottom: 2rem;">
+            Statutory algorithms calibrated with latest provisions for <strong>Assessment Year 2026-27 (FY 2025-26 &amp; FY 2026-27)</strong>. Seamlessly simulate Old vs New Regimes with the <strong>₹75,000 standard deduction</strong>, plan quarterly Advance Tax, evaluate Freelancer 44ADA 50% presumptive relief, and split GST.
+          </p>
+
+          <!-- Engine Stat Badges -->
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <span style="font-size: 0.8125rem; font-weight: 700; background: rgba(255,255,255,0.08); padding: 0.45rem 0.85rem; border-radius: var(--radius-full); color: var(--emerald-300); border: 1px solid rgba(16, 185, 129, 0.2);">
+              ✓ AY 2026-27 Tax Slabs
+            </span>
+            <span style="font-size: 0.8125rem; font-weight: 700; background: rgba(255,255,255,0.08); padding: 0.45rem 0.85rem; border-radius: var(--radius-full); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.15);">
+              ✓ ₹75,000 Standard Deduction
+            </span>
+            <span style="font-size: 0.8125rem; font-weight: 700; background: rgba(255,255,255,0.08); padding: 0.45rem 0.85rem; border-radius: var(--radius-full); color: var(--amber-300); border: 1px solid rgba(245, 158, 11, 0.2);">
+              ✓ 1-Click WhatsApp Export
+            </span>
+            <span style="font-size: 0.8125rem; font-weight: 700; background: rgba(255,255,255,0.08); padding: 0.45rem 0.85rem; border-radius: var(--radius-full); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.2);">
+              ✓ 100% Free &amp; Private
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. INTERACTIVE CALCULATOR SUITE
+         ========================================================================= -->
+    <!-- =========================================================================
+         9. INTERACTIVE FINANCIAL CALCULATORS SUITE (AY 2026-27 UPDATED)
+         ========================================================================= -->
+    <section id="calculators" class="section-py bg-slate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag amber">Live Tax Engines 2026</span>
+          <h2 class="section-title">Interactive Tax &amp; Financial Calculators</h2>
+          <p class="section-desc">
+            Accurate, real-time calculations updated with the latest provisions for <strong>Assessment Year 2026-27 (FY 2025-26 &amp; FY 2026-27)</strong>.
+          </p>
+        </div>
+
+        <!-- Calculator Tabs -->
+        <div class="calc-tabs-wrapper">
+          <div class="calc-tab-nav">
+            <button class="calc-tab-btn active" data-target="calcOldNewPane">
+              ⚡ Old vs New Tax (AY 2026-27)
+            </button>
+            <button class="calc-tab-btn" data-target="calcAdvTaxPane">
+              📅 Advance Tax Schedule 2026-27
+            </button>
+            <button class="calc-tab-btn" data-target="calcAdaPane">
+              💼 Freelancer 44ADA vs Normal
+            </button>
+            <button class="calc-tab-btn" data-target="calcGstPane">
+              📑 GST Forward &amp; Reverse
+            </button>
+            <button class="calc-tab-btn" data-target="calcHraPane">
+              🏠 HRA Exemption Sec 10(13A)
+            </button>
+          </div>
+        </div>
+
+        <!-- PANE 1: OLD VS NEW REGIME (AY 2026-27) -->
+        <div id="calcOldNewPane" class="calc-pane active">
+          <div class="calc-grid">
+            <!-- Inputs -->
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                Annual Income &amp; Deductions (AY 2026-27)
+              </h3>
+
+              <!-- Quick Salary Preset Chips -->
+              <div style="margin-top: 0.75rem;">
+                <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase;">
+                  ⚡ Quick Test Salary Presets:
+                </label>
+                <div class="salary-presets-row">
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(800000, this)">₹8 Lakhs</button>
+                  <button type="button" class="preset-chip active" onclick="setSalaryPreset(1250000, this)">₹12.5 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(1800000, this)">₹18 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(2500000, this)">₹25 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(5000000, this)">₹50 Lakhs</button>
+                  <button type="button" class="preset-chip" onclick="setSalaryPreset(10000000, this)">₹1 Crore</button>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcGrossSalary">Gross Annual Salary / Income</label>
+                  <span class="calc-help">Form 16 / CTC</span>
+                </div>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="calcGrossSalary" class="calc-field" value="1250000" step="10000">
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcOtherIncome">Other Income (Interest, Rental, Dividends)</label>
+                </div>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="calcOtherIncome" class="calc-field" value="50000" step="5000">
+                </div>
+              </div>
+
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--emerald-700); margin-top: 0.5rem;">
+                Deductions (Applicable for Old Tax Regime):
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calc80C">Section 80C (Max ₹1.5L)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calc80C" class="calc-field" value="150000" max="150000" step="5000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calc80D">Section 80D (Health Ins)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calc80D" class="calc-field" value="25000" step="5000">
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calcNPS">NPS 80CCD(1B) (Max ₹50k)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calcNPS" class="calc-field" value="50000" max="50000" step="5000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="calcHomeLoan">Home Loan Interest Sec 24</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="calcHomeLoan" class="calc-field" value="0" max="200000" step="10000">
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcHRA">HRA Exemption / Rent Paid Sec 10(13A)</label>
+                </div>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="calcHRA" class="calc-field" value="120000" step="5000">
+                </div>
+              </div>
+            </div>
+
+            <!-- Results Column -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1rem;">
+                  Tax Computation Comparison (AY 2026-27)
+                </h3>
+
+                <div class="regime-comparison-cards">
+                  <!-- New Regime Card -->
+                  <div id="cardNewRegime" class="regime-card winner">
+                    <span class="regime-badge">AY 2026-27</span>
+                    <div class="regime-name">New Tax Regime</div>
+                    <div class="regime-tax-val" id="resNewTax">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Std. Ded: ₹75,000</span>
+                  </div>
+
+                  <!-- Old Regime Card -->
+                  <div id="cardOldRegime" class="regime-card">
+                    <div class="regime-name">Old Tax Regime</div>
+                    <div class="regime-tax-val" id="resOldTax">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Std. Ded: ₹50,000</span>
+                  </div>
+                </div>
+
+                <!-- Recommendation Banner -->
+                <div class="recommendation-banner">
+                  <h4 id="recBannerTitle">Comparing Regimes...</h4>
+                  <p id="recBannerDesc">Loading recommendation...</p>
+                </div>
+
+                <!-- Breakdown Table -->
+                <table class="breakdown-table">
+                  <tr>
+                    <td>Taxable Income (New Regime)</td>
+                    <td id="resNewTaxable">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Taxable Income (Old Regime)</td>
+                    <td id="resOldTaxable">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Total Deductions Claimed (New)</td>
+                    <td id="resNewDed">₹75,000</td>
+                  </tr>
+                  <tr>
+                    <td>Total Deductions Claimed (Old)</td>
+                    <td id="resOldDed">₹0</td>
+                  </tr>
+                </table>
+
+                <!-- WhatsApp Calculation Export Card -->
+                <div class="whatsapp-export-card">
+                  <div>
+                    <strong style="font-size: 0.875rem; color: var(--primary-950); display: block;">📲 Need CA Pradeep to Review This?</strong>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Send these exact calculations to WhatsApp for free review.</span>
+                  </div>
+                  <button class="btn btn-whatsapp btn-sm" onclick="sendTaxSummaryToWhatsApp()">
+                    Send Calculation to WhatsApp
+                  </button>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openConsultationModal('Tax Optimization Plan AY 2026-27')">
+                Have CA Pradeep Optimize &amp; File This &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 2: ADVANCE TAX SCHEDULE 2026-27 -->
+        <div id="calcAdvTaxPane" class="calc-pane">
+          <div class="calc-grid">
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                Advance Tax Instalment Calculator (FY 2026-27)
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">
+                Required if your net annual income tax liability exceeds ₹10,000. Avoid 1% monthly penal interest under Section 234B &amp; 234C.
+              </p>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="advTaxAnnualAmount">Estimated Total Annual Tax Liability (FY 2026-27)</label>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="advTaxAnnualAmount" class="calc-field" value="120000" step="5000">
+                </div>
+              </div>
+
+              <div style="background: var(--surface-100); border-radius: var(--radius-md); padding: 1.25rem; margin-top: 1.25rem;">
+                <h4 style="font-size: 0.9375rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.5rem;">⚠️ Section 234C Penalty Rule</h4>
+                <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;">
+                  Failure to pay quarterly installments on or before statutory due dates triggers mandatory 1% simple interest per month on the shortfall amount.
+                </p>
+              </div>
+            </div>
+
+            <!-- Advance Tax Results -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1rem;">
+                  Quarterly Payment Schedule (FY 2026-27)
+                </h3>
+
+                <div class="adv-tax-grid">
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">1st Installment (15%)</div>
+                    <div class="adv-tax-amount" id="advResQ1">₹18,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th June 2026</div>
+                  </div>
+
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">2nd Installment (45%)</div>
+                    <div class="adv-tax-amount" id="advResQ2">₹54,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th Sept 2026</div>
+                  </div>
+
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">3rd Installment (75%)</div>
+                    <div class="adv-tax-amount" id="advResQ3">₹90,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th Dec 2026</div>
+                  </div>
+
+                  <div class="adv-tax-box">
+                    <div class="adv-tax-quarter">4th Installment (100%)</div>
+                    <div class="adv-tax-amount" id="advResQ4">₹1,20,000</div>
+                    <div class="adv-tax-date">🗓️ On or before 15th Mar 2027</div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" style="margin-top: 1.25rem;" onclick="openConsultationModal('Advance Tax Schedule Advisory')">
+                Have CA Pradeep Manage Advance Tax &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 3: FREELANCER 44ADA CALCULATOR -->
+        <div id="calcAdaPane" class="calc-pane">
+          <div class="calc-grid">
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                Freelancer / Professional 44ADA Presumptive Tax
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">
+                For Software Consultants, Doctors, Architects, Lawyers &amp; Designers with gross receipts up to ₹75 Lakhs.
+              </p>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="adaGrossReceipts">Total Gross Professional Receipts / Revenue</label>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="adaGrossReceipts" class="calc-field" value="2500000" step="50000">
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="adaActualExpenses">Estimated Actual Annual Expenses (Rent, Software, Internet, Travel)</label>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="adaActualExpenses" class="calc-field" value="400000" step="20000">
+                </div>
+              </div>
+            </div>
+
+            <!-- 44ADA Results -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1.25rem;">
+                  Section 44ADA Benefits Summary
+                </h3>
+
+                <div class="regime-comparison-cards">
+                  <div class="regime-card winner">
+                    <span class="regime-badge">No Audit Needed</span>
+                    <div class="regime-name" style="color: var(--emerald-700);">44ADA 50% Profit</div>
+                    <div class="regime-tax-val" id="adaResTaxADA" style="color: var(--emerald-600);">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Tax on 50% Presumed Income</span>
+                  </div>
+
+                  <div class="regime-card">
+                    <div class="regime-name">Normal Bookkeeping</div>
+                    <div class="regime-tax-val" id="adaResTaxActual">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Tax on Actual Profit</span>
+                  </div>
+                </div>
+
+                <div class="recommendation-banner" style="background: linear-gradient(135deg, #059669, #047857);">
+                  <h4 style="color: #fff;">💡 Potential Tax Saving: <span id="adaResSavings">₹0</span></h4>
+                  <p style="color: #d1fae5;">Claim 50% standard expense deduction without keeping complex receipts or tax audit.</p>
+                </div>
+
+                <table class="breakdown-table">
+                  <tr>
+                    <td>Presumed Taxable Profit (50% u/s 44ADA)</td>
+                    <td id="adaResProfitADA">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Actual Taxable Profit</td>
+                    <td id="adaResProfitActual">₹0</td>
+                  </tr>
+                </table>
+              </div>
+
+              <button class="btn btn-primary" onclick="openConsultationModal('Freelancer 44ADA Advisory')">
+                Consult CA Pradeep on 44ADA &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 4: GST CALCULATOR -->
+        <div id="calcGstPane" class="calc-pane">
+          <div class="calc-grid">
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                Calculate Goods &amp; Services Tax (GST 2026)
+              </h3>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="gstAmount">Enter Transaction Amount</label>
+                <div class="calc-input-wrap">
+                  <span class="currency-symbol">₹</span>
+                  <input type="number" id="gstAmount" class="calc-field" value="50000" step="1000">
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="gstRate">Select Applicable GST Slab</label>
+                <select id="gstRate" class="form-control" style="font-weight: 600;">
+                  <option value="5">5% (Essential Goods, Transport, Basic Foods)</option>
+                  <option value="12">12% (Standard Goods, Business Services, Apparel)</option>
+                  <option value="18" selected>18% (IT Services, Software, CA/Consulting, Telecom)</option>
+                  <option value="28">28% (Luxury Items, Automobiles, Aerated Drinks)</option>
+                </select>
+              </div>
+
+              <div class="calc-input-group">
+                <label class="calc-label">GST Calculation Mode</label>
+                <div style="display: flex; gap: 1.5rem; margin-top: 0.35rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; cursor: pointer;">
+                    <input type="radio" name="gstType" value="exclusive" checked style="accent-color: var(--emerald-600);">
+                    <span><strong>GST Exclusive</strong> (Add GST to base price)</span>
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; cursor: pointer;">
+                    <input type="radio" name="gstType" value="inclusive" style="accent-color: var(--emerald-600);">
+                    <span><strong>GST Inclusive</strong> (Extract GST from MRP)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- GST Results -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1.5rem;">
+                  GST Tax Breakup (2026)
+                </h3>
+
+                <table class="breakdown-table">
+                  <tr>
+                    <td>Net / Base Amount</td>
+                    <td id="gstResNet" style="font-size: 1.125rem;">₹50,000</td>
+                  </tr>
+                  <tr>
+                    <td>Total GST Tax Amount</td>
+                    <td id="gstResTax" style="font-size: 1.125rem; color: var(--emerald-600);">₹9,000</td>
+                  </tr>
+                  <tr style="background: var(--surface-100);">
+                    <td style="font-weight: 800; font-size: 1rem; color: var(--primary-950); padding: 0.85rem 0.5rem;">Total Final Invoice Amount</td>
+                    <td id="gstResTotal" style="font-weight: 800; font-size: 1.25rem; color: var(--primary-950); padding: 0.85rem 0.5rem;">₹59,000</td>
+                  </tr>
+                  <tr>
+                    <td>CGST (Central GST)</td>
+                    <td id="gstResCgst">₹4,500</td>
+                  </tr>
+                  <tr>
+                    <td>SGST (State GST)</td>
+                    <td id="gstResSgst">₹4,500</td>
+                  </tr>
+                  <tr>
+                    <td>IGST (Interstate Supply)</td>
+                    <td id="gstResIgst">₹9,000</td>
+                  </tr>
+                </table>
+              </div>
+
+              <button class="btn btn-primary" onclick="openConsultationModal('GST Return Filing Assistance 2026')">
+                Get CA Support for GST Filing &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 5: HRA EXEMPTION -->
+        <div id="calcHraPane" class="calc-pane">
+          <div class="calc-grid">
+            <div class="calc-inputs-col">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); border-bottom: 1px solid var(--surface-200); padding-bottom: 0.75rem;">
+                House Rent Allowance (HRA) Exemption Sec 10(13A)
+              </h3>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraBasic">Basic Salary (Annual)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraBasic" class="calc-field" value="600000" step="10000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraDA">Dearness Allowance (DA)</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraDA" class="calc-field" value="0" step="5000">
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraReceived">HRA Received from Employer</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraReceived" class="calc-field" value="240000" step="5000">
+                  </div>
+                </div>
+
+                <div class="calc-input-group">
+                  <label class="calc-label" for="hraRentPaid">Total Rent Paid Annually</label>
+                  <div class="calc-input-wrap">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="hraRentPaid" class="calc-field" value="300000" step="5000">
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label class="calc-label" for="hraIsMetro">City of Residence</label>
+                <select id="hraIsMetro" class="form-control">
+                  <option value="metro">Metro City (Delhi, Mumbai, Kolkata, Chennai - 50% Basic)</option>
+                  <option value="non-metro">Non-Metro City (Bangalore, Hyderabad, Pune, etc. - 40% Basic)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- HRA Results -->
+            <div class="calc-results-col">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1rem;">
+                  HRA Exemption Summary (AY 2026-27)
+                </h3>
+
+                <div class="regime-comparison-cards" style="margin-bottom: 1.5rem;">
+                  <div class="regime-card winner">
+                    <div class="regime-name" style="color: var(--emerald-700);">Exempt HRA</div>
+                    <div class="regime-tax-val" id="hraResExempt" style="color: var(--emerald-600);">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Tax-Free Allowance</span>
+                  </div>
+                  <div class="regime-card">
+                    <div class="regime-name">Taxable HRA</div>
+                    <div class="regime-tax-val" id="hraResTaxable">₹0</div>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">Added to Salary</span>
+                  </div>
+                </div>
+
+                <table class="breakdown-table">
+                  <tr>
+                    <td>1. Actual HRA Received</td>
+                    <td id="hraCond1">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>2. Rent Paid - 10% of Salary</td>
+                    <td id="hraCond2">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>3. 50% / 40% of Salary</td>
+                    <td id="hraCond3">₹0</td>
+                  </tr>
+                </table>
+              </div>
+
+              <button class="btn btn-primary" onclick="openConsultationModal('HRA & Rent Proof Advisory')">
+                Consult CA on Landlord PAN &amp; Proofs &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. STATUTORY TAX RULES & PROVISIONS GUIDE (AY 2026-27)
+         ========================================================================= -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag blue">Statutory Tax Reference 2026</span>
+          <h2 class="section-title">Key Tax Provisions &amp; Eligibility Guidelines (AY 2026-27)</h2>
+          <p class="section-desc">
+            Everything you need to know about the Indian Income Tax changes, filing thresholds, and compliance safeguards.
+          </p>
+        </div>
+
+        <div class="faq-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+          <div class="faq-item open" style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-lg); padding: 1.5rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.75rem;">
+              ⚡ What changed in the New Tax Regime for AY 2026-27?
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-main); line-height: 1.65;">
+              The Standard Deduction for salaried employees under the New Regime (Sec 115BAC) is <strong>₹75,000</strong> (up from ₹50,000). Taxable income up to ₹7,00,000 continues to enjoy a full Section 87A tax rebate, meaning <strong>zero net tax liability</strong> for salaried individuals with gross income up to ₹7.75 Lakhs under the New Regime.
+            </p>
+          </div>
+
+          <div class="faq-item open" style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-lg); padding: 1.5rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.75rem;">
+              📅 Who is required to pay Advance Tax for FY 2026-27?
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-main); line-height: 1.65;">
+              Under Section 208, any taxpayer whose estimated net tax liability after TDS/TCS exceeds <strong>₹10,000</strong> must pay advance tax in 4 quarterly installments: <strong>15% by 15th June</strong>, <strong>45% by 15th Sept</strong>, <strong>75% by 15th Dec</strong>, and <strong>100% by 15th March</strong>. Failure attracts mandatory 1% monthly interest under Section 234B &amp; 234C.
+            </p>
+          </div>
+
+          <div class="faq-item open" style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-lg); padding: 1.5rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.75rem;">
+              💼 Who can opt for Freelancer Section 44ADA?
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-main); line-height: 1.65;">
+              Section 44ADA applies to specified resident professionals—including software consultants, web developers, doctors, lawyers, interior designers, and architects—with gross receipts up to <strong>₹75 Lakhs</strong> (provided cash receipts do not exceed 5%). You declare flat <strong>50% as taxable profit</strong>, saving yourself from maintaining books of accounts and statutory tax audits.
+            </p>
+          </div>
+
+          <div class="faq-item open" style="background: var(--surface-50); border: 1px solid var(--surface-200); border-radius: var(--radius-lg); padding: 1.5rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.75rem;">
+              🏠 How is HRA Exemption calculated under Section 10(13A)?
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-main); line-height: 1.65;">
+              Exempt HRA is the minimum of three statutory conditions: (1) Actual HRA received from employer, (2) Actual rent paid minus 10% of basic salary + DA, or (3) 50% of salary for metro cities (Delhi, Mumbai, Kolkata, Chennai) or 40% of salary for non-metro cities. Note: HRA exemption is available <strong>only under the Old Tax Regime</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. CA ADVISORY CALL TO ACTION
+         ========================================================================= -->
+    <section class="section-py bg-dark" style="padding: 4rem 0;">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-2xl); padding: 3rem; text-align: center; max-width: 900px; margin: 0 auto;">
+          <span style="background: var(--emerald-500); color: #ffffff; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); display: inline-block; margin-bottom: 1rem;">
+            CA Verification &amp; Filing Support
+          </span>
+          <h2 style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; color: #ffffff; margin-bottom: 1rem;">
+            Need CA Pradeep Agarwal to Optimize Your Taxes?
+          </h2>
+          <p style="font-size: 1.05rem; color: var(--surface-300); max-width: 650px; margin: 0 auto 2rem auto; line-height: 1.7;">
+            Self-calculations are great for estimation, but complex scenarios like RSUs/ESOPs, capital gains, foreign assets, and 44ADA balance sheets require licensed CA precision. Get your computation verified before filing.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-lg" onclick="openConsultationModal('Calculator Hub Review Booking')">
+              Book CA Consultation &rarr;
+            </button>
+            <button class="btn btn-whatsapp btn-lg" onclick="openWhatsAppInquiry('Tax Calculation Verification Request')">
+              WhatsApp Us (+91 98914 95092)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       6. FOOTER & LEGAL COMPLIANCE
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <img src="assets/logo-white.png" alt="Easy My Taxes Logo" style="height: 44px;">
+          <p>
+            Easy My Taxes is a premier technology-driven Chartered Accountancy and financial consultancy platform led by <strong>CA Pradeep Agarwal (FCA, DISA)</strong>, delivering precision ITR filings for AY 2026-27, corporate compliances, statutory audits, and virtual CFO leadership.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <span style="font-size: 0.8125rem; background: rgba(255,255,255,0.08); padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); color: var(--emerald-400);">
+              ✓ Registered CA Network
+            </span>
+            <span style="font-size: 0.8125rem; background: rgba(255,255,255,0.08); padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); color: var(--amber-400);">
+              ✓ 256-Bit SSL Encrypted
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h4>CA Practice Areas 2026</h4>
+          <div class="footer-links">
+            <a href="index.html#services">Salaried &amp; Individual ITR (AY 2026-27)</a>
+            <a href="index.html#services">Capital Gains &amp; Crypto</a>
+            <a href="index.html#services">NRI Tax Advisory &amp; 15CA/CB</a>
+            <a href="index.html#services">GST Registration &amp; Returns</a>
+            <a href="index.html#services">Pvt Ltd &amp; LLP Registration</a>
+            <a href="index.html#services">Virtual CFO Retainer</a>
+            <a href="index.html#services">Statutory &amp; Tax Audits</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Quick Links & Tools -->
+        <div class="footer-col">
+          <h4>Tools &amp; Resources 2026</h4>
+          <div class="footer-links">
+            <a href="calculators.html#calcOldNewPane">Old vs New Tax Calculator (AY 2026-27)</a>
+            <a href="calculators.html#calcAdvTaxPane">Advance Tax Schedule Calculator</a>
+            <a href="calculators.html#calcAdaPane">Freelancer 44ADA Calculator</a>
+            <a href="calculators.html#calcGstPane">GST Forward/Reverse Calc</a>
+            <a href="calculators.html#calcHraPane">HRA Exemption Calculator</a>
+            <a href="due-dates.html">Compliance Due Dates 2026-27</a>
+            <a href="about-ca.html">About CA Pradeep Agarwal</a>
+            <a href="index.html#checklist">Document Checklist Helper</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Reach Us -->
+        <div class="footer-col">
+          <h4>Reach Our Firm</h4>
+          <div class="footer-contact">
+            <p><strong>Senior Managing Partner:</strong><br>CA Pradeep Agarwal (FCA, DISA)</p>
+            <p><strong>Official Phone:</strong><br><a href="tel:+919891495092">+91 98914 95092</a></p>
+            <p><strong>Official Email:</strong><br><a href="mailto:easymytaxes@gmail.com">easymytaxes@gmail.com</a></p>
+            <p><strong>Advisory Hours:</strong><br>Mon – Sat: 9:30 AM – 7:30 PM IST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Easy My Taxes. Chartered Accountancy Practice led by CA Pradeep Agarwal. All Rights Reserved.</p>
+        <div class="footer-disclaimer">
+          <p>
+            Disclaimer: The tools and computations provided on this website are designed for educational, informational, and preliminary advisory purposes based on the Income Tax Act 1961 (as amended for AY 2026-27). Easy My Taxes and its partners comply with ICAI professional guidelines. Official filing should be conducted with verified documentation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Consultation Booking Modal -->
+  <div class="modal-backdrop" id="consultModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Book a 1-on-1 CA Advisory Session</h3>
+          <p style="font-size: 0.8125rem; color: var(--text-muted);">Confidential consultation with CA Pradeep Agarwal &amp; tax team.</p>
+        </div>
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+      </div>
+      <form id="consultForm" onsubmit="handleConsultationSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="cName">Your Full Name *</label>
+          <input type="text" id="cName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cPhone">WhatsApp / Mobile Number *</label>
+          <input type="tel" id="cPhone" class="form-control" placeholder="e.g. +91 98914 95092" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cEmail">Email Address *</label>
+          <input type="email" id="cEmail" class="form-control" placeholder="e.g. rahul@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cService">Primary Advisory Requirement *</label>
+          <select id="cService" class="form-control">
+            <option value="ITR Filing AY 2026-27">ITR Filing &amp; Tax Regime Optimization (AY 2026-27)</option>
+            <option value="Advance Tax Planning">Advance Tax Planning (FY 2026-27)</option>
+            <option value="Freelancer 44ADA Advisory">Freelancer / Professional 44ADA Presumptive Tax</option>
+            <option value="GST Filing & Refunds">GST Return Filing &amp; Refund Advisory</option>
+            <option value="HRA & Rent Proofs">HRA Exemption &amp; Deductions</option>
+            <option value="General CA Consultation">General CA Consultation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cNotes">Specific Questions / Case Notes (Optional)</label>
+          <textarea id="cNotes" class="form-control" rows="3" placeholder="E.g., I need assistance comparing Old vs New regime with NPS and HRA..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+          Confirm Booking with CA Pradeep &rarr;
+        </button>
+        <p style="font-size: 0.75rem; text-align: center; color: var(--text-subtle);">
+          🔒 Guaranteed zero spam. Free initial case assessment.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/calculators.js"></script>
+  <script src="js/calendar-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
