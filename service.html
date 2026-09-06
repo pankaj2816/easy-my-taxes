@@ -47,7 +47,14 @@
             <div class="mega-menu-inner">
               <!-- Left Category Tabs (1. Company Registrations, 2. Compliance, 3. Licenses, etc.) -->
               <div class="mega-sidebar">
-                <div class="mega-side-item active" data-target="mega-pane-registrations">
+                <div class="mega-side-item active" data-target="mega-pane-itr">
+                  <span class="mega-side-icon">📝</span>
+                  <div>
+                    <strong>Income Tax Returns (ITR)</strong>
+                    <span style="display:block; font-size: 0.72rem; color: var(--text-subtle); font-weight: normal;">Salary, Capital Gains, NRIs</span>
+                  </div>
+                </div>
+                <div class="mega-side-item" data-target="mega-pane-registrations">
                   <span class="mega-side-icon">🏢</span>
                   <div>
                     <strong>Company Registrations</strong>
@@ -87,8 +94,68 @@
               <!-- Right Multi-Column Content Area (Switches on hover) -->
               <div class="mega-content">
                 
-                <!-- 1. COMPANY REGISTRATIONS PANE (Default Active) -->
-                <div class="mega-pane active" id="mega-pane-registrations">
+                <!-- 0. INCOME TAX RETURNS (ITR) PANE (Default Active) -->
+                <div class="mega-pane active" id="mega-pane-itr">
+                  <div class="mega-pane-header" style="margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 0;">Income Tax Return (ITR) Services (AY 2026-27)</h4>
+                      <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">100% AIS, TIS &amp; 26AS matching with Senior CA verification</p>
+                    </div>
+                    <a href="service.html?category=itr" style="font-size: 0.8125rem; font-weight: 700; color: #ea580c; text-decoration: none;">View All ITR Services &rarr;</a>
+                  </div>
+                  <div class="mega-col-grid">
+                    <div class="mega-col">
+                      <div class="mega-col-header">Individual &amp; Salaried</div>
+                      <a href="service.html?id=itr-salaried" class="mega-link featured-link">
+                        <span class="mega-link-title">Salaried Individual ITR <span class="badge-pill gold">Popular</span></span>
+                        <span class="mega-link-sub">Single/Multiple Form 16, HRA &amp; ESOPs</span>
+                      </a>
+                      <a href="service.html?id=itr-capital-gains" class="mega-link">
+                        <span class="mega-link-title">Capital Gains &amp; Trading ITR</span>
+                        <span class="mega-link-sub">Stocks, Mutual Funds, Crypto &amp; F&amp;O</span>
+                      </a>
+                      <a href="service.html?id=itr-nri" class="mega-link">
+                        <span class="mega-link-title">NRI Taxation &amp; Schedule FA</span>
+                        <span class="mega-link-sub">Foreign assets &amp; DTAA tax credits</span>
+                      </a>
+                    </div>
+
+                    <div class="mega-col">
+                      <div class="mega-col-header">Business &amp; Corporate</div>
+                      <a href="service.html?id=itr-business-professionals" class="mega-link featured-link">
+                        <span class="mega-link-title">Professionals (Sec 44ADA)</span>
+                        <span class="mega-link-sub">50% presumptive profit for consultants</span>
+                      </a>
+                      <a href="service.html?id=itr-corporate" class="mega-link">
+                        <span class="mega-link-title">Corporate ITR-6 Filing</span>
+                        <span class="mega-link-sub">Companies Act &amp; Tax Audit alignment</span>
+                      </a>
+                      <a href="service.html?id=itr-partnership" class="mega-link">
+                        <span class="mega-link-title">Partnership &amp; LLP (ITR-5)</span>
+                        <span class="mega-link-sub">Section 40(b) partner remuneration</span>
+                      </a>
+                    </div>
+
+                    <div class="mega-col">
+                      <div class="mega-col-header">Notices &amp; Special Filings</div>
+                      <a href="service.html?id=itr-tax-notice" class="mega-link">
+                        <span class="mega-link-title">Tax Notice &amp; Scrutiny Resolution</span>
+                        <span class="mega-link-sub">Direct legal reply by CA Pradeep</span>
+                      </a>
+                      <a href="service.html?id=itr-updated" class="mega-link">
+                        <span class="mega-link-title">Updated Return (ITR-U)</span>
+                        <span class="mega-link-sub">Past 2-year missed / omitted returns</span>
+                      </a>
+                      <a href="service.html?id=itr-trust-ngo" class="mega-link">
+                        <span class="mega-link-title">Trust &amp; NGO ITR-7</span>
+                        <span class="mega-link-sub">Section 11, 12A &amp; 80G tax exemptions</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1. COMPANY REGISTRATIONS PANE -->
+                <div class="mega-pane" id="mega-pane-registrations">
                   <div class="mega-pane-header" style="margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between;">
                     <div>
                       <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 0;">Company Registration Services</h4>
@@ -497,6 +564,9 @@
     <div style="background: #070d18; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.85rem 0; position: sticky; top: 72px; z-index: 40; backdrop-filter: blur(8px);">
       <div class="container">
         <div class="category-hub-tabs" id="categoryTabsHeader">
+          <button type="button" class="category-hub-tab" data-cat="itr" onclick="switchCategory('itr')">
+            <span>📝</span> Income Tax Returns (9)
+          </button>
           <button type="button" class="category-hub-tab active" data-cat="registrations" onclick="switchCategory('registrations')">
             <span>🏢</span> Company Registrations (16)
           </button>

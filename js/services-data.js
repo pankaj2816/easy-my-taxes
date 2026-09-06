@@ -3210,5 +3210,1282 @@ const MASTER_SERVICES_DATA = {
         "a": "Yes! Indian residents can legally invest and incorporate companies abroad under the RBI Overseas Direct Investment (ODI) or Liberalised Remittance Scheme (LRS) frameworks."
       }
     ]
+  },
+  "itr-salaried": {
+    "id": "itr-salaried",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\ud83d\udcdd",
+    "badge": "AY 2026-27 Default & New Slabs",
+    "title": "Salaried Individual ITR Filing (AY 2026-27)",
+    "tagline": "Expert CA-assisted ITR-1 / ITR-2 filing for salaried professionals with single/multiple Form 16, ESOPs, and allowances.",
+    "timeline": "24 - 48 Hours",
+    "govtPortal": "Income Tax Department (E-Filing 2.0)",
+    "filingMode": "100% Online Paperless",
+    "overview": "Comprehensive income tax return filing for salaried employees calibrated for Assessment Year 2026-27. Directed by CA Pradeep Agarwal, we perform 100% reconciliation with Annual Information Statement (AIS) and Tax Information Summary (TIS), optimize Old vs New Tax Regime deductions, and ensure zero defective notices.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        For <strong>Assessment Year 2026-27 (FY 2025-26)</strong>, the Revised New Tax Regime is the statutory default regime with a <strong>\u20b975,000 Standard Deduction</strong> for salaried employees and complete tax rebate up to \u20b97.75 Lakhs under Section 87A. However, if you claim significant deductions under Section 80C, 80D (health insurance), Section 24(b) (home loan interest), and HRA, the Old Regime may yield thousands in additional tax refunds.\n      </p>\n      <p>\n        Filing salary returns without CA verification frequently leads to <strong>defective return notices under Section 139(9)</strong> or demand notices under Section 143(1) due to mismatches between Form 16 and your AIS/26AS. Easy My Taxes conducts a line-by-line tax credit matching, reconciles multiple Form 16s across mid-year job switches, and handles complicated foreign ESOP perks accurately.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\udcbc",
+        "title": "Single & Multiple Form 16",
+        "desc": "Employees who changed employers during the year and received multiple Form 16s."
+      },
+      {
+        "icon": "\ud83d\udcc8",
+        "title": "Tech & ESOP Employees",
+        "desc": "Professionals with vested ESOPs, RSUs, US stock vesting, and foreign perquisites."
+      },
+      {
+        "icon": "\ud83c\udfe0",
+        "title": "Home Loan & HRA Claimants",
+        "desc": "Salaried taxpayers maximizing dual benefits of HRA and Section 24(b) interest deduction."
+      },
+      {
+        "icon": "\ud83d\udcb0",
+        "title": "High Net Worth Earners",
+        "desc": "Individuals earning > \u20b950 Lakhs requiring Schedule AL (Assets & Liabilities) disclosure."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "Primary Document",
+        "value": "Form 16 Part A & B",
+        "desc": "TDS certificate issued by your employer(s) for the financial year."
+      },
+      {
+        "icon": "\ud83d\udd0d",
+        "label": "Tax Credit Records",
+        "value": "AIS & 26AS Matching",
+        "desc": "Reconciled against the Income Tax Portal's Annual Information Statement."
+      },
+      {
+        "icon": "\ud83c\udfe6",
+        "label": "Bank Disclosure",
+        "value": "All Active Accounts",
+        "desc": "Mandatory reporting of all savings bank accounts held in India for refund pre-validation."
+      },
+      {
+        "icon": "\ud83d\udccb",
+        "label": "Deductions Proof",
+        "value": "Investment Receipts",
+        "desc": "ELSS, PPF, NPS, Mediclaim, and Home Loan interest certificates if choosing Old Regime."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Dual-Regime Tax Optimization",
+        "desc": "We mathematically simulate your exact liability under both Old and New regimes to choose the one that gives maximum tax savings."
+      },
+      {
+        "title": "Multiple Form 16 Harmonization",
+        "desc": "Eliminate double standard deduction errors and calculate exact aggregate tax when switching jobs."
+      },
+      {
+        "title": "Zero Defective Notice Guarantee",
+        "desc": "Every computation sheet is reviewed by Senior CA Pradeep Agarwal to guarantee 100% AIS reconciliation."
+      }
+    ],
+    "documents": [
+      "Form 16 (Part A and Part B from all employers)",
+      "Annual Information Statement (AIS) & Form 26AS",
+      "Bank Account Statements for all active savings accounts",
+      "HRA Rent Receipts / Lease Agreement (Landlord PAN if rent > \u20b91L)",
+      "Home Loan Provisional Interest Certificate (Sec 24 & 80EEA)",
+      "Proof of 80C, 80D, and 80CCD(1B) NPS investments (for Old Regime)"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Document Upload & AIS Fetch",
+        "desc": "Securely upload your Form 16 and bank statements; our system fetches your live AIS & TIS."
+      },
+      {
+        "step": "2",
+        "title": "CA Computation & Regime Simulation",
+        "desc": "Dedicated CA computes taxable salary, reconciles allowances, and optimizes Old vs New regime."
+      },
+      {
+        "step": "3",
+        "title": "Review & Approval",
+        "desc": "You review the final draft computation sheet and net tax saving / refund amount."
+      },
+      {
+        "step": "4",
+        "title": "E-Filing & Verification Acknowledgement",
+        "desc": "Return is officially submitted on the IT portal and e-verification acknowledgement (ITR-V) is issued."
+      }
+    ],
+    "deliverables": [
+      "Official Income Tax Acknowledgement (ITR-V)",
+      "Detailed CA Computation of Income Sheet",
+      "Old vs New Regime Comparative Tax Savings Report",
+      "AIS / 26AS Tax Credit Matching Verification Statement",
+      "Year-Round Tax Notice Safeguard & Advisory"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Within 30 Days of Filing",
+        "title": "E-Verification via Aadhaar OTP",
+        "desc": "E-verify return within 30 days of submission to ensure the return is legally valid."
+      },
+      {
+        "badge": "Periodic",
+        "timeline": "Within 15-45 Days",
+        "title": "Track Intimation u/s 143(1)",
+        "desc": "Monitor processing status and instant refund credit directly to your pre-validated bank account."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st July Annually",
+        "title": "Timely Filing Adherence",
+        "desc": "File before statutory deadline to avoid \u20b95,000 late fee u/s 234F and 1% monthly interest u/s 234A."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Which tax regime is better for salaried employees in AY 2026-27?",
+        "a": "For AY 2026-27, the New Tax Regime is the default regime with a \u20b975,000 standard deduction and zero tax for incomes up to \u20b97.75 Lakhs. However, if your total eligible deductions (80C, 80D, NPS, Home Loan Interest under Section 24b, and HRA) exceed \u20b93.75 Lakhs to \u20b94 Lakhs, the Old Regime may save you substantially more. Our CAs calculate both to pick your maximum refund."
+      },
+      {
+        "q": "I changed jobs this year and received two Form 16s. How should I file?",
+        "a": "When you switch jobs, both employers often apply the basic exemption limit and \u20b975,000 standard deduction, leading to under-deducted TDS. Filing them directly without reconciliation will attract a tax demand notice. We consolidate both Form 16s, adjust the standard deduction once, and compute the correct aggregate liability."
+      },
+      {
+        "q": "How do I report foreign stock options (ESOPs / RSUs) from an MNC?",
+        "a": "If you hold shares or options in a foreign employer (e.g. US parent company), you MUST file Form ITR-2 and disclose these foreign holdings under Schedule FA (Foreign Assets). Failure to report foreign assets attracts a stringent penalty under the Black Money Act. Our firm specializes in Schedule FA compliance."
+      },
+      {
+        "q": "Can I claim HRA if I pay rent to my parents?",
+        "a": "Yes! You can legally claim HRA exemption by paying rent to your parents, provided your parents own the property, you transfer the rent via bank channel, maintain rent receipts, and your parents declare the rental income in their individual ITR."
+      }
+    ]
+  },
+  "itr-capital-gains": {
+    "id": "itr-capital-gains",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\ud83d\udcc8",
+    "badge": "Stocks, Crypto, F&O & Property",
+    "title": "Capital Gains & Trading ITR Filing (AY 2026-27)",
+    "tagline": "Precision computation and loss carry-forward for Stocks, Mutual Funds, Crypto (VDA), Futures & Options, and Real Estate.",
+    "timeline": "2 - 3 Days",
+    "govtPortal": "Income Tax Department (E-Filing 2.0)",
+    "filingMode": "100% Online Paperless",
+    "overview": "Specialized tax computation for active stock market traders, equity investors, crypto asset holders, and property sellers. We consolidate multi-broker P&L statements (Zerodha, Groww, Upstox), audit Section 112A equity gains, set up 8-year loss carry forwards, and ensure 100% AIS matching.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Capital gains taxation in India has become highly scrutinized with automated broker reporting directly to your <strong>Annual Information Statement (AIS)</strong>. Any discrepancy between your broker's reported turnover and your filed return results in automated tax demand notices under Section 143(1).\n      </p>\n      <p>\n        Different asset classes require distinct tax treatment: <strong>Listed Equity & Mutual Funds</strong> (STCG at 20% u/s 111A, LTCG at 12.5% u/s 112A above \u20b91.25 Lakh exemption); <strong>Futures & Options (F&O)</strong> (treated as non-speculative business income under ITR-3 requiring balance sheet prep); <strong>Crypto & VDAs</strong> (flat 30% tax u/s 115BBH with zero loss set-off); and <strong>Real Estate</strong> (LTCG with Section 54/54EC capital gain exemptions).\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\udcca",
+        "title": "Equity & Mutual Fund Investors",
+        "desc": "Taxpayers who sold stocks or redeemed mutual funds across Zerodha, Groww, INDmoney, etc."
+      },
+      {
+        "icon": "\ud83d\udcc9",
+        "title": "F&O & Intraday Traders",
+        "desc": "Derivatives traders requiring business turnover computation and loss carry-forward setup."
+      },
+      {
+        "icon": "\ud83e\ude99",
+        "title": "Crypto & NFT Holders",
+        "desc": "Investors trading Bitcoin, Ethereum, or VDAs subject to Section 115BBH 30% tax and 1% TDS."
+      },
+      {
+        "icon": "\ud83c\udfe1",
+        "title": "Property & Land Sellers",
+        "desc": "Individuals selling residential, commercial property, or land claiming Section 54/54EC relief."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "Broker Reports",
+        "value": "Consolidated Tax P&L",
+        "desc": "Annual capital gain and trading P&L statement from all operational broker platforms."
+      },
+      {
+        "icon": "\ud83e\ude99",
+        "label": "Crypto Exchanges",
+        "value": "VDA Transaction Ledger",
+        "desc": "CoinDCX, WazirX, Binance, or CoinSwitch transaction history and TDS certificates."
+      },
+      {
+        "icon": "\ud83c\udfe1",
+        "label": "Property Deeds",
+        "value": "Sale & Purchase Deeds",
+        "desc": "Registered deeds, stamp valuation records, and improvement expenditure receipts."
+      },
+      {
+        "icon": "\ud83d\udd0d",
+        "label": "Tax Matching",
+        "value": "AIS Schedule 112A",
+        "desc": "Verification against Section 112A and 111A capital transactions in your portal AIS."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "8-Year Loss Carry Forward",
+        "desc": "Filing ITR-2 or ITR-3 on time lets you legally carry forward short-term, long-term, and F&O losses to offset future profits for up to 8 assessment years."
+      },
+      {
+        "title": "Section 54 / 54EC Property Exemptions",
+        "desc": "Expert guidance on investing property sale proceeds in Section 54EC capital gain bonds (REC, NHAI) or residential property to legally wipe out capital gain tax."
+      },
+      {
+        "title": "Multi-Broker Consolidation",
+        "desc": "We consolidate trade books across 5+ brokerage apps without manual data entry errors."
+      }
+    ],
+    "documents": [
+      "Consolidated Annual Tax P&L Statement from all brokers",
+      "Form 26AS & Annual Information Statement (AIS)",
+      "Crypto transaction report / 1% TDS (Form 16A) certificates",
+      "Property Sale Deed & Original Purchase Deed (with indexation proofs)",
+      "Section 54EC Capital Gain Bond allotment certificate (if claimed)",
+      "Bank statements showing capital gains receipt and reinvestment"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Upload P&L & Trades",
+        "desc": "Upload your broker Tax P&L reports (Excel/PDF) and property deed copies."
+      },
+      {
+        "step": "2",
+        "title": "Turnover & Gain Computation",
+        "desc": "CA categorizes STCG, LTCG, business turnover, and grandfathering benefits under Sec 112A."
+      },
+      {
+        "step": "3",
+        "title": "Loss Set-Off & Optimization",
+        "desc": "Intra-head and inter-head losses are matched to minimize your current year payable tax."
+      },
+      {
+        "step": "4",
+        "title": "ITR-2 / ITR-3 Filing",
+        "desc": "Comprehensive return is submitted on the e-filing portal and acknowledgement is provided."
+      }
+    ],
+    "deliverables": [
+      "Official ITR-2 / ITR-3 E-Filing Acknowledgement",
+      "Detailed Capital Gains Computation Sheet (Scrip-wise & Asset-wise)",
+      "Loss Carry Forward Schedule (Trackable for 8 Years)",
+      "Business Balance Sheet & P&L (For F&O / Intraday traders)",
+      "Section 54 / 54EC Exemption Verification Certificate"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Before 31st July",
+        "title": "File Within Statutory Due Date",
+        "desc": "Losses CANNOT be carried forward if the return is filed after the July deadline under Section 80."
+      },
+      {
+        "badge": "Statutory",
+        "timeline": "Quarterly",
+        "title": "Advance Tax on Capital Gains",
+        "desc": "Pay advance tax on the installment immediately following the capital gain transaction to avoid Sec 234C interest."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What are the revised capital gains tax rates under the latest Finance Act?",
+        "a": "Short-Term Capital Gains (STCG) on listed equity under Section 111A are taxed at 20% (previously 15%). Long-Term Capital Gains (LTCG) under Section 112A are taxed at 12.5% (previously 10%) with an increased basic annual exemption limit of \u20b91.25 Lakhs."
+      },
+      {
+        "q": "Are F&O (Futures & Options) trading losses treated as capital losses?",
+        "a": "No. Under Section 43(5) of the Income Tax Act, trading in derivatives (F&O) is categorized as Non-Speculative Business Income, NOT capital gains. F&O traders must file Form ITR-3. These losses can be set off against any income except salary and carried forward for 8 years."
+      },
+      {
+        "q": "How is Cryptocurrency / VDA taxed in India?",
+        "a": "Under Section 115BBH, any income from the transfer of Virtual Digital Assets (VDAs) including Crypto and NFTs is taxed at a flat rate of 30% plus cess and surcharge. Crucially, NO expenses (except cost of acquisition) can be deducted, and crypto losses CANNOT be set off against crypto gains or any other income."
+      },
+      {
+        "q": "Can I save tax on property sale capital gains?",
+        "a": "Yes. Under Section 54, you can claim full exemption by reinvesting LTCG into another residential property in India within 2 years (or construct within 3 years). Under Section 54EC, you can invest up to \u20b950 Lakhs in specified capital gain bonds (REC, NHAI, PFC) within 6 months of sale."
+      }
+    ]
+  },
+  "itr-business-professionals": {
+    "id": "itr-business-professionals",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\ud83d\udcbc",
+    "badge": "Section 44ADA & 44AD Presumptive",
+    "title": "ITR for Business & Professionals (Sec 44AD / 44ADA)",
+    "tagline": "Pay tax on just 50% of revenue for professionals or 6-8% for small businesses with zero accounting audit burden.",
+    "timeline": "24 - 48 Hours",
+    "govtPortal": "Income Tax Department",
+    "filingMode": "100% Online Paperless",
+    "overview": "Designed for software consultants, doctors, lawyers, architects, designers, freelancers, and small business owners. We leverage presumptive taxation schemes under Section 44ADA and 44AD to declare simplified net profit, claim legitimate business deductions, and eliminate the requirement to maintain complex accounting ledgers or statutory audits.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Under <strong>Section 44ADA</strong>, specified professionals (software consultants, web developers, doctors, lawyers, technical consultants, interior designers) with gross receipts up to <strong>\u20b975 Lakhs</strong> (if digital receipts exceed 95%) can declare just <strong>50% of their gross receipts as taxable profit</strong>. The remaining 50% is treated as statutory business expenses with zero requirement to maintain physical bills or undergo an audit.\n      </p>\n      <p>\n        Similarly, under <strong>Section 44AD</strong>, small commercial businesses, traders, and contractors with turnover up to <strong>\u20b93 Crores</strong> (if digital transactions exceed 95%) can declare profit at a nominal <strong>6% for digital receipts</strong> (8% for cash receipts). Easy My Taxes ensures your presumptive filing is calibrated with Form 26AS TDS credits under Section 194J and 194C.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\udcbb",
+        "title": "IT & Software Consultants",
+        "desc": "Remote software developers, technical contractors, and cloud consultants earning consulting fees."
+      },
+      {
+        "icon": "\ud83c\udfa8",
+        "title": "Freelancers & Creative Agencies",
+        "desc": "UI/UX designers, digital marketers, content creators, and copywriters billing Indian & global clients."
+      },
+      {
+        "icon": "\ud83e\ude7a",
+        "title": "Doctors, Lawyers & Architects",
+        "desc": "Practicing professionals operating private clinics, legal chambers, or architectural practices."
+      },
+      {
+        "icon": "\ud83c\udfea",
+        "title": "Small Business Proprietors",
+        "desc": "Retailers, distributors, and contractors declaring presumptive turnover under Section 44AD."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcb0",
+        "label": "Receipts Ceiling",
+        "value": "Up to \u20b975L (Professionals)",
+        "desc": "Gross receipts up to \u20b975 Lakhs under Sec 44ADA (provided cash receipts \u2264 5%)."
+      },
+      {
+        "icon": "\ud83c\udfea",
+        "label": "Business Turnover",
+        "value": "Up to \u20b93Cr (Businesses)",
+        "desc": "Turnover up to \u20b93 Crores under Sec 44AD (provided cash transactions \u2264 5%)."
+      },
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "TDS Certificates",
+        "value": "Sec 194J / 194C / 194O",
+        "desc": "Reconciled Form 26AS TDS credits deducted by your clients or marketplace platforms."
+      },
+      {
+        "icon": "\ud83c\udfe6",
+        "label": "Banking Trail",
+        "value": "Current / Savings Account",
+        "desc": "Bank statements proving total gross receipts deposited during the financial year."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "50% Statutory Expense Allowance",
+        "desc": "Declare 50% of gross fees as profit and pay tax only on that 50%. The remaining 50% is deemed business expenses with no bills required."
+      },
+      {
+        "title": "Zero Bookkeeping & Audit Burden",
+        "desc": "Completely exempt from maintaining detailed books of accounts under Section 44AA or undergoing Tax Audit under Section 44AB."
+      },
+      {
+        "title": "Single Installment Advance Tax",
+        "desc": "Presumptive taxpayers only need to pay advance tax once a year by 15th March, rather than in 4 quarterly installments."
+      }
+    ],
+    "documents": [
+      "Bank Account Statements showing consulting receipts / client remittances",
+      "Form 26AS & AIS showing TDS deducted u/s 194J (10% or 2%) or 194C",
+      "Invoices or client payment summaries for the fiscal year",
+      "FIRC / BRC certificates for export consulting receipts (if applicable)",
+      "PAN Card & Aadhaar Card of the proprietor / professional"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Bank & 26AS Reconciliation",
+        "desc": "We reconcile client receipts in your bank against TDS credits in Form 26AS/AIS."
+      },
+      {
+        "step": "2",
+        "title": "Presumptive Profit Computation",
+        "desc": "CA computes eligible presumptive profit (50% u/s 44ADA or 6% u/s 44AD)."
+      },
+      {
+        "step": "3",
+        "title": "Tax Optimization & Deduction",
+        "desc": "Apply Section 80C, 80D, 80CCD, and Chapter VI-A deductions to minimize net tax."
+      },
+      {
+        "step": "4",
+        "title": "ITR-4 / ITR-3 Submission",
+        "desc": "Filing executed on Income Tax portal and official ITR-V acknowledgement provided."
+      }
+    ],
+    "deliverables": [
+      "Official ITR-4 (SUGAM) E-Filing Acknowledgement",
+      "Detailed Presumptive Profit Computation Sheet",
+      "Form 26AS & 194J TDS Reconciliation Statement",
+      "Advance Tax Assessment & Compliance Voucher",
+      "Professional Certificate of Net Income (For Visa & Bank Loans)"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Statutory",
+        "timeline": "By 15th March Annually",
+        "title": "Advance Tax Payment (100%)",
+        "desc": "Presumptive taxpayers must pay 100% of estimated advance tax by 15th March to avoid 234C interest."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st July Annually",
+        "title": "ITR Filing Deadline",
+        "desc": "File before 31st July to prevent Section 234F late fee and retain presumptive benefits."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can a software developer or web designer claim Section 44ADA?",
+        "a": "YES! Software development and information technology services are recognized as technical consultancy under Section 44AA(1) via CBDT notifications. If your gross receipts are up to \u20b975 Lakhs, you can declare 50% as profit under Section 44ADA."
+      },
+      {
+        "q": "Do I need to maintain invoices and expense bills under Section 44ADA?",
+        "a": "No. The entire purpose of presumptive taxation under Section 44ADA is to relieve professionals from maintaining physical books of accounts, ledgers, and expense bills. The department statutorily presumes 50% as your expenses."
+      },
+      {
+        "q": "What if my actual profit is less than 50%?",
+        "a": "If your actual net profit is lower than 50% and your total income exceeds the basic exemption limit, you CANNOT use presumptive taxation. You must maintain regular books of accounts under Section 44AA and undergo a mandatory Tax Audit by a Chartered Accountant under Section 44AB."
+      },
+      {
+        "q": "Can I claim deductions like 80C and 80D under presumptive taxation?",
+        "a": "YES. The 50% presumptive deduction is applied at the business income stage to determine your Gross Total Income (GTI). You can still claim personal deductions like Section 80C, 80D, 80CCD (NPS), and medical insurance under the Old Regime, or enjoy the revised slabs under the New Regime."
+      }
+    ]
+  },
+  "itr-nri": {
+    "id": "itr-nri",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\u2708\ufe0f",
+    "badge": "Cross-Border & DTAA Advisory",
+    "title": "NRI Taxation & Foreign Assets Filing (AY 2026-27)",
+    "tagline": "End-to-end tax return filing for Non-Resident Indians with Indian rental income, property sales, NRE/NRO accounts, and DTAA benefits.",
+    "timeline": "3 - 5 Days",
+    "govtPortal": "Income Tax Department & CBDT",
+    "filingMode": "100% Online Paperless",
+    "overview": "Specialized cross-border direct tax advisory for Non-Resident Indians (NRIs), Overseas Citizens of India (OCIs), and expatriates. Handled by Senior CA Pradeep Agarwal, we manage residential status determination under Section 6, Foreign Asset reporting under Schedule FA, Double Tax Avoidance Agreement (DTAA) treaty relief, and repatriation certificates (Form 15CA/CB).",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Determining your exact residential status under <strong>Section 6 of the Income Tax Act</strong> is the foundation of Indian taxation. For NRIs, only income that accrues, arises, or is received in India (such as rental income, capital gains on Indian stocks/property, or interest on NRO accounts) is taxable in India. Income earned outside India is 100% tax-exempt.\n      </p>\n      <p>\n        NRIs frequently suffer high <strong>TDS deductions (often 20% to 30% plus surcharge)</strong> on Indian income. We help you claim Double Tax Avoidance Agreement (DTAA) relief under Article 12/13, secure Tax Residency Certificates (TRC), claim full refunds of excess TDS, and provide Chartered Accountant certification under <strong>Form 15CB and Form 15CA</strong> for remitting funds from NRO to NRE or foreign accounts.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83c\udf0d",
+        "title": "NRIs with Indian Incomes",
+        "desc": "Non-residents earning rental income, dividends, or bank interest on NRO deposits in India."
+      },
+      {
+        "icon": "\ud83c\udfe1",
+        "title": "Indian Property Sellers",
+        "desc": "NRIs selling ancestral or residential property in India subject to Section 195 20% TDS."
+      },
+      {
+        "icon": "\ud83c\udfe6",
+        "title": "Fund Repatriation Seekers",
+        "desc": "Individuals needing Form 15CB CA Certificate to remit funds from NRO accounts abroad."
+      },
+      {
+        "icon": "\ud83d\udcbc",
+        "title": "Returning Expatriates (RNOR)",
+        "desc": "Individuals relocating to India optimizing Resident but Not Ordinarily Resident (RNOR) tax holiday."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udec2",
+        "label": "Residential Proof",
+        "value": "Section 6 Determination",
+        "desc": "Physical stay in India less than statutory thresholds (< 182 days or < 120 days for high earners)."
+      },
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "Tax Residency",
+        "value": "Foreign TRC Certificate",
+        "desc": "Tax Residency Certificate from home country to avail DTAA treaty benefits."
+      },
+      {
+        "icon": "\ud83c\udfe6",
+        "label": "Bank Classification",
+        "value": "NRE & NRO Accounts",
+        "desc": "Complete statements of NRO (taxable) and NRE (tax-exempt) bank accounts in India."
+      },
+      {
+        "icon": "\ud83d\udcc4",
+        "label": "TDS Proof",
+        "value": "Form 16A u/s 195",
+        "desc": "TDS certificates reflecting tax deducted on Indian capital gains or rent."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "DTAA Double Taxation Relief",
+        "desc": "Avoid paying tax twice on the same income by leveraging bilateral DTAA tax credits under Section 90."
+      },
+      {
+        "title": "Fast TDS Refund Recovery",
+        "desc": "Recover thousands in excessive 20-30% TDS deducted on NRO interest and property sales."
+      },
+      {
+        "title": "Form 15CA / 15CB CA Certification",
+        "desc": "Legally compliant CA certification to remit up to $1 Million per financial year under RBI LRS route."
+      }
+    ],
+    "documents": [
+      "Passport copies with all immigration entry/exit stamps for the financial year",
+      "Tax Residency Certificate (TRC) and Form 10F from foreign tax authority",
+      "NRO & NRE Bank Account Statements and TDS Certificates (Form 16A)",
+      "Property Sale Agreement and Form 16B/26QB (if Indian property sold)",
+      "Broker Tax P&L Statement for Indian mutual funds or equity trades",
+      "Indian PAN Card copy and foreign address verification"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Residential Status Determination",
+        "desc": "CA calculates physical days in India to determine NRI / RNOR / ROR status under Sec 6."
+      },
+      {
+        "step": "2",
+        "title": "Income & DTAA Computation",
+        "desc": "Isolate Indian sourced income, compute capital gains, and apply DTAA treaty tax credits."
+      },
+      {
+        "step": "3",
+        "title": "Form 10F & TRC Filing",
+        "desc": "Submit Form 10F online on income tax portal to substantiate DTAA exemption."
+      },
+      {
+        "step": "4",
+        "title": "ITR-2 Submission & 15CA/CB",
+        "desc": "File ITR-2 with Schedule FSI/TR, process TDS refund, and issue 15CB remittance certificate."
+      }
+    ],
+    "deliverables": [
+      "Official ITR-2 E-Filing Acknowledgement (NRI Status)",
+      "Residential Status Legal Advisory Note (Section 6)",
+      "DTAA Foreign Tax Credit (FTC) Computation & Form 67",
+      "Form 15CB CA Certificate & Form 15CA Filing (for funds transfer)",
+      "Full TDS Refund Tracking until bank credit"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Statutory",
+        "timeline": "Before Filing ITR",
+        "title": "File Form 67 (Foreign Tax Credit)",
+        "desc": "Mandatory filing of Form 67 before filing ITR to legally claim foreign tax credits in India."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st July",
+        "title": "ITR-2 Filing Deadline",
+        "desc": "Submit return within statutory deadline to ensure uninterrupted NRO account operations."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is income earned in the USA, UK, or UAE taxable in India for an NRI?",
+        "a": "NO. If your residential status under Section 6 is Non-Resident Indian (NRI), your foreign salary, foreign business income, and foreign investments are 100% TAX-FREE in India. You only pay tax in India on income that originates in India (such as rent from Indian property, NRO interest, or Indian capital gains)."
+      },
+      {
+        "q": "Is interest earned on NRE and NRO bank accounts taxable in India?",
+        "a": "Interest earned on an NRE (Non-Resident External) account is 100% TAX-FREE in India under Section 10(4). However, interest earned on an NRO (Non-Resident Ordinary) account is fully taxable in India and banks deduct 30% TDS plus cess. We file your ITR to claim back excess TDS."
+      },
+      {
+        "q": "What is Form 15CA and Form 15CB?",
+        "a": "Form 15CB is a statutory certificate issued by a Chartered Accountant certifying that appropriate taxes have been paid on funds being remitted abroad. Form 15CA is an online declaration filed by the remitter based on Form 15CB. Authorized Dealer banks require both forms before transferring funds from an NRO account to a foreign account."
+      },
+      {
+        "q": "Can an NRI sell property in India and remit the funds abroad?",
+        "a": "Yes! An NRI can sell residential or commercial property in India. After paying applicable capital gains tax and obtaining Form 15CA/15CB from our CA firm, you can remit up to USD 1,000,000 (1 Million US Dollars) per financial year under RBI guidelines."
+      }
+    ]
+  },
+  "itr-tax-notice": {
+    "id": "itr-tax-notice",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\u2696\ufe0f",
+    "badge": "Direct Representation by Senior CA",
+    "title": "Tax Notice & Scrutiny Resolution (143/139/148)",
+    "tagline": "Professional legal drafting, defective return rectification, and representation for income tax notices directly by CA Pradeep Agarwal.",
+    "timeline": "2 - 5 Days",
+    "govtPortal": "Income Tax Department & ITAT",
+    "filingMode": "100% Online Paperless",
+    "overview": "Defend against automated computer-generated demand notices, defective return intimations, AIS discrepancies, and reassessment notices. Handled personally by Senior Chartered Accountant CA Pradeep Agarwal (FCA, DISA), we formulate strong legal replies, file Section 154 rectification petitions, and prevent penalties or prosecution.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        With the deployment of the Income Tax Department's AI-driven <strong>Insight Portal and Faceless Assessment Scheme</strong>, notices are automatically generated for cash deposits, AIS mismatches, high-value credit card spends, unregistered crypto transactions, and disputed deduction claims.\n      </p>\n      <p>\n        Ignoring a tax notice or submitting an unverified reply can escalate into a formal ex-parte best judgment assessment under Section 144, an automatic freeze of your bank accounts, or penalties ranging up to <strong>200% of tax payable under Section 270A</strong>. Our practice provides thorough diagnostic analysis of your case, drafts rigorous legal and technical replies citing relevant ITAT/High Court case laws, and rectifies errors on the portal.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\u26a0\ufe0f",
+        "title": "Section 143(1) Demand Notices",
+        "desc": "Taxpayers receiving automated intimation with unexpected tax demand or reduced refund."
+      },
+      {
+        "icon": "\ud83d\udcd1",
+        "title": "Section 139(9) Defective Returns",
+        "desc": "Filings flagged as defective due to balance sheet errors, turnover mismatches, or missing schedules."
+      },
+      {
+        "icon": "\ud83d\udd0d",
+        "title": "Section 148 / 148A Reassessment",
+        "desc": "Cases reopened by the tax department for alleged income escaping assessment in previous years."
+      },
+      {
+        "icon": "\ud83c\udfdb\ufe0f",
+        "title": "Section 154 Rectification Petitions",
+        "desc": "Taxpayers seeking correction of apparent clerical, TDS, or advance tax credit errors."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcc4",
+        "label": "Notice Document",
+        "value": "Notice DIN & PDF",
+        "desc": "Official notice downloaded from e-filing portal with valid Document Identification Number (DIN)."
+      },
+      {
+        "icon": "\ud83d\udcc5",
+        "label": "Statutory Timeline",
+        "value": "Within Response Window",
+        "desc": "Filing reply within 15 to 30 days of notice issuance (or seeking formal extension of time)."
+      },
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "Original ITR Record",
+        "value": "Computation & ITR-V",
+        "desc": "Original computation sheet and ITR-V acknowledgement of the disputed assessment year."
+      },
+      {
+        "icon": "\ud83d\udcda",
+        "label": "Substantiating Proof",
+        "value": "Vouchers & Statements",
+        "desc": "Bank statements, contract notes, gift deeds, or agreement copies disproving the tax allegation."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Direct Senior CA Representation",
+        "desc": "Handled directly by CA Pradeep Agarwal (FCA, DISA) with 15+ years of litigation and assessment experience."
+      },
+      {
+        "title": "100% Demand Elimination",
+        "desc": "Over 92% of erroneous Section 143(1) demands are successfully resolved to \u20b90 via legal rectification."
+      },
+      {
+        "title": "Penalty & Prosecution Protection",
+        "desc": "Ensure your written submission safeguards you against Section 270A under-reporting penalties."
+      }
+    ],
+    "documents": [
+      "Copy of the Income Tax Notice / Intimation received with DIN",
+      "Original ITR acknowledgement (ITR-V) and Computation Sheet",
+      "Annual Information Statement (AIS) and Form 26AS of the relevant AY",
+      "Bank statements supporting the disputed transactions",
+      "Property deeds, sale receipts, or gift deeds (if notice concerns capital transactions)",
+      "E-filing portal login credentials for official submission"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Notice Diagnostic & Audit",
+        "desc": "CA Pradeep Agarwal examines the notice DIN, root cause, and AIS data mismatch."
+      },
+      {
+        "step": "2",
+        "title": "Legal Reply Formulation",
+        "desc": "Drafting a comprehensive technical legal reply citing relevant judicial precedents and CBDT circulars."
+      },
+      {
+        "step": "3",
+        "title": "Client Review & Finalization",
+        "desc": "Reviewing the drafted reply and evidence bundle with you before submission."
+      },
+      {
+        "step": "4",
+        "title": "Portal Submission & Follow-Up",
+        "desc": "Official electronic submission under 'e-Proceedings' and continuous tracking until order is passed."
+      }
+    ],
+    "deliverables": [
+      "Officially Drafted Legal Written Submission with Case Law Citations",
+      "E-Proceedings Submission Acknowledgement Receipt",
+      "Section 154 Online Rectification Application (if applicable)",
+      "Revised Computation of Income Sheet",
+      "Final Order Tracker and Demand Cancellation Intimation"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Within 30 Days of Notice",
+        "title": "Submit Response or Seek Adjournment",
+        "desc": "Never ignore the notice deadline; file the response or an adjournment request on the portal."
+      },
+      {
+        "badge": "Continuous",
+        "timeline": "Until Rectification Order",
+        "title": "Monitor e-Proceedings Tab",
+        "desc": "Track assessing officer remarks and ensure demand is wiped out from 'Outstanding Demand' tab."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What happens if I ignore an Income Tax Notice?",
+        "a": "Never ignore an income tax notice! If you fail to respond within the stipulated time, the Assessing Officer will pass an 'Ex-Parte Best Judgment Assessment' under Section 144, computing maximum tax and imposing a 50% to 200% penalty under Section 270A, and may initiate bank account attachment."
+      },
+      {
+        "q": "I received an intimation under Section 143(1) with a huge tax demand due to TDS mismatch. What should I do?",
+        "a": "This is one of the most common errors. It occurs when your deductor/employer deposited TDS under the wrong PAN or delayed filing their quarterly TDS return. Do NOT pay the demand immediately! We file a Rectification Application under Section 154 with proof of TDS credits, wiping out the demand completely."
+      },
+      {
+        "q": "What is a Defective Return Notice under Section 139(9)?",
+        "a": "A notice under Section 139(9) means your filed return contains incomplete schedules, balance sheet mismatches, or gross receipts that don't align with the selected ITR form. You are given 15 days to correct and file a revised response. If not filed, the return is treated as invalid (never filed)."
+      },
+      {
+        "q": "Can a notice be issued for transactions that happened 3 or 5 years ago?",
+        "a": "Yes. Under Section 148/148A, the department can reopen assessments up to 3 years from the end of the relevant assessment year, or up to 10 years if they possess evidence that escaped income exceeds \u20b950 Lakhs. We specialize in challenging Section 148 jurisdictional notices."
+      }
+    ]
+  },
+  "itr-updated": {
+    "id": "itr-updated",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\ud83d\udd04",
+    "badge": "Section 139(8A) Amnesty",
+    "title": "Updated Return (ITR-U) Filing (Past 2 Years)",
+    "tagline": "Missed filing your ITR or omitted income in the last 2 years? File an Updated Return under Section 139(8A) and avoid tax notices.",
+    "timeline": "24 - 48 Hours",
+    "govtPortal": "Income Tax Department",
+    "filingMode": "100% Online Paperless",
+    "overview": "Introduced under Section 139(8A) of the Income Tax Act, Form ITR-U offers a golden statutory window to taxpayers who missed their original and belated filing deadlines or omitted significant income (such as crypto, capital gains, or secondary salary) in the past two assessment years.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Under <strong>Section 139(8A)</strong>, taxpayers can voluntarily file an <strong>Updated Return (ITR-U) within 24 months</strong> from the end of the relevant assessment year. This provides complete statutory immunity against search, seizure, and criminal prosecution under Section 276C.\n      </p>\n      <p>\n        An ITR-U can be filed to declare un-reported income, correct wrong head of income, or regularize high-value financial transactions appearing in your AIS. The taxpayer pays additional statutory tax: <strong>25% additional tax</strong> if filed within 12 months, or <strong>50% additional tax</strong> if filed between 12 and 24 months. Note: ITR-U cannot be used to claim a fresh refund or increase an existing refund.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\u23f3",
+        "title": "Missed Return Filers",
+        "desc": "Taxpayers who missed both the 31st July and 31st December belated filing deadlines."
+      },
+      {
+        "icon": "\ud83d\udd0d",
+        "title": "Omitted Income Rectification",
+        "desc": "Individuals who forgot to declare stock gains, crypto earnings, or interest in past years."
+      },
+      {
+        "icon": "\u26a0\ufe0f",
+        "title": "AIS Discrepancy Avoidance",
+        "desc": "Taxpayers receiving SMS/email compliance nudges from the department for undeclared trades."
+      },
+      {
+        "icon": "\ud83c\udfe6",
+        "title": "Loan & Visa Applicants",
+        "desc": "Borrowers needing consecutive past 2-3 years of verified ITR acknowledgements for major bank loans."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcc5",
+        "label": "Eligible Assessment Years",
+        "value": "Past 2 Years (AY 24-25 & 25-26)",
+        "desc": "Available for preceding 2 assessment years within 24 months from the end of the AY."
+      },
+      {
+        "icon": "\ud83d\udcb0",
+        "label": "Tax Position",
+        "value": "Additional Tax Payable",
+        "desc": "Must result in additional tax liability or reduction of carried forward losses (no fresh refunds)."
+      },
+      {
+        "icon": "\ud83d\udd0d",
+        "label": "Litigation Status",
+        "value": "No Ongoing Search/Seizure",
+        "desc": "Not available if search/survey u/s 132 has been initiated or prosecution is pending."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Protection from Penal Prosecution",
+        "desc": "Voluntary disclosure under Section 139(8A) grants complete statutory immunity from criminal prosecution and seizure."
+      },
+      {
+        "title": "Avoid 200% Misreporting Penalty",
+        "desc": "Pay flat 25% or 50% additional tax instead of facing a 200% under-reporting penalty under Section 270A."
+      },
+      {
+        "title": "Build Verified 3-Year Credit Track",
+        "desc": "Enable high-value home loans, commercial credit, and foreign business visa processing."
+      }
+    ],
+    "documents": [
+      "Bank Statements and Form 26AS for the relevant past Assessment Year",
+      "Annual Information Statement (AIS) and TIS for the relevant year",
+      "Broker Tax P&L statements showing undeclared capital gains or crypto",
+      "Original ITR-V and computation sheet (if an original return was filed)",
+      "PAN Card and Aadhaar Card copy"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "AIS & Omission Diagnostic",
+        "desc": "CA calculates undeclared income from AIS and evaluates additional tax liability."
+      },
+      {
+        "step": "2",
+        "title": "Part A & Part B Computation",
+        "desc": "Computation of 25% or 50% additional tax under Section 140B."
+      },
+      {
+        "step": "3",
+        "title": "Challan Payment (Code 140B)",
+        "desc": "Client pays tax and additional tax on e-filing portal under self-assessment."
+      },
+      {
+        "step": "4",
+        "title": "ITR-U Electronic Submission",
+        "desc": "Updated return is transmitted with Form 139(8A) details and acknowledgement is generated."
+      }
+    ],
+    "deliverables": [
+      "Official Form ITR-U E-Filing Acknowledgement",
+      "Section 140B Additional Tax Computation Sheet",
+      "Self-Assessment Tax Challan Receipt (BSR Code & Challan No.)",
+      "Comprehensive AIS Reconciliation Certification"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Immediate",
+        "title": "E-Verify Return",
+        "desc": "Complete instant e-verification via Aadhaar OTP or Digital Signature."
+      },
+      {
+        "badge": "Statutory",
+        "timeline": "Permanent",
+        "title": "Preserve 140B Challan",
+        "desc": "Archive Challan and ITR-U acknowledgement for future bank due diligence."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I file an ITR-U to claim a tax refund for a missed year?",
+        "a": "NO. The law under Section 139(8A) explicitly states that an Updated Return CANNOT be filed if it results in a fresh refund, increases an existing refund, or results in a nil tax return. It can only be filed if additional tax is payable or if it reduces carried-forward losses."
+      },
+      {
+        "q": "What is the penalty / additional tax rate under ITR-U?",
+        "a": "If you file ITR-U within 12 months from the end of the relevant assessment year, the additional tax is 25% of the aggregate tax and interest. If filed after 12 months but before 24 months, the additional tax is 50% of the aggregate tax and interest."
+      },
+      {
+        "q": "Which assessment years are currently open for ITR-U filing?",
+        "a": "Currently, you can file ITR-U for AY 2024-25 (FY 2023-24) at 25% additional tax, and AY 2023-24 (FY 2022-23) at 50% additional tax."
+      },
+      {
+        "q": "Will filing an ITR-U trigger an automatic tax audit?",
+        "a": "No. The ITR-U scheme was specifically introduced by the Government of India as an amnesty mechanism to encourage voluntary tax compliance and reduce litigation. Once filed and accepted with payment of Section 140B tax, the assessment is generally finalized without notices."
+      }
+    ]
+  },
+  "itr-corporate": {
+    "id": "itr-corporate",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\ud83c\udfe2",
+    "badge": "Companies Act & Tax Audit Alignment",
+    "title": "Corporate Tax Return Filing (Form ITR-6)",
+    "tagline": "Statutory corporate income tax return filing for Private Limited and Public Limited Companies with full MCA financial statement alignment.",
+    "timeline": "3 - 5 Days",
+    "govtPortal": "Income Tax Department & MCA",
+    "filingMode": "100% Online Paperless",
+    "overview": "Mandatory annual corporate tax return filing in Form ITR-6 for all companies incorporated in India under the Companies Act 2013. Handled by CA Pradeep Agarwal, we ensure 100% alignment between your audited MCA financial statements (AOC-4), Tax Audit Report (Form 3CA/3CD), Minimum Alternate Tax (MAT), and Section 115BAA concessional tax provisions.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Every company registered in India must statutorily file <strong>Form ITR-6</strong>, irrespective of whether it made a profit, incurred a loss, or conducted zero commercial transactions during the fiscal year. Form ITR-6 is one of the most complex filings in Indian tax law, requiring digital certification via the Managing Director's Class-3 DSC.\n      </p>\n      <p>\n        We optimize your tax liability under the concessional <strong>Section 115BAA (22% corporate tax rate)</strong> or Section 115BAB (15% for new manufacturing companies), reconcile Section 43B statutory dues, verify MAT credit utilization under Section 115JAA, and ensure complete synchronization with your ROC filing (Form AOC-4).\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83c\udfe2",
+        "title": "Private Limited Companies",
+        "desc": "All active and pre-revenue domestic companies registered with the Ministry of Corporate Affairs."
+      },
+      {
+        "icon": "\ud83c\udfed",
+        "title": "Manufacturing Companies",
+        "desc": "Companies availing 15% concessional corporate tax rates under Section 115BAB."
+      },
+      {
+        "icon": "\ud83c\udf10",
+        "title": "Indian Subsidiaries of Foreign MNCs",
+        "desc": "Subsidiaries requiring Transfer Pricing (Form 3CEB) documentation and corporate ITR filing."
+      },
+      {
+        "icon": "\ud83d\ude80",
+        "title": "DPIIT Certified Startups",
+        "desc": "Startups claiming 100% 3-year tax holiday under Section 80-IAC."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "Audited Financials",
+        "value": "Statutory Balance Sheet",
+        "desc": "Audited Balance Sheet, P&L, Notes to Accounts, and Auditor's Report signed by CA."
+      },
+      {
+        "icon": "\ud83d\udcca",
+        "label": "Tax Audit Report",
+        "value": "Form 3CA / 3CD",
+        "desc": "Mandatory Tax Audit Report filed on portal if turnover exceeds \u20b91 Crore (or \u20b910Cr for digital)."
+      },
+      {
+        "icon": "\ud83d\udd8b\ufe0f",
+        "label": "Digital Signature",
+        "value": "Director Class-3 DSC",
+        "desc": "Valid Class-3 DSC of the Managing Director or authorized director registered on the portal."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Section 115BAA Concessional Tax (22%)",
+        "desc": "Opt for the simplified 22% corporate tax regime and eliminate the burden of Minimum Alternate Tax (MAT)."
+      },
+      {
+        "title": "Complete MCA-ITR Reconciliation",
+        "desc": "Eliminate notices by ensuring zero variance between your ITR-6 balance sheet and MCA Form AOC-4."
+      },
+      {
+        "title": "Startup India 80-IAC Claim",
+        "desc": "Properly claim and document 100% tax holiday deduction for DPIIT recognized startups."
+      }
+    ],
+    "documents": [
+      "Audited Balance Sheet, Profit & Loss Account, and Notes to Accounts",
+      "Statutory Auditor's Report and Directors' Report",
+      "Tax Audit Report in Form 3CA / 3CD (with UDIN)",
+      "Form 26AS, AIS, and TIS of the Company",
+      "Advance Tax and Self-Assessment Tax payment challans",
+      "Class-3 Digital Signature Certificate (DSC) of Director"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Financial Statement Audit Review",
+        "desc": "CA reviews audited accounts, tax depreciation schedules, and Section 43B disallowances."
+      },
+      {
+        "step": "2",
+        "title": "Form 3CA/3CD Tax Audit Filing",
+        "desc": "Auditor certifies and uploads Form 3CA/3CD on the income tax portal with unique UDIN."
+      },
+      {
+        "step": "3",
+        "title": "ITR-6 Preparation & Computation",
+        "desc": "Drafting comprehensive ITR-6 with Schedule BP, MAT, Depreciation, and Shareholding schedules."
+      },
+      {
+        "step": "4",
+        "title": "DSC Signing & E-Filing",
+        "desc": "Director signs ITR-6 via Class-3 DSC and official electronic acknowledgement is generated."
+      }
+    ],
+    "deliverables": [
+      "Official Form ITR-6 E-Filing Acknowledgement Receipt",
+      "Detailed Corporate Tax Computation Sheet",
+      "Uploaded Form 3CA / 3CD Tax Audit Report with UDIN",
+      "MAT / Section 115BAA Tax Regime Recommendation Report",
+      "Annual Tax Archive Kit for Bank Consortium & Investors"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "By 31st October Annually",
+        "title": "Corporate ITR-6 Deadline",
+        "desc": "Filing deadline for audited corporate returns is 31st October (or 30th November if Transfer Pricing applies)."
+      },
+      {
+        "badge": "Statutory",
+        "timeline": "Within 30 Days of AGM",
+        "title": "File MCA Form AOC-4",
+        "desc": "Ensure the same audited numbers are filed in Form AOC-4 on the MCA portal."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is filing Form ITR-6 mandatory for a company with ZERO business or revenue?",
+        "a": "YES. Every company incorporated in India is a separate legal entity and MUST file Form ITR-6 annually under the Income Tax Act, even if revenue is Nil or the company is in pre-operating stage. Failure to file attracts \u20b95,000 late fee and risks prosecution under Section 276CC."
+      },
+      {
+        "q": "What is the corporate tax rate for Private Limited Companies in India?",
+        "a": "Under Section 115BAA, domestic companies can opt for a flat 22% corporate tax rate (effective 25.17% including surcharge and cess) without MAT. New domestic manufacturing companies incorporated after 1st October 2019 can opt for 15% under Section 115BAB."
+      },
+      {
+        "q": "What is the deadline for filing ITR-6 for corporate taxpayers?",
+        "a": "For companies requiring audit (which applies to nearly all operating companies), the filing deadline for Form 3CA/3CD Tax Audit is 30th September, and the deadline for Form ITR-6 is 31st October of the relevant assessment year."
+      },
+      {
+        "q": "Can Form ITR-6 be verified using an Aadhaar OTP?",
+        "a": "NO. In India, corporate tax returns (Form ITR-6) CANNOT be verified via Aadhaar OTP or bank EVC. It is legally mandatory to sign and transmit Form ITR-6 using the Class-3 Digital Signature Certificate (DSC) of the Managing Director or authorized director."
+      }
+    ]
+  },
+  "itr-partnership": {
+    "id": "itr-partnership",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\ud83e\udd1d",
+    "badge": "LLP & Partnership Firm Returns",
+    "title": "Partnership & LLP Tax Return Filing (Form ITR-5)",
+    "tagline": "Tax return filing for Limited Liability Partnerships (LLPs), Registered Partnerships, and AOPs with partner remuneration optimization.",
+    "timeline": "2 - 3 Days",
+    "govtPortal": "Income Tax Department",
+    "filingMode": "100% Online Paperless",
+    "overview": "Statutory income tax return filing in Form ITR-5 for Limited Liability Partnerships (LLPs), partnership firms, Association of Persons (AOP), and Body of Individuals (BOI). We optimize partners' remuneration and interest under Section 40(b), ensure adherence to partnership deed covenants, and reconcile Form 26AS TDS credits.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Under the Income Tax Act 1961, <strong>Partnership Firms and LLPs are taxed as separate taxable entities</strong> in Form ITR-5 at a flat statutory rate of <strong>30%</strong> (plus 12% surcharge if taxable income exceeds \u20b91 Crore, plus 4% cess).\n      </p>\n      <p>\n        A key statutory advantage is <strong>partner remuneration and interest on capital</strong> allowable under Section 40(b). By drafting the partnership or LLP deed properly and structuring partner salaries within statutory limits (up to \u20b93 Lakhs or 90% of book profit for the first \u20b93L, and 60% thereafter), the firm's net taxable income can be substantially reduced. Profit share distributed to partners post-tax is <strong>100% tax-free in the hands of the partners</strong>.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83e\udd1d",
+        "title": "Limited Liability Partnerships",
+        "desc": "All LLPs incorporated with the MCA requiring mandatory Form ITR-5 filing."
+      },
+      {
+        "icon": "\ud83d\udcdc",
+        "title": "Partnership Firms",
+        "desc": "Registered and unregistered traditional partnership firms formed under Partnership Act 1932."
+      },
+      {
+        "icon": "\ud83d\udc65",
+        "title": "AOPs & BOIs",
+        "desc": "Joint ventures, syndicates, and Associations of Persons operating commercial projects."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83c\udd94",
+        "label": "Firm Permanent PAN",
+        "value": "Separate Firm PAN",
+        "desc": "Distinct 10-digit PAN card issued in the name of the Partnership Firm or LLP."
+      },
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "Constitutional Deed",
+        "value": "Executed Partnership Deed",
+        "desc": "Deed with express clauses authorizing partner salary and interest under Section 40(b)."
+      },
+      {
+        "icon": "\ud83d\udd8b\ufe0f",
+        "label": "Digital Signature",
+        "value": "Partner Class-3 DSC",
+        "desc": "LLPs must mandatorily sign ITR-5 using the Designated Partner's Class-3 DSC."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Section 40(b) Remuneration Deductions",
+        "desc": "Maximize allowable working partner salary and 12% interest on capital to legally reduce the firm's net taxable profit."
+      },
+      {
+        "title": "100% Tax-Free Profit Distribution",
+        "desc": "Profits shared among partners after firm taxation are completely exempt from tax under Section 10(2A)."
+      },
+      {
+        "title": "Complete Tax Audit Support (44AB)",
+        "desc": "If turnover exceeds \u20b91 Crore (or \u20b910Cr for digital firms), we handle full Form 3CB/3CD tax audit certification."
+      }
+    ],
+    "documents": [
+      "Executed Partnership Deed / LLP Agreement and amendments",
+      "Trial Balance, Balance Sheet, and Profit & Loss Account",
+      "Form 26AS & AIS of the Partnership / LLP",
+      "Bank statements of all firm operational accounts",
+      "Partner capital account statements showing drawings and interest",
+      "Class-3 DSC of Designated Partner (for LLPs)"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Deed & Book Profit Audit",
+        "desc": "CA calculates book profit and verifies partner remuneration limits under Section 40(b)."
+      },
+      {
+        "step": "2",
+        "title": "TDS & Tax Audit Review",
+        "desc": "Reconcile vendor TDS and evaluate Section 44AB tax audit applicability."
+      },
+      {
+        "step": "3",
+        "title": "ITR-5 Drafting",
+        "desc": "Prepare Form ITR-5 with complete partner profit-sharing and capital schedules."
+      },
+      {
+        "step": "4",
+        "title": "DSC Signing & E-Filing",
+        "desc": "Submit on portal via DSC or partner Aadhaar OTP (for traditional firms) and issue ITR-V."
+      }
+    ],
+    "deliverables": [
+      "Official Form ITR-5 E-Filing Acknowledgement",
+      "Detailed Partnership Tax Computation Sheet",
+      "Section 40(b) Partner Remuneration & Interest Schedule",
+      "Partner Profit Share Certificates (Section 10(2A) Exemption)",
+      "Form 3CB / 3CD Tax Audit Report (if audited)"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "By 31st July / 31st Oct",
+        "title": "ITR-5 Filing Deadline",
+        "desc": "31st July for non-audit firms; 31st October if statutory tax audit under Sec 44AB applies."
+      },
+      {
+        "badge": "Statutory",
+        "timeline": "Quarterly",
+        "title": "Advance Tax Payments",
+        "desc": "Pay advance tax in 4 installments (15 June, 15 Sept, 15 Dec, 15 Mar) to avoid Sec 234C interest."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the tax rate on a Partnership Firm or LLP in India?",
+        "a": "Partnership firms and LLPs are taxed at a flat rate of 30% plus 12% surcharge (if total income exceeds \u20b91 Crore) and 4% Health & Education Cess, resulting in an effective tax rate of 31.2% or 34.94%."
+      },
+      {
+        "q": "Can partners take salary from the firm to reduce the firm's tax?",
+        "a": "YES! Under Section 40(b), working partners can be paid salary, bonus, or remuneration provided it is authorized by the partnership deed. The maximum statutory deduction allowed is: on the first \u20b93 Lakhs of book profit\u2014\u20b91,50,000 or 90% of book profit (whichever is more); and on the balance book profit\u201460%."
+      },
+      {
+        "q": "Is the profit share received by partners taxable in their individual hands?",
+        "a": "NO. Under Section 10(2A) of the Income Tax Act, any share in the total income of the partnership firm received by a partner is completely exempt from income tax in the hands of the partner."
+      }
+    ]
+  },
+  "itr-trust-ngo": {
+    "id": "itr-trust-ngo",
+    "category": "itr",
+    "categoryLabel": "Income Tax Returns (ITR)",
+    "icon": "\ud83c\udf31",
+    "badge": "Section 11, 12A & 80G Exemptions",
+    "title": "Trust & NGO Tax Return Filing (Form ITR-7)",
+    "tagline": "Statutory income tax return filing for Charitable Trusts, Section 8 Companies, NGOs, and Educational Institutions.",
+    "timeline": "3 - 5 Days",
+    "govtPortal": "Income Tax Department",
+    "filingMode": "100% Online Paperless",
+    "overview": "Specialized return filing in Form ITR-7 for charitable trusts, religious institutions, Section 8 non-profit companies, societies, and educational trusts claiming tax exemptions under Section 11 and 12. We audit the mandatory 85% income application rule, manage Form 10B/10BB audit reports, and safeguard your permanent 12A/80G registrations.",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Taxation of Charitable and Religious Trusts in India is strictly governed by <strong>Section 11, 12, 12A, 12AB, and 13</strong> of the Income Tax Act. To claim 100% tax exemption on donations and grants, an NGO must apply at least <strong>85% of its total income</strong> toward charitable or religious objectives in India during the financial year.\n      </p>\n      <p>\n        Any shortfall must be statutorily accumulated by filing <strong>Form 9A or Form 10</strong> before the due date. Crucially, the <strong>Tax Audit Report in Form 10B or Form 10BB</strong> must be filed by a Chartered Accountant at least one month prior to filing Form ITR-7. Missing these deadlines automatically forfeits your Section 11 tax exemption, triggering a 30% maximum marginal tax rate on gross donations.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83c\udf31",
+        "title": "Section 8 Non-Profit Companies",
+        "desc": "Companies incorporated under Section 8 of the Companies Act 2013 for social welfare."
+      },
+      {
+        "icon": "\ud83c\udfdb\ufe0f",
+        "title": "Charitable & Religious Trusts",
+        "desc": "Public charitable trusts registered under Indian Trusts Act or Bombay Public Trusts Act."
+      },
+      {
+        "icon": "\ud83c\udf93",
+        "title": "Educational Institutions",
+        "desc": "Schools, colleges, universities, and hospitals claiming Section 10(23C) exemptions."
+      },
+      {
+        "icon": "\ud83e\udd1d",
+        "title": "Registered Societies",
+        "desc": "Societies registered under the Societies Registration Act 1860."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcdc",
+        "label": "Statutory Registration",
+        "value": "Section 12AB Registration",
+        "desc": "Active 12AB registration order with 14-digit Unique Registration Number (URN)."
+      },
+      {
+        "icon": "\ud83d\udcca",
+        "label": "Audit Report",
+        "value": "Form 10B / Form 10BB",
+        "desc": "Mandatory audit report filed by CA one month prior to ITR-7 due date."
+      },
+      {
+        "icon": "\ud83d\udd8b\ufe0f",
+        "label": "Digital Signature",
+        "value": "Managing Trustee DSC",
+        "desc": "Valid Class-3 DSC of the Managing Trustee, Secretary, or Director."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "100% Tax Exemption Preservation",
+        "desc": "Ensure strict compliance with the 85% income application mandate to pay \u20b90 tax on all voluntary donations and grants."
+      },
+      {
+        "title": "Form 9A & Form 10 Accumulation",
+        "desc": "Statutorily accumulate unspent donations for up to 5 years for future capital projects without paying tax."
+      },
+      {
+        "title": "Safeguard 80G Donor Benefits",
+        "desc": "Protect your donors' 50% tax deduction eligibility by filing mandatory Form 10BD donation returns."
+      }
+    ],
+    "documents": [
+      "Audited Financial Statements (Balance Sheet, Income & Expenditure Account)",
+      "Section 12AB & 80G Registration Approval Orders (with URN)",
+      "Form 10B or Form 10BB Audit Report signed by Chartered Accountant",
+      "Detailed donation register with donor PAN, address, and donation mode",
+      "Form 10BD filing acknowledgement and Statement of Donations",
+      "Class-3 DSC of the Managing Trustee / Authorized Signatory"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "85% Application & Accounts Audit",
+        "desc": "CA audits income vs charitable expenditure and calculates 85% application compliance."
+      },
+      {
+        "step": "2",
+        "title": "Form 9A / Form 10 Filing",
+        "desc": "If expenditure is under 85%, file Form 9A (deemed application) or Form 10 (accumulation)."
+      },
+      {
+        "step": "3",
+        "title": "Form 10B / 10BB Upload",
+        "desc": "Chartered Accountant certifies and uploads Form 10B/10BB on portal with UDIN."
+      },
+      {
+        "step": "4",
+        "title": "Form ITR-7 E-Filing",
+        "desc": "Submit Form ITR-7 via Digital Signature and secure official ITR-V acknowledgement."
+      }
+    ],
+    "deliverables": [
+      "Official Form ITR-7 E-Filing Acknowledgement",
+      "Detailed Charitable Income Application & Exemption Statement",
+      "Uploaded Form 10B / Form 10BB Audit Report with UDIN",
+      "Form 9A / Form 10 Accumulation Proofs (if applicable)",
+      "Statement of Donations (Form 10BD) Reconciliation Certificate"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "By 30th September",
+        "title": "File Form 10B / 10BB Audit",
+        "desc": "CA audit report must be uploaded one month before ITR-7 due date."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st October",
+        "title": "Form ITR-7 Due Date",
+        "desc": "Submit return by 31st October to prevent forfeiture of Section 11 exemptions."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st May",
+        "title": "File Form 10BD (Donations)",
+        "desc": "Mandatory filing of Statement of Donations to enable donors to claim 80G deductions."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the 85% income application rule for trusts and NGOs?",
+        "a": "Under Section 11(1)(a), a charitable or religious trust must apply at least 85% of its total income during the financial year toward charitable or religious purposes in India. If at least 85% is applied, the entire income is 100% tax-exempt."
+      },
+      {
+        "q": "What happens if a trust fails to spend 85% of its income?",
+        "a": "If you cannot spend 85% in the financial year, you can legally file Form 9A (for deemed application in the next year) or Form 10 (to accumulate funds for a specific project for up to 5 years). Both forms must be filed before the due date to protect your tax exemption."
+      },
+      {
+        "q": "When is Form 10B required versus Form 10BB?",
+        "a": "Form 10B is required if the trust's total income exceeds \u20b95 Crores, or if it received any foreign contribution, or applied funds outside India. Form 10BB is required for other trusts where income is up to \u20b95 Crores without foreign funds."
+      }
+    ]
   }
 };

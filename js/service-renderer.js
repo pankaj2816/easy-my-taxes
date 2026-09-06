@@ -18,6 +18,23 @@
 
 // Category Metadata
 const CATEGORY_META = {
+  itr: {
+    key: 'itr',
+    name: 'Income Tax Returns (ITR)',
+    shortName: 'ITR Filing',
+    icon: '📝',
+    badge: 'AY 2026-27 Chartered Tax Practice',
+    title: 'Income Tax Return (ITR) Filing Services',
+    tagline: 'Precision CA-assisted ITR filing for Assessment Year 2026-27 with 100% AIS, TIS, and 26AS matching, capital gains tax audit, and zero-defect guarantee.',
+    portal: 'Income Tax Department (E-Filing 2.0)',
+    timeline: '24 - 48 Hours Fastrack',
+    chips: [
+      '⚡ AY 2026-27 Calibrated',
+      '📑 100% AIS & 26AS Matching',
+      '🔒 Senior CA Pradeep Verified',
+      '🛡️ Zero Defective Notice Assurance'
+    ]
+  },
   registrations: {
     key: 'registrations',
     name: 'Company Registrations',
@@ -73,6 +90,25 @@ const CATEGORY_META = {
 
 // Smart Category-level Fallback Data Generators
 const STATUTORY_DEFAULTS = {
+  itr: {
+    whoFor: [
+      { icon: '💼', title: 'Salaried Employees', desc: 'Single or multiple Form 16, HRA, ESOPs, and allowances.' },
+      { icon: '📈', title: 'Investors & Traders', desc: 'Stocks, mutual funds, crypto VDAs, futures and options.' },
+      { icon: '💻', title: 'Professionals & Freelancers', desc: 'Software developers, doctors, designers u/s 44ADA.' },
+      { icon: '🌍', title: 'NRIs & Global Expats', desc: 'Foreign assets, Schedule FA, NRO/NRE accounts and DTAA.' }
+    ],
+    eligibility: [
+      { icon: '🪪', label: 'Mandatory Identifier', value: 'PAN Linked to Aadhaar', desc: 'Valid 10-digit Permanent Account Number linked with 12-digit Aadhaar.' },
+      { icon: '📊', label: 'Statutory Records', value: 'AIS & Form 26AS', desc: 'Reconciled Annual Information Statement and Tax Credit statement from IT portal.' },
+      { icon: '🏦', label: 'Banking Validation', value: 'Pre-Validated Accounts', desc: 'Active bank accounts for instant refund electronic direct deposit.' },
+      { icon: '📱', label: 'Verification Channel', value: 'Aadhaar-Linked Mobile', desc: 'Active mobile number to receive OTP for instant 30-day e-verification.' }
+    ],
+    postCompliances: [
+      { badge: 'Mandatory', timeline: 'Within 30 Days', title: 'E-Verification of Return', desc: 'Verify via Aadhaar OTP, net banking EVC, or signed ITR-V to CPC Bengaluru.' },
+      { badge: 'Statutory', timeline: 'Quarterly', title: 'Advance Tax Installments', desc: 'Pay quarterly installments if estimated net tax liability exceeds ₹10,000 (Sec 208).' },
+      { badge: 'Periodic', timeline: '15-45 Days Post-Filing', title: 'Track 143(1) Intimation', desc: 'Monitor processing status on portal and verify refund credit into bank account.' }
+    ]
+  },
   registrations: {
     whoFor: [
       { icon: '🚀', title: 'Tech & SaaS Startups', desc: 'Ideal for founders seeking angel/VC funding, ESOP pools, and rapid scale.' },
