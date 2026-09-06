@@ -371,13 +371,14 @@ function initStickyHeader() {
 
 // Live Statutory Countdown Timer (Target: 31st July 2026)
 function initCountdownTimer() {
+  const elDays = document.getElementById('cdDays');
+  if (!elDays) return;
   const targetDate = new Date('2026-07-31T23:59:59+05:30').getTime();
 
   function updateClock() {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
-    const elDays = document.getElementById('cdDays');
     const elHours = document.getElementById('cdHours');
     const elMins = document.getElementById('cdMins');
     const elSecs = document.getElementById('cdSecs');
