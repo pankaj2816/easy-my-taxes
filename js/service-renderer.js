@@ -18,6 +18,25 @@
 
 // Category Metadata
 const CATEGORY_META = {
+  all: {
+    key: 'all',
+    name: 'All CA Services',
+    shortName: 'All Services',
+    icon: '⚡',
+    badge: 'Directory of 52+ Statutory Services & Practice Areas (2026)',
+    title: 'All Statutory Services & CA Advisory Directory',
+    tagline: 'Comprehensive portfolio of 52+ statutory offerings across Company Registrations, ROC Annual Compliances, Business Licenses, and Income Tax Returns supervised by CA Pradeep Agarwal.',
+    portal: 'Ministry of Corporate Affairs, CBDT & Central Registries',
+    timeline: 'Fastrack CA Turnaround',
+    chips: [
+      '⚡ 52+ Total Offerings',
+      '📝 9 ITR Filings',
+      '🏢 16 Company Registrations',
+      '⚖️ 13 Compliances',
+      '📜 14 Business Licenses',
+      '🔒 Direct CA Supervision'
+    ]
+  },
   itr: {
     key: 'itr',
     name: 'Income Tax Returns (ITR)',
@@ -171,7 +190,7 @@ const STATUTORY_DEFAULTS = {
   }
 };
 
-let currentActiveCategory = 'registrations';
+let currentActiveCategory = 'all';
 let currentSearchQuery = '';
 
 /**
@@ -187,6 +206,10 @@ function initServicePageRouter() {
   // Handle explicit category requests
   if (categoryParam && CATEGORY_META[categoryParam]) {
     renderCategoryHub(categoryParam);
+    return;
+  }
+  if (categoryParam === 'all' || categoryParam === 'services') {
+    renderCategoryHub('all');
     return;
   }
 
@@ -210,8 +233,13 @@ function initServicePageRouter() {
     return;
   }
 
-  // Default fallback: Category Hub for registrations
-  renderCategoryHub('registrations');
+  if (serviceId === 'services' || serviceId === 'all') {
+    renderCategoryHub('all');
+    return;
+  }
+
+  // Default fallback: Show smart All Services hub
+  renderCategoryHub('all');
 }
 
 /**
@@ -221,6 +249,9 @@ function switchCategory(catKey) {
   if (!CATEGORY_META[catKey]) return;
   currentActiveCategory = catKey;
   currentSearchQuery = '';
+
+  const searchInput = document.getElementById('catHubSearchInput');
+  if (searchInput) searchInput.value = '';
 
   // Update browser URL without reloading
   const newUrl = `${window.location.pathname}?category=${catKey}`;
@@ -236,7 +267,7 @@ function switchCategory(catKey) {
 function renderCategoryHub(catKey, searchQuery = '') {
   currentActiveCategory = catKey;
   currentSearchQuery = searchQuery.toLowerCase().trim();
-  const meta = CATEGORY_META[catKey];
+  const meta = CATEGORY_META[catKey] || CATEGORY_META['all'];
   if (!meta) return;
 
   // Toggle View Containers
@@ -259,9 +290,29 @@ function renderCategoryHub(catKey, searchQuery = '') {
   const metaDesc = document.getElementById('pageMetaDesc');
   if (metaDesc) metaDesc.setAttribute('content', `${meta.tagline} Direct CA advisory with 100% compliance guarantee.`);
 
-  // 2. Hub Header Content
+  // 2. Hub Breadcrumbs
+  const catHubServicesCrumb = document.getElementById('catHubServicesCrumb');
+  const catHubCrumbSep = document.getElementById('catHubCrumbSep');
   const catHubCrumb = document.getElementById('catHubCrumb');
-  if (catHubCrumb) catHubCrumb.textContent = meta.name;
+
+  if (catKey === 'all') {
+    if (catHubServicesCrumb) {
+      catHubServicesCrumb.innerHTML = `<span style="color: #ffffff; font-weight: 700;">Services</span>`;
+    }
+    if (catHubCrumbSep) catHubCrumbSep.style.display = 'none';
+    if (catHubCrumb) catHubCrumb.style.display = 'none';
+  } else {
+    if (catHubServicesCrumb) {
+      catHubServicesCrumb.innerHTML = `<a href="service.html?category=all" onclick="event.preventDefault(); switchCategory('all');" class="breadcrumb-link">Services</a>`;
+    }
+    if (catHubCrumbSep) catHubCrumbSep.style.display = 'inline';
+    if (catHubCrumb) {
+      catHubCrumb.style.display = 'inline';
+      catHubCrumb.textContent = meta.name;
+    }
+  }
+
+  // 3. Hub Header Content
   const catHubBadge = document.getElementById('catHubBadge');
   if (catHubBadge) catHubBadge.textContent = meta.badge;
   const catHubTitle = document.getElementById('catHubTitle');
@@ -277,30 +328,43 @@ function renderCategoryHub(catKey, searchQuery = '') {
     `).join('');
   }
 
-  // 3. Filter services from MASTER_SERVICES_DATA
+  // 4. Filter services from MASTER_SERVICES_DATA
   if (typeof MASTER_SERVICES_DATA === 'undefined') return;
 
-  let services = Object.values(MASTER_SERVICES_DATA).filter(s => s.category === catKey);
+  const allServicesList = Object.values(MASTER_SERVICES_DATA);
+  let services = catKey === 'all'
+    ? allServicesList
+    : allServicesList.filter(s => s.category === catKey);
 
   // If search query is applied
   if (currentSearchQuery) {
     services = services.filter(s =>
       s.title.toLowerCase().includes(currentSearchQuery) ||
       s.tagline.toLowerCase().includes(currentSearchQuery) ||
+      (s.categoryLabel && s.categoryLabel.toLowerCase().includes(currentSearchQuery)) ||
       (s.overview && s.overview.toLowerCase().includes(currentSearchQuery)) ||
       (s.deliverables && s.deliverables.some(d => d.toLowerCase().includes(currentSearchQuery)))
     );
   }
 
-  // 4. Update Count Indicator
+  // 5. Update Count Indicator & Search placeholder
+  const searchInput = document.getElementById('catHubSearchInput');
+  if (searchInput && !currentSearchQuery) {
+    searchInput.placeholder = catKey === 'all'
+      ? 'Search across all 52 services by name, keyword or form...'
+      : `Filter ${meta.shortName} by name, keyword or form...`;
+  }
+
   const catHubCount = document.getElementById('catHubCount');
   if (catHubCount) {
     catHubCount.textContent = currentSearchQuery 
       ? `Found ${services.length} matching services` 
-      : `Showing all ${services.length} statutory services in ${meta.shortName}`;
+      : (catKey === 'all' 
+          ? `Showing all 52 statutory services across 4 practice areas` 
+          : `Showing all ${services.length} statutory services in ${meta.shortName}`);
   }
 
-  // 5. Render Grid
+  // 6. Render Grid
   const grid = document.getElementById('catHubGrid');
   if (!grid) return;
 
@@ -322,48 +386,113 @@ function renderCategoryHub(catKey, searchQuery = '') {
     return;
   }
 
-  grid.innerHTML = services.map(s => {
-    // Deliverables preview (2 items)
-    const inclusions = (s.deliverables || []).slice(0, 2).map(item => `
-      <li>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        <span>${item}</span>
-      </li>
-    `).join('');
-
-    const waMsg = encodeURIComponent(`Hello CA Pradeep Agarwal, I would like to inquire about ${s.title}. Please guide me through the documents and process.`);
-
-    return `
-      <div class="cat-card">
-        <div>
-          <div class="cat-card-header">
-            <div class="cat-card-icon">${s.icon || '🏢'}</div>
-            <div class="cat-card-badges">
-              <span class="cat-badge-fastrack">${s.badge ? s.badge.slice(0, 24) : 'CA Supervised'}</span>
-              <span class="cat-badge-time">⏱️ ${s.timeline}</span>
-            </div>
-          </div>
-          <h3 class="cat-card-title">${s.title}</h3>
-          <p class="cat-card-tagline">${s.tagline}</p>
-          <ul class="cat-card-inclusions">
-            ${inclusions}
-          </ul>
-        </div>
-        <div class="cat-card-footer">
-          <a href="service.html?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
-            Explore &amp; Apply &rarr;
-          </a>
-          <a href="https://wa.me/919891495092?text=${waMsg}" target="_blank" class="btn-cat-wa" title="WhatsApp Inquiry" aria-label="WhatsApp Inquiry">
-            💬
-          </a>
-        </div>
-      </div>
-    `;
-  }).join('');
+  // Smart categorized view if "all" and no search query
+  if (catKey === 'all' && !currentSearchQuery) {
+    renderAllServicesSmartView(grid, allServicesList);
+  } else {
+    grid.innerHTML = services.map(s => renderServiceCardHtml(s)).join('');
+  }
 }
 
+
+/**
+ * Render single service card HTML
+ */
+function renderServiceCardHtml(s) {
+  const inclusions = (s.deliverables || []).slice(0, 2).map(item => `
+    <li>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span>${item}</span>
+    </li>
+  `).join('');
+
+  const waMsg = encodeURIComponent(`Hello CA Pradeep Agarwal, I would like to inquire about ${s.title}. Please guide me through the documents and process.`);
+
+  return `
+    <div class="cat-card">
+      <div>
+        <div class="cat-card-header">
+          <div class="cat-card-icon">${s.icon || '🏢'}</div>
+          <div class="cat-card-badges">
+            <span class="cat-badge-fastrack">${s.badge ? s.badge.slice(0, 24) : 'CA Supervised'}</span>
+            <span class="cat-badge-time">⏱️ ${s.timeline}</span>
+          </div>
+        </div>
+        <h3 class="cat-card-title">${s.title}</h3>
+        <p class="cat-card-tagline">${s.tagline}</p>
+        <ul class="cat-card-inclusions">
+          ${inclusions}
+        </ul>
+      </div>
+      <div class="cat-card-footer">
+        <a href="service.html?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
+          Explore &amp; Apply &rarr;
+        </a>
+        <a href="https://wa.me/919891495092?text=${waMsg}" target="_blank" class="btn-cat-wa" title="WhatsApp Inquiry" aria-label="WhatsApp Inquiry">
+          💬
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Render smart organized categorized view for All Services
+ */
+function renderAllServicesSmartView(grid, allServicesList) {
+  const categories = [
+    { key: 'itr', name: 'Income Tax Returns (ITR)', icon: '📝', count: 9, tagline: 'AY 2026-27 precision tax returns with 100% AIS matching & notice protection' },
+    { key: 'registrations', name: 'Company Registrations', icon: '🏢', count: 16, tagline: 'MCA SPICe+ fastrack incorporations for startups, LLPs & corporate structures' },
+    { key: 'compliance', name: 'Statutory Compliances & Filings', icon: '⚖️', count: 13, tagline: 'End-to-end ROC annual governance, director KYC, statutory audits & tax compliance' },
+    { key: 'licenses', name: 'Business Licenses & Certifications', icon: '📜', count: 14, tagline: 'Central, state & municipal regulatory licensing with zero inspection delays' }
+  ];
+
+  let html = `
+    <!-- Top 4 Master Pillar Overview Cards -->
+    <div class="all-pillars-grid" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 3.5rem;">
+      ${categories.map(cat => `
+        <div class="pillar-card" onclick="switchCategory('${cat.key}')">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span style="font-size: 2.25rem;">${cat.icon}</span>
+            <span style="font-size: 0.75rem; font-weight: 800; background: var(--emerald-50); color: var(--emerald-700); border: 1px solid var(--emerald-200); padding: 0.25rem 0.7rem; border-radius: var(--radius-full);">${cat.count} Services</span>
+          </div>
+          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.4rem;">${cat.name}</h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.55; flex-grow: 1;">${cat.tagline}</p>
+          <div style="font-size: 0.85rem; font-weight: 800; color: var(--emerald-600); display: flex; align-items: center; gap: 0.35rem;">
+            <span>Browse ${cat.name.split(' ')[0]} Section &rarr;</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  // Categorized Sections
+  categories.forEach(cat => {
+    const catServices = allServicesList.filter(s => s.category === cat.key);
+    html += `
+      <div style="grid-column: 1 / -1; margin-top: 2rem; margin-bottom: 1.25rem; padding-bottom: 0.85rem; border-bottom: 2px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span style="font-size: 2rem;">${cat.icon}</span>
+          <div>
+            <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-950); margin: 0; line-height: 1.2;">${cat.name}</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">${cat.tagline}</p>
+          </div>
+        </div>
+        <button class="btn btn-sm btn-outline" onclick="switchCategory('${cat.key}')" style="font-weight: 700; white-space: nowrap;">
+          View Dedicated Hub (${cat.count}) &rarr;
+        </button>
+      </div>
+    `;
+
+    catServices.forEach(s => {
+      html += renderServiceCardHtml(s);
+    });
+  });
+
+  grid.innerHTML = html;
+}
 /**
  * Handle Live Search inside Category Hub
  */
@@ -419,7 +548,7 @@ function renderSingleServicePage(serviceId) {
   // 2. Breadcrumbs with link to Category Hub
   const crumbCategory = document.getElementById('crumbCategory');
   if (crumbCategory) {
-    crumbCategory.innerHTML = `<a href="service.html?category=${data.category}" onclick="event.preventDefault(); switchCategory('${data.category}');" style="color: var(--emerald-400); text-decoration: none; font-weight: 600;">${data.categoryLabel}</a>`;
+    crumbCategory.innerHTML = `<a href="service.html?category=${data.category}" onclick="event.preventDefault(); switchCategory('${data.category}');" class="breadcrumb-link">${data.categoryLabel}</a>`;
   }
   const crumbTitle = document.getElementById('crumbTitle');
   if (crumbTitle) crumbTitle.textContent = data.title;

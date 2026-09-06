@@ -39,7 +39,7 @@
         
         <!-- UNIFIED SERVICES MEGA MENU -->
         <div class="nav-item has-mega-menu" id="navItemServices">
-          <a href="index.html#services" class="nav-link">
+          <a href="service.html?category=all" class="nav-link">
             <span>Services</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </a>
@@ -572,10 +572,13 @@
     <div style="background: #070d18; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.85rem 0; position: sticky; top: 72px; z-index: 40; backdrop-filter: blur(8px);">
       <div class="container">
         <div class="category-hub-tabs" id="categoryTabsHeader">
+          <button type="button" class="category-hub-tab active" data-cat="all" onclick="switchCategory('all')">
+            <span>⚡</span> All Services (52)
+          </button>
           <button type="button" class="category-hub-tab" data-cat="itr" onclick="switchCategory('itr')">
             <span>📝</span> Income Tax Returns (9)
           </button>
-          <button type="button" class="category-hub-tab active" data-cat="registrations" onclick="switchCategory('registrations')">
+          <button type="button" class="category-hub-tab" data-cat="registrations" onclick="switchCategory('registrations')">
             <span>🏢</span> Company Registrations (16)
           </button>
           <button type="button" class="category-hub-tab" data-cat="compliance" onclick="switchCategory('compliance')">
@@ -595,11 +598,13 @@
       <!-- Category Hero Banner -->
       <section class="section-py bg-dark" style="padding: 3.5rem 0 3rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
         <div class="container">
-          <nav style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--surface-300); margin-bottom: 1.5rem; flex-wrap: wrap;">
-            <a href="index.html" style="color: var(--emerald-400); font-weight: 600; text-decoration: none;">Home</a>
+          <nav style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--surface-300); margin-bottom: 1.5rem; flex-wrap: wrap;" id="catHubBreadcrumb">
+            <a href="index.html" class="breadcrumb-link">Home</a>
             <span>/</span>
-            <span style="color: var(--surface-300);">Services</span>
-            <span>/</span>
+            <span id="catHubServicesCrumb">
+              <a href="service.html?category=all" onclick="event.preventDefault(); switchCategory('all');" class="breadcrumb-link">Services</a>
+            </span>
+            <span id="catHubCrumbSep">/</span>
             <span id="catHubCrumb" style="color: #ffffff; font-weight: 700;">Directory</span>
           </nav>
 
@@ -669,9 +674,11 @@
       <div class="container">
         <!-- Breadcrumb -->
         <nav style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--surface-300); margin-bottom: 1.5rem; flex-wrap: wrap;">
-          <a href="index.html" style="color: var(--emerald-400); font-weight: 600; text-decoration: none;">Home</a>
+          <a href="index.html" class="breadcrumb-link">Home</a>
           <span>/</span>
-          <span id="crumbCategory" style="color: var(--surface-300);">Services</span>
+          <a href="service.html?category=all" onclick="event.preventDefault(); switchCategory('all');" class="breadcrumb-link">Services</a>
+          <span>/</span>
+          <span id="crumbCategory"></span>
           <span>/</span>
           <span id="crumbTitle" style="color: #ffffff; font-weight: 700;">Service Details</span>
         </nav>

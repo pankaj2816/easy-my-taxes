@@ -3143,3 +3143,50 @@
   background: var(--emerald-600);
   color: #ffffff;
 }
+
+
+/* All Services 4-Pillar Overview Cards */
+.pillar-card {
+  background: var(--surface-0);
+  border: 1px solid var(--surface-200);
+  border-radius: var(--radius-xl);
+  padding: 1.6rem;
+  transition: all var(--trans-base);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--emerald-500), var(--emerald-400));
+  opacity: 0;
+  transition: opacity var(--trans-fast);
+}
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--emerald-400);
+  box-shadow: var(--shadow-lg);
+}
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.breadcrumb-link {
+  color: var(--emerald-400);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--trans-fast);
+}
+.breadcrumb-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
