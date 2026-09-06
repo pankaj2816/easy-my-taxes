@@ -256,7 +256,7 @@ function renderComplianceCalendar(filter = 'all', searchQuery = '') {
           <span class="status-badge ${badgeClass}">${badgeText}</span>
         </td>
         <td>
-          <button class="btn btn-sm btn-outline" onclick="openConsultationModal('${item.title} (Assistance by CA Pradeep Agarwal)')">
+          <button class="btn btn-sm btn-outline" onclick="openConsultationModal('${(item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;')} (Assistance by CA Pradeep Agarwal)')">
             Get CA Assistance
           </button>
         </td>

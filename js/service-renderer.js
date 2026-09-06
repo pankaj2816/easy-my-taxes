@@ -747,6 +747,8 @@ function renderSingleServicePage(serviceId) {
   if (sfService) sfService.value = data.title;
   const cService = document.getElementById('cService');
   if (cService) cService.value = data.title;
+  const consultationService = document.getElementById('consultationService');
+  if (consultationService) consultationService.value = data.title;
 
   // Button Listeners (No fee text in WhatsApp message)
   const btnBook = document.getElementById('btnBookThisService');

@@ -423,6 +423,7 @@ function initMobileNav() {
   overlay?.addEventListener('click', closeNav);
   drawerLinks.forEach(l => l.addEventListener('click', closeNav));
   document.querySelectorAll('.mobile-sublink').forEach(l => l.addEventListener('click', closeNav));
+  window.closeMobileNav = closeNav;
 }
 
 // Render Service Grid with Category + Live Keyword Search
@@ -449,15 +450,16 @@ function initServiceGrid(filter = 'all', search = '') {
   }
 
   if (filtered.length === 0) {
+    const safeSearch = (search || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
     container.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: var(--surface-0); border-radius: var(--radius-lg); border: 1px dashed var(--surface-300);">
         <p style="font-size: 1.1rem; font-weight: 700; color: var(--primary-950); margin-bottom: 0.5rem;">
-          No CA services matching "<strong>${search}</strong>"
+          No CA services matching "<strong>${safeSearch}</strong>"
         </p>
         <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">
           We offer bespoke corporate structuring and direct litigation advisory. Talk to CA Pradeep Agarwal directly.
         </p>
-        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Custom Inquiry: ' + '${search}')">
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Custom Inquiry: ${safeSearch}')">
           Request Custom Service Consultation
         </button>
       </div>
@@ -818,20 +820,40 @@ function initChecklistSelector() {
 
 // Consultation Modal
 function openConsultationModal(prefilledService = '') {
-  const modal = document.getElementById('consultationModal');
-  const serviceInput = document.getElementById('consultationService');
+  const modal = document.getElementById('consultationModal') || document.getElementById('consultModal');
+  const serviceInput = document.getElementById('consultationService') || document.getElementById('cService');
   if (serviceInput && prefilledService) {
     serviceInput.value = prefilledService;
   }
-  modal?.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeConsultationModal() {
-  const modal = document.getElementById('consultationModal');
-  modal?.classList.remove('active');
-  document.body.style.overflow = '';
+  const modal = document.getElementById('consultationModal') || document.getElementById('consultModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
+
+// Global dismiss handlers for backdrops and escape key
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.classList.contains('modal-backdrop')) {
+    closeConsultationModal();
+    if (typeof closeServiceModal === 'function') closeServiceModal();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeConsultationModal();
+    if (typeof closeServiceModal === 'function') closeServiceModal();
+    if (typeof window.closeMobileNav === 'function') window.closeMobileNav();
+  }
+});
 
 // Handle Consultation Booking Form Submission
 function handleConsultationSubmit(e) {
