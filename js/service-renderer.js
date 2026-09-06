@@ -2,11 +2,18 @@
  * SERVICE & CATEGORY DIRECTORY ENGINE - EASY MY TAXES (2026 EDITION)
  * Direct CA Advisory & Statutory Services Portal
  *
- * Supports:
+ * Provides:
  * 1. Smart Category Directory Hub (?category=registrations | ?category=compliance | ?category=licenses)
- * 2. In-Depth Single Service Landing (?id=private-limited-company, etc.)
- * 3. Sibling Services Showcase at the bottom of single service pages
- * 4. Zero fees / charges display compliant with ICAI guidelines
+ * 2. In-Depth RegisterKaro-Style Single Service Landing (?id=private-limited-company, etc.)
+ * 3. Detailed Plain-English Overviews & "Who Should Choose This"
+ * 4. Statutory Minimum Eligibility & Pre-Requisites Grid
+ * 5. Categorized Mandatory Document Checklist
+ * 6. Step-by-Step Filing Roadmap & Package Deliverables
+ * 7. Mandatory Post-Registration / Post-Approval Compliances (INC-20A, ADT-1, Annual Filings)
+ * 8. Entity Comparison Decision Matrix
+ * 9. Expanded In-Depth Practical FAQs
+ * 10. Sibling Services Showcase Grid
+ * 11. Zero fees / charges display compliant with ICAI guidelines
  */
 
 // Category Metadata
@@ -60,6 +67,70 @@ const CATEGORY_META = {
       '🚀 Fastrack Approval Guarantee',
       '📄 100% Paperless Online Processing',
       '🏛️ Government Approved Certification'
+    ]
+  }
+};
+
+// Smart Category-level Fallback Data Generators
+const STATUTORY_DEFAULTS = {
+  registrations: {
+    whoFor: [
+      { icon: '🚀', title: 'Tech & SaaS Startups', desc: 'Ideal for founders seeking angel/VC funding, ESOP pools, and rapid scale.' },
+      { icon: '💼', title: 'Professional Firms', desc: 'Great for consultants, agencies, and service providers wanting a corporate shield.' },
+      { icon: '🛒', title: 'E-Commerce Merchants', desc: 'Essential for selling on Amazon, Flipkart, or operating direct-to-consumer portals.' },
+      { icon: '🏭', title: 'Manufacturing & Trading', desc: 'Required for commercial vendor contracts, bank loans, and institutional tenders.' }
+    ],
+    eligibility: [
+      { icon: '👥', label: 'Minimum Promoters', value: '2 Directors / Partners', desc: 'At least two individuals required to act as directors or designated partners.' },
+      { icon: '🇮🇳', label: 'Resident Indian', value: '1 Resident Director', desc: 'At least one director must have resided in India for ≥ 182 days in the previous FY.' },
+      { icon: '💰', label: 'Minimum Capital', value: '₹0 Paid-Up Capital', desc: 'No statutory minimum capital mandated by MCA; start with any nominal amount.' },
+      { icon: '🏢', label: 'Registered Address', value: 'Commercial or Home', desc: 'Can be rented, owned, or residential premise with a recent utility bill and owner NOC.' }
+    ],
+    postCompliances: [
+      { badge: 'Mandatory', timeline: 'Within 180 Days', title: 'Commencement of Business (INC-20A)', desc: 'File declaration with ROC confirming directors have deposited share capital in bank.' },
+      { badge: 'Mandatory', timeline: 'Within 30 Days', title: 'First Auditor Appointment (ADT-1)', desc: 'Appoint an independent statutory Chartered Accountant at first board meeting.' },
+      { badge: 'Annual', timeline: 'By 30th October', title: 'Annual ROC Filings (AOC-4 & MGT-7)', desc: 'Submit audited balance sheet, profit & loss statement, and annual return to MCA.' },
+      { badge: 'Annual', timeline: 'By 30th September', title: 'Director KYC (DIR-3 KYC)', desc: 'Mandatory annual verification of DIN credentials for all active directors.' },
+      { badge: 'Statutory', timeline: 'Within 60 Days', title: 'Share Certificates Issuance', desc: 'Issue stamped physical or electronic share certificates to initial subscribers.' },
+      { badge: 'Annual', timeline: 'By 31st October', title: 'Corporate Income Tax Return (ITR-6)', desc: 'Annual corporate tax return filing with audited financials under Income Tax Act.' }
+    ]
+  },
+  compliance: {
+    whoFor: [
+      { icon: '🏢', title: 'Private Limited Companies', desc: 'Fulfill annual ROC, AOC-4, MGT-7, and Director KYC statutory mandates.' },
+      { icon: '🤝', title: 'Limited Liability Partnerships', desc: 'Submit mandatory Form 11 (Annual Return) and Form 8 (Statement of Accounts).' },
+      { icon: '👥', title: 'Company Directors', desc: 'Preserve active DIN status and prevent personal disqualification u/s 164(2).' },
+      { icon: '📊', title: 'Audited Enterprises', desc: 'Complete statutory, internal, and tax audits under Section 44AB seamlessly.' }
+    ],
+    eligibility: [
+      { icon: '📑', label: 'Entity Identification', value: 'Active CIN / LLPIN', desc: 'The company or LLP must be active and not struck off on the MCA master database.' },
+      { icon: '🔑', label: 'Director Credentials', value: 'Active DIN & DSC', desc: 'Valid Class-3 Digital Signature Certificate and active Director Identification Number.' },
+      { icon: '📚', label: 'Financial Records', value: 'Updated Books of Accounts', desc: 'General ledger, bank statements, and trial balance ready for reconciliation.' },
+      { icon: '🏛️', label: 'Prior Year Status', value: 'Preceding Filings Clear', desc: 'Prior year ROC returns and ITR acknowledgements available for audit trail.' }
+    ],
+    postCompliances: [
+      { badge: 'Statutory', timeline: 'Immediate Post-Filing', title: 'ROC Acknowledgement & SRN Storage', desc: 'Maintain official MCA Challan with SRN for statutory audit trail and bank KYC.' },
+      { badge: 'Secretarial', timeline: 'Within 30 Days', title: 'Update Statutory Registers (Sec 88)', desc: 'Record filing details in Register of Members, Directors, and Charges at registered office.' },
+      { badge: 'Corporate', timeline: 'Annual Cycle', title: 'Minutes of Board & AGM Meetings', desc: 'Formalize minutes of Annual General Meeting (AGM) and board resolutions in statutory binder.' }
+    ]
+  },
+  licenses: {
+    whoFor: [
+      { icon: '🛍️', title: 'Retailers & Shopkeepers', desc: 'Procure mandatory Shop & Establishment (Gumasta) and municipal Trade Licenses.' },
+      { icon: '🍽️', title: 'Food Business Operators', desc: 'Mandatory FSSAI Registration or State/Central License for restaurants, cloud kitchens & FMCG.' },
+      { icon: '🌐', title: 'Exporters & Importers', desc: 'Procure 10-digit DGFT Import Export Code (IEC) to trade globally without barriers.' },
+      { icon: '🏭', title: 'Manufacturers & Brands', desc: 'Obtain MSME / Udyam priority certifications, BIS ISI mark, and ISO quality standards.' }
+    ],
+    eligibility: [
+      { icon: '🏢', label: 'Legal Constitution', value: 'Any Business Entity', desc: 'Proprietorship, Partnership, LLP, Company, or Trust with valid PAN card.' },
+      { icon: '📍', label: 'Operational Premise', value: 'Valid Address Proof', desc: 'Utility bill not older than 2 months, Rent Agreement, and Landlord NOC.' },
+      { icon: '🏦', label: 'Banking Facility', value: 'Active Bank Account', desc: 'Bank statement or cancelled cheque in the operational business name.' },
+      { icon: '👤', label: 'Authorized Signatory', value: 'PAN & Aadhaar Card', desc: 'Identity verification and mobile number linked with Aadhaar for OTP signing.' }
+    ],
+    postCompliances: [
+      { badge: 'Mandatory', timeline: 'Permanent', title: 'Premise Display of License', desc: 'Statutorily display license certificate (e.g. FSSAI QR / GSTIN / Trade License) at reception.' },
+      { badge: 'Periodic', timeline: '30-60 Days Before Expiry', title: 'Timely License Renewal', desc: 'File renewal application before expiry to prevent late penalties or business closure notices.' },
+      { badge: 'Compliance', timeline: 'On Request', title: 'Maintain Statutory Audit Register', desc: 'Keep inspection register, invoice files, and safety clearance records updated on site.' }
     ]
   }
 };
@@ -276,7 +347,7 @@ function navigateToService(e, serviceId) {
 }
 
 /**
- * Render In-Depth Single Service Landing Page
+ * Render In-Depth RegisterKaro-Style Single Service Landing Page
  */
 function renderSingleServicePage(serviceId) {
   const data = typeof MASTER_SERVICES_DATA !== 'undefined' && MASTER_SERVICES_DATA[serviceId] 
@@ -354,6 +425,59 @@ function renderSingleServicePage(serviceId) {
     };
   }
 
+  // -------------------------------------------------------------------------
+  // NEW REGISTERKARO-STYLE SECTIONS
+  // -------------------------------------------------------------------------
+
+  // A. Deep Dive Overview ("Understanding This Service")
+  const deepDiveTitle = document.getElementById('deepDiveTitle');
+  if (deepDiveTitle) deepDiveTitle.textContent = `Understanding ${data.title} in Simple Terms`;
+  const deepDiveCard = document.getElementById('deepDiveCard');
+  if (deepDiveCard) {
+    const defaultExplanation = `
+      <p style="font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;">
+        ${data.overview}
+      </p>
+      <p>
+        In India, statutory compliance and legal registration are administered under dedicated statutory authorities such as the <strong>${data.govtPortal}</strong>. When you register or file through <strong>Easy My Taxes</strong> under the direct stewardship of <strong>CA Pradeep Agarwal (FCA, DISA)</strong>, our chartered accountancy team conducts a thorough pre-scrutiny of all documents to ensure zero rejection, seamless regulatory approval, and complete protection against statutory notices.
+      </p>
+      <div style="background: var(--surface-50); border-left: 4px solid var(--emerald-500); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-top: 1.25rem;">
+        <strong style="color: var(--primary-950);">💡 Key Regulatory Advantage:</strong>
+        <span style="font-size: 0.925rem; color: var(--text-muted); margin-left: 0.35rem;">
+          Every filing is executed 100% digitally through the central government portal with official timestamping, permanent government registration identifiers, and instant bank account integration.
+        </span>
+      </div>
+    `;
+    deepDiveCard.innerHTML = data.detailedOverview || defaultExplanation;
+  }
+
+  // B. "Who Should Choose This?" Grid
+  const whoForGrid = document.getElementById('whoForGrid');
+  if (whoForGrid) {
+    const whoForItems = data.whoIsItFor || (STATUTORY_DEFAULTS[data.category] ? STATUTORY_DEFAULTS[data.category].whoFor : []);
+    whoForGrid.innerHTML = whoForItems.map(item => `
+      <div class="who-for-card">
+        <div class="who-for-icon">${item.icon}</div>
+        <h4 class="who-for-title">${item.title}</h4>
+        <p class="who-for-desc">${item.desc}</p>
+      </div>
+    `).join('');
+  }
+
+  // C. Statutory Eligibility Criteria & Pre-Requisites Grid
+  const eligibilityGrid = document.getElementById('eligibilityGrid');
+  if (eligibilityGrid) {
+    const eligItems = data.eligibility || (STATUTORY_DEFAULTS[data.category] ? STATUTORY_DEFAULTS[data.category].eligibility : []);
+    eligibilityGrid.innerHTML = eligItems.map(item => `
+      <div class="eligibility-card">
+        <div class="eligibility-icon">${item.icon}</div>
+        <span class="eligibility-label">${item.label}</span>
+        <div class="eligibility-value">${item.value}</div>
+        <p class="eligibility-desc">${item.desc}</p>
+      </div>
+    `).join('');
+  }
+
   // 4. Benefits Grid
   const benefitsContainer = document.getElementById('benefitsContainer');
   if (benefitsContainer && data.benefits) {
@@ -403,7 +527,33 @@ function renderSingleServicePage(serviceId) {
     `).join('');
   }
 
-  // 8. FAQs Accordion
+  // D. Mandatory Post-Registration / Post-Approval Compliances
+  const postCompGrid = document.getElementById('postCompGrid');
+  if (postCompGrid) {
+    const postItems = data.postCompliances || (STATUTORY_DEFAULTS[data.category] ? STATUTORY_DEFAULTS[data.category].postCompliances : []);
+    postCompGrid.innerHTML = postItems.map(item => `
+      <div class="post-compliance-card">
+        <div class="post-comp-header">
+          <span class="post-comp-badge">${item.badge}</span>
+          <span class="post-comp-timeline">⏱️ ${item.timeline}</span>
+        </div>
+        <h4 class="post-comp-title">${item.title}</h4>
+        <p class="post-comp-desc">${item.desc}</p>
+      </div>
+    `).join('');
+  }
+
+  // E. Entity Comparison Matrix (Display only for Company Registrations)
+  const comparisonSection = document.getElementById('comparisonSection');
+  if (comparisonSection) {
+    if (data.category === 'registrations') {
+      comparisonSection.style.display = 'block';
+    } else {
+      comparisonSection.style.display = 'none';
+    }
+  }
+
+  // 8. FAQs Accordion (Expanded)
   const faqsContainer = document.getElementById('faqsContainer');
   if (faqsContainer && data.faqs) {
     faqsContainer.innerHTML = data.faqs.map((faq, idx) => `

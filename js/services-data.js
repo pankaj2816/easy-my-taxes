@@ -149,15 +149,114 @@ const MASTER_SERVICES_DATA = {
     "faqs": [
       {
         "q": "Can a residential address be used as the registered office?",
-        "a": "Yes! A residential address (even rented) can be used as the registered office of a Private Limited Company with a valid utility bill and NOC."
+        "a": "Yes, absolutely. A residential property (even if rented or registered in a parent's name) can legally serve as the registered office of a Private Limited Company. You simply need the latest electricity/utility bill (less than 2 months old) and a No-Objection Certificate (NOC) from the owner."
       },
       {
-        "q": "Can salaried employees become directors in a Pvt Ltd?",
-        "a": "Yes, legally any individual can become a director provided their current employment contract allows secondary directorships."
+        "q": "Can salaried employees become directors in a Private Limited Company?",
+        "a": "Legally, yes. The Companies Act does not prohibit salaried employees from holding directorships. However, you must verify whether your current employment contract contains any dual-employment or non-compete clause. If so, you can hold 100% equity shares as an investor without becoming an executive director."
       },
       {
-        "q": "What is the tax rate on Private Limited Companies?",
-        "a": "New domestic manufacturing companies pay 15% plus cess, and other companies pay 22% under Section 115BAA plus cess and surcharge."
+        "q": "What is the corporate income tax rate on Private Limited Companies?",
+        "a": "Under Section 115BAA of the Income Tax Act, domestic companies enjoy a concessional corporate income tax rate of 22% (plus 10% surcharge and 4% cess, resulting in an effective tax rate of 25.17%), with exemption from Minimum Alternate Tax (MAT)."
+      },
+      {
+        "q": "Is physical presence required at any government office?",
+        "a": "No physical visits are ever required. The entire incorporation procedure is 100% digital under the MCA SPICe+ paperless regime. Documents are signed digitally via Class-3 DSC and verified online by the ROC."
+      },
+      {
+        "q": "How is a Private Limited Company different from an LLP?",
+        "a": "A Private Limited Company is the required entity for startups seeking venture capital and issuing ESOPs, but it has mandatory annual statutory audit requirements. An LLP is ideal for service firms and partnerships who do not plan to raise angel equity and want an exemption from statutory audit if turnover is under \u20b940 Lakhs."
+      },
+      {
+        "q": "What documents do foreign nationals need to be directors in an Indian Pvt Ltd?",
+        "a": "Foreign nationals require a valid passport (notarized and apostilled or consularized in their home country) along with proof of address (bank statement, driving license, or utility bill translated into English and notarized)."
+      }
+    ],
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        A <strong>Private Limited Company (Pvt Ltd)</strong> is India's most recognized and respected legal entity for startups, high-growth businesses, and venture-backed ventures. Regulated under the <strong>Companies Act 2013</strong> by the Ministry of Corporate Affairs (MCA), it grants an ironclad limited liability shield to its promoters and shareholders while establishing an independent corporate persona.\n      </p>\n      <p>\n        Unlike a proprietorship or traditional partnership, a Private Limited Company has <strong>perpetual succession</strong>\u2014it continues to exist irrespective of changes in directors, promoters, or shareholders. It is the only entity structure in India favored by institutional venture capitalists (VCs), angel syndicates, and banks for equity fundraising, issuance of preferential shares, convertible debt notes, and employee stock option plans (ESOPs).\n      </p>\n      <div style=\"background: var(--surface-50); border-left: 4px solid var(--emerald-500); padding: 1.1rem 1.35rem; border-radius: var(--radius-sm); margin-top: 1.25rem;\">\n        <strong style=\"color: var(--primary-950);\">\u26a1 SPICe+ Digital Advantage:</strong>\n        <span style=\"font-size: 0.925rem; color: var(--text-muted); margin-left: 0.35rem;\">\n          Incorporate 100% digitally through the MCA SPICe+ unified system. Receive your Certificate of Incorporation (COI), permanent CIN, Company PAN, TAN, EPFO, ESIC, Professional Tax, and integrated corporate bank account in just 5\u20137 working days under direct CA supervision.\n        </span>\n      </div>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\ude80",
+        "title": "Tech & SaaS Startups",
+        "desc": "Founders planning to raise angel, VC, or seed equity funding and distribute employee ESOPs."
+      },
+      {
+        "icon": "\ud83d\udcbc",
+        "title": "High-Growth Businesses",
+        "desc": "Enterprises aiming for corporate vendor status, large bank credit facilities, and institutional tenders."
+      },
+      {
+        "icon": "\ud83d\uded2",
+        "title": "E-Commerce & D2C Brands",
+        "desc": "Brands selling online, leveraging Amazon Brand Registry, and safeguarding their brand assets."
+      },
+      {
+        "icon": "\ud83c\udf10",
+        "title": "Subsidiaries & Foreign FDI",
+        "desc": "International holding corporations creating a compliant 100% Indian operating subsidiary."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udc65",
+        "label": "Minimum Promoters",
+        "value": "2 Directors & 2 Shareholders",
+        "desc": "Minimum 2 directors and 2 shareholders (the same 2 individuals can hold both roles; max 200 members)."
+      },
+      {
+        "icon": "\ud83c\uddee\ud83c\uddf3",
+        "label": "Resident Indian",
+        "value": "1 Resident Director",
+        "desc": "At least one director must have resided in India for \u2265 182 days in the previous financial year."
+      },
+      {
+        "icon": "\ud83d\udcb0",
+        "label": "Paid-Up Capital",
+        "value": "\u20b90 Minimum Capital",
+        "desc": "No minimum capital mandated under Companies Act 2013; start with any nominal capital (e.g. \u20b910,000)."
+      },
+      {
+        "icon": "\ud83c\udfe2",
+        "label": "Registered Office",
+        "value": "Commercial or Residential",
+        "desc": "Valid address in India (owned or rented home/office) with electricity bill < 2 months old and owner NOC."
+      }
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Within 180 Days",
+        "title": "Commencement of Business (INC-20A)",
+        "desc": "File declaration with ROC confirming directors have deposited share capital in bank."
+      },
+      {
+        "badge": "Mandatory",
+        "timeline": "Within 30 Days",
+        "title": "First Auditor Appointment (ADT-1)",
+        "desc": "Appoint an independent statutory Chartered Accountant at first board meeting."
+      },
+      {
+        "badge": "Statutory",
+        "timeline": "Within 60 Days",
+        "title": "Issuance of Share Certificates",
+        "desc": "Issue stamped physical or electronic share certificates to all initial subscribers."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 30th October",
+        "title": "Annual ROC Filings (AOC-4 & MGT-7)",
+        "desc": "Submit audited balance sheet, profit & loss statement, and annual return to MCA."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 30th September",
+        "title": "Director KYC (DIR-3 KYC)",
+        "desc": "Mandatory annual verification of DIN credentials for all active directors."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st October",
+        "title": "Corporate Tax Return (ITR-6)",
+        "desc": "Annual corporate income tax return filing with audited financials under Income Tax Act."
       }
     ]
   },
@@ -224,12 +323,99 @@ const MASTER_SERVICES_DATA = {
     ],
     "faqs": [
       {
-        "q": "Can an LLP raise venture capital investment?",
-        "a": "Venture Capital and Angel funds typically prefer Private Limited companies because equity shares can be issued and diluted easily. LLPs are ideal for service agencies, consulting practices, and real estate partnerships."
+        "q": "Is a statutory audit mandatory for every LLP?",
+        "a": "No! One of the biggest advantages of an LLP over a Private Limited Company is that an audit is NOT mandatory unless the annual turnover exceeds \u20b940 Lakhs OR the total capital contribution exceeds \u20b925 Lakhs."
       },
       {
-        "q": "What is the annual compliance required for an LLP?",
-        "a": "An LLP must file Form 11 (Annual Return) by 30th May and Form 8 (Statement of Accounts & Solvency) by 30th October each year."
+        "q": "What happens if Form 3 (LLP Agreement) is not filed on time?",
+        "a": "The LLP Agreement must be executed and filed in Form 3 within 30 days of incorporation. Delay in filing attracts a penalty of \u20b9100 per day until rectified, which is why CA Pradeep Agarwal's team drafts and files it immediately upon incorporation."
+      },
+      {
+        "q": "Can an LLP raise venture capital funding?",
+        "a": "Institutional VCs and angel investors generally avoid investing in LLPs because an LLP cannot issue shares, equity options (ESOPs), or convertible preference shares. If you plan to raise institutional equity, a Private Limited Company is recommended."
+      },
+      {
+        "q": "Can an existing partnership firm be converted into an LLP?",
+        "a": "Yes! Under Chapter X and the Second Schedule of the LLP Act 2008, an unregistered or registered partnership firm can be converted into an LLP seamlessly with full tax exemption on asset transfer."
+      },
+      {
+        "q": "What is the tax rate on an LLP in India?",
+        "a": "An LLP is taxed at a flat rate of 30% plus 12% surcharge (if total income exceeds \u20b91 Crore) and 4% Health & Education Cess. However, profit share distributed to partners is 100% tax-exempt in the hands of the partners."
+      }
+    ],
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        A <strong>Limited Liability Partnership (LLP)</strong> is an innovative corporate hybrid regulated by the <strong>Limited Liability Partnership Act 2008</strong>. It uniquely combines the operational simplicity and flexibility of a traditional partnership firm with the limited liability shield and corporate identity of a private limited company.\n      </p>\n      <p>\n        In an LLP, one partner is not responsible or liable for another partner's misconduct, negligence, or unauthorized debts. Unlike a private limited company, an LLP is <strong>completely exempt from mandatory statutory audit</strong> as long as its annual turnover does not exceed <strong>\u20b940 Lakhs</strong> or its capital contribution does not exceed <strong>\u20b925 Lakhs</strong>. This makes it an extraordinarily cost-effective choice for professional practices, agencies, and small commercial businesses.\n      </p>\n      <div style=\"background: var(--surface-50); border-left: 4px solid var(--emerald-500); padding: 1.1rem 1.35rem; border-radius: var(--radius-sm); margin-top: 1.25rem;\">\n        <strong style=\"color: var(--primary-950);\">\u26a1 Key LLP Advantage:</strong>\n        <span style=\"font-size: 0.925rem; color: var(--text-muted); margin-left: 0.35rem;\">\n          Profits distributed to partners are completely tax-free in the hands of the partners (since the LLP pays tax directly), avoiding dividend distribution friction. There are no restrictions on internal partner agreements.\n        </span>\n      </div>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\u2696\ufe0f",
+        "title": "Professional Services",
+        "desc": "Chartered Accountants, lawyers, architects, medical practitioners, and design agencies."
+      },
+      {
+        "icon": "\ud83e\udd1d",
+        "title": "Consulting & IT Agencies",
+        "desc": "Software service companies, digital marketing agencies, and recruiting firms."
+      },
+      {
+        "icon": "\ud83d\udcbc",
+        "title": "Family Businesses",
+        "desc": "Small to mid-sized family enterprises seeking limited liability without corporate rigidity."
+      },
+      {
+        "icon": "\ud83c\udfd7\ufe0f",
+        "title": "Joint Ventures",
+        "desc": "Project-based collaborations between two distinct companies or independent partners."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udc65",
+        "label": "Minimum Partners",
+        "value": "2 Designated Partners",
+        "desc": "Minimum 2 designated partners required (both can be individuals; no upper cap on total partners)."
+      },
+      {
+        "icon": "\ud83c\uddee\ud83c\uddf3",
+        "label": "Resident Status",
+        "value": "1 Resident Indian Partner",
+        "desc": "At least one designated partner must be a resident of India (\u2265 182 days stay in previous FY)."
+      },
+      {
+        "icon": "\ud83d\udcb0",
+        "label": "Capital Contribution",
+        "value": "No Minimum Capital",
+        "desc": "Partners can contribute any agreed sum (tangible or intangible) as stated in the LLP deed."
+      },
+      {
+        "icon": "\ud83c\udfe2",
+        "label": "Registered Premise",
+        "value": "Commercial or Residential",
+        "desc": "Valid address proof with utility bill < 2 months old and owner No-Objection Certificate."
+      }
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Within 30 Days",
+        "title": "Filing LLP Agreement (Form 3)",
+        "desc": "Crucial requirement: Draft and file the executed LLP Agreement with the ROC on MCA portal."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 30th May",
+        "title": "LLP Annual Return (Form 11)",
+        "desc": "Annual return providing details of all partners and management structure to ROC."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 30th October",
+        "title": "Statement of Account & Solvency (Form 8)",
+        "desc": "Annual declaration of financial accounts and solvency signed by designated partners."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st July / Oct",
+        "title": "Income Tax Return (ITR-5)",
+        "desc": "Annual partnership tax return (deadline is 31st October if statutory audit applies)."
       }
     ]
   },
@@ -298,12 +484,95 @@ const MASTER_SERVICES_DATA = {
     ],
     "faqs": [
       {
-        "q": "Can NRIs incorporate an OPC in India?",
-        "a": "Yes! As per amended MCA rules, Non-Resident Indians (NRIs) can incorporate an OPC in India."
+        "q": "Can an OPC be converted into a Private Limited Company later?",
+        "a": "Yes! An OPC can convert into a Private Limited Company voluntarily at any time by simply adding one more director and shareholder and filing Form INC-6."
       },
       {
-        "q": "Is holding Annual General Meetings (AGM) mandatory for an OPC?",
-        "a": "No, an OPC is explicitly exempted from holding Annual General Meetings (AGM) under the Companies Act."
+        "q": "Can a person form more than one One Person Company?",
+        "a": "No. Under MCA regulations, a natural person can be a member/director of only ONE One Person Company at any given time, and can act as a nominee in only one OPC."
+      },
+      {
+        "q": "Is an Annual General Meeting (AGM) mandatory for an OPC?",
+        "a": "No! Section 96 of the Companies Act 2013 specifically exempts One Person Companies from holding mandatory Annual General Meetings (AGM)."
+      },
+      {
+        "q": "What is the role of the Nominee in an OPC?",
+        "a": "The nominee has no active operational role or management rights during the lifetime of the sole member. The nominee only steps into the member's shoes in the event of the member's death or mental incapacity, ensuring seamless perpetual succession."
+      }
+    ],
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        A <strong>One Person Company (OPC)</strong> is a revolutionary corporate structure introduced under <strong>Section 2(62) of the Companies Act 2013</strong>. It enables solo entrepreneurs, solopreneurs, and independent professionals to operate a full-fledged corporate entity with 100% ownership and complete limited liability protection.\n      </p>\n      <p>\n        Prior to OPCs, individual founders had to rely on sole proprietorships\u2014which offered zero legal separation between personal assets and business liabilities. An OPC solves this by establishing a separate legal identity where the solo founder can enter contracts, purchase assets, and obtain bank credit in the company's name. A nominee director is designated simply to ensure unbroken perpetual succession in the event of the sole director's death or incapacity.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\udc64",
+        "title": "Solopreneurs & Freelancers",
+        "desc": "Individual specialists wanting corporate credibility without needing a dummy partner."
+      },
+      {
+        "icon": "\ud83d\udcbb",
+        "title": "Solo Tech Developers",
+        "desc": "Independent software creators developing micro-SaaS, mobile apps, and digital assets."
+      },
+      {
+        "icon": "\ud83d\udcca",
+        "title": "Specialized Consultants",
+        "desc": "Management, financial, and marketing consultants servicing corporate enterprise clients."
+      },
+      {
+        "icon": "\ud83e\uddea",
+        "title": "Early Stage Innovators",
+        "desc": "Founders proving a business model alone before bringing in partners and converting to Pvt Ltd."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udc64",
+        "label": "Sole Member",
+        "value": "1 Director & Shareholder",
+        "desc": "One individual serves as 100% owner, sole director, and subscriber."
+      },
+      {
+        "icon": "\ud83e\udd1d",
+        "label": "Nominee Requirement",
+        "value": "1 Designated Nominee",
+        "desc": "A nominee must be appointed with written consent (Form INC-3) for succession."
+      },
+      {
+        "icon": "\ud83c\uddee\ud83c\uddf3",
+        "label": "Citizenship Criteria",
+        "value": "Natural Person (Citizen)",
+        "desc": "Must be a natural person and Indian citizen (both resident and non-resident allowed)."
+      },
+      {
+        "icon": "\ud83c\udfe2",
+        "label": "Registered Address",
+        "value": "Commercial or Home",
+        "desc": "Valid Indian premise proof with electricity bill < 2 months old and owner NOC."
+      }
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Within 180 Days",
+        "title": "Commencement of Business (INC-20A)",
+        "desc": "Filing declaration with ROC confirming capital has been deposited into corporate account."
+      },
+      {
+        "badge": "Mandatory",
+        "timeline": "Within 30 Days",
+        "title": "First Auditor Appointment (ADT-1)",
+        "desc": "Statutory auditor appointment by sole director for mandatory annual financial audits."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "Within 180 Days of FY",
+        "title": "Filing Financial Statements (AOC-4)",
+        "desc": "Submission of balance sheet and profit & loss statement to the Registrar of Companies."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 29th November",
+        "title": "Abridged Annual Return (MGT-7A)",
+        "desc": "Simplified annual return designed specifically for One Person Companies."
       }
     ]
   },
@@ -1136,8 +1405,101 @@ const MASTER_SERVICES_DATA = {
     ],
     "faqs": [
       {
-        "q": "What happens if a company has zero revenue in a year?",
-        "a": "Even a completely dormant or zero-revenue company must file mandatory annual returns (Form AOC-4 and MGT-7) to maintain active legal status."
+        "q": "Is annual compliance mandatory even if my company had ZERO revenue?",
+        "a": "YES. Even if your company had zero transactions, zero sales, or is completely inactive, filing Form AOC-4 and Form MGT-7 is legally mandatory under the Companies Act 2013. Failure to file attracts \u20b9100/day fine per form and leads to director disqualification."
+      },
+      {
+        "q": "What is the penalty for delayed filing of Form AOC-4 and MGT-7?",
+        "a": "The Ministry of Corporate Affairs imposes a mandatory statutory late fee of \u20b9100 per day for each delayed form. Since there is no statutory ceiling, a delay of one year can accumulate over \u20b972,000 in government fines alone."
+      },
+      {
+        "q": "Can Easy My Taxes assist with appointing a Statutory Auditor?",
+        "a": "Yes! Under Section 139 of the Companies Act 2013, every company must appoint an independent Chartered Accountant in practice as its Statutory Auditor. CA Pradeep Agarwal's firm provides statutory audit and tax audit certification."
+      },
+      {
+        "q": "What is the deadline for holding the Annual General Meeting (AGM)?",
+        "a": "The AGM must be held within 6 months from the date of closing of the financial year (i.e. by 30th September each year, except for the first AGM which can be held within 9 months of the first FY close)."
+      }
+    ],
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Annual corporate compliance is mandatory for every <strong>Private Limited Company</strong> registered in India under the <strong>Companies Act 2013</strong>. Regardless of whether your company conducted multi-crore business operations or remained pre-revenue (nil transactions), you must statutorily file annual financial statements and annual returns with the Registrar of Companies (ROC).\n      </p>\n      <p>\n        Defaulting on annual compliance attracts severe consequences: daily late filing penalties of <strong>\u20b9100 per day per form with no upper cap</strong>, director disqualification for up to 5 years under Section 164(2), DIN deactivation, and risk of company strike-off by the ROC. Easy My Taxes, led by Senior Chartered Accountant <strong>CA Pradeep Agarwal</strong>, provides complete retainer management\u2014including AGM documentation, statutory audit coordination, and timely ROC e-filing.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83c\udfe2",
+        "title": "Active Private Limited Companies",
+        "desc": "Companies with commercial operations requiring statutory audit and annual ROC filing."
+      },
+      {
+        "icon": "\ud83d\udca4",
+        "title": "Dormant & Nil Companies",
+        "desc": "Pre-revenue or inactive companies that must file mandatory annual returns to prevent director bans."
+      },
+      {
+        "icon": "\ud83d\udcc8",
+        "title": "Fundraising Startups",
+        "desc": "Startups preparing for institutional VC due diligence, bank loan approvals, and clean audits."
+      },
+      {
+        "icon": "\ud83d\udc65",
+        "title": "Company Directors",
+        "desc": "Individual directors safeguarding their DIN status from MCA disqualification and legal liability."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83c\udfe2",
+        "label": "Active CIN Status",
+        "value": "Company in Good Standing",
+        "desc": "The company's status on the MCA V3 portal must be 'Active' and not marked struck-off."
+      },
+      {
+        "icon": "\ud83d\udd11",
+        "label": "Active Director DINs",
+        "value": "DIR-3 KYC Completed",
+        "desc": "At least two directors must hold active DINs with updated annual KYC verification."
+      },
+      {
+        "icon": "\ud83d\udcda",
+        "label": "Books of Accounts",
+        "value": "Financial Statements Finalized",
+        "desc": "Balance sheet, Profit & Loss statement, and trial balance ready for statutory audit review."
+      },
+      {
+        "icon": "\ud83d\udd8b\ufe0f",
+        "label": "Digital Signatures",
+        "value": "Active Class-3 DSC",
+        "desc": "Valid Class-3 Digital Signatures of at least one director and certifying Chartered Accountant."
+      }
+    ],
+    "postCompliances": [
+      {
+        "badge": "Annual",
+        "timeline": "Within 30 Days of AGM",
+        "title": "Filing Form AOC-4 (Financials)",
+        "desc": "Submit audited Balance Sheet, Profit & Loss Account, Director's Report, and Auditor's Report to MCA."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "Within 60 Days of AGM",
+        "title": "Filing Form MGT-7 (Annual Return)",
+        "desc": "Submit annual return detailing shareholding pattern, indebtedness, and directorship changes."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 30th September",
+        "title": "Director KYC (DIR-3 KYC)",
+        "desc": "Mandatory annual KYC filing for all company directors to avoid a \u20b95,000 deactivation penalty."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 30th June",
+        "title": "Form DPT-3 (Return of Deposits)",
+        "desc": "Mandatory filing of outstanding loans, advances, or receipts not considered deposits."
+      },
+      {
+        "badge": "Corporate",
+        "timeline": "Quarterly & Annual",
+        "title": "Statutory Board & AGM Minutes",
+        "desc": "Drafting and formalizing minutes of at least 4 board meetings and the Annual General Meeting."
       }
     ]
   },
@@ -1255,8 +1617,83 @@ const MASTER_SERVICES_DATA = {
     ],
     "faqs": [
       {
-        "q": "I am a disqualified director, must I still file DIR-3 KYC?",
-        "a": "Yes, even disqualified directors must file DIR-3 KYC annually to keep their records compliant."
+        "q": "I am no longer a director in any company. Do I still need to file DIR-3 KYC?",
+        "a": "YES. The statutory requirement applies to the DIN holder as an individual, not to the company. As long as your DIN exists on the MCA database, you must file annual KYC to keep it active."
+      },
+      {
+        "q": "What is the penalty if I miss the 30th September deadline?",
+        "a": "If you miss the 30th September statutory cutoff, the MCA automatically deactivates your DIN. To reactivate a deactivated DIN, you must file Form DIR-3 KYC and pay a mandatory government penalty fee of \u20b95,000."
+      },
+      {
+        "q": "What is the difference between DIR-3 KYC Web and DIR-3 KYC e-Form?",
+        "a": "DIR-3 KYC Web is a 1-minute OTP-based verification used when all personal details (mobile, email, address) remain identical to the previous filing. The full DIR-3 KYC e-Form (requiring Class-3 DSC and CA certification) is required when you file for the first time or when any personal detail has changed."
+      },
+      {
+        "q": "Can one mobile number or email be used for multiple directors?",
+        "a": "No! The MCA strictly mandates that every director must have a unique personal mobile number and unique email ID. The same contact credentials cannot be shared across multiple DINs."
+      }
+    ],
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        <strong>Director KYC (DIR-3 KYC)</strong> is a mandatory annual regulatory verification required by the Ministry of Corporate Affairs (MCA) under <strong>Rule 12A of the Companies (Appointment and Qualification of Directors) Rules 2014</strong>. Every individual who has been allotted a Director Identification Number (DIN) or Designated Partner Identification Number (DPIN) must complete this verification annually before <strong>30th September</strong>.\n      </p>\n      <p>\n        The rule applies strictly to all DIN holders\u2014regardless of whether you are an active director, disqualified director, or hold a DIN without serving on any active board. If a director fails to file their KYC by the 30th September statutory cutoff, the MCA central database automatically marks their DIN as <strong>'Deactivated due to non-filing of DIR-3 KYC'</strong>. Deactivated DIN holders cannot sign any MCA forms, incorporate companies, or pass board resolutions, and a <strong>statutory regularization fee of \u20b95,000</strong> is levied to reactivate the DIN.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\udc64",
+        "title": "All Active Company Directors",
+        "desc": "Directors in Private Limited, Public Limited, or Section 8 companies."
+      },
+      {
+        "icon": "\ud83e\udd1d",
+        "title": "Designated Partners in LLPs",
+        "desc": "Partners holding a DPIN in active or registered Limited Liability Partnerships."
+      },
+      {
+        "icon": "\ud83d\udca4",
+        "title": "Holders of Inactive DINs",
+        "desc": "Individuals holding an allotted DIN even if not currently appointed to any active company board."
+      },
+      {
+        "icon": "\ud83c\udf10",
+        "title": "Foreign & NRI Directors",
+        "desc": "Foreign nationals and NRIs holding an Indian DIN in Indian subsidiaries or joint ventures."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udd22",
+        "label": "Allotted Identifier",
+        "value": "Valid 8-Digit DIN",
+        "desc": "Active or deactivated Director Identification Number allotted by the MCA."
+      },
+      {
+        "icon": "\ud83d\udcf1",
+        "label": "Personal Mobile Number",
+        "value": "Unique Mobile OTP",
+        "desc": "Personal mobile number belonging directly to the director (unique per DIN)."
+      },
+      {
+        "icon": "\u2709\ufe0f",
+        "label": "Personal Email ID",
+        "value": "Unique Email OTP",
+        "desc": "Personal email address to receive and verify the MCA dual authentication OTP."
+      },
+      {
+        "icon": "\ud83e\udeaa",
+        "label": "Identity Documents",
+        "value": "PAN & Aadhaar / Passport",
+        "desc": "Name, father's name, and date of birth must match exactly between PAN and Aadhaar."
+      }
+    ],
+    "postCompliances": [
+      {
+        "badge": "Annual",
+        "timeline": "By 30th September Annually",
+        "title": "Annual Web-KYC Submission",
+        "desc": "If no personal details have changed, complete the quick 2-minute web OTP filing annually."
+      },
+      {
+        "badge": "Event-Based",
+        "timeline": "Within 30 Days of Change",
+        "title": "e-Form DIR-3 KYC (Detail Change)",
+        "desc": "If address, phone, or email changes, file full e-Form with digital signature and CA certification."
       }
     ]
   },
@@ -1926,8 +2363,89 @@ const MASTER_SERVICES_DATA = {
     ],
     "faqs": [
       {
-        "q": "What is the difference between FSSAI Registration and License?",
-        "a": "Petty food businesses with annual turnover below \u20b912 Lakhs require a Basic Registration (Form A). Businesses with turnover above \u20b912 Lakhs require a State or Central License (Form B)."
+        "q": "What is the difference between FSSAI Registration and FSSAI License?",
+        "a": "FSSAI Basic Registration is for petty food business operators with an annual turnover of up to \u20b912 Lakhs. FSSAI State License is required for mid-sized operators with turnover between \u20b912 Lakhs and \u20b920 Crores. FSSAI Central License is required for large manufacturers, 100% export units, importers, and businesses with turnover above \u20b920 Crores or operating in multiple states."
+      },
+      {
+        "q": "Can I start selling food on Swiggy and Zomato with just the application number?",
+        "a": "No. Major platforms like Swiggy and Zomato mandate an active 14-digit FSSAI license certificate. However, Easy My Taxes fast-tracks FSSAI issuance within 3 to 7 working days so you can go live without delay."
+      },
+      {
+        "q": "What is the validity period of an FSSAI license?",
+        "a": "An FSSAI license or registration can be issued for a duration of 1 to 5 years, depending on your preference. Choosing a 5-year license saves recurring renewal fees and administrative hassle."
+      },
+      {
+        "q": "Can a home kitchen or home baker get an FSSAI license?",
+        "a": "Yes! Home bakers and home-cooked food operators can legally obtain a Basic FSSAI Registration using their residential address proof and an owner NOC."
+      }
+    ],
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        An <strong>FSSAI License / Registration</strong> is a 14-digit statutory compliance certificate issued by the <strong>Food Safety and Standards Authority of India (FSSAI)</strong> under the <strong>Food Safety and Standards Act 2006</strong>. It is legally mandatory for every Food Business Operator (FBO) in India involved in manufacturing, processing, packaging, storing, distributing, or selling food items.\n      </p>\n      <p>\n        Operating a food establishment without an active FSSAI certificate is a cognizable statutory offense under Section 63 of the FSS Act, punishable with imprisonment up to 6 months and penalties up to \u20b95 Lakhs. Furthermore, food delivery aggregators like Zomato, Swiggy, and Blinkit strictly require an active 14-digit FSSAI license for merchant onboarding.\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83c\udf7d\ufe0f",
+        "title": "Restaurants & Cloud Kitchens",
+        "desc": "Dine-in outlets, bakeries, cafes, food trucks, and Swiggy/Zomato cloud kitchens."
+      },
+      {
+        "icon": "\ud83c\udfed",
+        "title": "Food Manufacturers",
+        "desc": "Packaged food producers, snack processors, edible oil mills, and dairy product makers."
+      },
+      {
+        "icon": "\ud83d\udce6",
+        "title": "Food Distributors & Importers",
+        "desc": "Wholesalers, cold chain operators, re-packers, and importers of food ingredients."
+      },
+      {
+        "icon": "\ud83d\uded2",
+        "title": "Grocery Stores & D2C Brands",
+        "desc": "Supermarkets, organic food brands, and online gourmet food delivery portals."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83d\udcdc",
+        "label": "License Tiers",
+        "value": "Turnover-Based Tiers",
+        "desc": "Basic Registration (< \u20b912L turnover); State License (\u20b912L\u2013\u20b920Cr); Central License (> \u20b920Cr or Multi-State)."
+      },
+      {
+        "icon": "\ud83d\udccd",
+        "label": "Premises Proof",
+        "value": "Commercial or Kitchen NOC",
+        "desc": "Electricity bill, Rent Agreement, and Municipal Health Trade License / Local Body NOC."
+      },
+      {
+        "icon": "\ud83d\udc64",
+        "label": "Food Safety Lead",
+        "value": "Nominated Supervisor",
+        "desc": "Photo ID proof of authorized food safety in-charge and basic medical fitness certificates."
+      },
+      {
+        "icon": "\ud83d\udca7",
+        "label": "Testing Reports",
+        "value": "Potable Water Report",
+        "desc": "Required for manufacturing, catering, and food processing units from an NABL accredited lab."
+      }
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "Permanent",
+        "title": "14-Digit FSSAI Display",
+        "desc": "Prominently display FSSAI logo and 14-digit license number on food packaging, menu cards, and billing counters."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st May",
+        "title": "Annual Return Form D-1",
+        "desc": "Mandatory annual manufacturing and production return for food processors and importers."
+      },
+      {
+        "badge": "Periodic",
+        "timeline": "30-60 Days Before Expiry",
+        "title": "Timely License Renewal",
+        "desc": "Renew license before expiration to avoid a statutory penalty of \u20b9100 per day."
       }
     ]
   },
@@ -2054,8 +2572,95 @@ const MASTER_SERVICES_DATA = {
     ],
     "faqs": [
       {
-        "q": "Can I get GST registration on a residential address?",
-        "a": "Yes, you can register GST on a residential address with a valid electricity bill and Landlord NOC."
+        "q": "What is the threshold limit for mandatory GST registration?",
+        "a": "For businesses dealing exclusively in goods, GST registration is mandatory once annual turnover exceeds \u20b940 Lakhs (\u20b920 Lakhs in Special Category States). For service providers, the threshold is \u20b920 Lakhs (\u20b910 Lakhs in Special Category States)."
+      },
+      {
+        "q": "Can I get GST registration voluntarily even if my turnover is below the threshold?",
+        "a": "Yes! Voluntary GST registration is very common. It allows you to claim full Input Tax Credit (ITC) on your business expenses, issue official tax invoices, and register as an approved vendor with corporate clients."
+      },
+      {
+        "q": "How long does it take to get a GSTIN number?",
+        "a": "With Aadhaar authentication, GST approval and certificate generation typically take 3 to 5 working days, provided the departmental officer does not issue a site clarification notice."
+      },
+      {
+        "q": "What is an LUT (Letter of Undertaking) in GST?",
+        "a": "An LUT (Form GST RFD-11) is an official statutory declaration filed on the GST portal that allows exporters of goods or services to export without paying IGST upfront, preserving crucial working capital."
+      }
+    ],
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        A <strong>Goods and Services Tax Identification Number (GSTIN)</strong> is a 15-digit statutory tax identifier issued by the GST Council under the <strong>Central Goods and Services Tax (CGST) Act 2017</strong>. It is mandatory for any commercial enterprise, manufacturer, or professional service provider exceeding statutory turnover thresholds or engaging in inter-state commerce.\n      </p>\n      <p>\n        Operating without a mandatory GST registration attracts severe statutory penalties under Section 122 (100% of tax evaded or \u20b910,000, whichever is higher). Obtaining a GSTIN unlocks seamless Input Tax Credit (ITC) pass-through, enables legally issuing tax invoices, allows registration on Amazon, Flipkart, and GeM portals, and permits zero-rated export of services via Letter of Undertaking (LUT).\n      </p>\n    ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\udecd\ufe0f",
+        "title": "Product Sellers & Traders",
+        "desc": "Businesses with annual turnover exceeding \u20b940 Lakhs (\u20b920 Lakhs for special category states)."
+      },
+      {
+        "icon": "\ud83d\udcbb",
+        "title": "Service Providers",
+        "desc": "Consultants, developers, and professionals with annual gross receipts exceeding \u20b920 Lakhs."
+      },
+      {
+        "icon": "\ud83d\udce6",
+        "title": "E-Commerce Merchants",
+        "desc": "Mandatory for anyone selling goods or services on Amazon, Flipkart, Blinkit, or Swiggy."
+      },
+      {
+        "icon": "\ud83c\udf0d",
+        "title": "Software & Service Exporters",
+        "desc": "Required to execute Letter of Undertaking (LUT) to export services with zero tax deduction."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83c\udd94",
+        "label": "Identity Identification",
+        "value": "Valid Permanent PAN",
+        "desc": "Individual PAN for proprietorships; Corporate PAN for LLPs, Companies, and Trusts."
+      },
+      {
+        "icon": "\ud83d\udcf1",
+        "label": "Aadhaar Authentication",
+        "value": "Linked Mobile Number",
+        "desc": "Signatory's Aadhaar must be linked with mobile number for instant e-KYC OTP verification."
+      },
+      {
+        "icon": "\ud83d\udccd",
+        "label": "Premises Proof",
+        "value": "Valid Address Document",
+        "desc": "Electricity bill, Property Tax receipt, or Municipal Khata not older than 2 months."
+      },
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "Possession Rights",
+        "value": "Rent Agreement & NOC",
+        "desc": "If premises are leased or rented, a clear landlord NOC and lease agreement are required."
+      }
+    ],
+    "postCompliances": [
+      {
+        "badge": "Monthly / QRMP",
+        "timeline": "By 11th / 13th of Month",
+        "title": "GSTR-1 Outward Supplies",
+        "desc": "Detailed reporting of all outward sales, tax invoices, and export supplies."
+      },
+      {
+        "badge": "Monthly / QRMP",
+        "timeline": "By 20th / 22nd / 24th",
+        "title": "GSTR-3B Summary Return",
+        "desc": "Self-assessed summary return with input tax credit reconciliation and net tax payment."
+      },
+      {
+        "badge": "Annual",
+        "timeline": "By 31st December",
+        "title": "GSTR-9 Annual Return",
+        "desc": "Comprehensive annual return consolidation for registered taxpayers exceeding statutory limits."
+      },
+      {
+        "badge": "Continuous",
+        "timeline": "Monthly Reconcile",
+        "title": "GSTR-2B ITC Matching",
+        "desc": "Strict vendor matching to ensure you claim 100% eligible Input Tax Credit without notice."
       }
     ]
   },
