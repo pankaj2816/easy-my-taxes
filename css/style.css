@@ -486,6 +486,19 @@ button {
   transform: translateY(-1px);
 }
 
+.btn-outline-light {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 .btn-sm {
   padding: 0.55rem 1rem;
   font-size: 0.8125rem;
