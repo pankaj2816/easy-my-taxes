@@ -3192,8 +3192,9 @@
 }
 
 
+
 /* ==========================================================================
-   TESTIMONIALS SLIDER & COMPACT CAROUSEL (SMART SPACE SAVER)
+   SMART TESTIMONIALS SIDE SCROLLER (DRAG-TO-SCROLL, FLOATING ARROWS & PEEK)
    ========================================================================== */
 
 .testimonials-slider-wrapper {
@@ -3209,54 +3210,119 @@
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 0.5rem 0.25rem 1.25rem 0.25rem;
+  padding: 0.75rem 0.5rem 1.5rem 0.5rem;
+  cursor: grab;
 }
 
 .testimonials-slider::-webkit-scrollbar {
   display: none;
 }
 
-.testimonials-slider .testimonial-card {
-  flex: 0 0 calc(33.333% - 1rem);
-  scroll-snap-align: start;
-  min-width: 300px;
-  box-sizing: border-box;
+.testimonials-slider.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+  scroll-behavior: auto;
 }
 
-@media (max-width: 1024px) {
+/* Card sizing: 3.2 cards visible on desktop so the 4th card peeks out */
+.testimonials-slider .testimonial-card {
+  flex: 0 0 calc(31.5% - 0.75rem);
+  scroll-snap-align: start;
+  min-width: 310px;
+  box-sizing: border-box;
+  transition: transform var(--trans-fast), box-shadow var(--trans-fast);
+}
+
+@media (max-width: 1150px) {
   .testimonials-slider .testimonial-card {
-    flex: 0 0 calc(50% - 0.75rem);
-    min-width: 280px;
+    flex: 0 0 calc(47% - 0.75rem);
+    min-width: 290px;
   }
 }
 
 @media (max-width: 640px) {
   .testimonials-slider .testimonial-card {
-    flex: 0 0 88%;
+    flex: 0 0 85%;
     min-width: 260px;
   }
 }
 
-.carousel-btn {
-  width: 38px;
-  height: 38px;
+/* Floating Side Navigation Arrows */
+.slider-side-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 46px;
+  height: 46px;
   border-radius: var(--radius-full);
-  background: var(--surface-0);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--surface-300);
-  color: var(--primary-900);
+  color: var(--primary-950);
   display: grid;
   place-items: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all var(--trans-fast);
 }
 
-.carousel-btn:hover {
+.slider-side-nav:hover {
   background: var(--primary-900);
   color: #ffffff;
   border-color: var(--primary-900);
-  transform: translateY(-1px);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
+.slider-side-nav.prev {
+  left: -22px;
+}
+
+.slider-side-nav.next {
+  right: -22px;
+}
+
+@media (max-width: 768px) {
+  .slider-side-nav.prev {
+    left: -10px;
+  }
+  .slider-side-nav.next {
+    right: -10px;
+  }
+}
+
+/* Pagination Dots */
+.slider-dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  background: var(--surface-300);
+  cursor: pointer;
+  transition: all var(--trans-base);
+  border: none;
+  padding: 0;
+}
+
+.slider-dot:hover {
+  background: var(--surface-400);
+}
+
+.slider-dot.active {
+  width: 28px;
+  background: var(--emerald-500);
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+}
 
 /* ==========================================================================
    SMART SERVICES EXPLORER (LEFT NAVIGATION + HOVER SUBSECTIONS)

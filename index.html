@@ -851,12 +851,26 @@
           <button class="test-filter-btn" data-filter="freelancer">Freelancers (44ADA)</button>
         </div>
 
-        <!-- Smart Horizontal Testimonials Slider (Single compact row) -->
+        <!-- Smart Horizontal Testimonials Slider (Drag-to-scroll + Floating Side Controls) -->
         <div class="testimonials-slider-wrapper">
-          <div id="testimonialsGridContainer" class="testimonials-slider">
+          <!-- Floating Left Arrow -->
+          <button class="slider-side-nav prev" id="sliderSidePrev" onclick="scrollTestimonials(-1)" aria-label="Scroll to previous review" title="Previous Review">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <!-- Scrollable Slider -->
+          <div id="testimonialsGridContainer" class="testimonials-slider" title="Click and drag or swipe to explore reviews">
             <!-- Populated dynamically by app.js -->
           </div>
+
+          <!-- Floating Right Arrow -->
+          <button class="slider-side-nav next" id="sliderSideNext" onclick="scrollTestimonials(1)" aria-label="Scroll to next review" title="Next Review">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
+
+        <!-- Interactive Pagination Dots -->
+        <div class="slider-dots-container" id="sliderDotsContainer"></div>
       </div>
     </section>
 

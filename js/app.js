@@ -338,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonials('all');
   initTestimonialFilters();
   startTestimonialAutoScroll();
+  initDragToScroll();
   initChecklist('salaried');
   initChecklistSelector();
   initStatsCounter();
@@ -520,13 +521,112 @@ function initServicesSearch() {
 
 // Render Filterable Testimonials / Verified Case Studies
 
-// Smart Carousel Scroll Controls for Testimonials
+// Smart Carousel Scroll Controls for Testimonials (with Drag-to-Scroll & Dots Sync)
 function scrollTestimonials(direction) {
   const container = document.getElementById('testimonialsGridContainer');
   if (!container) return;
   const firstCard = container.querySelector('.testimonial-card');
   const cardWidth = firstCard ? firstCard.offsetWidth + 24 : 350;
-  container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  
+  const maxScroll = container.scrollWidth - container.clientWidth - 15;
+  if (direction === 1 && container.scrollLeft >= maxScroll) {
+    container.scrollTo({ left: 0, behavior: 'smooth' });
+  } else if (direction === -1 && container.scrollLeft <= 10) {
+    container.scrollTo({ left: maxScroll, behavior: 'smooth' });
+  } else {
+    container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  }
+}
+
+// Mouse Drag-to-Scroll on Desktop
+function initDragToScroll() {
+  const slider = document.getElementById('testimonialsGridContainer');
+  if (!slider) return;
+
+  let isDown = false;
+  let startX = 0;
+  let scrollLeft = 0;
+  let hasMoved = false;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    hasMoved = false;
+    slider.classList.add('is-dragging');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('is-dragging');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('is-dragging');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    hasMoved = true;
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // Track scroll position to update pagination dots
+  slider.addEventListener('scroll', updateActiveDot);
+}
+
+// Update Pagination Dots
+function renderSliderDots() {
+  const container = document.getElementById('testimonialsGridContainer');
+  const dotsContainer = document.getElementById('sliderDotsContainer');
+  if (!container || !dotsContainer) return;
+
+  const cards = container.querySelectorAll('.testimonial-card');
+  if (cards.length <= 1) {
+    dotsContainer.innerHTML = '';
+    return;
+  }
+
+  dotsContainer.innerHTML = Array.from(cards).map((_, i) => `
+    <button class="slider-dot ${i === 0 ? 'active' : ''}" data-idx="${i}" onclick="scrollToSlide(${i})" aria-label="Go to slide ${i + 1}"></button>
+  `).join('');
+}
+
+function scrollToSlide(idx) {
+  const container = document.getElementById('testimonialsGridContainer');
+  if (!container) return;
+  const cards = container.querySelectorAll('.testimonial-card');
+  if (cards[idx]) {
+    container.scrollTo({ left: cards[idx].offsetLeft - 8, behavior: 'smooth' });
+  }
+}
+
+function updateActiveDot() {
+  const container = document.getElementById('testimonialsGridContainer');
+  const dots = document.querySelectorAll('.slider-dot');
+  if (!container || dots.length === 0) return;
+
+  const scrollPos = container.scrollLeft;
+  const cards = container.querySelectorAll('.testimonial-card');
+  let activeIndex = 0;
+  let minDiff = Infinity;
+
+  cards.forEach((card, i) => {
+    const diff = Math.abs(card.offsetLeft - 8 - scrollPos);
+    if (diff < minDiff) {
+      minDiff = diff;
+      activeIndex = i;
+    }
+  });
+
+  dots.forEach((dot, i) => {
+    if (i === activeIndex) dot.classList.add('active');
+    else dot.classList.remove('active');
+  });
 }
 
 let testimonialAutoTimer = null;
@@ -536,14 +636,9 @@ function startTestimonialAutoScroll() {
   if (!container) return;
 
   testimonialAutoTimer = setInterval(() => {
-    if (container.matches(':hover')) return; // Pause on hover
-    const maxScroll = container.scrollWidth - container.clientWidth - 15;
-    if (container.scrollLeft >= maxScroll) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-      scrollTestimonials(1);
-    }
-  }, 5500);
+    if (container.matches(':hover') || container.classList.contains('is-dragging')) return;
+    scrollTestimonials(1);
+  }, 5000);
 }
 
 function stopTestimonialAutoScroll() {
@@ -577,6 +672,7 @@ function initTestimonials(filter = 'all') {
       </div>
     </div>
   `).join('');
+  renderSliderDots();
 }
 
 function initTestimonialFilters() {
