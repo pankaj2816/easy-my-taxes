@@ -355,6 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initHeroQuickFinder();
   initCalcTabs();
+  initMegaMenus();
+  initMobileAccordions();
 });
 
 // Sticky Header
@@ -886,4 +888,39 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 4500);
+}
+
+
+// RegisterKaro-Style Mega Menu Tab Hover Switching
+function initMegaMenus() {
+  document.querySelectorAll('.mega-dropdown').forEach(dropdown => {
+    const sideItems = dropdown.querySelectorAll('.mega-side-item');
+    const panes = dropdown.querySelectorAll('.mega-pane');
+
+    sideItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const targetId = item.getAttribute('data-target');
+        sideItems.forEach(i => i.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+
+        item.classList.add('active');
+        const targetPane = dropdown.querySelector('#' + targetId);
+        if (targetPane) targetPane.classList.add('active');
+      });
+    });
+  });
+}
+
+// Mobile Accordions in Navigation Drawer
+function initMobileAccordions() {
+  document.querySelectorAll('.mobile-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.mobile-accordion-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
 }

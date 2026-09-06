@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About CA Pradeep Agarwal (FCA, DISA) | Lead Chartered Accountant &amp; Tax Strategist | Easy My Taxes</title>
-  <meta name="description" content="Meet CA Pradeep Agarwal (FCA, DISA), Senior Managing Partner at Easy My Taxes. Over 15 years of excellence in Direct Tax Litigation, Corporate Restructuring, NRI Taxation, and Virtual CFO governance.">
-  <meta name="keywords" content="CA Pradeep Agarwal, Chartered Accountant, FCA ICAI, DISA, Easy My Taxes Managing Partner, Tax Consultant Gurugram, Direct Tax Scrutiny, Virtual CFO India">
+  <title id="pageTitle">Service Details | Easy My Taxes &amp; CA Pradeep Agarwal</title>
+  <meta name="description" id="pageMetaDesc" content="Professional Chartered Accountancy and legal compliance services in India by CA Pradeep Agarwal.">
+  <meta name="keywords" id="pageMetaKeywords" content="Company Registration, Compliance, Licenses, CA Pradeep Agarwal, Easy My Taxes">
   <meta name="author" content="Easy My Taxes">
   
-  <!-- Open Graph / Meta -->
-  <meta property="og:title" content="About CA Pradeep Agarwal (FCA, DISA) | Easy My Taxes">
-  <meta property="og:description" content="Meet Senior Managing Partner CA Pradeep Agarwal. 15+ years of distinguished practice in tax litigation, corporate advisory, and audit assurance.">
+  <!-- Open Graph -->
+  <meta property="og:title" id="ogTitle" content="Service Details | Easy My Taxes">
+  <meta property="og:description" id="ogDesc" content="Precision CA advisory, corporate incorporation, and tax filings in India.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/logo.png">
 
@@ -25,10 +25,8 @@
 </head>
 <body>
 
-
-
   <!-- =========================================================================
-       1. MAIN NAVIGATION HEADER
+       1. MAIN NAVIGATION HEADER (REGISTERKARO-STYLE MEGA MENU)
        ========================================================================= -->
   <header class="site-header">
     <div class="container nav-container">
@@ -36,11 +34,11 @@
         <img src="assets/logo.png" alt="Easy My Taxes Logo">
       </a>
 
-            <!-- Desktop Nav with Mega Menus -->
+      <!-- Desktop Nav with Mega Menus -->
       <nav class="main-nav" aria-label="Main Navigation">
         
         <!-- 1. COMPANY REGISTRATIONS MEGA MENU -->
-        <div class="nav-item has-mega-menu">
+        <div class="nav-item has-mega-menu" id="navItemRegistrations">
           <a href="service.html?id=company-registration" class="nav-link">
             <span>Company Registrations</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -248,7 +246,7 @@
         </div>
 
         <!-- 2. COMPLIANCE MEGA MENU -->
-        <div class="nav-item has-mega-menu">
+        <div class="nav-item has-mega-menu" id="navItemCompliance">
           <a href="service.html?id=pvt-ltd-compliance" class="nav-link">
             <span>Compliance</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -381,7 +379,7 @@
         </div>
 
         <!-- 3. LICENSES MEGA MENU -->
-        <div class="nav-item has-mega-menu">
+        <div class="nav-item has-mega-menu" id="navItemLicenses">
           <a href="service.html?id=licenses-certifications" class="nav-link">
             <span>Licenses</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -512,7 +510,7 @@
           <a href="due-dates.html" class="nav-link">Due Dates 2026-27</a>
         </div>
         <div class="nav-item">
-          <a href="about-ca.html" class="nav-link active" style="color: var(--emerald-600); font-weight: 800;">About CA</a>
+          <a href="about-ca.html" class="nav-link">About CA</a>
         </div>
       </nav>
 
@@ -522,7 +520,7 @@
           <span class="phone-dot"></span>
           <span>+91 98914 95092</span>
         </a>
-        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Consultation with CA Pradeep Agarwal')">
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Navbar Booking')">
           Book Consultation
         </button>
         <button class="mobile-toggle" id="mobileNavToggle" aria-label="Open Mobile Menu">
@@ -534,7 +532,7 @@
     </div>
   </header>
 
-    <!-- Mobile Drawer Menu -->
+  <!-- Mobile Drawer Menu -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
   <div class="mobile-drawer" id="mobileNavDrawer">
     <div class="mobile-drawer-header">
@@ -546,7 +544,7 @@
       
       <!-- Mobile Accordion: Company Registrations -->
       <div class="mobile-accordion-item">
-        <button class="mobile-accordion-header" type="button">
+        <button class="mobile-accordion-header">
           <span>🏢 Company Registrations</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -565,7 +563,7 @@
 
       <!-- Mobile Accordion: Compliance -->
       <div class="mobile-accordion-item">
-        <button class="mobile-accordion-header" type="button">
+        <button class="mobile-accordion-header">
           <span>📊 Compliance &amp; Filings</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -583,7 +581,7 @@
 
       <!-- Mobile Accordion: Licenses -->
       <div class="mobile-accordion-item">
-        <button class="mobile-accordion-header" type="button">
+        <button class="mobile-accordion-header">
           <span>📜 Licenses &amp; Certifications</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -613,294 +611,242 @@
     </div>
   </div>
 
-  <main>
-    <!-- =========================================================================
-         2. BREADCRUMB & HERO BANNER
-         ========================================================================= -->
-    <section style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); padding: 3rem 0 3.5rem 0; border-bottom: 1px solid var(--surface-200);">
+  <!-- =========================================================================
+       DYNAMIC SERVICE CONTENT INJECTION CONTAINER
+       ========================================================================= -->
+  <main id="serviceDetailContainer">
+    <!-- Breadcrumb & Hero -->
+    <section class="section-py bg-dark" style="padding: 3.5rem 0 3rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
       <div class="container">
-        <nav style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-          <a href="index.html" style="color: var(--primary-800); font-weight: 600; text-decoration: none;">Home</a>
+        <!-- Breadcrumb -->
+        <nav style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--surface-300); margin-bottom: 1.5rem; flex-wrap: wrap;">
+          <a href="index.html" style="color: var(--emerald-400); font-weight: 600; text-decoration: none;">Home</a>
           <span>/</span>
-          <span style="color: var(--emerald-600); font-weight: 700;">About Lead CA</span>
+          <span id="crumbCategory" style="color: var(--surface-300);">Services</span>
+          <span>/</span>
+          <span id="crumbTitle" style="color: #ffffff; font-weight: 700;">Service Details</span>
         </nav>
 
-        <div style="max-width: 820px;">
-          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--emerald-50); border: 1px solid var(--emerald-200); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.8125rem; font-weight: 700; color: var(--emerald-800); margin-bottom: 1rem;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--emerald-500); display: inline-block;"></span>
-            Senior Managing Partner &amp; Chief Tax Strategist
-          </div>
-          <h1 style="font-size: clamp(2.25rem, 4vw, 3.25rem); font-weight: 800; color: var(--primary-950); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem;">
-            CA Pradeep Agarwal <span style="color: var(--emerald-600);">(FCA, DISA)</span>
-          </h1>
-          <p style="font-size: 1.125rem; color: var(--text-main); line-height: 1.7; margin-bottom: 2rem;">
-            Fellow Chartered Accountant (ICAI) and Certified Information Systems Auditor (DISA) with 15+ years of distinguished practice guiding salaried corporate leaders, high-frequency traders, tech startups, and global NRIs.
-          </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <button class="btn btn-primary" onclick="openConsultationModal('1-on-1 Consultation with CA Pradeep Agarwal')">
-              Schedule 1-on-1 Consultation &rarr;
-            </button>
-            <button class="btn btn-whatsapp" onclick="openWhatsAppInquiry('Direct Consultation Request with CA Pradeep Agarwal')">
-              Chat on WhatsApp (+91 98914 95092)
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
-         3. FULL PROFILE CARD
-         ========================================================================= -->
-    <section class="section-py bg-white">
-      <div class="container">
-        <div class="ca-profile-card" style="box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); border-radius: var(--radius-xl); overflow: hidden;">
-          <!-- Photo Container -->
-          <div class="ca-photo-container">
-            <img 
-              id="caProfilePhoto" 
-              src="assets/ca-pradeep-agarwal.svg" 
-              alt="CA Pradeep Agarwal - Managing Partner &amp; Lead Chartered Accountant" 
-              class="ca-photo-img"
-            >
-            <div class="ca-experience-floating-badge">
-              <div>
-                <div class="ca-exp-num">15+</div>
-                <div class="ca-exp-text">Years of CA Practice</div>
-              </div>
-              <div style="text-align: right;">
-                <div style="font-size: 0.8125rem; font-weight: 800; color: #fff;">FCA, DISA (ICAI)</div>
-                <div class="ca-exp-text">Senior Managing Partner</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Profile Details -->
-          <div class="ca-profile-info">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
-              <span class="section-tag" style="margin-bottom: 0;">Verified Chartered Accountant</span>
-              <span class="ca-qualification-tag">ICAI Reg. Fellow Member</span>
-              <span class="ca-qualification-tag">Information Systems Auditor (DISA)</span>
+        <div class="service-hero-grid">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); padding: 0.35rem 0.85rem; border-radius: var(--radius-full); margin-bottom: 1.25rem;">
+              <span id="heroBadge" style="color: var(--emerald-400); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">
+                ⚡ Statutory Fastrack Service
+              </span>
             </div>
 
-            <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.25rem;">CA Pradeep Agarwal</h2>
-            <div class="ca-designation">
-              <span>Managing Partner &amp; Chief Tax Strategist</span>
-              <span>•</span>
-              <span style="color: var(--text-subtle); font-size: 0.9375rem; font-weight: 600;">Easy My Taxes</span>
-            </div>
+            <h1 id="heroTitle" style="font-size: clamp(2rem, 4.2vw, 3.25rem); font-weight: 800; color: #ffffff; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.25rem;">
+              Service Title
+            </h1>
 
-            <p class="ca-bio-text">
-              <strong>CA Pradeep Agarwal</strong> is a distinguished Fellow Chartered Accountant (FCA) with over 15 years of comprehensive experience across Direct Tax Litigation, Corporate Restructuring, GST Audits, Cross-Border NRI Taxation, and Startup Advisory. He has personally counseled over 18,000 salaried professionals, startup founders, and high-net-worth investors across India, the US, UK, UAE, and Singapore.
+            <p id="heroTagline" style="font-size: 1.125rem; color: var(--surface-300); line-height: 1.7; margin-bottom: 2rem;">
+              Detailed description of the statutory service and regulatory compliance assurance.
             </p>
 
-            <div class="ca-quote-box">
-              "Our philosophy at Easy My Taxes is rooted in proactive compliance rather than reactive damage control. Every taxpayer deserves institutional-grade tax strategies, meticulous AIS/TIS reconciliation, and zero notice vulnerability."
+            <!-- Quick Specs Row -->
+            <div class="service-quick-specs">
+              <div class="spec-card">
+                <span class="spec-label">Turnaround Timeline</span>
+                <strong class="spec-val" id="heroTimeline">5 - 7 Days</strong>
+              </div>
+              <div class="spec-card">
+                <span class="spec-label">Regulatory Authority</span>
+                <strong class="spec-val" id="heroPortal">MCA &amp; ROC</strong>
+              </div>
+              <div class="spec-card">
+                <span class="spec-label">Professional Fee</span>
+                <strong class="spec-val" id="heroPrice" style="color: var(--emerald-400);">Starting at ₹4,999</strong>
+              </div>
             </div>
 
-            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 1.5rem 0 0.75rem 0;">Primary Practice Areas</h4>
-            <div class="ca-expertise-grid">
-              <div class="ca-expertise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Direct Tax Scrutiny, 148 Reassessment &amp; Appeals</span>
-              </div>
-              <div class="ca-expertise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Startup Structuring &amp; Section 80-IAC Tax Exemption</span>
-              </div>
-              <div class="ca-expertise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>NRI 15CA/CB Repatriation &amp; Foreign Asset Disclosures</span>
-              </div>
-              <div class="ca-expertise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Statutory &amp; Tax Audits (Section 44AB / 3CD)</span>
-              </div>
-              <div class="ca-expertise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Virtual CFO &amp; Strategic Board Advisory</span>
-              </div>
-              <div class="ca-expertise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Complex Capital Gains (F&amp;O, Crypto, Real Estate)</span>
+            <!-- Action CTAs -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+              <button class="btn btn-primary btn-lg" id="btnBookThisService">
+                Book This Service &rarr;
+              </button>
+              <button class="btn btn-whatsapp btn-lg" id="btnWhatsAppService">
+                WhatsApp Inquiry (+91 98914 95092)
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Highlight Card -->
+          <div class="hero-assurance-card">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+              <span style="font-size: 2rem;" id="heroIcon">🏢</span>
+              <div>
+                <h4 style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin: 0;">CA Certified Guarantee</h4>
+                <span style="font-size: 0.8125rem; color: var(--emerald-400);">Led by CA Pradeep Agarwal (FCA, DISA)</span>
               </div>
             </div>
+            <p id="heroOverview" style="font-size: 0.9375rem; color: var(--surface-300); line-height: 1.65; margin-bottom: 1.5rem;">
+              Full statutory overview will be populated here.
+            </p>
+            <ul class="assurance-bullets">
+              <li>✓ 100% Online Paperless Filing</li>
+              <li>✓ Zero Rejection Guarantee on Documentation</li>
+              <li>✓ Dedicated Relationship Manager &amp; CA Review</li>
+              <li>✓ Transparent Pricing with No Hidden Surcharges</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         4. PRACTICE HIGHLIGHTS & KEY METRICS
-         ========================================================================= -->
+    <!-- Key Benefits & Why It's Required -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag emerald">Key Statutory Advantages</span>
+          <h2 class="section-title">Why Your Business Requires This Registration</h2>
+          <p class="section-desc">Protect your personal assets, ensure 100% regulatory compliance, and unlock institutional banking credit.</p>
+        </div>
+        <div class="service-benefits-grid" id="benefitsContainer">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents Required Checklist -->
     <section class="section-py bg-slate">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Track Record &amp; Impact</span>
-          <h2 class="section-title">A Proven Legacy in Tax &amp; Corporate Advisory</h2>
-          <p class="section-desc">
-            Measurable client outcomes delivered through disciplined adherence to ICAI standards and technical tax rigor.
-          </p>
+          <span class="section-tag blue">Pre-Requisites</span>
+          <h2 class="section-title">Mandatory Documents Checklist</h2>
+          <p class="section-desc">Keep these documents handy. Check off the items you already possess to get an instant readiness evaluation.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
-          <div style="background: var(--surface-0); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--surface-200); text-align: center;">
-            <div style="font-size: 2.75rem; font-weight: 800; color: var(--emerald-600); margin-bottom: 0.25rem;">15+</div>
-            <div style="font-weight: 700; color: var(--primary-950); margin-bottom: 0.5rem;">Years of Continuous Practice</div>
-            <p style="font-size: 0.875rem; color: var(--text-muted);">Decade and a half of handling complex tax assessments and corporate filings.</p>
+        <div style="max-width: 860px; margin: 0 auto; background: var(--surface-0); border: 1px solid var(--surface-200); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--surface-200); flex-wrap: wrap; gap: 0.5rem;">
+            <strong style="font-size: 1.05rem; color: var(--primary-950);">📋 Required Documentation Checklist</strong>
+            <span style="font-size: 0.8125rem; background: var(--emerald-50); color: var(--emerald-700); font-weight: 700; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); border: 1px solid var(--emerald-200);">
+              Soft copies / scanned PDFs accepted
+            </span>
           </div>
 
-          <div style="background: var(--surface-0); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--surface-200); text-align: center;">
-            <div style="font-size: 2.75rem; font-weight: 800; color: var(--emerald-600); margin-bottom: 0.25rem;">18,000+</div>
-            <div style="font-weight: 700; color: var(--primary-950); margin-bottom: 0.5rem;">Returns &amp; Filings Managed</div>
-            <p style="font-size: 0.875rem; color: var(--text-muted);">Trusted by tech leads, doctors, startup founders, traders, and international NRIs.</p>
+          <div id="documentsContainer" class="doc-checklist-grid">
+            <!-- Populated by JS -->
           </div>
 
-          <div style="background: var(--surface-0); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--surface-200); text-align: center;">
-            <div style="font-size: 2.75rem; font-weight: 800; color: var(--emerald-600); margin-bottom: 0.25rem;">₹34 Cr+</div>
-            <div style="font-weight: 700; color: var(--primary-950); margin-bottom: 0.5rem;">Legitimate Taxes Saved</div>
-            <p style="font-size: 0.875rem; color: var(--text-muted);">Achieved through strategic regime optimization, deductions, and Section 54/54EC exemptions.</p>
-          </div>
-
-          <div style="background: var(--surface-0); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--surface-200); text-align: center;">
-            <div style="font-size: 2.75rem; font-weight: 800; color: var(--emerald-600); margin-bottom: 0.25rem;">99.4%</div>
-            <div style="font-weight: 700; color: var(--primary-950); margin-bottom: 0.5rem;">First-Time Notice Clearance</div>
-            <p style="font-size: 0.875rem; color: var(--text-muted);">High rate of successful resolution for Section 143(1), 139(9), and 148 notices.</p>
+          <div style="margin-top: 2rem; background: var(--surface-100); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <strong style="font-size: 0.9375rem; color: var(--primary-950); display: block;">Missing any document or need format assistance?</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted);">Our team assists with affidavit drafts, landlord NOC templates, and digital signature generation.</span>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openConsultationModal('Document Assistance')">Get Document Help</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         5. HOW CA PRADEEP AGARWAL ASSISTS CLIENTS
-         ========================================================================= -->
+    <!-- 4-Step Process Flow -->
     <section class="section-py bg-white">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Direct Partner Engagement</span>
-          <h2 class="section-title">How You Work Directly with CA Pradeep</h2>
-          <p class="section-desc">
-            No intermediaries or automated guesswork. Every consultation and critical tax strategy is personally reviewed and structured by CA Pradeep Agarwal.
-          </p>
+          <span class="section-tag amber">Seamless Execution</span>
+          <h2 class="section-title">How Easy My Taxes Manages Your Filing</h2>
+          <p class="section-desc">A structured 4-step statutory procedure handled directly by Chartered Accountants.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <div style="padding: 2.25rem; border-radius: var(--radius-xl); background: #f8fafc; border: 1px solid var(--surface-200);">
-            <div style="width: 50px; height: 50px; border-radius: 12px; background: var(--emerald-100); color: var(--emerald-700); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
-              🎯
-            </div>
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.75rem;">1. Comprehensive Tax Diagnostic</h3>
-            <p style="font-size: 0.9375rem; color: var(--text-main); line-height: 1.6;">
-              Deep-dive review of your Form 16, AIS, TIS, capital gain statements, and expense registers to identify missed deductions and cross-verify tax credits.
-            </p>
-          </div>
+        <div class="process-grid" id="stepsContainer" style="margin-top: 2rem;">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
 
-          <div style="padding: 2.25rem; border-radius: var(--radius-xl); background: #f8fafc; border: 1px solid var(--surface-200);">
-            <div style="width: 50px; height: 50px; border-radius: 12px; background: var(--emerald-100); color: var(--emerald-700); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
-              🛡️
-            </div>
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.75rem;">2. Notice Defense &amp; Representation</h3>
-            <p style="font-size: 0.9375rem; color: var(--text-main); line-height: 1.6;">
-              Legal drafting of robust technical rejoinders for Income Tax notices (Section 143(1), 139(9), 148) and proactive rectification filings.
-            </p>
-          </div>
+    <!-- Package Deliverables -->
+    <section class="section-py bg-slate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag emerald">Final Output</span>
+          <h2 class="section-title">What You Receive in Your Compliance Kit</h2>
+          <p class="section-desc">Official government certificates, legal charter documents, and tax accounts delivered directly to your inbox.</p>
+        </div>
 
-          <div style="padding: 2.25rem; border-radius: var(--radius-xl); background: #f8fafc; border: 1px solid var(--surface-200);">
-            <div style="width: 50px; height: 50px; border-radius: 12px; background: var(--emerald-100); color: var(--emerald-700); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
-              🚀
-            </div>
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.75rem;">3. Corporate &amp; Virtual CFO Leadership</h3>
-            <p style="font-size: 0.9375rem; color: var(--text-main); line-height: 1.6;">
-              Monthly cash flow oversight, MIS reporting, board-level tax planning, and statutory compliance for startups and growing SMEs.
-            </p>
+        <div style="max-width: 880px; margin: 0 auto; background: var(--surface-0); border: 1px solid var(--surface-200); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-lg);">
+          <div id="deliverablesContainer" class="deliverables-grid">
+            <!-- Populated by JS -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         6. DIRECT CONSULTATION FORM SECTION
-         ========================================================================= -->
-    <section id="contact" class="section-py bg-dark">
+    <!-- Service Specific FAQs -->
+    <section class="section-py bg-white">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: center;" class="contact-grid-wrapper">
-          <div style="max-width: 600px;">
-            <span class="section-tag amber">Direct Partner Booking</span>
-            <h2 class="section-title" style="color: #ffffff;">Book a 1-on-1 Consultation with CA Pradeep Agarwal</h2>
-            <p class="section-desc" style="color: var(--surface-300); margin-bottom: 2rem;">
-              Discuss your specific taxation scenario, scrutiny notice, NRI repatriation, or corporate structure directly with senior leadership.
+        <div class="section-header">
+          <span class="section-tag blue">Frequently Asked Questions</span>
+          <h2 class="section-title">Common Queries &amp; Expert Answers</h2>
+          <p class="section-desc">Clear insights into statutory rules, compliance thresholds, and timelines.</p>
+        </div>
+
+        <div class="faq-accordion" style="max-width: 860px; margin: 0 auto;" id="faqsContainer">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Consultation Booking Form Section -->
+    <section class="section-py bg-dark" style="padding: 4rem 0;">
+      <div class="container">
+        <div class="service-consult-box">
+          <div class="consult-box-text">
+            <span class="badge-pill gold" style="margin-bottom: 1rem; display: inline-block;">Personalized CA Consultation</span>
+            <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; color: #ffffff; margin-bottom: 1rem;">
+              Ready to Proceed? Let CA Pradeep Agarwal Handle It.
+            </h2>
+            <p style="font-size: 1.05rem; color: var(--surface-300); line-height: 1.7; margin-bottom: 2rem;">
+              Schedule a confidential case assessment. We evaluate your requirements, verify eligibility, and initiate official drafting immediately.
             </p>
-
-            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-              <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 46px; height: 46px; border-radius: var(--radius-md); background: rgba(255,255,255,0.08); display: grid; place-items: center; color: var(--emerald-400);">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
-                <div>
-                  <div style="font-size: 0.8125rem; color: var(--text-light);">Direct Partner Advisory Line</div>
-                  <div style="font-size: 1.125rem; font-weight: 800; color: #fff;">+91 98914 95092</div>
-                </div>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.9375rem;">
+                <span style="color: var(--emerald-400); font-weight: 800;">✓</span> Direct guidance by Senior Chartered Accountant (FCA, DISA)
               </div>
-
-              <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 46px; height: 46px; border-radius: var(--radius-md); background: rgba(255,255,255,0.08); display: grid; place-items: center; color: var(--emerald-400);">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div>
-                  <div style="font-size: 0.8125rem; color: var(--text-light);">Direct Advisory Desk</div>
-                  <div style="font-size: 1.125rem; font-weight: 800; color: #fff;">
-                    <a href="mailto:easymytaxes@gmail.com" style="color: #fff; text-decoration: underline;">easymytaxes@gmail.com</a>
-                  </div>
-                </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.9375rem;">
+                <span style="color: var(--emerald-400); font-weight: 800;">✓</span> No hidden government fee surprises or recurring maintenance traps
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.9375rem;">
+                <span style="color: var(--emerald-400); font-weight: 800;">✓</span> Free 1st year post-incorporation compliance advisory
               </div>
             </div>
           </div>
 
-          <!-- Consultation Card Form -->
-          <div style="background: var(--surface-0); border-radius: var(--radius-xl); padding: 2.5rem; color: var(--text-main); box-shadow: var(--shadow-xl);">
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.35rem;">
-              Request Direct Consultation
+          <div class="consult-box-form">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-950); margin-bottom: 1.25rem;">
+              Initiate Fast-Track Service
             </h3>
-            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-              Leave your details to schedule a call with CA Pradeep Agarwal's office.
-            </p>
-
-            <form onsubmit="handleConsultationSubmit(event)" style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="form-group">
-                  <label class="form-label" for="contactFullName">Full Name *</label>
-                  <input type="text" id="contactFullName" class="form-control" placeholder="e.g. Amit Sharma" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="contactPhone">Phone / WhatsApp *</label>
-                  <input type="tel" id="contactPhone" class="form-control" placeholder="+91 98914 XXXXX" required>
-                </div>
+            <form id="serviceDirectForm" onsubmit="handleServiceLeadSubmit(event)">
+              <div class="form-group">
+                <label class="form-label" for="sfName">Full Name *</label>
+                <input type="text" id="sfName" class="form-control" placeholder="e.g. Vikram Mehta" required>
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="contactEmail">Work / Personal Email *</label>
-                <input type="email" id="contactEmail" class="form-control" placeholder="amit@company.com" required>
+                <label class="form-label" for="sfPhone">Mobile / WhatsApp Number *</label>
+                <input type="tel" id="sfPhone" class="form-control" placeholder="+91 98914 95092" required>
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="contactServicePref">Advisory Area</label>
-                <select id="contactServicePref" class="form-control">
-                  <option value="Personal Tax Planning & ITR">Personal Tax Planning &amp; ITR (AY 2026-27)</option>
-                  <option value="Notice Scrutiny & Appeal">Income Tax Notice Scrutiny &amp; Appeal</option>
-                  <option value="Freelancer 44ADA Advisory">Freelancer / Professional 44ADA Advisory</option>
-                  <option value="Corporate Structuring & 80-IAC">Corporate Structuring &amp; 80-IAC Tax Holiday</option>
-                  <option value="Virtual CFO Engagement">Virtual CFO / Bookkeeping Retainer</option>
-                  <option value="NRI Repatriation & 15CA/CB">NRI Repatriation &amp; 15CA/CB Advisory</option>
-                </select>
+                <label class="form-label" for="sfEmail">Official Email *</label>
+                <input type="email" id="sfEmail" class="form-control" placeholder="e.g. vikram@company.com" required>
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="contactMessage">Brief Query / Context (Optional)</label>
-                <textarea id="contactMessage" class="form-control" rows="3" placeholder="Briefly describe your requirements or tax scenario..."></textarea>
+                <label class="form-label" for="sfService">Selected Service</label>
+                <input type="text" id="sfService" class="form-control" readonly style="background: var(--surface-100); font-weight: 700; color: var(--primary-950);">
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
-                Book Consultation with CA Pradeep &rarr;
+              <div class="form-group">
+                <label class="form-label" for="sfNotes">Specific Requirements (Optional)</label>
+                <textarea id="sfNotes" class="form-control" rows="2" placeholder="E.g., We need 2 DSCs and expedited name clearance..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+                Submit Application to CA &rarr;
               </button>
+              <p style="font-size: 0.75rem; text-align: center; color: var(--text-subtle); margin-top: 0.5rem;">
+                🔒 Zero spam. We contact you via WhatsApp / Call within 30 minutes.
+              </p>
             </form>
           </div>
         </div>
@@ -909,7 +855,7 @@
   </main>
 
   <!-- =========================================================================
-       9. FOOTER & LEGAL COMPLIANCE
+       FOOTER & LEGAL COMPLIANCE
        ========================================================================= -->
   <footer class="site-footer">
     <div class="container">
@@ -932,149 +878,90 @@
 
         <!-- Col 2: Services -->
         <div class="footer-col">
-          <h4>CA Practice Areas 2026</h4>
+          <h4>Company Registrations</h4>
           <div class="footer-links">
-            <a href="service.html?id=private-limited-company">Private Limited Company Registration</a>
+            <a href="service.html?id=private-limited-company">Private Limited Company</a>
             <a href="service.html?id=llp-registration">LLP Registration</a>
-            <a href="service.html?id=startup-india">Startup India (DPIIT &amp; 80-IAC)</a>
-            <a href="service.html?id=pvt-ltd-compliance">Pvt Ltd Annual ROC Compliance</a>
-            <a href="service.html?id=fssai-registration">FSSAI Food License</a>
-            <a href="service.html?id=gst-registration">GST Registration &amp; Returns</a>
-            <a href="service.html?id=msme-udyam">MSME / Udyam Certificate</a>
+            <a href="service.html?id=one-person-company">One Person Company</a>
+            <a href="service.html?id=startup-india">Startup India 80-IAC</a>
+            <a href="service.html?id=indian-subsidiary">Indian Subsidiary (FDI)</a>
+            <a href="service.html?id=sole-proprietorship">Sole Proprietorship</a>
+            <a href="service.html?id=ngo">Section 8 NGO Company</a>
           </div>
         </div>
 
-        <!-- Col 3: Quick Links & Tools -->
+        <!-- Col 3: Compliance & Licenses -->
         <div class="footer-col">
-          <h4>Tools &amp; Resources 2026</h4>
+          <h4>Compliance &amp; Licenses</h4>
           <div class="footer-links">
-            <a href="calculators.html#calcOldNewPane">Old vs New Tax Calculator (AY 2026-27)</a>
-            <a href="calculators.html#calcAdvTaxPane">Advance Tax Schedule Calculator</a>
-            <a href="calculators.html#calcAdaPane">Freelancer 44ADA Calculator</a>
-            <a href="calculators.html#calcGstPane">GST Forward/Reverse Calc</a>
-            <a href="calculators.html#calcHraPane">HRA Exemption Calculator</a>
-            <a href="due-dates.html">Compliance Due Dates 2026-27</a>
-            <a href="about-ca.html">About CA Pradeep Agarwal</a>
-            <a href="index.html#checklist">Document Checklist Helper</a>
+            <a href="service.html?id=pvt-ltd-compliance">Pvt Ltd Annual Compliance</a>
+            <a href="service.html?id=llp-annual-filing">LLP Annual Filing (Form 11 &amp; 8)</a>
+            <a href="service.html?id=director-kyc">Director KYC (DIR-3 KYC)</a>
+            <a href="service.html?id=statutory-audit">Statutory &amp; Tax Audit 44AB</a>
+            <a href="service.html?id=fssai-registration">FSSAI Food License</a>
+            <a href="service.html?id=gst-registration">GST Registration &amp; Returns</a>
+            <a href="service.html?id=msme-udyam">MSME Udyam Registration</a>
+            <a href="service.html?id=import-export-code">Import Export Code (IEC)</a>
           </div>
         </div>
 
         <!-- Col 4: Reach Us -->
         <div class="footer-col">
-          <h4>Direct Connect</h4>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <div>
-              <strong>+91 98914 95092</strong><br>
-              <span style="font-size: 0.75rem; color: var(--text-light);">Direct Advisory Helpline</span>
-            </div>
-          </div>
-
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <div>
-              <strong><a href="mailto:easymytaxes@gmail.com" style="color: #fff;">easymytaxes@gmail.com</a></strong><br>
-              <span style="font-size: 0.75rem; color: var(--text-light);">Document Submissions</span>
-            </div>
-          </div>
-
-          <div style="margin-top: 1.25rem;">
-            <button class="btn btn-whatsapp btn-sm" style="width: 100%;" onclick="openWhatsAppInquiry('Consultation with CA Pradeep Agarwal')">
-              Instant WhatsApp Desk
-            </button>
+          <h4>Reach Our Firm</h4>
+          <div class="footer-contact">
+            <p><strong>Senior Managing Partner:</strong><br>CA Pradeep Agarwal (FCA, DISA)</p>
+            <p><strong>Official Phone:</strong><br><a href="tel:+919891495092">+91 98914 95092</a></p>
+            <p><strong>Official Email:</strong><br><a href="mailto:easymytaxes@gmail.com">easymytaxes@gmail.com</a></p>
+            <p><strong>Advisory Hours:</strong><br>Mon – Sat: 9:30 AM – 7:30 PM IST</p>
           </div>
         </div>
-      </div>
-
-      <!-- ICAI Mandatory Disclaimer -->
-      <div class="footer-disclaimer-box">
-        <strong>ICAI Compliance &amp; Regulatory Disclaimer:</strong> As per the Chartered Accountants Act, 1949, and guidelines issued by the Institute of Chartered Accountants of India (ICAI), this website is designed solely for providing informational and educational resources regarding taxation, corporate compliance, and accounting services. It does not constitute advertising, solicitation, or inducement of professional engagement. By accessing this platform, users acknowledge that they are seeking information voluntarily.
       </div>
 
       <div class="footer-bottom">
-        <div>
-          © 2026 Easy My Taxes. All Rights Reserved. Built with precision under CA Pradeep Agarwal (FCA, DISA).
-        </div>
-        <div style="display: flex; gap: 1.5rem;">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Engagement</a>
-          <a href="#">Security &amp; Encryption</a>
-          <a href="#">Sitemap</a>
+        <p>&copy; 2026 Easy My Taxes. Chartered Accountancy Practice led by CA Pradeep Agarwal. All Rights Reserved.</p>
+        <div class="footer-disclaimer">
+          <p>
+            Disclaimer: The materials and legal guidance provided on this website are structured based on the Companies Act 2013, Income Tax Act 1961, and ICAI standards. Easy My Taxes and its partners provide professional legal and Chartered Accountancy services in accordance with Indian statutory requirements.
+          </p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- =========================================================================
-       10. FLOATING WHATSAPP BUTTON
-       ========================================================================= -->
-  <a href="javascript:void(0)" class="floating-whatsapp" onclick="openWhatsAppInquiry('Consultation with CA Pradeep Agarwal')" aria-label="Chat with CA on WhatsApp">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.37C9.37 7.37 9.1 7.43 8.88 7.68C8.65 7.92 8.02 8.51 8.02 9.73C8.02 10.95 8.91 12.12 9.03 12.28C9.15 12.45 10.77 14.94 13.25 16C13.84 16.26 14.3 16.41 14.66 16.53C15.26 16.72 15.8 16.69 16.23 16.63C16.71 16.56 17.71 16.02 17.92 15.43C18.13 14.84 18.13 14.34 18.07 14.23C18.01 14.12 17.85 14.06 17.6 13.94C17.36 13.82 16.14 13.22 15.91 13.14C15.69 13.06 15.53 13.02 15.36 13.26C15.19 13.51 14.72 14.06 14.57 14.23C14.43 14.4 14.28 14.42 14.04 14.3C13.8 14.18 12.78 13.85 11.58 12.77C10.64 11.93 10.01 10.9 9.89 10.68C9.76 10.47 9.87 10.35 10 10.23C10.11 10.12 10.24 9.94 10.36 9.8C10.49 9.66 10.53 9.55 10.61 9.39C10.69 9.22 10.65 9.08 10.59 8.96C10.53 8.83 10.04 7.63 9.84 7.13C9.64 6.64 9.44 6.71 9.29 6.71C9.15 6.71 8.99 6.71 8.83 6.71L9.53 7.37Z" />
-    </svg>
-  </a>
-
-  <!-- =========================================================================
-       11. PERSISTENT MOBILE BOTTOM ACTION BAR
-       ========================================================================= -->
-  <div class="mobile-bottom-bar" aria-label="Mobile Quick Action Bar">
-    <a href="tel:+919891495092" class="mobile-bar-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      <span>Call CA</span>
-    </a>
-    <a href="javascript:void(0)" class="mobile-bar-btn highlight-green" onclick="openWhatsAppInquiry('Compliance Deadlines Advisory')">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.37C9.37 7.37 9.1 7.43 8.88 7.68C8.65 7.92 8.02 8.51 8.02 9.73C8.02 10.95 8.91 12.12 9.03 12.28C9.15 12.45 10.77 14.94 13.25 16C13.84 16.26 14.3 16.41 14.66 16.53C15.26 16.72 15.8 16.69 16.23 16.63C16.71 16.56 17.71 16.02 17.92 15.43C18.13 14.84 18.13 14.34 18.07 14.23C18.01 14.12 17.85 14.06 17.6 13.94C17.36 13.82 16.14 13.22 15.91 13.14C15.69 13.06 15.53 13.02 15.36 13.26C15.19 13.51 14.72 14.06 14.57 14.23C14.43 14.4 14.28 14.42 14.04 14.3C13.8 14.18 12.78 13.85 11.58 12.77C10.64 11.93 10.01 10.9 9.89 10.68C9.76 10.47 9.87 10.35 10 10.23C10.11 10.12 10.24 9.94 10.36 9.8C10.49 9.66 10.53 9.55 10.61 9.39C10.69 9.22 10.65 9.08 10.59 8.96C10.53 8.83 10.04 7.63 9.84 7.13C9.64 6.64 9.44 6.71 9.29 6.71C9.15 6.71 8.99 6.71 8.83 6.71L9.53 7.37Z" />
-      </svg>
-      <span>WhatsApp</span>
-    </a>
-    <a href="javascript:void(0)" class="mobile-bar-btn primary-cta" onclick="openConsultationModal('Mobile Floating Booking - Compliance')">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      <span>Book CA</span>
-    </a>
-  </div>
-
-  <!-- =========================================================================
-       12. CONSULTATION BOOKING MODAL
-       ========================================================================= -->
-  <div class="modal-backdrop" id="consultationModal">
+  <!-- Consultation Booking Modal -->
+  <div class="modal-backdrop" id="consultModal">
     <div class="modal-card">
-      <button class="modal-close-btn" onclick="closeConsultationModal()" aria-label="Close Modal">✕</button>
-      <h3 class="modal-title">Book Consultation with CA Pradeep Agarwal</h3>
-      <p class="modal-subtitle">Direct, one-on-one session with Senior Partner CA Pradeep Agarwal &amp; Tax Specialists.</p>
-
-      <form id="consultationForm" onsubmit="handleConsultationSubmit(event)" style="display: flex; flex-direction: column; gap: 1rem;">
-        <input type="hidden" id="consultationService" value="Statutory Compliance Advisory">
-
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Book a 1-on-1 CA Advisory Session</h3>
+          <p style="font-size: 0.8125rem; color: var(--text-muted);">Confidential consultation with CA Pradeep Agarwal &amp; tax team.</p>
+        </div>
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+      </div>
+      <form id="consultForm" onsubmit="handleConsultationSubmit(event)">
         <div class="form-group">
           <label class="form-label" for="cName">Your Full Name *</label>
-          <input type="text" id="cName" class="form-control" placeholder="e.g. Ramesh Verma" required>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-          <div class="form-group">
-            <label class="form-label" for="cPhone">Mobile / WhatsApp *</label>
-            <input type="tel" id="cPhone" class="form-control" placeholder="+91 98914 XXXXX" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cEmail">Email Address *</label>
-            <input type="email" id="cEmail" class="form-control" placeholder="ramesh@gmail.com" required>
-          </div>
+          <input type="text" id="cName" class="form-control" placeholder="e.g. Rahul Sharma" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="cSlot">Preferred Consultation Time Slot</label>
-          <select id="cSlot" class="form-control">
-            <option value="Today - Urgent Slot (Next 2 Hours)">⚡ Urgent - Next 2 Hours</option>
-            <option value="Morning (10:00 AM - 1:00 PM)">🌅 Morning (10:00 AM - 1:00 PM)</option>
-            <option value="Afternoon (2:00 PM - 5:00 PM)">☀️ Afternoon (2:00 PM - 5:00 PM)</option>
-            <option value="Evening (5:00 PM - 8:00 PM)">🌆 Evening (5:00 PM - 8:00 PM)</option>
-          </select>
+          <label class="form-label" for="cPhone">WhatsApp / Mobile Number *</label>
+          <input type="tel" id="cPhone" class="form-control" placeholder="e.g. +91 98914 95092" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cEmail">Email Address *</label>
+          <input type="email" id="cEmail" class="form-control" placeholder="e.g. rahul@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cService">Service Requirement *</label>
+          <input type="text" id="cService" class="form-control" readonly style="font-weight: 700; color: var(--primary-950);">
         </div>
 
         <div class="form-group">
           <label class="form-label" for="cNotes">Specific Questions / Case Notes (Optional)</label>
-          <textarea id="cNotes" class="form-control" rows="3" placeholder="E.g., I need assistance with Advance tax filing and quarterly TDS returns..."></textarea>
+          <textarea id="cNotes" class="form-control" rows="3" placeholder="E.g., I need assistance with incorporation timeline and documents..."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
@@ -1088,6 +975,8 @@
   </div>
 
   <!-- Scripts -->
+  <script src="js/services-data.js"></script>
+  <script src="js/service-renderer.js"></script>
   <script src="js/calculators.js"></script>
   <script src="js/calendar-data.js"></script>
   <script src="js/app.js"></script>
