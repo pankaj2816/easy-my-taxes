@@ -14,7 +14,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Incorporate your Private Limited, LLP, OPC, or Public Company with MCA in 5\u20137 working days.",
     "timeline": "5 - 7 Working Days",
     "govtPortal": "Ministry of Corporate Affairs (MCA)",
-    "startingPrice": "Starting at \u20b95,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Company incorporation in India is fully digital via the MCA SPICe+ unified portal. Easy My Taxes, directed by CA Pradeep Agarwal, manages name reservation, Digital Signature Certificates (DSC), Director Identification Numbers (DIN), drafting MOA & AOA, and post-incorporation tax registrations with 100% compliance guarantee.",
     "benefits": [
       {
@@ -92,7 +92,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "The gold standard legal entity for startups, high-growth businesses, and venture-backed ventures.",
     "timeline": "5 - 7 Days",
     "govtPortal": "MCA (Ministry of Corporate Affairs)",
-    "startingPrice": "Starting at \u20b96,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Private Limited Company (Pvt Ltd) is India's most recognized corporate structure. It grants limited liability to its members, allows easy equity allocation for angel investment and ESOPs, and establishes immense institutional credibility with clients, banks, and enterprise vendors.",
     "benefits": [
       {
@@ -171,7 +171,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Enjoy limited liability protection with the operational simplicity of a partnership firm.",
     "timeline": "6 - 8 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b95,499",
+    "filingMode": "100% Online Paperless",
     "overview": "A Limited Liability Partnership (LLP) blends the operational flexibility of a partnership with the limited liability shield of a company. Regulated by the LLP Act 2008, LLPs have zero statutory audit obligations if turnover is under \u20b940 Lakhs or capital contribution is under \u20b925 Lakhs.",
     "benefits": [
       {
@@ -243,7 +243,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Complete corporate recognition and limited liability for solo entrepreneurs with 100% ownership.",
     "timeline": "5 - 7 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b95,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A One Person Company (OPC) allows a single entrepreneur to own and manage a registered corporate entity under the Companies Act 2013 with limited liability. One nominee director is appointed to ensure uninterrupted business continuity.",
     "benefits": [
       {
@@ -317,7 +317,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Corporate structure suited for large-scale operations, public capital raising, and future IPO listings.",
     "timeline": "10 - 14 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b914,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Public Limited Company requires a minimum of 3 directors and 7 shareholders. It offers the ability to raise public deposits, issue publicly traded shares, and list on stock exchanges (NSE/BSE).",
     "benefits": [
       {
@@ -384,7 +384,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "The fastest, most cost-effective way to start a business in India with Udyam and GST certificates.",
     "timeline": "2 - 3 Days",
     "govtPortal": "MSME Udyam & GST Portal",
-    "startingPrice": "Starting at \u20b91,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Sole Proprietorship is an unincorporated business owned and operated by a single person. It requires no MCA filings and is established through MSME Udyam Registration, GSTIN, and Shop & Establishment license, enabling immediate opening of a Current Bank Account.",
     "benefits": [
       {
@@ -444,7 +444,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Legal partnership deed drafting and Registrar of Firms (ROF) registration.",
     "timeline": "4 - 7 Days",
     "govtPortal": "State Registrar of Firms (ROF)",
-    "startingPrice": "Starting at \u20b93,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Governed by the Indian Partnership Act 1932, a partnership firm is formed by two or more individuals agreeing to share business profits and management duties. Easy My Taxes crafts legally sound Partnership Deeds addressing profit ratios, dispute resolution, capital interest, and retirement rules.",
     "benefits": [
       {
@@ -510,7 +510,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Unlock 3 consecutive years of 100% tax holiday, angel tax shields, and fast-track IP patents.",
     "timeline": "7 - 12 Days",
     "govtPortal": "DPIIT Startup India Portal",
-    "startingPrice": "Starting at \u20b97,999",
+    "filingMode": "100% Online Paperless",
     "overview": "The Startup India initiative by the Government of India provides certified startups with monumental tax exemptions under Section 80-IAC of the Income Tax Act, 80% rebate on patent filings, exemption from angel tax under Section 56(2)(viib), and self-certification under 6 environmental and 3 labor laws.",
     "benefits": [
       {
@@ -577,7 +577,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "End-to-end founder suite: incorporation, founder agreement, ESOP policy & cap table setup.",
     "timeline": "7 - 10 Days",
     "govtPortal": "MCA & DPIIT",
-    "startingPrice": "Starting at \u20b98,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Starting a tech or scalable business requires more than just ROC filing. Our comprehensive Startup Suite covers Company Incorporation, Co-founder Agreements with reverse vesting schedules, ESOP policy design, and Cap Table structuring led by CA Pradeep Agarwal.",
     "benefits": [
       {
@@ -638,7 +638,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Start a non-banking mutual benefit finance company to accept deposits and lend to members.",
     "timeline": "10 - 15 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b916,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Nidhi Company is a specialized public entity recognized under Section 406 of the Companies Act 2013. Its sole objective is cultivating the habit of thrift and savings among its members, receiving deposits, and lending exclusively to members against collateral (gold, property, deposits) without needing RBI NBFC license approval.",
     "benefits": [
       {
@@ -699,7 +699,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Legally lend small business loans and personal credit to underserved communities without RBI NBFC hurdle.",
     "timeline": "15 - 20 Days",
     "govtPortal": "MCA & Reserve Bank of India",
-    "startingPrice": "Starting at \u20b919,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Starting a Section 8 Microfinance institution allows entrepreneurs to provide collateral-free loans up to \u20b950,000 for small rural/urban enterprises and women groups. Operating under the central Section 8 regulatory shelter, it requires significantly lower capital than standard commercial NBFCs.",
     "benefits": [
       {
@@ -760,7 +760,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Empowering agricultural producers, farmers, and artisans with collective corporate strength.",
     "timeline": "10 - 15 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b914,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Producer Company (Farmer Producer Organization - FPO) combines cooperative principles with corporate efficiency. Formed by 10 or more primary agricultural producers or 2 or more producer institutions, it qualifies for massive NABARD, SFAC, and 100% agricultural income tax exemptions under Section 80P/80PA.",
     "benefits": [
       {
@@ -821,7 +821,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Launch 100% foreign-owned Indian operations under RBI Automatic Route with full FEMA compliance.",
     "timeline": "10 - 15 Days",
     "govtPortal": "MCA, RBI FIRMS & DGFT",
-    "startingPrice": "Starting at \u20b924,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Global companies expanding to the vibrant Indian market can set up a Wholly Owned Subsidiary (WOS). Under the Automatic Route, up to 100% Foreign Direct Investment (FDI) is permitted in most sectors without prior government approval. Easy My Taxes handles MCA incorporation, apostilled document verification, RBI FIRMS portal filings, and Form FC-GPR equity allotment.",
     "benefits": [
       {
@@ -893,7 +893,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Establish Branch Offices (BO), Liaison Offices (LO), or Project Offices in India with RBI clearance.",
     "timeline": "3 - 6 Weeks",
     "govtPortal": "Reserve Bank of India (RBI) & MCA",
-    "startingPrice": "Starting at \u20b929,999",
+    "filingMode": "100% Online Paperless",
     "overview": "For international enterprises that prefer extending their overseas entity into India without creating a separate subsidiary, setting up a Branch Office (BO) or Liaison Office (LO) under Section 380 of the Companies Act and FEMA regulations provides a direct operational vehicle approved by Authorized Dealer (AD) Category-I Banks and RBI.",
     "benefits": [
       {
@@ -955,7 +955,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Strategic cross-border entry, transfer pricing, and statutory FEMA compliance for international enterprises.",
     "timeline": "2 - 4 Weeks",
     "govtPortal": "RBI, MCA & Tax Department",
-    "startingPrice": "Custom Quote",
+    "filingMode": "100% Online Paperless",
     "overview": "Navigating Indian regulatory compliance for foreign businesses requires deep expertise in corporate law, Bilateral Double Tax Avoidance Agreements (DTAA), Equalization Levy, and Transfer Pricing. CA Pradeep Agarwal provides comprehensive foreign enterprise setup, directorship representation, and permanent establishment advisory.",
     "benefits": [
       {
@@ -1016,7 +1016,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Establish a recognized non-profit organization with 12A tax exemption and 80G donor deductions.",
     "timeline": "10 - 15 Days",
     "govtPortal": "MCA & Income Tax Department",
-    "startingPrice": "Starting at \u20b911,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Section 8 Company is India's most credible NGO structure. Formed for promoting science, art, education, charity, social welfare, and environmental protection, it requires a Central Government Section 8 license and enables nationwide operations, corporate CSR funding, and tax-free donations under Section 12A & 80G.",
     "benefits": [
       {
@@ -1084,7 +1084,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Maintain good standing and avoid \u20b9100/day per form penalties with timely AOC-4, MGT-7 & board meetings.",
     "timeline": "Annual Retainer / Per Filing",
     "govtPortal": "Ministry of Corporate Affairs (MCA)",
-    "startingPrice": "Starting at \u20b99,999/yr",
+    "filingMode": "100% Online Paperless",
     "overview": "Every registered Private Limited Company must complete mandatory annual compliances under the Companies Act 2013 regardless of turnover or business activity. Easy My Taxes takes full charge of preparing Financial Statements, drafting Director's Report, filing Form AOC-4 (Financials) and Form MGT-7/7A (Annual Return), and maintaining statutory secretarial registers.",
     "benefits": [
       {
@@ -1151,7 +1151,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Avoid \u20b9100/day penal charges with timely submission of Annual Return and Solvency Statement.",
     "timeline": "By 30th May & 30th Oct Annually",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b94,499/yr",
+    "filingMode": "100% Online Paperless",
     "overview": "All Limited Liability Partnerships (LLPs) must file two statutory forms every year with the MCA: Form 11 (Annual Return) on or before 30th May and Form 8 (Statement of Account & Solvency) on or before 30th October. Failure to file incurs a non-waivable statutory fine of \u20b9100 per day per form.",
     "benefits": [
       {
@@ -1211,7 +1211,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Keep your DIN active and avoid \u20b95,000 government deactivation penalty before 30th September.",
     "timeline": "Same Day (24 Hours)",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b9499/DIN",
+    "filingMode": "100% Online Paperless",
     "overview": "Under Rule 12A of the Companies (Appointment and Qualification of Directors) Rules, every individual holding a Director Identification Number (DIN/DPIN) must submit their annual KYC. First-time filings require Form DIR-3 KYC with DSC, while subsequent filings are completed via DIR-3 KYC Web with mobile and email OTPs.",
     "benefits": [
       {
@@ -1270,7 +1270,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Independent audit assurance, Form 3CA/3CB and 3CD tax audit reporting by CA Pradeep Agarwal.",
     "timeline": "10 - 20 Days",
     "govtPortal": "Income Tax & MCA Portals",
-    "startingPrice": "Starting at \u20b914,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Under Section 139 of the Companies Act 2013, every company must undergo a statutory financial audit by an independent Chartered Accountant. Additionally, businesses exceeding \u20b91 Crore (or \u20b910 Crore if 95% transactions are digital) and professionals exceeding \u20b950 Lakhs must file a Tax Audit Report in Form 3CA/3CB & Form 3CD under Section 44AB of the Income Tax Act.",
     "benefits": [
       {
@@ -1337,7 +1337,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Automated 2B ITC matching, GSTR-1, GSTR-3B filings, and annual reconciliation audits.",
     "timeline": "Monthly Retainer",
     "govtPortal": "GST Portal (GSTN)",
-    "startingPrice": "Starting at \u20b91,499/mo",
+    "filingMode": "100% Online Paperless",
     "overview": "Staying compliant under Goods & Services Tax (GST) requires monthly outward supply reporting in GSTR-1, tax liability clearance in GSTR-3B, and rigorous 100% invoice matching with GSTR-2B. Easy My Taxes safeguards your business against Input Tax Credit (ITC) blocks under Rule 86A and notice demands.",
     "benefits": [
       {
@@ -1397,7 +1397,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Avoid \u20b9200/day penal charges under Sec 234E and generate Form 16/16A smoothly.",
     "timeline": "Quarterly (July, Oct, Jan, May)",
     "govtPortal": "TRACES & Income Tax Portal",
-    "startingPrice": "Starting at \u20b91,999/qtr",
+    "filingMode": "100% Online Paperless",
     "overview": "Entities deducting Tax at Source (TDS) under Section 192 (Salary), 194C (Contractors), 194J (Professional fees), 194I (Rent), or collecting TCS must file quarterly returns on TRACES. Easy My Taxes computes exact monthly tax liabilities, generates challans, and prepares quarterly returns without short-deduction notices.",
     "benefits": [
       {
@@ -1457,7 +1457,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Statutory ITR filing for Private Limited, LLPs, and Partnerships with loss carry-forward benefits.",
     "timeline": "By 31st October (or 30th Nov for Transfer Pricing)",
     "govtPortal": "Income Tax e-Filing Portal",
-    "startingPrice": "Starting at \u20b94,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Corporate income tax filing requires meticulous computation of Minimum Alternate Tax (MAT), Section 115BAA concessional rates, brought-forward loss set-offs, and depreciation schedules. Easy My Taxes ensures your corporate tax return is audited and e-verified with 100% AIS/TIS alignment.",
     "benefits": [
       {
@@ -1518,7 +1518,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Avoid 1% monthly interest under Section 234B & 234C with quarterly tax forecasting.",
     "timeline": "Quarterly (15 June, 15 Sept, 15 Dec, 15 Mar)",
     "govtPortal": "Income Tax NSDL / e-Filing Portal",
-    "startingPrice": "Starting at \u20b91,499/qtr",
+    "filingMode": "100% Online Paperless",
     "overview": "If your net income tax liability after TDS exceeds \u20b910,000 in a financial year, you must pay Advance Tax in four quarterly installments: 15% by 15th June, 45% by 15th Sept, 75% by 15th Dec, and 100% by 15th March. We calculate your estimated profits and generate tax payment challans accurately.",
     "benefits": [
       {
@@ -1577,7 +1577,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Appoint new directors or record formal resignation on MCA portal within 30 days.",
     "timeline": "3 - 5 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b92,499",
+    "filingMode": "100% Online Paperless",
     "overview": "Adding a strategic co-founder, independent director, or investor nominee to your board\u2014or processing a formal director resignation\u2014requires filing MCA Form DIR-12 along with Board Resolutions, Form DIR-2 consent, and Form DIR-8 non-disqualification declarations within 30 days.",
     "benefits": [
       {
@@ -1638,7 +1638,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Update official registered office address within city, state, or interstate with ROC approval.",
     "timeline": "3 - 7 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b92,999",
+    "filingMode": "100% Online Paperless",
     "overview": "When your company moves to a new commercial space, you must report the change in registered office address within 30 days by filing MCA Form INC-22 along with utility bills, rent agreement, landlord NOC, and geo-tagged office photographs.",
     "benefits": [
       {
@@ -1698,7 +1698,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Expand authorized capital ceiling to issue new equity, onboard angel investors, or issue ESOPs.",
     "timeline": "4 - 7 Days",
     "govtPortal": "Ministry of Corporate Affairs",
-    "startingPrice": "Starting at \u20b94,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A company cannot issue shares exceeding its Authorized Share Capital stated in its Memorandum of Association (MOA). To bring in new investor capital or allot ESOPs, the company must amend its Capital Clause in MOA via shareholder approval (EGM) and file Form SH-7 with the ROC along with differential stamp duty.",
     "benefits": [
       {
@@ -1759,7 +1759,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "File Foreign Liabilities and Assets (FLA) Return, Form FC-GPR, and FC-TRS with Reserve Bank of India.",
     "timeline": "By 15th July Annually (or 30 days post-FDI)",
     "govtPortal": "RBI FIRMS & FLAIR Portals",
-    "startingPrice": "Starting at \u20b99,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Any Indian company or LLP that has received Foreign Direct Investment (FDI) or made overseas direct investments (ODI) must file the mandatory Foreign Liabilities and Assets (FLA) Return with the Reserve Bank of India on the FLAIR portal by 15th July every year. Easy My Taxes also handles Form FC-GPR (share allotment to foreigners) and Form FC-TRS (share transfer between resident and non-resident).",
     "benefits": [
       {
@@ -1819,7 +1819,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "End-to-end statutory licensing: FSSAI, Trade License, GST, MSME, BIS, ISO, and Drug Licenses.",
     "timeline": "3 - 10 Days",
     "govtPortal": "Central & State Licensing Authorities",
-    "startingPrice": "Starting at \u20b91,499",
+    "filingMode": "100% Online Paperless",
     "overview": "Operating a commercial establishment in India requires specific municipal, state, and central government licenses based on your business sector. Easy My Taxes provides an end-to-end licensing concierge led by seasoned regulatory compliance professionals.",
     "benefits": [
       {
@@ -1880,7 +1880,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Get 14-digit FSSAI Basic, State, or Central Food License for restaurants, cloud kitchens & food D2C.",
     "timeline": "3 - 7 Working Days",
     "govtPortal": "FSSAI FoSCoS Portal",
-    "startingPrice": "Starting at \u20b91,499",
+    "filingMode": "100% Online Paperless",
     "overview": "Under the Food Safety and Standards Act 2006, any business handling food\u2014including restaurants, bakeries, cloud kitchens, food processors, retail grocery stores, and Swiggy/Zomato food delivery vendors\u2014must obtain a 14-digit FSSAI license. Easy My Taxes provides fast-track FoSCoS filing.",
     "benefits": [
       {
@@ -1941,7 +1941,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Statutory permission from local Municipal Corporation to conduct commercial trade safely.",
     "timeline": "5 - 8 Days",
     "govtPortal": "Municipal Corporation / Urban Local Body",
-    "startingPrice": "Starting at \u20b92,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Trade License is an authorization certificate issued by the local Municipal Corporation (MCD, BMC, BBMP, GHMC, etc.) permitting an individual or company to commence trade, retail, or manufacturing activities in a specific municipal jurisdiction. It certifies that the establishment adheres to safety, health, and environmental guidelines.",
     "benefits": [
       {
@@ -2002,7 +2002,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Get your 15-digit GSTIN with Aadhaar OTP authentication in 3 to 5 business days.",
     "timeline": "3 - 5 Working Days",
     "govtPortal": "GST Portal (GSTN)",
-    "startingPrice": "Starting at \u20b91,499",
+    "filingMode": "100% Online Paperless",
     "overview": "Any business with annual turnover exceeding \u20b940 Lakhs for goods (\u20b920 Lakhs in special states) or \u20b920 Lakhs for services must register under GST. Additionally, GST registration is compulsory for inter-state sellers, ecommerce vendors (Amazon, Flipkart, Shopify), and export businesses regardless of turnover.",
     "benefits": [
       {
@@ -2069,7 +2069,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Unlock collateral-free bank loans, 45-day payment protections, and government tender exemptions.",
     "timeline": "24 - 48 Hours",
     "govtPortal": "Ministry of Micro, Small & Medium Enterprises",
-    "startingPrice": "Starting at \u20b9999",
+    "filingMode": "100% Online Paperless",
     "overview": "Udyam Registration is the official recognition provided by the Ministry of MSME, Government of India. It categorizes enterprises into Micro, Small, and Medium sectors based on investment and turnover, granting access to subsidized bank loans, 50% patent/trademark fee discounts, and strict Section 15 45-day delayed payment protections.",
     "benefits": [
       {
@@ -2130,7 +2130,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "10-digit lifetime license issued by DGFT to export goods and services and import globally.",
     "timeline": "24 - 48 Hours",
     "govtPortal": "Directorate General of Foreign Trade (DGFT)",
-    "startingPrice": "Starting at \u20b91,999",
+    "filingMode": "100% Online Paperless",
     "overview": "The Import Export Code (IEC) is a 10-digit identification code issued by the Directorate General of Foreign Trade (DGFT), Ministry of Commerce. It is mandatory for any individual, firm, or company importing goods into India or exporting physical products or overseas digital/IT services.",
     "benefits": [
       {
@@ -2190,7 +2190,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "State Labor Department license required to open commercial shops, IT offices & warehouses.",
     "timeline": "3 - 5 Days",
     "govtPortal": "State Labor Department Portal",
-    "startingPrice": "Starting at \u20b91,999",
+    "filingMode": "100% Online Paperless",
     "overview": "The Shop and Establishment Act (known as Gumasta License in Maharashtra and Trade Certificate in Delhi/Karnataka) is regulated by state labor departments. It governs working hours, statutory leaves, wages, and terms of employment for commercial establishments, offices, and retail stores.",
     "benefits": [
       {
@@ -2250,7 +2250,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Bureau of Indian Standards certification for electronics, industrial goods & consumer products.",
     "timeline": "15 - 30 Days",
     "govtPortal": "Bureau of Indian Standards (Manakonline)",
-    "startingPrice": "Starting at \u20b919,999",
+    "filingMode": "100% Online Paperless",
     "overview": "The Bureau of Indian Standards (BIS) mandates quality and safety certifications for products sold in the Indian market. The Compulsory Registration Scheme (CRS) applies to electronics and IT products (laptops, batteries, LED lights), while the ISI Mark certification applies to industrial, chemical, and building materials.",
     "benefits": [
       {
@@ -2310,7 +2310,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Internationally recognized quality, environmental, and information security management certificates.",
     "timeline": "3 - 7 Working Days",
     "govtPortal": "Accredited Certification Bodies (IAF / Non-IAF)",
-    "startingPrice": "Starting at \u20b93,499",
+    "filingMode": "100% Online Paperless",
     "overview": "ISO Certification demonstrates that your products, services, and management systems meet international standards of quality, security, and efficiency. We facilitate ISO 9001 (Quality Management), ISO 14001 (Environmental), ISO 27001 (Information Security for SaaS/IT), and ISO 22000 (Food Safety).",
     "benefits": [
       {
@@ -2370,7 +2370,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "State government registration for employers (PTRC) and professionals/directors (PTEC).",
     "timeline": "3 - 5 Days",
     "govtPortal": "State Commercial Tax Department",
-    "startingPrice": "Starting at \u20b91,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Professional Tax is a state-level tax levied on salaried employees, business proprietors, and practicing professionals (doctors, CAs, lawyers, consultants). Employers require Professional Tax Registration Certificate (PTRC) to deduct and remit tax from salaries, while directors require Professional Tax Enrolment Certificate (PTEC).",
     "benefits": [
       {
@@ -2430,7 +2430,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "State Food & Drug Administration (FDA) license for retail pharmacies, wholesalers & distributors.",
     "timeline": "15 - 25 Days",
     "govtPortal": "State FDA / CDSCO Portal",
-    "startingPrice": "Starting at \u20b914,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Under the Drugs and Cosmetics Act 1940, any commercial enterprise selling, distributing, or stocking pharmaceutical medicines, medical devices, or cosmetics must obtain a Retail Drug License (Form 20/21) or Wholesale Drug License (Form 20B/21B) from the State Licensing Authority.",
     "benefits": [
       {
@@ -2490,7 +2490,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "State Fire Services NOC required for commercial buildings, restaurants, factories & warehouses.",
     "timeline": "10 - 20 Days",
     "govtPortal": "State Fire & Emergency Services",
-    "startingPrice": "Starting at \u20b99,999",
+    "filingMode": "100% Online Paperless",
     "overview": "A Fire Safety NOC (No Objection Certificate) is issued by the State Fire Services Department certifying that a commercial building, hotel, hospital, manufacturing factory, or school is equipped with compliant fire prevention, alarm, and emergency evacuation systems according to the National Building Code (NBC).",
     "benefits": [
       {
@@ -2550,7 +2550,7 @@ const MASTER_SERVICES_DATA = {
     "tagline": "Incorporate your company in Dubai (UAE Freezone), USA (Delaware/Wyoming), UK, or Singapore.",
     "timeline": "5 - 10 Days",
     "govtPortal": "Foreign Corporate Registrars & RBI",
-    "startingPrice": "Starting at \u20b949,999",
+    "filingMode": "100% Online Paperless",
     "overview": "Expanding your business globally unlocks access to international payment gateways (Stripe, Mercury, Wise), venture capital investment, and 0% to low corporate tax jurisdictions. Easy My Taxes manages foreign company incorporation, local registered agents, corporate bank accounts, and RBI Overseas Direct Investment (ODI) compliance under FEMA.",
     "benefits": [
       {

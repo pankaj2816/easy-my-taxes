@@ -11,7 +11,6 @@ const servicesCatalog = [
     title: 'Salaried Individual ITR (AY 2026-27)',
     shortDesc: 'Complete tax return filing for salaried professionals with Single/Multiple Form 16, ESOPs, and allowances.',
     fullDesc: 'Expert CA-assisted ITR filing for Assessment Year 2026-27 tailored to maximize deductions under 80C, 80D, HRA, and home loans with 100% AIS and TIS 2026 reconciliation.',
-    price: 'Starting at ₹999',
     deliverables: [
       'AIS & 26AS Tax Credit Matching (AY 2026-27)',
       'Old vs New Regime comparative tax optimization',
@@ -27,7 +26,6 @@ const servicesCatalog = [
     title: 'Capital Gains & Trading (AY 2026-27)',
     shortDesc: 'Accurate tax computation for Stocks, Mutual Funds, Crypto (VDA), Futures & Options (F&O), and Real Estate.',
     fullDesc: 'Comprehensive calculation of Short-Term (STCG) and Long-Term (LTCG) Capital Gains with set-off and carry forward of business and trading losses across all brokers for FY 2025-26.',
-    price: 'Starting at ₹2,499',
     deliverables: [
       'P&L statement consolidation from Zerodha, Groww, Upstox, etc.',
       'Cryptocurrency / VDA 30% tax and 1% TDS audit',
@@ -43,7 +41,6 @@ const servicesCatalog = [
     title: 'NRI Taxation & Foreign Assets (2026)',
     shortDesc: 'Specialized cross-border tax advisory, DTAA benefits, Form 15CA/CB, and FEMA compliance for non-residents.',
     fullDesc: 'End-to-end tax filing for Non-Resident Indians (NRIs) with Indian rental income, capital gains, NRE/NRO accounts, and Foreign Bank and Financial Accounts (FBAR) reporting.',
-    price: 'Starting at ₹4,999',
     deliverables: [
       'DTAA (Double Tax Avoidance Agreement) credit claims',
       'Form 15CA / 15CB CA certification for funds repatriation',
@@ -59,7 +56,6 @@ const servicesCatalog = [
     title: 'Tax Notice & Scrutiny Resolution',
     shortDesc: 'Professional legal drafting and representation for notices under Section 143(1), 139(9), 148, or 156.',
     fullDesc: 'Handled directly by Senior Chartered Accountant CA Pradeep Agarwal to draft strong technical responses, rectify defective returns, and prevent unnecessary penalties or litigation.',
-    price: 'Custom Quote',
     deliverables: [
       'In-depth notice analysis and root cause diagnostic',
       'Drafting legally compliant replies on Income Tax Portal',
@@ -75,7 +71,6 @@ const servicesCatalog = [
     title: 'Monthly & Quarterly GST Returns 2026',
     shortDesc: 'Error-free filing of GSTR-1, GSTR-3B, GSTR-4, and complete 2B Input Tax Credit (ITC) reconciliation.',
     fullDesc: 'Automated 100% invoice matching with GSTR-2B to ensure maximum ITC claim without notices or penalties. Includes e-way bills and e-invoicing support.',
-    price: 'Starting at ₹1,499/mo',
     deliverables: [
       'GSTR-1 outward supply filing & GSTR-3B summary returns',
       'Vendor ITC reconciliation & 2B mismatch alerts',
@@ -91,7 +86,6 @@ const servicesCatalog = [
     title: 'GST Registration & Export Refund',
     shortDesc: 'New GSTIN generation within 3-5 days, LUT for 0% zero-rated exports, and accumulated ITC refund claims.',
     fullDesc: 'Fast-track GST registration for proprietorship, partnership, companies, and ecommerce sellers. Complete documentation for GST refunds on export of services and inverted duty structures.',
-    price: 'Starting at ₹1,499',
     deliverables: [
       'GSTIN Certificate issuance from GST department',
       'Letter of Undertaking (LUT) filing for zero-tax exports',
@@ -107,7 +101,6 @@ const servicesCatalog = [
     title: 'Company & LLP Incorporation',
     shortDesc: 'Setup Private Limited, LLP, OPC, or Section 8 Company with SPICe+ MCA approval in just 7 days.',
     fullDesc: 'All-inclusive company registration package including Name Approval, DSC, DIN, MOA/AOA drafting, Certificate of Incorporation, PAN, TAN, and Bank Account opening.',
-    price: 'Starting at ₹6,999',
     deliverables: [
       '2 Digital Signature Certificates (DSC Class 3)',
       'RUN Name Approval & SPICe+ Form MCA Filing',
@@ -123,7 +116,6 @@ const servicesCatalog = [
     title: 'Startup India & 80-IAC Tax Exemption',
     shortDesc: 'DPIIT Recognition, Section 80-IAC 3-Year 100% Tax Holiday, and Angel Tax Exemption advisory.',
     fullDesc: 'Get your startup officially certified by DPIIT to unlock 3 consecutive years of zero income tax, government tender relaxations, and intellectual property rebates.',
-    price: 'Starting at ₹7,999',
     deliverables: [
       'DPIIT Recognition Certificate application',
       'Form 80-IAC submission with pitch deck alignment',
@@ -139,7 +131,6 @@ const servicesCatalog = [
     title: 'Virtual CFO & Accounting Retainer',
     shortDesc: 'Strategic finance leadership, cloud bookkeeping on Zoho/Tally, monthly MIS, and cash flow governance.',
     fullDesc: 'Get senior CA financial direction without the cost of a full-time CFO. We manage your daily books, payroll, statutory deductions, investor reporting, and financial forecasting.',
-    price: 'Starting at ₹9,999/mo',
     deliverables: [
       'Daily/Weekly Bookkeeping on Zoho Books / Tally Prime / QuickBooks',
       'Monthly Executive MIS & Cash Flow Burn Rate reports',
@@ -155,7 +146,6 @@ const servicesCatalog = [
     title: 'Statutory & Tax Audit (Sec 44AB)',
     shortDesc: 'Independent assurance, Form 3CA/3CD compliance, internal controls review, and balance sheet certification.',
     fullDesc: 'Expert audit services conducted in strict adherence to ICAI Standards on Auditing (SAs) and Companies Act provisions, ensuring transparent financials for banks, investors, and regulators.',
-    price: 'Custom Quote',
     deliverables: [
       'Tax Audit Report in Form 3CA/3CB and Form 3CD',
       'Statutory Financial Statements with Notes to Accounts',
@@ -171,7 +161,6 @@ const servicesCatalog = [
     title: 'Trademark & Brand Protection',
     shortDesc: 'Fast-track trademark search, class identification, TM-A filing, and objection handling.',
     fullDesc: 'Protect your brand name, logo, and slogan from competitors with comprehensive trademark search and registration before the Controller General of Patents, Designs and Trade Marks.',
-    price: 'Starting at ₹2,999 + Govt Fees',
     deliverables: [
       'Comprehensive Trademark Conflict & Distinctiveness Search',
       'Application Filing (Form TM-A) for ™ symbol usage within 24 hrs',
@@ -187,7 +176,6 @@ const servicesCatalog = [
     title: 'MSME / Udyam & Import Export Code (IEC)',
     shortDesc: 'Udyam Registration for collateral-free bank loans, priority subsidies, and DGFT IEC for global trading.',
     fullDesc: 'Instant government registration for micro, small, and medium enterprises to avail priority bank lending, lower interest rates, 50% trademark fee discount, and export licenses.',
-    price: 'Starting at ₹1,199',
     deliverables: [
       'Udyam Registration Certificate with QR Code',
       'IEC Certificate from DGFT for international trade',
@@ -492,9 +480,11 @@ function initServiceGrid(filter = 'all', search = '') {
         </div>
       </div>
       <div class="service-card-footer">
-        <div class="service-price">
-          <span>Fee:</span><br>
-          <strong>${s.price}</strong>
+        <div class="service-assurance-tag">
+          <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; font-weight: 700; color: var(--emerald-600); background: var(--emerald-50); padding: 0.3rem 0.65rem; border-radius: 999px; border: 1px solid var(--emerald-200);">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            CA Verified
+          </span>
         </div>
         <button class="service-action-btn" onclick="openServiceDetailModal('${s.id}')">
           View Details &rarr;
@@ -613,8 +603,8 @@ function openServiceDetailModal(serviceId) {
 
       <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--surface-200); margin-top: 1.5rem;">
         <div>
-          <span style="font-size: 0.8125rem; color: var(--text-subtle);">Professional Advisory Fee</span>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--primary-900);">${service.price}</div>
+          <span style="font-size: 0.8125rem; color: var(--text-subtle);">Statutory Advisory Mode</span>
+          <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary-900);">100% Online CA Supervision</div>
         </div>
         <div style="display: flex; gap: 0.75rem;">
           <button class="btn btn-whatsapp" onclick="openWhatsAppInquiry('${service.title}')">
