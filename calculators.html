@@ -34,47 +34,74 @@
         <img src="assets/logo.png" alt="Easy My Taxes Logo">
       </a>
 
-            <!-- Desktop Nav with Mega Menus -->
+                  <!-- Desktop Nav with Unified Services Mega Menu -->
       <nav class="main-nav" aria-label="Main Navigation">
         
-        <!-- 1. COMPANY REGISTRATIONS MEGA MENU -->
-        <div class="nav-item has-mega-menu">
-          <a href="service.html?id=company-registration" class="nav-link">
-            <span>Company Registrations</span>
+        <!-- UNIFIED SERVICES MEGA MENU -->
+        <div class="nav-item has-mega-menu" id="navItemServices">
+          <a href="index.html#services" class="nav-link">
+            <span>Services</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </a>
           <div class="mega-dropdown">
             <div class="mega-menu-inner">
-              <!-- Left Category Tabs -->
+              <!-- Left Category Tabs (1. Company Registrations, 2. Compliance, 3. Licenses, etc.) -->
               <div class="mega-sidebar">
-                <div class="mega-side-item active" data-target="mega-reg-main">
+                <div class="mega-side-item active" data-target="mega-pane-registrations">
                   <span class="mega-side-icon">🏢</span>
-                  <span>Company Registration</span>
+                  <div>
+                    <strong>Company Registrations</strong>
+                    <span style="display:block; font-size: 0.72rem; color: var(--text-subtle); font-weight: normal;">Pvt Ltd, LLP, OPC, Global</span>
+                  </div>
                 </div>
-                <div class="mega-side-item" data-target="mega-reg-ngo">
+                <div class="mega-side-item" data-target="mega-pane-compliance">
+                  <span class="mega-side-icon">📊</span>
+                  <div>
+                    <strong>Compliance &amp; Filings</strong>
+                    <span style="display:block; font-size: 0.72rem; color: var(--text-subtle); font-weight: normal;">ROC, GST, TDS, Audits</span>
+                  </div>
+                </div>
+                <div class="mega-side-item" data-target="mega-pane-licenses">
+                  <span class="mega-side-icon">📜</span>
+                  <div>
+                    <strong>Licenses &amp; Certifications</strong>
+                    <span style="display:block; font-size: 0.72rem; color: var(--text-subtle); font-weight: normal;">FSSAI, Trade, GST, BIS, ISO</span>
+                  </div>
+                </div>
+                <div class="mega-side-item" data-target="mega-pane-ngo">
                   <span class="mega-side-icon">🌱</span>
-                  <span>NGO &amp; Non-Profit</span>
+                  <div>
+                    <strong>NGO &amp; Non-Profit</strong>
+                    <span style="display:block; font-size: 0.72rem; color: var(--text-subtle); font-weight: normal;">Sec 8, 12A/80G, CSR-1</span>
+                  </div>
                 </div>
-                <div class="mega-side-item" data-target="mega-reg-global">
+                <div class="mega-side-item" data-target="mega-pane-international">
                   <span class="mega-side-icon">🌏</span>
-                  <span>International &amp; FDI</span>
-                </div>
-                <div class="mega-side-item" data-target="mega-reg-special">
-                  <span class="mega-side-icon">⭐</span>
-                  <span>Special Entities &amp; FPO</span>
+                  <div>
+                    <strong>International Setup</strong>
+                    <span style="display:block; font-size: 0.72rem; color: var(--text-subtle); font-weight: normal;">Dubai, USA, Singapore</span>
+                  </div>
                 </div>
               </div>
 
-              <!-- Right Multi-Column Content Area -->
+              <!-- Right Multi-Column Content Area (Switches on hover) -->
               <div class="mega-content">
-                <!-- Group 1: Standard Company Registration (Default) -->
-                <div class="mega-pane active" id="mega-reg-main">
+                
+                <!-- 1. COMPANY REGISTRATIONS PANE (Default Active) -->
+                <div class="mega-pane active" id="mega-pane-registrations">
+                  <div class="mega-pane-header" style="margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 0;">Company Registration Services</h4>
+                      <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">MCA SPICe+ digital setup with 100% compliance guarantee</p>
+                    </div>
+                    <a href="service.html?id=company-registration" style="font-size: 0.8125rem; font-weight: 700; color: #ea580c; text-decoration: none;">View All Registrations &rarr;</a>
+                  </div>
                   <div class="mega-col-grid">
                     <div class="mega-col">
-                      <div class="mega-col-header">Primary Corporate Forms</div>
+                      <div class="mega-col-header">Primary Entities</div>
                       <a href="service.html?id=company-registration" class="mega-link">
                         <span class="mega-link-title">Company Registration Overview</span>
-                        <span class="mega-link-sub">MCA SPICe+ digital setup</span>
+                        <span class="mega-link-sub">MCA SPICe+ digital incorporation</span>
                       </a>
                       <a href="service.html?id=public-limited-company" class="mega-link">
                         <span class="mega-link-title">Public Limited Company</span>
@@ -144,11 +171,158 @@
                   </div>
                 </div>
 
-                <!-- Group 2: NGO & Non Profit -->
-                <div class="mega-pane" id="mega-reg-ngo">
+                <!-- 2. COMPLIANCE & FILINGS PANE -->
+                <div class="mega-pane" id="mega-pane-compliance">
+                  <div class="mega-pane-header" style="margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 0;">Statutory Corporate Compliance &amp; Audits</h4>
+                      <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Protect your company from MCA late fees and director disqualification</p>
+                    </div>
+                    <a href="service.html?id=pvt-ltd-compliance" style="font-size: 0.8125rem; font-weight: 700; color: #ea580c; text-decoration: none;">View All Compliances &rarr;</a>
+                  </div>
                   <div class="mega-col-grid">
                     <div class="mega-col">
-                      <div class="mega-col-header">Non-Profit Vehicles</div>
+                      <div class="mega-col-header">Annual ROC Filings</div>
+                      <a href="service.html?id=pvt-ltd-compliance" class="mega-link featured-link">
+                        <span class="mega-link-title">Pvt Ltd Annual Compliance <span class="badge-pill gold">Mandatory</span></span>
+                        <span class="mega-link-sub">Form AOC-4, MGT-7 &amp; AGM minutes</span>
+                      </a>
+                      <a href="service.html?id=llp-annual-filing" class="mega-link">
+                        <span class="mega-link-title">LLP Annual Return (Form 11 &amp; 8)</span>
+                        <span class="mega-link-sub">Avoid ₹100/day statutory penalty</span>
+                      </a>
+                      <a href="service.html?id=director-kyc" class="mega-link">
+                        <span class="mega-link-title">Director KYC (DIR-3 KYC)</span>
+                        <span class="mega-link-sub">Avoid ₹5,000 deactivation fee</span>
+                      </a>
+                      <a href="due-dates.html" class="mega-link">
+                        <span class="mega-link-title">Compliance Calendar 2026–27 🗓️</span>
+                        <span class="mega-link-sub">Track all statutory filing due dates</span>
+                      </a>
+                    </div>
+
+                    <div class="mega-col">
+                      <div class="mega-col-header">Tax &amp; Audit Services</div>
+                      <a href="service.html?id=statutory-audit" class="mega-link">
+                        <span class="mega-link-title">Statutory Audit &amp; Tax Audit 44AB</span>
+                        <span class="mega-link-sub">ICAI certified audit by CA Pradeep</span>
+                      </a>
+                      <a href="service.html?id=income-tax-filing" class="mega-link">
+                        <span class="mega-link-title">Corporate ITR-6 Filing</span>
+                        <span class="mega-link-sub">Preserve 8-year loss carry forwards</span>
+                      </a>
+                      <a href="service.html?id=advance-tax-compliance" class="mega-link">
+                        <span class="mega-link-title">Advance Tax Schedule FY 2026-27</span>
+                        <span class="mega-link-sub">Shield against Section 234C penalty</span>
+                      </a>
+                      <a href="service.html?id=tds-returns" class="mega-link">
+                        <span class="mega-link-title">Quarterly TDS / TCS Returns</span>
+                        <span class="mega-link-sub">24Q, 26Q &amp; Form 16/16A generation</span>
+                      </a>
+                    </div>
+
+                    <div class="mega-col">
+                      <div class="mega-col-header">Corporate Secretarial</div>
+                      <a href="service.html?id=gst-compliance" class="mega-link">
+                        <span class="mega-link-title">Monthly &amp; Annual GST Returns</span>
+                        <span class="mega-link-sub">GSTR-1, 3B &amp; 100% 2B ITC matching</span>
+                      </a>
+                      <a href="service.html?id=change-directors" class="mega-link">
+                        <span class="mega-link-title">Add / Remove Director (DIR-12)</span>
+                        <span class="mega-link-sub">Appointment, resignation &amp; DIN</span>
+                      </a>
+                      <a href="service.html?id=change-office" class="mega-link">
+                        <span class="mega-link-title">Change Registered Office (INC-22)</span>
+                        <span class="mega-link-sub">Address shift within or interstate</span>
+                      </a>
+                      <a href="service.html?id=share-capital-increase" class="mega-link">
+                        <span class="mega-link-title">Increase Authorized Capital (SH-7)</span>
+                        <span class="mega-link-sub">Raise limit for fresh equity rounds</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. LICENSES & PERMITS PANE -->
+                <div class="mega-pane" id="mega-pane-licenses">
+                  <div class="mega-pane-header" style="margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 0;">Business Licenses &amp; Certifications</h4>
+                      <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Central, state, and municipal statutory licenses to trade legally</p>
+                    </div>
+                    <a href="service.html?id=licenses-certifications" style="font-size: 0.8125rem; font-weight: 700; color: #ea580c; text-decoration: none;">View All Licenses &rarr;</a>
+                  </div>
+                  <div class="mega-col-grid">
+                    <div class="mega-col">
+                      <div class="mega-col-header">Food &amp; Municipal</div>
+                      <a href="service.html?id=fssai-registration" class="mega-link featured-link">
+                        <span class="mega-link-title">FSSAI Food License <span class="badge-pill gold">Essential</span></span>
+                        <span class="mega-link-sub">Basic, State &amp; Central FoSCoS</span>
+                      </a>
+                      <a href="service.html?id=trade-license" class="mega-link">
+                        <span class="mega-link-title">Municipal Trade License</span>
+                        <span class="mega-link-sub">Local Municipal Corporation clearance</span>
+                      </a>
+                      <a href="service.html?id=shop-establishment" class="mega-link">
+                        <span class="mega-link-title">Shop &amp; Establishment (Gumasta)</span>
+                        <span class="mega-link-sub">State labor commercial license</span>
+                      </a>
+                      <a href="service.html?id=fire-noc" class="mega-link">
+                        <span class="mega-link-title">Fire Safety NOC</span>
+                        <span class="mega-link-sub">Commercial building &amp; hotel clearance</span>
+                      </a>
+                    </div>
+
+                    <div class="mega-col">
+                      <div class="mega-col-header">Commercial &amp; Trade</div>
+                      <a href="service.html?id=gst-registration" class="mega-link">
+                        <span class="mega-link-title">GST Registration</span>
+                        <span class="mega-link-sub">15-Digit GSTIN in 3 to 5 days</span>
+                      </a>
+                      <a href="service.html?id=msme-udyam" class="mega-link">
+                        <span class="mega-link-title">MSME / Udyam Certificate</span>
+                        <span class="mega-link-sub">Collateral-free loan &amp; 45-day law</span>
+                      </a>
+                      <a href="service.html?id=import-export-code" class="mega-link">
+                        <span class="mega-link-title">Import Export Code (IEC)</span>
+                        <span class="mega-link-sub">DGFT 10-digit lifetime export permit</span>
+                      </a>
+                      <a href="service.html?id=professional-tax" class="mega-link">
+                        <span class="mega-link-title">Professional Tax (PTRC / PTEC)</span>
+                        <span class="mega-link-sub">State commercial tax registration</span>
+                      </a>
+                    </div>
+
+                    <div class="mega-col">
+                      <div class="mega-col-header">Standards &amp; Special</div>
+                      <a href="service.html?id=bis-registration" class="mega-link">
+                        <span class="mega-link-title">BIS Certification (ISI Mark)</span>
+                        <span class="mega-link-sub">Electronics CRS &amp; Industrial ISI</span>
+                      </a>
+                      <a href="service.html?id=iso-certification" class="mega-link">
+                        <span class="mega-link-title">ISO Certification (9001/27001)</span>
+                        <span class="mega-link-sub">IAF accredited quality validation</span>
+                      </a>
+                      <a href="service.html?id=drug-license" class="mega-link">
+                        <span class="mega-link-title">Drug License (Pharmacy)</span>
+                        <span class="mega-link-sub">State FDA retail &amp; wholesale</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. NGO & NON-PROFIT PANE -->
+                <div class="mega-pane" id="mega-pane-ngo">
+                  <div class="mega-pane-header" style="margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 0;">NGO &amp; Non-Profit Foundations</h4>
+                      <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Charitable institutions, tax exemptions, and CSR donor certifications</p>
+                    </div>
+                    <a href="service.html?id=ngo" style="font-size: 0.8125rem; font-weight: 700; color: #ea580c; text-decoration: none;">View NGO Details &rarr;</a>
+                  </div>
+                  <div class="mega-col-grid">
+                    <div class="mega-col">
+                      <div class="mega-col-header">Non-Profit Entities</div>
                       <a href="service.html?id=ngo" class="mega-link">
                         <span class="mega-link-title">Section 8 Company</span>
                         <span class="mega-link-sub">Central Govt approved non-profit</span>
@@ -179,8 +353,15 @@
                   </div>
                 </div>
 
-                <!-- Group 3: International & Global -->
-                <div class="mega-pane" id="mega-reg-global">
+                <!-- 5. INTERNATIONAL SETUP PANE -->
+                <div class="mega-pane" id="mega-pane-international">
+                  <div class="mega-pane-header" style="margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary-950); margin: 0;">International &amp; Cross-Border Business</h4>
+                      <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Global entity structuring, Stripe access, and RBI FEMA compliance</p>
+                    </div>
+                    <a href="service.html?id=international-business-setup" style="font-size: 0.8125rem; font-weight: 700; color: #ea580c; text-decoration: none;">View Offshore Setup &rarr;</a>
+                  </div>
                   <div class="mega-col-grid">
                     <div class="mega-col">
                       <div class="mega-col-header">Inbound Foreign Investment</div>
@@ -191,6 +372,10 @@
                       <a href="service.html?id=foreign-subsidiary" class="mega-link">
                         <span class="mega-link-title">Branch / Liaison Office</span>
                         <span class="mega-link-sub">Direct overseas parent extension</span>
+                      </a>
+                      <a href="service.html?id=fema-rbi-compliance" class="mega-link">
+                        <span class="mega-link-title">RBI Annual FLA Return</span>
+                        <span class="mega-link-sub">Foreign liabilities &amp; assets filing</span>
                       </a>
                     </div>
                     <div class="mega-col">
@@ -203,301 +388,14 @@
                         <span class="mega-link-title">Dubai Freezone (UAE)</span>
                         <span class="mega-link-sub">0% Corporate tax &amp; Golden Visa</span>
                       </a>
-                    </div>
-                    <div class="mega-col">
-                      <div class="mega-col-header">FEMA &amp; Cross Border</div>
-                      <a href="service.html?id=fema-rbi-compliance" class="mega-link">
-                        <span class="mega-link-title">RBI FIRMS &amp; FC-GPR</span>
-                        <span class="mega-link-sub">Reporting foreign equity inward</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Group 4: Specialized Entities -->
-                <div class="mega-pane" id="mega-reg-special">
-                  <div class="mega-col-grid">
-                    <div class="mega-col">
-                      <a href="service.html?id=nidhi-company" class="mega-link">
-                        <span class="mega-link-title">Nidhi Company (Mutual Benefit)</span>
-                        <span class="mega-link-sub">Deposit taking without RBI NBFC</span>
-                      </a>
-                      <a href="service.html?id=microfinance-company" class="mega-link">
-                        <span class="mega-link-title">Section 8 Microfinance</span>
-                        <span class="mega-link-sub">Small business collateral-free credit</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <a href="service.html?id=producer-company" class="mega-link">
-                        <span class="mega-link-title">Farmer Producer Org (FPO)</span>
-                        <span class="mega-link-sub">100% Tax deduction u/s 80PA</span>
-                      </a>
-                      <a href="service.html?id=startup-india" class="mega-link">
-                        <span class="mega-link-title">Startup India 80-IAC</span>
-                        <span class="mega-link-sub">DPIIT tax holiday certificate</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. COMPLIANCE MEGA MENU -->
-        <div class="nav-item has-mega-menu">
-          <a href="service.html?id=pvt-ltd-compliance" class="nav-link">
-            <span>Compliance</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="mega-dropdown">
-            <div class="mega-menu-inner">
-              <!-- Left Category Tabs -->
-              <div class="mega-sidebar">
-                <div class="mega-side-item active" data-target="mega-comp-roc">
-                  <span class="mega-side-icon">📊</span>
-                  <span>Annual ROC Filings</span>
-                </div>
-                <div class="mega-side-item" data-target="mega-comp-tax">
-                  <span class="mega-side-icon">📑</span>
-                  <span>Tax &amp; Statutory Filings</span>
-                </div>
-                <div class="mega-side-item" data-target="mega-comp-secretarial">
-                  <span class="mega-side-icon">⚖️</span>
-                  <span>Corporate Changes</span>
-                </div>
-              </div>
-
-              <!-- Right Content Area -->
-              <div class="mega-content">
-                <!-- Group 1: Annual ROC -->
-                <div class="mega-pane active" id="mega-comp-roc">
-                  <div class="mega-col-grid">
-                    <div class="mega-col">
-                      <div class="mega-col-header">Mandatory Annual Returns</div>
-                      <a href="service.html?id=pvt-ltd-compliance" class="mega-link featured-link">
-                        <span class="mega-link-title">Pvt Ltd Annual Compliance <span class="badge-pill gold">Mandatory</span></span>
-                        <span class="mega-link-sub">Form AOC-4, MGT-7 &amp; AGM minutes</span>
-                      </a>
-                      <a href="service.html?id=llp-annual-filing" class="mega-link">
-                        <span class="mega-link-title">LLP Annual Return (Form 11 &amp; 8)</span>
-                        <span class="mega-link-sub">Avoid ₹100/day statutory penalty</span>
-                      </a>
-                      <a href="service.html?id=director-kyc" class="mega-link">
-                        <span class="mega-link-title">Director KYC (DIR-3 KYC)</span>
-                        <span class="mega-link-sub">Avoid ₹5,000 deactivation fee</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <div class="mega-col-header">Audit &amp; Assurance</div>
-                      <a href="service.html?id=statutory-audit" class="mega-link">
-                        <span class="mega-link-title">Statutory Audit &amp; Tax Audit 44AB</span>
-                        <span class="mega-link-sub">ICAI certified audit by CA Pradeep</span>
-                      </a>
-                      <a href="service.html?id=income-tax-filing" class="mega-link">
-                        <span class="mega-link-title">Corporate ITR-6 Filing</span>
-                        <span class="mega-link-sub">Preserve 8-year loss carry forwards</span>
-                      </a>
-                      <a href="service.html?id=advance-tax-compliance" class="mega-link">
-                        <span class="mega-link-title">Advance Tax Schedule FY 2026-27</span>
-                        <span class="mega-link-sub">Shield against Section 234C penalty</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <div class="mega-col-header">Direct Tax &amp; GST</div>
-                      <a href="service.html?id=gst-compliance" class="mega-link">
-                        <span class="mega-link-title">Monthly &amp; Annual GST Returns</span>
-                        <span class="mega-link-sub">GSTR-1, 3B &amp; 100% 2B ITC matching</span>
-                      </a>
-                      <a href="service.html?id=tds-returns" class="mega-link">
-                        <span class="mega-link-title">Quarterly TDS / TCS Returns</span>
-                        <span class="mega-link-sub">24Q, 26Q &amp; Form 16/16A generation</span>
-                      </a>
-                      <a href="due-dates.html" class="mega-link">
-                        <span class="mega-link-title">Compliance Calendar 2026–27 🗓️</span>
-                        <span class="mega-link-sub">Track all statutory filing due dates</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Group 2: Tax & Statutory -->
-                <div class="mega-pane" id="mega-comp-tax">
-                  <div class="mega-col-grid">
-                    <div class="mega-col">
-                      <a href="service.html?id=gst-compliance" class="mega-link">
-                        <span class="mega-link-title">GSTR-1 &amp; GSTR-3B Filing</span>
-                        <span class="mega-link-sub">Zero mismatch, maximum ITC claim</span>
-                      </a>
-                      <a href="service.html?id=tds-returns" class="mega-link">
-                        <span class="mega-link-title">TDS Filing (24Q / 26Q)</span>
-                        <span class="mega-link-sub">Prevent Section 234E late fees</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <a href="service.html?id=income-tax-filing" class="mega-link">
-                        <span class="mega-link-title">ITR-5 (LLP &amp; Partnership)</span>
-                        <span class="mega-link-sub">Business tax filing AY 2026-27</span>
-                      </a>
-                      <a href="service.html?id=advance-tax-compliance" class="mega-link">
-                        <span class="mega-link-title">Advance Tax Quarterly Planning</span>
-                        <span class="mega-link-sub">15 June, 15 Sept, 15 Dec, 15 Mar</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Group 3: Secretarial Changes -->
-                <div class="mega-pane" id="mega-comp-secretarial">
-                  <div class="mega-col-grid">
-                    <div class="mega-col">
-                      <a href="service.html?id=change-directors" class="mega-link">
-                        <span class="mega-link-title">Add / Remove Director (DIR-12)</span>
-                        <span class="mega-link-sub">Appointment, resignation &amp; DIN</span>
-                      </a>
-                      <a href="service.html?id=change-office" class="mega-link">
-                        <span class="mega-link-title">Change Registered Office (INC-22)</span>
-                        <span class="mega-link-sub">Address shift within or interstate</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <a href="service.html?id=share-capital-increase" class="mega-link">
-                        <span class="mega-link-title">Increase Authorized Capital (SH-7)</span>
-                        <span class="mega-link-sub">Raise limit for fresh equity rounds</span>
-                      </a>
-                      <a href="service.html?id=fema-rbi-compliance" class="mega-link">
-                        <span class="mega-link-title">RBI Annual FLA Return</span>
-                        <span class="mega-link-sub">Foreign liabilities &amp; assets filing</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. LICENSES MEGA MENU -->
-        <div class="nav-item has-mega-menu">
-          <a href="service.html?id=licenses-certifications" class="nav-link">
-            <span>Licenses</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="mega-dropdown">
-            <div class="mega-menu-inner">
-              <!-- Left Category Tabs -->
-              <div class="mega-sidebar">
-                <div class="mega-side-item active" data-target="mega-lic-food">
-                  <span class="mega-side-icon">🥗</span>
-                  <span>Food &amp; Municipal</span>
-                </div>
-                <div class="mega-side-item" data-target="mega-lic-trade">
-                  <span class="mega-side-icon">🏭</span>
-                  <span>Trade &amp; Commercial</span>
-                </div>
-                <div class="mega-side-item" data-target="mega-lic-quality">
-                  <span class="mega-side-icon">🛡️</span>
-                  <span>Standards &amp; Special</span>
-                </div>
-              </div>
-
-              <!-- Right Content Area -->
-              <div class="mega-content">
-                <!-- Group 1: Food & Municipal -->
-                <div class="mega-pane active" id="mega-lic-food">
-                  <div class="mega-col-grid">
-                    <div class="mega-col">
-                      <div class="mega-col-header">Food &amp; Health Approvals</div>
-                      <a href="service.html?id=fssai-registration" class="mega-link featured-link">
-                        <span class="mega-link-title">FSSAI Food License <span class="badge-pill gold">Essential</span></span>
-                        <span class="mega-link-sub">Basic, State &amp; Central FoSCoS</span>
-                      </a>
-                      <a href="service.html?id=trade-license" class="mega-link">
-                        <span class="mega-link-title">Municipal Trade License</span>
-                        <span class="mega-link-sub">Local Municipal Corporation clearance</span>
-                      </a>
-                      <a href="service.html?id=shop-establishment" class="mega-link">
-                        <span class="mega-link-title">Shop &amp; Establishment (Gumasta)</span>
-                        <span class="mega-link-sub">State labor commercial license</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <div class="mega-col-header">Business &amp; Tax Permits</div>
-                      <a href="service.html?id=gst-registration" class="mega-link">
-                        <span class="mega-link-title">GST Registration</span>
-                        <span class="mega-link-sub">15-Digit GSTIN in 3 to 5 days</span>
-                      </a>
-                      <a href="service.html?id=msme-udyam" class="mega-link">
-                        <span class="mega-link-title">MSME / Udyam Certificate</span>
-                        <span class="mega-link-sub">Collateral-free loan &amp; 45-day law</span>
-                      </a>
-                      <a href="service.html?id=import-export-code" class="mega-link">
-                        <span class="mega-link-title">Import Export Code (IEC)</span>
-                        <span class="mega-link-sub">DGFT 10-digit lifetime export permit</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <div class="mega-col-header">Quality &amp; Standards</div>
-                      <a href="service.html?id=bis-registration" class="mega-link">
-                        <span class="mega-link-title">BIS Certification (ISI Mark)</span>
-                        <span class="mega-link-sub">Electronics CRS &amp; Industrial ISI</span>
-                      </a>
-                      <a href="service.html?id=iso-certification" class="mega-link">
-                        <span class="mega-link-title">ISO Certification (9001/27001)</span>
-                        <span class="mega-link-sub">IAF accredited quality validation</span>
-                      </a>
-                      <a href="service.html?id=drug-license" class="mega-link">
-                        <span class="mega-link-title">Drug License (Pharmacy)</span>
-                        <span class="mega-link-sub">State FDA retail &amp; wholesale</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Group 2: Trade & Commercial -->
-                <div class="mega-pane" id="mega-lic-trade">
-                  <div class="mega-col-grid">
-                    <div class="mega-col">
-                      <a href="service.html?id=professional-tax" class="mega-link">
-                        <span class="mega-link-title">Professional Tax (PTRC / PTEC)</span>
-                        <span class="mega-link-sub">State commercial tax registration</span>
-                      </a>
-                      <a href="service.html?id=fire-noc" class="mega-link">
-                        <span class="mega-link-title">Fire Safety NOC</span>
-                        <span class="mega-link-sub">Commercial building &amp; hotel clearance</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
                       <a href="service.html?id=international-business-setup" class="mega-link">
-                        <span class="mega-link-title">Offshore Company Formation</span>
-                        <span class="mega-link-sub">USA, Dubai, Singapore &amp; UK</span>
+                        <span class="mega-link-title">Singapore Entity Setup</span>
+                        <span class="mega-link-sub">Premier Asian fintech hub</span>
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <!-- Group 3: Standards -->
-                <div class="mega-pane" id="mega-lic-quality">
-                  <div class="mega-col-grid">
-                    <div class="mega-col">
-                      <a href="service.html?id=bis-registration" class="mega-link">
-                        <span class="mega-link-title">BIS Compulsory Registration (CRS)</span>
-                        <span class="mega-link-sub">Mandatory for imported electronics</span>
-                      </a>
-                      <a href="service.html?id=iso-certification" class="mega-link">
-                        <span class="mega-link-title">ISO 27001 Security Standard</span>
-                        <span class="mega-link-sub">Information security for SaaS &amp; IT</span>
-                      </a>
-                    </div>
-                    <div class="mega-col">
-                      <a href="service.html?id=drug-license" class="mega-link">
-                        <span class="mega-link-title">Wholesale &amp; Retail Drug Permit</span>
-                        <span class="mega-link-sub">Form 20/21 &amp; Form 20B/21B</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -539,59 +437,39 @@
       <img src="assets/logo.png" alt="Easy My Taxes" style="height: 40px;">
       <button id="mobileNavClose" style="font-size: 1.5rem; color: var(--primary-900);">✕</button>
     </div>
-    <div class="mobile-drawer-links">
+        <div class="mobile-drawer-links">
       <a href="index.html" class="mobile-drawer-link">Home</a>
       
-      <!-- Mobile Accordion: Company Registrations -->
+      <!-- Mobile Accordion: Services -->
       <div class="mobile-accordion-item">
         <button class="mobile-accordion-header" type="button">
-          <span>🏢 Company Registrations</span>
+          <span>💼 All Services</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="mobile-accordion-body">
+          <strong style="font-size: 0.75rem; text-transform: uppercase; color: #ea580c; margin-top: 0.35rem; display: block;">🏢 Company Registrations</strong>
           <a href="service.html?id=private-limited-company" class="mobile-sublink">Private Limited Company</a>
           <a href="service.html?id=llp-registration" class="mobile-sublink">LLP Registration</a>
           <a href="service.html?id=one-person-company" class="mobile-sublink">One Person Company (OPC)</a>
           <a href="service.html?id=public-limited-company" class="mobile-sublink">Public Limited Company</a>
           <a href="service.html?id=sole-proprietorship" class="mobile-sublink">Sole Proprietorship</a>
-          <a href="service.html?id=partnership-firm" class="mobile-sublink">Partnership Firm</a>
           <a href="service.html?id=startup-india" class="mobile-sublink">Startup India 80-IAC</a>
           <a href="service.html?id=indian-subsidiary" class="mobile-sublink">Indian Subsidiary (FDI)</a>
-          <a href="service.html?id=ngo" class="mobile-sublink">NGO / Section 8 Company</a>
-        </div>
-      </div>
-
-      <!-- Mobile Accordion: Compliance -->
-      <div class="mobile-accordion-item">
-        <button class="mobile-accordion-header" type="button">
-          <span>📊 Compliance &amp; Filings</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="mobile-accordion-body">
-          <a href="service.html?id=pvt-ltd-compliance" class="mobile-sublink">Pvt Ltd Annual Compliance (AOC-4/MGT-7)</a>
+          
+          <strong style="font-size: 0.75rem; text-transform: uppercase; color: #ea580c; margin-top: 0.75rem; display: block;">📊 Compliance &amp; Filings</strong>
+          <a href="service.html?id=pvt-ltd-compliance" class="mobile-sublink">Pvt Ltd Annual ROC Compliance</a>
           <a href="service.html?id=llp-annual-filing" class="mobile-sublink">LLP Annual Return (Form 11 &amp; 8)</a>
           <a href="service.html?id=director-kyc" class="mobile-sublink">Director KYC (DIR-3 KYC)</a>
           <a href="service.html?id=statutory-audit" class="mobile-sublink">Statutory &amp; Tax Audit u/s 44AB</a>
           <a href="service.html?id=gst-compliance" class="mobile-sublink">Monthly GST Returns (GSTR-1, 3B)</a>
           <a href="service.html?id=tds-returns" class="mobile-sublink">TDS / TCS Return Filing (24Q/26Q)</a>
-          <a href="service.html?id=income-tax-filing" class="mobile-sublink">Corporate ITR-6 Filing</a>
-          <a href="service.html?id=change-directors" class="mobile-sublink">Add / Remove Director (DIR-12)</a>
-        </div>
-      </div>
 
-      <!-- Mobile Accordion: Licenses -->
-      <div class="mobile-accordion-item">
-        <button class="mobile-accordion-header" type="button">
-          <span>📜 Licenses &amp; Certifications</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="mobile-accordion-body">
+          <strong style="font-size: 0.75rem; text-transform: uppercase; color: #ea580c; margin-top: 0.75rem; display: block;">📜 Licenses &amp; Permits</strong>
           <a href="service.html?id=fssai-registration" class="mobile-sublink">FSSAI Food License</a>
           <a href="service.html?id=trade-license" class="mobile-sublink">Municipal Trade License</a>
           <a href="service.html?id=gst-registration" class="mobile-sublink">GST Registration</a>
           <a href="service.html?id=msme-udyam" class="mobile-sublink">MSME / Udyam Registration</a>
           <a href="service.html?id=import-export-code" class="mobile-sublink">Import Export Code (IEC)</a>
-          <a href="service.html?id=shop-establishment" class="mobile-sublink">Shop &amp; Establishment (Gumasta)</a>
           <a href="service.html?id=bis-registration" class="mobile-sublink">BIS Registration &amp; ISI Mark</a>
           <a href="service.html?id=iso-certification" class="mobile-sublink">ISO Certification</a>
         </div>
