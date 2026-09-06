@@ -3190,3 +3190,69 @@
   color: #ffffff;
   text-decoration: underline;
 }
+
+
+/* ==========================================================================
+   TESTIMONIALS SLIDER & COMPACT CAROUSEL (SMART SPACE SAVER)
+   ========================================================================== */
+
+.testimonials-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.testimonials-slider {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.5rem 0.25rem 1.25rem 0.25rem;
+}
+
+.testimonials-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonials-slider .testimonial-card {
+  flex: 0 0 calc(33.333% - 1rem);
+  scroll-snap-align: start;
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-slider .testimonial-card {
+    flex: 0 0 calc(50% - 0.75rem);
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-slider .testimonial-card {
+    flex: 0 0 88%;
+    min-width: 260px;
+  }
+}
+
+.carousel-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: var(--surface-0);
+  border: 1px solid var(--surface-300);
+  color: var(--primary-900);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all var(--trans-fast);
+}
+
+.carousel-btn:hover {
+  background: var(--primary-900);
+  color: #ffffff;
+  border-color: var(--primary-900);
+  transform: translateY(-1px);
+}

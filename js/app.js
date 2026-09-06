@@ -337,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initServicesSearch();
   initTestimonials('all');
   initTestimonialFilters();
+  startTestimonialAutoScroll();
   initChecklist('salaried');
   initChecklistSelector();
   initStatsCounter();
@@ -518,6 +519,40 @@ function initServicesSearch() {
 }
 
 // Render Filterable Testimonials / Verified Case Studies
+
+// Smart Carousel Scroll Controls for Testimonials
+function scrollTestimonials(direction) {
+  const container = document.getElementById('testimonialsGridContainer');
+  if (!container) return;
+  const firstCard = container.querySelector('.testimonial-card');
+  const cardWidth = firstCard ? firstCard.offsetWidth + 24 : 350;
+  container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+}
+
+let testimonialAutoTimer = null;
+function startTestimonialAutoScroll() {
+  stopTestimonialAutoScroll();
+  const container = document.getElementById('testimonialsGridContainer');
+  if (!container) return;
+
+  testimonialAutoTimer = setInterval(() => {
+    if (container.matches(':hover')) return; // Pause on hover
+    const maxScroll = container.scrollWidth - container.clientWidth - 15;
+    if (container.scrollLeft >= maxScroll) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      scrollTestimonials(1);
+    }
+  }, 5500);
+}
+
+function stopTestimonialAutoScroll() {
+  if (testimonialAutoTimer) {
+    clearInterval(testimonialAutoTimer);
+    testimonialAutoTimer = null;
+  }
+}
+
 function initTestimonials(filter = 'all') {
   const container = document.getElementById('testimonialsGridContainer');
   if (!container) return;
