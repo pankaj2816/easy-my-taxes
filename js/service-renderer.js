@@ -192,6 +192,7 @@ const STATUTORY_DEFAULTS = {
 
 let currentActiveCategory = 'all';
 let currentSearchQuery = '';
+let currentHoverExplorerCategory = 'registrations';
 
 /**
  * Main Controller: Inspects URL params and routes to either:
@@ -388,8 +389,10 @@ function renderCategoryHub(catKey, searchQuery = '') {
 
   // Smart categorized view if "all" and no search query
   if (catKey === 'all' && !currentSearchQuery) {
+    grid.style.display = 'block';
     renderAllServicesSmartView(grid, allServicesList);
   } else {
+    grid.style.display = '';
     grid.innerHTML = services.map(s => renderServiceCardHtml(s)).join('');
   }
 }
@@ -439,60 +442,221 @@ function renderServiceCardHtml(s) {
 }
 
 /**
- * Render smart organized categorized view for All Services
+ * Render smart organized categorized view for All Services with Left Sidebar & Hover Switching
  */
-function renderAllServicesSmartView(grid, allServicesList) {
+function renderAllServicesSmartView(grid, allServicesList, activeCat = currentHoverExplorerCategory) {
+  currentHoverExplorerCategory = activeCat;
+
   const categories = [
-    { key: 'itr', name: 'Income Tax Returns (ITR)', icon: '📝', count: 9, tagline: 'AY 2026-27 precision tax returns with 100% AIS matching & notice protection' },
-    { key: 'registrations', name: 'Company Registrations', icon: '🏢', count: 16, tagline: 'MCA SPICe+ fastrack incorporations for startups, LLPs & corporate structures' },
-    { key: 'compliance', name: 'Statutory Compliances & Filings', icon: '⚖️', count: 13, tagline: 'End-to-end ROC annual governance, director KYC, statutory audits & tax compliance' },
-    { key: 'licenses', name: 'Business Licenses & Certifications', icon: '📜', count: 14, tagline: 'Central, state & municipal regulatory licensing with zero inspection delays' }
+    { 
+      key: 'registrations', 
+      name: 'Company Registrations', 
+      icon: '🏢', 
+      shortTagline: 'Pvt Ltd, LLP, OPC & Global', 
+      tagline: 'MCA SPICe+ fastrack incorporations for startups, LLPs & corporate structures with 100% compliance guarantee.',
+      portal: 'Ministry of Corporate Affairs (MCA)'
+    },
+    { 
+      key: 'compliance', 
+      name: 'Statutory Compliances', 
+      icon: '⚖️', 
+      shortTagline: 'Annual ROC, KYC & Audits', 
+      tagline: 'End-to-end statutory annual ROC filings, director KYC, statutory audits & tax governance.',
+      portal: 'MCA & Income Tax Department'
+    },
+    { 
+      key: 'licenses', 
+      name: 'Business Licenses', 
+      icon: '📜', 
+      shortTagline: 'GST, FSSAI, MSME & IEC', 
+      tagline: 'Mandatory central, state & municipal regulatory licensing to trade and manufacture legally.',
+      portal: 'Central & State Regulatory Portals'
+    },
+    { 
+      key: 'itr', 
+      name: 'Income Tax Returns (ITR)', 
+      icon: '📝', 
+      shortTagline: 'AY 2026-27 Salary, NRIs, F&O', 
+      tagline: 'Precision CA-assisted ITR filing for AY 2026-27 with 100% AIS, TIS, and 26AS matching.',
+      portal: 'Income Tax Department (E-Filing 2.0)'
+    }
   ];
 
-  let html = `
-    <!-- Top 4 Master Pillar Overview Cards -->
-    <div class="all-pillars-grid" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 3.5rem;">
-      ${categories.map(cat => `
-        <div class="pillar-card" onclick="switchCategory('${cat.key}')">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-            <span style="font-size: 2.25rem;">${cat.icon}</span>
-            <span style="font-size: 0.75rem; font-weight: 800; background: var(--emerald-50); color: var(--emerald-700); border: 1px solid var(--emerald-200); padding: 0.25rem 0.7rem; border-radius: var(--radius-full);">${cat.count} Services</span>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--primary-950); margin-bottom: 0.4rem;">${cat.name}</h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.55; flex-grow: 1;">${cat.tagline}</p>
-          <div style="font-size: 0.85rem; font-weight: 800; color: var(--emerald-600); display: flex; align-items: center; gap: 0.35rem;">
-            <span>Browse ${cat.name.split(' ')[0]} Section &rarr;</span>
-          </div>
+  const selectedCatObj = categories.find(c => c.key === activeCat) || categories[0];
+  const selectedCatServices = allServicesList.filter(s => s.category === selectedCatObj.key);
+
+  const html = `
+    <div class="services-explorer-container" style="grid-column: 1 / -1;">
+      <!-- Left Sticky Sidebar with Main Services -->
+      <aside class="explorer-sidebar" aria-label="Services Navigation">
+        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); margin-bottom: 0.25rem; padding: 0.25rem 0.5rem;">
+          Select Practice Vertical
         </div>
-      `).join('')}
+
+        ${categories.map(cat => {
+          const count = allServicesList.filter(s => s.category === cat.key).length;
+          const isActive = cat.key === activeCat;
+          return `
+            <div class="explorer-nav-item ${isActive ? 'active' : ''}" 
+                 data-cat="${cat.key}" 
+                 onmouseenter="handleExplorerHover('${cat.key}')" 
+                 onclick="handleExplorerClick('${cat.key}')">
+              <span class="nav-item-icon">${cat.icon}</span>
+              <div class="nav-item-info">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.15rem;">
+                  <span class="nav-item-title">${cat.name}</span>
+                  <span class="nav-item-badge">${count}</span>
+                </div>
+                <p class="nav-item-desc">${cat.shortTagline}</p>
+              </div>
+              <span class="nav-item-arrow">&rsaquo;</span>
+            </div>
+          `;
+        }).join('')}
+
+        <!-- Advisory Help Card in Left Sidebar -->
+        <div style="margin-top: 1rem; background: linear-gradient(135deg, #0b1528, #172a4d); border-radius: var(--radius-xl); padding: 1.25rem; color: #ffffff; border: 1px solid rgba(255,255,255,0.08);">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span style="font-size: 1.1rem;">💬</span>
+            <strong style="font-size: 0.85rem;">Need Structuring Help?</strong>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--surface-300); line-height: 1.4; margin-bottom: 0.85rem;">
+            Speak directly with CA Pradeep Agarwal for guidance on which structure or license applies to you.
+          </p>
+          <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.75rem; padding: 0.5rem;" onclick="openConsultationModal('Explorer Sidebar Help')">
+            Book CA Advisory
+          </button>
+        </div>
+      </aside>
+
+      <!-- Right Content Pane showing Subsections / Sub-Services -->
+      <main class="explorer-content-pane" id="explorerContentPane">
+        <!-- Category Banner -->
+        <div class="explorer-pane-header">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span style="font-size: 2.5rem; line-height: 1;">${selectedCatObj.icon}</span>
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; flex-wrap: wrap;">
+                <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-950); margin: 0;">${selectedCatObj.name}</h2>
+                <span style="font-size: 0.75rem; font-weight: 800; background: var(--emerald-50); color: var(--emerald-700); border: 1px solid var(--emerald-200); padding: 0.2rem 0.65rem; border-radius: var(--radius-full);">
+                  ${selectedCatServices.length} Sub-Services
+                </span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">${selectedCatObj.tagline}</p>
+            </div>
+          </div>
+          <button class="btn btn-sm btn-outline" onclick="switchCategory('${selectedCatObj.key}')" style="font-weight: 700; white-space: nowrap;">
+            Open ${selectedCatObj.name.split(' ')[0]} Hub &rarr;
+          </button>
+        </div>
+
+        <!-- Subsections Cards Grid -->
+        <div class="explorer-pane-grid">
+          ${selectedCatServices.map(s => renderServiceCardHtml(s)).join('')}
+        </div>
+      </main>
     </div>
   `;
 
-  // Categorized Sections
-  categories.forEach(cat => {
-    const catServices = allServicesList.filter(s => s.category === cat.key);
-    html += `
-      <div style="grid-column: 1 / -1; margin-top: 2rem; margin-bottom: 1.25rem; padding-bottom: 0.85rem; border-bottom: 2px solid var(--surface-200); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-        <div style="display: flex; align-items: center; gap: 0.85rem;">
-          <span style="font-size: 2rem;">${cat.icon}</span>
-          <div>
-            <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-950); margin: 0; line-height: 1.2;">${cat.name}</h2>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">${cat.tagline}</p>
-          </div>
-        </div>
-        <button class="btn btn-sm btn-outline" onclick="switchCategory('${cat.key}')" style="font-weight: 700; white-space: nowrap;">
-          View Dedicated Hub (${cat.count}) &rarr;
-        </button>
-      </div>
-    `;
-
-    catServices.forEach(s => {
-      html += renderServiceCardHtml(s);
-    });
-  });
-
   grid.innerHTML = html;
 }
+
+/**
+ * Handle mouse hover over left sidebar item
+ */
+function handleExplorerHover(catKey) {
+  if (currentHoverExplorerCategory === catKey) return;
+  currentHoverExplorerCategory = catKey;
+
+  // Update active state in sidebar
+  document.querySelectorAll('.explorer-nav-item').forEach(item => {
+    if (item.getAttribute('data-cat') === catKey) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+
+  // Re-render right pane
+  updateExplorerRightPane(catKey);
+}
+
+/**
+ * Handle click on left sidebar item
+ */
+function handleExplorerClick(catKey) {
+  handleExplorerHover(catKey);
+}
+
+/**
+ * Dynamically update right pane without rebuilding left sidebar
+ */
+function updateExplorerRightPane(catKey) {
+  const pane = document.getElementById('explorerContentPane');
+  if (!pane || typeof MASTER_SERVICES_DATA === 'undefined') return;
+
+  const categories = [
+    { 
+      key: 'registrations', 
+      name: 'Company Registrations', 
+      icon: '🏢', 
+      tagline: 'MCA SPICe+ fastrack incorporations for startups, LLPs & corporate structures with 100% compliance guarantee.',
+      portal: 'Ministry of Corporate Affairs (MCA)'
+    },
+    { 
+      key: 'compliance', 
+      name: 'Statutory Compliances', 
+      icon: '⚖️', 
+      tagline: 'End-to-end statutory annual ROC filings, director KYC, statutory audits & tax governance.',
+      portal: 'MCA & Income Tax Department'
+    },
+    { 
+      key: 'licenses', 
+      name: 'Business Licenses', 
+      icon: '📜', 
+      tagline: 'Mandatory central, state & municipal regulatory licensing to trade and manufacture legally.',
+      portal: 'Central & State Regulatory Portals'
+    },
+    { 
+      key: 'itr', 
+      name: 'Income Tax Returns (ITR)', 
+      icon: '📝', 
+      tagline: 'Precision CA-assisted ITR filing for AY 2026-27 with 100% AIS, TIS, and 26AS matching.',
+      portal: 'Income Tax Department (E-Filing 2.0)'
+    }
+  ];
+
+  const catObj = categories.find(c => c.key === catKey) || categories[0];
+  const catServices = Object.values(MASTER_SERVICES_DATA).filter(s => s.category === catObj.key);
+
+  pane.innerHTML = `
+    <!-- Category Banner -->
+    <div class="explorer-pane-header">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 2.5rem; line-height: 1;">${catObj.icon}</span>
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; flex-wrap: wrap;">
+            <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-950); margin: 0;">${catObj.name}</h2>
+            <span style="font-size: 0.75rem; font-weight: 800; background: var(--emerald-50); color: var(--emerald-700); border: 1px solid var(--emerald-200); padding: 0.2rem 0.65rem; border-radius: var(--radius-full);">
+              ${catServices.length} Sub-Services
+            </span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">${catObj.tagline}</p>
+        </div>
+      </div>
+      <button class="btn btn-sm btn-outline" onclick="switchCategory('${catObj.key}')" style="font-weight: 700; white-space: nowrap;">
+        Open ${catObj.name.split(' ')[0]} Hub &rarr;
+      </button>
+    </div>
+
+    <!-- Subsections Cards Grid -->
+    <div class="explorer-pane-grid">
+      ${catServices.map(s => renderServiceCardHtml(s)).join('')}
+    </div>
+  `;
+}
+
+
 /**
  * Handle Live Search inside Category Hub
  */
