@@ -45,23 +45,42 @@ function calculateTax() {
   const newNetTaxable = Math.max(0, totalIncome - newStdDeduction);
 
   let newTaxBeforeRebate = 0;
+  let slabMath = [];
+
   if (newNetTaxable > 1500000) {
     newTaxBeforeRebate = 150000 + (newNetTaxable - 1500000) * 0.30;
+    slabMath.push({ slab: '₹15L+', rate: '30%', amount: (newNetTaxable - 1500000) * 0.30 });
+    slabMath.push({ slab: '₹12L - ₹15L', rate: '20%', amount: 60000 });
+    slabMath.push({ slab: '₹10L - ₹12L', rate: '15%', amount: 30000 });
+    slabMath.push({ slab: '₹7L - ₹10L', rate: '10%', amount: 30000 });
+    slabMath.push({ slab: '₹3L - ₹7L', rate: '5%', amount: 20000 });
   } else if (newNetTaxable > 1200000) {
     newTaxBeforeRebate = 90000 + (newNetTaxable - 1200000) * 0.20;
+    slabMath.push({ slab: '₹12L - ₹15L', rate: '20%', amount: (newNetTaxable - 1200000) * 0.20 });
+    slabMath.push({ slab: '₹10L - ₹12L', rate: '15%', amount: 30000 });
+    slabMath.push({ slab: '₹7L - ₹10L', rate: '10%', amount: 30000 });
+    slabMath.push({ slab: '₹3L - ₹7L', rate: '5%', amount: 20000 });
   } else if (newNetTaxable > 1000000) {
     newTaxBeforeRebate = 60000 + (newNetTaxable - 1000000) * 0.15;
+    slabMath.push({ slab: '₹10L - ₹12L', rate: '15%', amount: (newNetTaxable - 1000000) * 0.15 });
+    slabMath.push({ slab: '₹7L - ₹10L', rate: '10%', amount: 30000 });
+    slabMath.push({ slab: '₹3L - ₹7L', rate: '5%', amount: 20000 });
   } else if (newNetTaxable > 700000) {
     newTaxBeforeRebate = 20000 + (newNetTaxable - 700000) * 0.10;
+    slabMath.push({ slab: '₹7L - ₹10L', rate: '10%', amount: (newNetTaxable - 700000) * 0.10 });
+    slabMath.push({ slab: '₹3L - ₹7L', rate: '5%', amount: 20000 });
   } else if (newNetTaxable > 300000) {
     newTaxBeforeRebate = (newNetTaxable - 300000) * 0.05;
+    slabMath.push({ slab: '₹3L - ₹7L', rate: '5%', amount: (newNetTaxable - 300000) * 0.05 });
   } else {
     newTaxBeforeRebate = 0;
   }
 
-  // Section 87A Rebate in New Regime (Taxable income up to ₹7,00,000 has zero net tax, rebate up to ₹25k)
+  // Section 87A Rebate in New Regime (Taxable income up to ₹7,00,000 has zero net tax)
   let newTaxAfterRebate = newTaxBeforeRebate;
-  if (newNetTaxable <= 700000) {
+  let newRebateApplied = 0;
+  if (newNetTaxable <= 700000 && newTaxBeforeRebate > 0) {
+    newRebateApplied = newTaxBeforeRebate;
     newTaxAfterRebate = 0;
   }
 
@@ -70,7 +89,6 @@ function calculateTax() {
   const totalNewTax = Math.round(newTaxAfterRebate + newCess);
 
   // --- OLD REGIME COMPUTATION ---
-  // Standard Deduction in Old Regime = ₹50,000 for salaried
   const oldStdDeduction = grossSalary > 0 ? 50000 : 0;
   const totalOldDeductions = oldStdDeduction + deduction80C + deduction80D + deductionNPS + deductionHomeLoan + deductionHRA + otherDeductions;
   const oldNetTaxable = Math.max(0, totalIncome - totalOldDeductions);
@@ -86,7 +104,6 @@ function calculateTax() {
     oldTaxBeforeRebate = 0;
   }
 
-  // Section 87A Rebate in Old Regime (Taxable income up to ₹5,00,000 has zero net tax)
   let oldTaxAfterRebate = oldTaxBeforeRebate;
   if (oldNetTaxable <= 500000) {
     oldTaxAfterRebate = 0;
@@ -95,13 +112,18 @@ function calculateTax() {
   const oldCess = oldTaxAfterRebate * 0.04;
   const totalOldTax = Math.round(oldTaxAfterRebate + oldCess);
 
+  const winningTax = Math.min(totalNewTax, totalOldTax);
+  const taxDiff = Math.abs(totalOldTax - totalNewTax);
+  const monthlyTakeHome = Math.max(0, Math.round((totalIncome - winningTax) / 12));
+  const monthlySavings = Math.round(taxDiff / 12);
+
   // Store state for WhatsApp export
   currentTaxState = {
     grossSalary,
     otherIncome,
     totalNewTax,
     totalOldTax,
-    diff: Math.abs(totalOldTax - totalNewTax),
+    diff: taxDiff,
     winner: totalNewTax <= totalOldTax ? 'New Tax Regime' : 'Old Tax Regime',
     newNetTaxable,
     oldNetTaxable
@@ -118,6 +140,31 @@ function calculateTax() {
   if (elNewTax) elNewTax.textContent = formatINR(totalNewTax);
   if (elOldTax) elOldTax.textContent = formatINR(totalOldTax);
 
+  // Monthly Take-Home update
+  const elTakeHomeVal = document.getElementById('resTakeHomeMonthly');
+  const elTakeHomeSavings = document.getElementById('resTakeHomeSavings');
+  if (elTakeHomeVal) elTakeHomeVal.textContent = `${formatINR(monthlyTakeHome)} / mo`;
+  if (elTakeHomeSavings) {
+    elTakeHomeSavings.textContent = taxDiff > 0 ? `Saving +${formatINR(monthlySavings)} / mo` : `Equal monthly tax`;
+  }
+
+  // Visual Comparison Bars update
+  const barNewVal = document.getElementById('barNewTaxVal');
+  const barOldVal = document.getElementById('barOldTaxVal');
+  const barNewFill = document.getElementById('barNewTaxFill');
+  const barOldFill = document.getElementById('barOldTaxFill');
+
+  if (barNewVal) barNewVal.textContent = formatINR(totalNewTax);
+  if (barOldVal) barOldVal.textContent = formatINR(totalOldTax);
+
+  if (barNewFill && barOldFill) {
+    const maxTax = Math.max(totalNewTax, totalOldTax, 1000);
+    const newPct = Math.max(4, Math.round((totalNewTax / maxTax) * 100));
+    const oldPct = Math.max(4, Math.round((totalOldTax / maxTax) * 100));
+    barNewFill.style.width = `${newPct}%`;
+    barOldFill.style.width = `${oldPct}%`;
+  }
+
   // Table Breakdowns
   const elNewTaxable = document.getElementById('resNewTaxable');
   const elOldTaxable = document.getElementById('resOldTaxable');
@@ -131,22 +178,50 @@ function calculateTax() {
 
   // Recommendation Banner
   if (totalNewTax < totalOldTax) {
-    const diff = totalOldTax - totalNewTax;
     elCardNew?.classList.add('winner');
     elCardOld?.classList.remove('winner');
     if (elBannerTitle) elBannerTitle.textContent = `🎉 New Tax Regime (AY 2026-27) is best for you!`;
-    if (elBannerDesc) elBannerDesc.textContent = `You save ${formatINR(diff)} in taxes under the revised New Regime with ₹75k Standard Deduction.`;
+    if (elBannerDesc) elBannerDesc.textContent = `You save ${formatINR(taxDiff)} in taxes under the revised New Regime with ₹75k Standard Deduction.`;
   } else if (totalOldTax < totalNewTax) {
-    const diff = totalNewTax - totalOldTax;
     elCardOld?.classList.add('winner');
     elCardNew?.classList.remove('winner');
     if (elBannerTitle) elBannerTitle.textContent = `🎉 Old Tax Regime is best for you!`;
-    if (elBannerDesc) elBannerDesc.textContent = `Due to substantial Chapter VI-A deductions, you save ${formatINR(diff)} in taxes under the Old Regime.`;
+    if (elBannerDesc) elBannerDesc.textContent = `Due to substantial deductions, you save ${formatINR(taxDiff)} in taxes under the Old Regime.`;
   } else {
     elCardNew?.classList.remove('winner');
     elCardOld?.classList.remove('winner');
     if (elBannerTitle) elBannerTitle.textContent = `⚖️ Both Regimes result in equal tax liability`;
     if (elBannerDesc) elBannerDesc.textContent = `Your tax liability is identical in both options (${formatINR(totalNewTax)}).`;
+  }
+
+  // Render Detailed Slab Computation
+  const slabBody = document.getElementById('slabAccordionBody');
+  if (slabBody) {
+    slabBody.innerHTML = `
+      <table style="width: 100%; border-collapse: collapse; margin-top: 0.25rem;">
+        <tr style="border-bottom: 1px solid var(--surface-200); font-weight: 700; color: var(--text-subtle);">
+          <th style="text-align: left; padding: 0.35rem 0;">Slab Range</th>
+          <th style="text-align: center; padding: 0.35rem 0;">Rate</th>
+          <th style="text-align: right; padding: 0.35rem 0;">Tax Computed</th>
+        </tr>
+        <tr><td>₹0 to ₹3,00,000</td><td style="text-align: center;">Nil</td><td style="text-align: right;">₹0</td></tr>
+        ${slabMath.reverse().map(s => `
+          <tr><td>${s.slab}</td><td style="text-align: center;">${s.rate}</td><td style="text-align: right;">${formatINR(s.amount)}</td></tr>
+        `).join('')}
+        ${newStdDeduction > 0 ? `<tr style="color: var(--emerald-700); font-weight: 600;"><td>Less: Std. Deduction</td><td style="text-align: center;">Flat</td><td style="text-align: right;">-₹75,000</td></tr>` : ''}
+        ${newRebateApplied > 0 ? `<tr style="color: var(--emerald-700); font-weight: 600;"><td>Less: Rebate u/s 87A</td><td style="text-align: center;">100%</td><td style="text-align: right;">-${formatINR(newRebateApplied)}</td></tr>` : ''}
+        <tr><td>Add: 4% Health &amp; Education Cess</td><td style="text-align: center;">4%</td><td style="text-align: right;">+${formatINR(newCess)}</td></tr>
+        <tr style="font-weight: 800; border-top: 1.5px solid var(--surface-300); color: var(--primary-950);">
+          <td>Net Total Tax Payable</td><td></td><td style="text-align: right; color: var(--emerald-600);">${formatINR(totalNewTax)}</td>
+        </tr>
+      </table>
+    `;
+  }
+
+  // Update slider if not currently dragging
+  const slider = document.getElementById('calcGrossSalarySlider');
+  if (slider && document.activeElement !== slider) {
+    slider.value = grossSalary;
   }
 
   // Also update advance tax if present
@@ -191,15 +266,25 @@ function calculateAdvanceTax(estimatedAnnualTax) {
   const q3 = Math.round(baseTax * 0.75);
   const q4 = baseTax;
 
+  const q1Payable = q1;
+  const q2Payable = Math.max(0, q2 - q1);
+  const q3Payable = Math.max(0, q3 - q2);
+  const q4Payable = Math.max(0, q4 - q3);
+
   const elQ1 = document.getElementById('advResQ1');
   const elQ2 = document.getElementById('advResQ2');
   const elQ3 = document.getElementById('advResQ3');
   const elQ4 = document.getElementById('advResQ4');
 
-  if (elQ1) elQ1.textContent = formatINR(q1);
-  if (elQ2) elQ2.textContent = formatINR(q2);
-  if (elQ3) elQ3.textContent = formatINR(q3);
-  if (elQ4) elQ4.textContent = formatINR(q4);
+  if (elQ1) elQ1.innerHTML = `${formatINR(q1)} <span style="display:block; font-size: 0.72rem; color: var(--emerald-600); font-weight: 700;">Pay: ${formatINR(q1Payable)}</span>`;
+  if (elQ2) elQ2.innerHTML = `${formatINR(q2)} <span style="display:block; font-size: 0.72rem; color: var(--emerald-600); font-weight: 700;">Pay: ${formatINR(q2Payable)}</span>`;
+  if (elQ3) elQ3.innerHTML = `${formatINR(q3)} <span style="display:block; font-size: 0.72rem; color: var(--emerald-600); font-weight: 700;">Pay: ${formatINR(q3Payable)}</span>`;
+  if (elQ4) elQ4.innerHTML = `${formatINR(q4)} <span style="display:block; font-size: 0.72rem; color: var(--emerald-600); font-weight: 700;">Pay: ${formatINR(q4Payable)}</span>`;
+
+  const slider = document.getElementById('advTaxAnnualAmountSlider');
+  if (slider && document.activeElement !== slider) {
+    slider.value = baseTax;
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -541,3 +626,41 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateHRA();
   calculateAdvanceTax();
 });
+
+
+// Sync range slider with text input
+function syncSalarySlider(val) {
+  const input = document.getElementById('calcGrossSalary');
+  if (input) {
+    input.value = val;
+    calculateTax();
+  }
+}
+
+// Sync Advance Tax slider
+function syncAdvTaxSlider(val) {
+  const input = document.getElementById('advTaxAnnualAmount');
+  if (input) {
+    input.value = val;
+    calculateAdvanceTax(parseFloat(val));
+  }
+}
+
+// Sync 44ADA slider
+function syncAdaSlider(val) {
+  const input = document.getElementById('adaGrossReceipts');
+  if (input) {
+    input.value = val;
+    calculate44ADA();
+  }
+}
+
+// Toggle Slab Accordion
+function toggleSlabAccordion() {
+  const body = document.getElementById('slabAccordionBody');
+  const icon = document.getElementById('slabToggleIcon');
+  if (body) {
+    body.classList.toggle('open');
+    if (icon) icon.textContent = body.classList.contains('open') ? '−' : '+';
+  }
+}

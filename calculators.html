@@ -681,6 +681,14 @@
                   <span class="currency-symbol">₹</span>
                   <input type="number" id="calcGrossSalary" class="calc-field" value="1250000" step="10000">
                 </div>
+                <!-- Interactive Range Slider -->
+                <div class="calc-range-wrap">
+                  <input type="range" id="calcGrossSalarySlider" min="300000" max="10000000" step="25000" value="1250000" class="calc-range-slider" oninput="syncSalarySlider(this.value)">
+                </div>
+                <div class="calc-range-limits">
+                  <span>₹3 Lakhs</span>
+                  <span>₹1 Crore</span>
+                </div>
               </div>
 
               <div class="calc-input-group">
@@ -768,11 +776,52 @@
                   </div>
                 </div>
 
+                <!-- Estimated Monthly In-Hand Salary Card -->
+                <div class="take-home-card">
+                  <div>
+                    <span class="take-home-title">Estimated Monthly In-Hand Pay</span>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Net post-tax pay under optimal regime</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div class="take-home-val" id="resTakeHomeMonthly">₹0 / mo</div>
+                    <span id="resTakeHomeSavings" style="font-size: 0.75rem; font-weight: 700; color: var(--emerald-700);">Saving +₹0 / mo</span>
+                  </div>
+                </div>
+
+                <!-- Visual Tax Comparison Bars -->
+                <div class="tax-visual-bars">
+                  <div class="tax-bar-row">
+                    <div class="tax-bar-label">
+                      <span>⚡ New Regime (AY 2026-27)</span>
+                      <strong id="barNewTaxVal" style="color: var(--emerald-600);">₹0</strong>
+                    </div>
+                    <div class="tax-bar-track">
+                      <div class="tax-bar-fill new-regime" id="barNewTaxFill" style="width: 50%;"></div>
+                    </div>
+                  </div>
+                  <div class="tax-bar-row">
+                    <div class="tax-bar-label">
+                      <span>📜 Old Regime</span>
+                      <strong id="barOldTaxVal" style="color: #b45309;">₹0</strong>
+                    </div>
+                    <div class="tax-bar-track">
+                      <div class="tax-bar-fill old-regime" id="barOldTaxFill" style="width: 50%;"></div>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- Recommendation Banner -->
                 <div class="recommendation-banner">
                   <h4 id="recBannerTitle">Comparing Regimes...</h4>
                   <p id="recBannerDesc">Loading recommendation...</p>
                 </div>
+
+                <!-- Detailed Tax Slab Computation Accordion -->
+                <button type="button" class="slab-accordion-toggle" onclick="toggleSlabAccordion()">
+                  <span>📊 View Detailed Slab-by-Slab Computation (AY 2026-27)</span>
+                  <span id="slabToggleIcon">+</span>
+                </button>
+                <div id="slabAccordionBody" class="slab-accordion-body"></div>
 
                 <!-- Breakdown Table -->
                 <table class="breakdown-table">
@@ -829,6 +878,13 @@
                 <div class="calc-input-wrap">
                   <span class="currency-symbol">₹</span>
                   <input type="number" id="advTaxAnnualAmount" class="calc-field" value="120000" step="5000">
+                </div>
+                <div class="calc-range-wrap">
+                  <input type="range" id="advTaxAnnualAmountSlider" min="10000" max="1000000" step="5000" value="120000" class="calc-range-slider" oninput="syncAdvTaxSlider(this.value)">
+                </div>
+                <div class="calc-range-limits">
+                  <span>₹10,000</span>
+                  <span>₹10 Lakhs</span>
                 </div>
               </div>
 
@@ -897,6 +953,13 @@
                 <div class="calc-input-wrap">
                   <span class="currency-symbol">₹</span>
                   <input type="number" id="adaGrossReceipts" class="calc-field" value="2500000" step="50000">
+                </div>
+                <div class="calc-range-wrap">
+                  <input type="range" id="adaGrossReceiptsSlider" min="500000" max="7500000" step="50000" value="2500000" class="calc-range-slider" oninput="syncAdaSlider(this.value)">
+                </div>
+                <div class="calc-range-limits">
+                  <span>₹5 Lakhs</span>
+                  <span>₹75 Lakhs (Statutory Limit)</span>
                 </div>
               </div>
 
