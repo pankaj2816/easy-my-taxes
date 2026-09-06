@@ -4487,5 +4487,277 @@ const MASTER_SERVICES_DATA = {
         "a": "Form 10B is required if the trust's total income exceeds \u20b95 Crores, or if it received any foreign contribution, or applied funds outside India. Form 10BB is required for other trusts where income is up to \u20b95 Crores without foreign funds."
       }
     ]
+  },
+  "virtual-cfo": {
+    "id": "virtual-cfo",
+    "category": "compliance",
+    "categoryLabel": "Compliance & Filings",
+    "icon": "\ud83d\udcbc",
+    "badge": "Strategic Financial Leadership",
+    "title": "Virtual CFO & Accounting Retainer",
+    "tagline": "Senior CA financial leadership, cloud bookkeeping on Zoho/Tally, executive monthly MIS, and cash flow governance without the cost of a full-time CFO.",
+    "timeline": "Monthly Retainer",
+    "govtPortal": "ICAI & Ministry of Corporate Affairs",
+    "filingMode": "100% Online Paperless",
+    "overview": "Get high-level strategic finance leadership, daily cloud bookkeeping, payroll compliance, and board-level MIS reporting directed by CA Pradeep Agarwal. Designed for high-growth startups, SMEs, and funded ventures requiring institutional financial controls without paying full-time executive salaries.",
+    "detailedOverview": "\n    <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n      A <strong>Virtual CFO (Chief Financial Officer)</strong> provides strategic finance leadership, operational accounting oversight, cash flow governance, and investor reporting on a flexible outsourced model. Led by <strong>CA Pradeep Agarwal (FCA, DISA)</strong>, our retainer service integrates seamlessly with your leadership team.\n    </p>\n    <p>\n      We transition your business to real-time cloud accounting (Zoho Books, Tally Prime on Cloud, or QuickBooks), establish internal financial controls, handle monthly payroll with statutory deductions (PF, ESIC, Professional Tax, TDS), formulate unit economics, and prepare investor-grade board reporting.\n    </p>\n  ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\ude80",
+        "title": "Funded Tech Startups",
+        "desc": "Startups requiring investor reporting, monthly burn-rate tracking, and financial forecasting."
+      },
+      {
+        "icon": "\ud83d\udcc8",
+        "title": "Scaling SMEs & Agencies",
+        "desc": "Enterprises crossing \u20b92Cr to \u20b950Cr revenue needing senior financial governance."
+      },
+      {
+        "icon": "\ud83d\uded2",
+        "title": "E-Commerce Brands",
+        "desc": "Brands with multi-channel marketplace settlements, inventory valuation, and payment reconciliation."
+      },
+      {
+        "icon": "\ud83c\udf10",
+        "title": "Foreign Subsidiaries",
+        "desc": "Indian subsidiaries requiring Indian GAAP compliance and monthly reporting to overseas parent."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83c\udfe2",
+        "label": "Constitution",
+        "value": "Any Operating Entity",
+        "desc": "Private Limited Company, LLP, Partnership, or Sole Proprietorship with active bank accounts."
+      },
+      {
+        "icon": "\ud83d\udcbb",
+        "label": "Software Integration",
+        "value": "Cloud Bookkeeping",
+        "desc": "Zoho Books, Tally Prime, QuickBooks, or SAP B1 access for transaction management."
+      },
+      {
+        "icon": "\ud83d\udcca",
+        "label": "Financial Volume",
+        "value": "Monthly Scope Defined",
+        "desc": "Defined transaction volume, invoicing frequency, and reporting cycles."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "70% Cost Savings vs In-House CFO",
+        "desc": "Gain senior Chartered Accountant direction at a fraction of the cost of hiring a full-time executive CFO."
+      },
+      {
+        "title": "Real-Time Cloud MIS Dashboards",
+        "desc": "Monthly executive summaries showing revenue margins, burn rate, runway, debtor aging, and net profitability."
+      },
+      {
+        "title": "Zero Statutory Compliance Defaults",
+        "desc": "Automated reconciliation of TDS, GST, PF, ESIC, Advance Tax, and ROC filings with zero penalty risk."
+      }
+    ],
+    "documents": [
+      "Company Incorporation Certificate (COI) / Partnership Deed",
+      "Monthly Bank Account Statements and Payment Gateway Ledgers",
+      "Customer Sales Invoices and Vendor Purchase Bills",
+      "Payroll Registers showing employee salaries and deductions",
+      "Prior year Audited Financial Statements and ITR acknowledgements"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Diagnostic & Chart of Accounts Setup",
+        "desc": "CA reviews existing books, standardizes Chart of Accounts, and sets up cloud software."
+      },
+      {
+        "step": "2",
+        "title": "Daily / Weekly Transaction Bookkeeping",
+        "desc": "Dedicated accountants record invoices, expenses, bank reconciliations, and payroll."
+      },
+      {
+        "step": "3",
+        "title": "Monthly Statutory Reconciliation",
+        "desc": "Reconciling GST, TDS, PF, and advance tax before statutory payment cutoffs."
+      },
+      {
+        "step": "4",
+        "title": "Executive MIS & Board Presentation",
+        "desc": "Monthly CFO review meeting analyzing gross margins, burn rate, and strategic financial advice."
+      }
+    ],
+    "deliverables": [
+      "Monthly Executive Management Information System (MIS) Report",
+      "Reconciled Profit & Loss Account, Balance Sheet, and Cash Flow Statement",
+      "Monthly Statutory Tax Compliance Summary (GST, TDS, PF, ESIC)",
+      "Debtor / Creditor Aging and Working Capital Optimization Report",
+      "Quarterly Board Meeting Financial Review Presentation"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Monthly",
+        "timeline": "By 7th of Every Month",
+        "title": "Statutory TDS & PF Payments",
+        "desc": "Remittance of monthly payroll TDS, contractor TDS, and provident fund dues."
+      },
+      {
+        "badge": "Monthly",
+        "timeline": "By 10th of Every Month",
+        "title": "Executive MIS Presentation",
+        "desc": "Detailed financial review with company founders and leadership."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is included in the Virtual CFO service?",
+        "a": "Our Virtual CFO service encompasses complete bookkeeping oversight, weekly accounts payable/receivable management, payroll processing with statutory deductions (PF, ESIC, TDS), monthly financial MIS reports, budgeting, cash flow forecasting, and direct representation before auditors and investors."
+      },
+      {
+        "q": "How does Easy My Taxes access our financial data securely?",
+        "a": "We operate strictly on secure cloud accounting platforms (Zoho Books, Tally on Cloud, QuickBooks) with role-based user access. Your bank credentials are never shared; we only utilize read-only bank feeds or monthly statements."
+      },
+      {
+        "q": "Can a Virtual CFO help during fundraising due diligence?",
+        "a": "Yes! CA Pradeep Agarwal has guided multiple startups through VC and angel investment rounds, preparing financial models, unit economics, data room documents, and resolving auditor queries."
+      }
+    ]
+  },
+  "trademark-registration": {
+    "id": "trademark-registration",
+    "category": "licenses",
+    "categoryLabel": "Licenses & Certifications",
+    "icon": "\u2122\ufe0f",
+    "badge": "Intellectual Property Protection",
+    "title": "Trademark Registration & Brand Protection",
+    "tagline": "Protect your brand name, logo, and slogan from competitors with fast-track trademark search, Form TM-A filing, and use the \u2122 symbol in 24 hours.",
+    "timeline": "24 Hours (\u2122 Filing)",
+    "govtPortal": "Controller General of Patents, Designs & Trademarks (CGPDTM)",
+    "filingMode": "100% Online Paperless",
+    "overview": "Legally safeguard your business brand name, logo, device mark, and slogan across 45 statutory classes under the Trade Marks Act 1999. Managed by CA Pradeep Agarwal's IP practice, we conduct deep prior-art conflict searches, file Form TM-A electronically to grant immediate \u2122 symbol rights, and handle departmental examination objections.",
+    "detailedOverview": "\n    <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n      A <strong>Registered Trademark (\u00ae symbol)</strong> is an exclusive statutory intellectual property right granted by the Government of India under the <strong>Trade Marks Act 1999</strong>. It confers exclusive legal ownership over your brand name, company name, logo, or tagline across India for 10 years (renewable indefinitely).\n    </p>\n    <p>\n      Without a registered trademark, competitors can freely copy your brand identity, launch copycat products, or even file a trademark first to legally ban you from using your own brand! Filing Form TM-A gives you the legal right to use the <strong>\u2122 symbol within 24 hours</strong>, blocks competitors, and allows enrollment in Amazon Brand Registry to ban counterfeit sellers.\n    </p>\n  ",
+    "whoIsItFor": [
+      {
+        "icon": "\ud83d\ude80",
+        "title": "Startups & Tech Founders",
+        "desc": "Protecting software brand names, app titles, and proprietary platform logos."
+      },
+      {
+        "icon": "\ud83d\udecd\ufe0f",
+        "title": "D2C Brands & Manufacturers",
+        "desc": "Securing product brand names, packaging labels, and enrolling in Amazon Brand Registry."
+      },
+      {
+        "icon": "\u2615",
+        "title": "Restaurants & Retail Outlets",
+        "desc": "Protecting restaurant chain names, cloud kitchen branding, and franchise trademarks."
+      },
+      {
+        "icon": "\ud83d\udcbc",
+        "title": "Service Providers & Creators",
+        "desc": "Consultants, educational institutes, media creators, and design agencies."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "\ud83c\udd94",
+        "label": "Applicant Constitution",
+        "value": "Individual or Corporate",
+        "desc": "Can be applied by an Individual, Proprietor, Startup (DPIIT), MSME, or Company."
+      },
+      {
+        "icon": "\ud83d\udd0d",
+        "label": "Distinctiveness",
+        "value": "Unique & Non-Descriptive",
+        "desc": "Brand name must be distinctive and not generic or identical to existing marks."
+      },
+      {
+        "icon": "\ud83d\udcd1",
+        "label": "MSME / Startup Benefit",
+        "value": "50% Govt Fee Rebate",
+        "desc": "Valid Udyam Certificate or DPIIT recognition secures 50% discount on government filing fees."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Immediate \u2122 Symbol Rights",
+        "desc": "Start using the \u2122 symbol beside your brand name immediately within 24 hours of filing Form TM-A."
+      },
+      {
+        "title": "Nationwide Monopoly & Protection",
+        "desc": "Exclusive legal rights across India to prevent competitors from using identical or deceptively similar marks."
+      },
+      {
+        "title": "Amazon Brand Registry & Anti-Counterfeit",
+        "desc": "Mandatory prerequisite to unlock Amazon Brand Registry, A+ Content, and remove fake listing hijackers."
+      }
+    ],
+    "documents": [
+      "Soft copy of Brand Name / Wordmark or high-resolution Logo (JPEG/PNG)",
+      "PAN Card & Aadhaar Card of Applicant / Authorized Signatory",
+      "Certificate of Incorporation (COI) / Partnership Deed (if applying as entity)",
+      "MSME / Udyam Certificate (to claim 50% government fee concession)",
+      "User Affidavit & Proof of Prior Use (if brand was in use prior to application date)",
+      "Signed Form TM-48 (Power of Attorney authorizing CA representation)"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Comprehensive Prior-Art Search",
+        "desc": "Deep public search across 45 classes on the IP India database to ensure zero conflict."
+      },
+      {
+        "step": "2",
+        "title": "Class Selection & Drafting",
+        "desc": "Identifying appropriate Nice Classification classes (Class 1-34 for Goods, Class 35-45 for Services)."
+      },
+      {
+        "step": "3",
+        "title": "Form TM-A Online Submission",
+        "desc": "Official digital filing on the IP India portal granting immediate \u2122 symbol usage."
+      },
+      {
+        "step": "4",
+        "title": "Examination & Registration",
+        "desc": "Responding to examination report objections, publication in Trade Marks Journal, and \u00ae certificate issuance."
+      }
+    ],
+    "deliverables": [
+      "Official Trademark Application Filing Receipt with Unique Application Number",
+      "Formal Clearance to use \u2122 Symbol legally in India",
+      "Official Trademark Examination Tracking & Alert Advisory",
+      "Final Certificate of Trademark Registration with \u00ae Symbol (upon grant)"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Statutory",
+        "timeline": "Within 30 Days of Notice",
+        "title": "Reply to Examination Report",
+        "desc": "If the trademark examiner issues Section 9 or 11 objections, file a legal reply within 30 days."
+      },
+      {
+        "badge": "Long-Term",
+        "timeline": "Every 10 Years",
+        "title": "Trademark Renewal (Form TM-R)",
+        "desc": "Renew trademark every 10 years to maintain permanent lifetime brand ownership."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between \u2122 and \u00ae symbols?",
+        "a": "The \u2122 symbol indicates that a trademark application has been officially filed with the Trade Marks Registry, and you can use it immediately upon receipt of the application number. The \u00ae symbol can only be used once the trademark has completed all stages, survived journal publication, and the official Certificate of Registration is issued."
+      },
+      {
+        "q": "How long is a trademark valid in India?",
+        "a": "A registered trademark is valid for 10 years from the date of filing. It can be renewed indefinitely every 10 years by filing Form TM-R."
+      },
+      {
+        "q": "Does having a registered company name automatically protect my brand as a trademark?",
+        "a": "NO! Registering a company with the MCA only registers a legal corporate entity; it does NOT grant intellectual property protection. Another person can register your brand name as a trademark and legally force you to change your company name. Trademark registration under the Trade Marks Act 1999 is mandatory."
+      },
+      {
+        "q": "Can an individual or startup claim 50% government fee discount on trademark?",
+        "a": "YES! Under the Trade Marks Rules, individuals, DPIIT recognized startups, and MSME/Udyam registered businesses receive a flat 50% discount on official government fees compared to large corporate entities."
+      }
+    ]
   }
 };
