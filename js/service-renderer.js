@@ -515,7 +515,7 @@ function renderAllServicesSmartView(grid, allServicesList, activeCat = currentHo
         }).join('')}
 
         <!-- Advisory Help Card in Left Sidebar -->
-        <div style="margin-top: 1rem; background: linear-gradient(135deg, #0b1528, #172a4d); border-radius: var(--radius-xl); padding: 1.25rem; color: #ffffff; border: 1px solid rgba(255,255,255,0.08);">
+        <div class="explorer-sidebar-advisory" style="margin-top: 1rem; background: linear-gradient(135deg, #0b1528, #172a4d); border-radius: var(--radius-xl); padding: 1.25rem; color: #ffffff; border: 1px solid rgba(255,255,255,0.08);">
           <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
             <span style="font-size: 1.1rem;">💬</span>
             <strong style="font-size: 0.85rem;">Need Structuring Help?</strong>
@@ -586,6 +586,13 @@ function handleExplorerHover(catKey) {
  */
 function handleExplorerClick(catKey) {
   handleExplorerHover(catKey);
+  if (window.innerWidth <= 1024) {
+    const pane = document.getElementById('explorerContentPane');
+    if (pane) {
+      const topPos = pane.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({ top: topPos, behavior: 'smooth' });
+    }
+  }
 }
 
 /**

@@ -422,6 +422,7 @@ function initMobileNav() {
   closeBtn?.addEventListener('click', closeNav);
   overlay?.addEventListener('click', closeNav);
   drawerLinks.forEach(l => l.addEventListener('click', closeNav));
+  document.querySelectorAll('.mobile-sublink').forEach(l => l.addEventListener('click', closeNav));
 }
 
 // Render Service Grid with Category + Live Keyword Search
