@@ -1851,3 +1851,19 @@
   pointer-events: none;
 }
 
+/* CA Leadership Spotlight Hub */
+.ca-hub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .ca-hub-grid {
+    grid-template-columns: 1.35fr 1fr;
+    gap: 3.5rem;
+  }
+}
+
+
