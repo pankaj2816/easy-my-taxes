@@ -2253,7 +2253,7 @@ const MASTER_SERVICES_DATA = {
     "icon": "\ud83d\udcdc",
     "badge": "Master Licensing Hub",
     "title": "Business Licenses & Certifications Hub (2026)",
-    "tagline": "End-to-end statutory licensing: FSSAI, Trade License, GST, MSME, BIS, ISO, and Drug Licenses.",
+    "tagline": "End-to-end statutory licensing: FSSAI, Trade License, GST, MSME, and ISO Certification.",
     "timeline": "3 - 10 Days",
     "govtPortal": "Central & State Licensing Authorities",
     "filingMode": "100% Online Paperless",
@@ -2269,7 +2269,7 @@ const MASTER_SERVICES_DATA = {
       },
       {
         "title": "Access Government Subsidies",
-        "desc": "MSME and BIS registered units qualify for priority sector lending, collateral-free loans, and subsidies."
+        "desc": "MSME registered units qualify for priority sector lending, collateral-free loans, and subsidies."
       }
     ],
     "documents": [
@@ -2845,66 +2845,6 @@ const MASTER_SERVICES_DATA = {
       }
     ]
   },
-  "bis-registration": {
-    "id": "bis-registration",
-    "category": "licenses",
-    "categoryLabel": "Licenses & Certifications",
-    "icon": "\ud83d\udee1\ufe0f",
-    "badge": "ISI Mark & CRS",
-    "title": "BIS Registration (ISI Mark & CRS Certification)",
-    "tagline": "Bureau of Indian Standards certification for electronics, industrial goods & consumer products.",
-    "timeline": "15 - 30 Days",
-    "govtPortal": "Bureau of Indian Standards (Manakonline)",
-    "filingMode": "100% Online Paperless",
-    "overview": "The Bureau of Indian Standards (BIS) mandates quality and safety certifications for products sold in the Indian market. The Compulsory Registration Scheme (CRS) applies to electronics and IT products (laptops, batteries, LED lights), while the ISI Mark certification applies to industrial, chemical, and building materials.",
-    "benefits": [
-      {
-        "title": "Compulsory Market Access in India",
-        "desc": "Goods under mandatory BIS orders cannot be imported, distributed, or sold without BIS approval."
-      },
-      {
-        "title": "ISI Mark Safety Trust",
-        "desc": "The prestigious ISI mark provides immediate quality validation for consumers and institutional buyers."
-      },
-      {
-        "title": "Customs Import Clearance",
-        "desc": "Prevents immediate seizure of foreign electronics and equipment at Indian ports."
-      }
-    ],
-    "documents": [
-      "Manufacturing Factory License & Machinery list",
-      "Test Reports from BIS Recognized Laboratory",
-      "Trademark Certificate / Brand Authorization",
-      "Authorized Indian Representative (AIR) details for foreign manufacturers"
-    ],
-    "steps": [
-      {
-        "step": "1",
-        "title": "Lab Testing",
-        "desc": "Submitting product samples to an NABL/BIS accredited testing laboratory."
-      },
-      {
-        "step": "2",
-        "title": "Manakonline Filing",
-        "desc": "Uploading test reports and manufacturing documentation onto the BIS portal."
-      },
-      {
-        "step": "3",
-        "title": "Scrutiny & Grant",
-        "desc": "BIS officers review reports and grant official Registration / ISI License."
-      }
-    ],
-    "deliverables": [
-      "Official BIS Certificate of Registration (R-Number)",
-      "Permission to use the Standard ISI Mark / CRS Logo"
-    ],
-    "faqs": [
-      {
-        "q": "What is the validity of a BIS CRS registration?",
-        "a": "BIS CRS registration is typically granted for 2 years and can be renewed periodically."
-      }
-    ]
-  },
   "iso-certification": {
     "id": "iso-certification",
     "category": "licenses",
@@ -3022,126 +2962,6 @@ const MASTER_SERVICES_DATA = {
       {
         "q": "Do all states in India levy Professional Tax?",
         "a": "No, Professional Tax is levied by specific states including Maharashtra, Karnataka, West Bengal, Telangana, Andhra Pradesh, Gujarat, and Tamil Nadu. Delhi and Haryana currently do not levy PT."
-      }
-    ]
-  },
-  "drug-license": {
-    "id": "drug-license",
-    "category": "licenses",
-    "categoryLabel": "Licenses & Certifications",
-    "icon": "\ud83d\udc8a",
-    "badge": "State FDA / CDSCO",
-    "title": "Retail & Wholesale Drug License",
-    "tagline": "State Food & Drug Administration (FDA) license for retail pharmacies, wholesalers & distributors.",
-    "timeline": "15 - 25 Days",
-    "govtPortal": "State FDA / CDSCO Portal",
-    "filingMode": "100% Online Paperless",
-    "overview": "Under the Drugs and Cosmetics Act 1940, any commercial enterprise selling, distributing, or stocking pharmaceutical medicines, medical devices, or cosmetics must obtain a Retail Drug License (Form 20/21) or Wholesale Drug License (Form 20B/21B) from the State Licensing Authority.",
-    "benefits": [
-      {
-        "title": "Compulsory Authority for Medicines",
-        "desc": "Strict legal prerequisite to purchase and sell allopathic, homeopathic, and ayurvedic medicines."
-      },
-      {
-        "title": "Retail Pharmacy & Online E-Pharmacy",
-        "desc": "Mandatory license to open retail chemist counters and list on online medical apps."
-      },
-      {
-        "title": "Wholesale Medicine Distribution",
-        "desc": "Enables distribution partnerships with pharmaceutical giants like Sun Pharma, Cipla, and Abbott."
-      }
-    ],
-    "documents": [
-      "Registered Pharmacist Diploma/Degree Certificate & State Pharmacy Council Registration",
-      "Appointment Letter & Pharmacist Bio-data",
-      "Premises Blueprint / Layout (minimum 10 sq. meters for retail, 15 sq. meters for wholesale)",
-      "Refrigeration facility proof (Refrigerator purchase bill) with temperature logs"
-    ],
-    "steps": [
-      {
-        "step": "1",
-        "title": "Premises & Pharmacist Check",
-        "desc": "Confirming minimum area, cold storage, and qualified registered pharmacist credentials."
-      },
-      {
-        "step": "2",
-        "title": "FDA Portal Submission",
-        "desc": "Uploading affidavits, blueprints, and paying government statutory inspection fees."
-      },
-      {
-        "step": "3",
-        "title": "Drug Inspector Site Visit",
-        "desc": "Assisting during physical premises inspection by Drug Inspector before formal license grant."
-      }
-    ],
-    "deliverables": [
-      "Official Form 20 & 21 (Retail) or Form 20B & 21B (Wholesale) Drug License",
-      "Pharmacy Inspection Endorsement & Record Register Templates"
-    ],
-    "faqs": [
-      {
-        "q": "Can a non-pharmacist open a medical store?",
-        "a": "Yes, any business owner can establish a pharmacy company, provided they hire a full-time certified Registered Pharmacist to supervise dispensing."
-      }
-    ]
-  },
-  "fire-noc": {
-    "id": "fire-noc",
-    "category": "licenses",
-    "categoryLabel": "Licenses & Certifications",
-    "icon": "\ud83d\udd25",
-    "badge": "State Fire Safety Dept",
-    "title": "Fire Safety NOC & Clearance Certificate",
-    "tagline": "State Fire Services NOC required for commercial buildings, restaurants, factories & warehouses.",
-    "timeline": "10 - 20 Days",
-    "govtPortal": "State Fire & Emergency Services",
-    "filingMode": "100% Online Paperless",
-    "overview": "A Fire Safety NOC (No Objection Certificate) is issued by the State Fire Services Department certifying that a commercial building, hotel, hospital, manufacturing factory, or school is equipped with compliant fire prevention, alarm, and emergency evacuation systems according to the National Building Code (NBC).",
-    "benefits": [
-      {
-        "title": "Mandatory for Trade License & Health NOC",
-        "desc": "Prerequisite clearance to obtain municipal trade licenses, excise licenses, and hotel approvals."
-      },
-      {
-        "title": "Insurance Claim Protection",
-        "desc": "Commercial property fire and casualty insurance claims are rejected if Fire NOC is missing."
-      },
-      {
-        "title": "Protection of Life & Property",
-        "desc": "Ensures full compliance with National Building Code fire containment norms."
-      }
-    ],
-    "documents": [
-      "Building Architectural Floor Plans and Fire System Layout",
-      "List of installed fire safety equipment (Extinguishers, Hose reels, Sprinklers, Hydrants)",
-      "Property Tax receipt and ownership/lease deed",
-      "Architect Certificate confirming fire exits and passage widths"
-    ],
-    "steps": [
-      {
-        "step": "1",
-        "title": "Site Audit & Equipment Check",
-        "desc": "Inspecting installed extinguishers, alarms, pumps, and fire escapes."
-      },
-      {
-        "step": "2",
-        "title": "Fire Department Submission",
-        "desc": "Submitting architectural blueprints to the Chief Fire Officer (CFO)."
-      },
-      {
-        "step": "3",
-        "title": "CFO Site Inspection",
-        "desc": "Fire department conducts physical drill inspection and issues official Fire NOC."
-      }
-    ],
-    "deliverables": [
-      "Official Fire Safety Certificate / NOC from Chief Fire Officer",
-      "Fire Evacuation Plan & Emergency Protocol Signage Pack"
-    ],
-    "faqs": [
-      {
-        "q": "What is the validity period of a Fire Safety NOC?",
-        "a": "Fire NOC is typically valid for 1 to 3 years depending on the state and building classification, after which annual audits and renewals are required."
       }
     ]
   },

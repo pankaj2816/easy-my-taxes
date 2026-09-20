@@ -96,10 +96,10 @@ const CATEGORY_META = {
     badge: 'Central & State Statutory Licensing Hub (2026)',
     title: 'Business Licenses & Central/State Certifications',
     tagline: 'Procure mandatory central, state, and municipal statutory licenses to trade, manufacture, and operate legally without regulatory interruption.',
-    portal: 'DGFT, FSSAI, BIS, MSME & Municipal Authorities',
+    portal: 'DGFT, FSSAI, MSME & Municipal Authorities',
     timeline: '24 Hours to 15 Working Days',
     chips: [
-      '⚡ 13 Statutory Licenses',
+      '⚡ 10 Statutory Licenses',
       '🚀 Fastrack Approval Guarantee',
       '📄 100% Paperless Online Processing',
       '🏛️ Government Approved Certification'
@@ -174,7 +174,7 @@ const STATUTORY_DEFAULTS = {
       { icon: '🛍️', title: 'Retailers & Shopkeepers', desc: 'Procure mandatory Shop & Establishment (Gumasta) and municipal Trade Licenses.' },
       { icon: '🍽️', title: 'Food Business Operators', desc: 'Mandatory FSSAI Registration or State/Central License for restaurants, cloud kitchens & FMCG.' },
       { icon: '🌐', title: 'Exporters & Importers', desc: 'Procure 10-digit DGFT Import Export Code (IEC) to trade globally without barriers.' },
-      { icon: '🏭', title: 'Manufacturers & Brands', desc: 'Obtain MSME / Udyam priority certifications, BIS ISI mark, and ISO quality standards.' }
+      { icon: '🏭', title: 'Manufacturers & Brands', desc: 'Obtain MSME / Udyam priority certifications and ISO quality standards.' }
     ],
     eligibility: [
       { icon: '🏢', label: 'Legal Constitution', value: 'Any Business Entity', desc: 'Proprietorship, Partnership, LLP, Company, or Trust with valid PAN card.' },
