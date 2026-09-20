@@ -1051,9 +1051,14 @@
           <textarea id="cNotes" class="form-control" rows="3" placeholder="E.g., I need assistance with Advance tax filing and quarterly TDS returns..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
-          Confirm Booking with CA Pradeep &rarr;
-        </button>
+        <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap;">
+          <button type="submit" class="btn btn-primary btn-lg" style="flex: 2; min-width: 200px;">
+            Confirm Booking with CA Pradeep &rarr;
+          </button>
+          <button type="button" class="btn btn-outline btn-lg" onclick="closeConsultationModal()" style="flex: 1; min-width: 100px;">
+            ✕ Close
+          </button>
+        </div>
         <p style="font-size: 0.75rem; text-align: center; color: var(--text-subtle);">
           🔒 Guaranteed zero spam. Free initial case assessment.
         </p>
