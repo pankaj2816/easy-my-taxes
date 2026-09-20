@@ -1,0 +1,5 @@
+# Easy My Taxes - Robots Exclusion File
+User-agent: *
+Allow: /
+
+Sitemap: https://easymytaxes.com/sitemap.xml

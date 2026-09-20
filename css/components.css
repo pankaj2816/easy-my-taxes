@@ -4354,3 +4354,17 @@ input, select, textarea, .form-control {
     font-size: 1.1rem !important;
   }
 }
+
+@media (max-width: 380px) {
+  .spec-card {
+    min-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  .ca-photo-img {
+    height: 290px !important;
+  }
+  .modal-title {
+    font-size: 1.15rem !important;
+    padding-right: 2.6rem !important;
+  }
+}

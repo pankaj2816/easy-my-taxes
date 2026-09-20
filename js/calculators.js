@@ -434,6 +434,7 @@ const noticeDatabase = {
 };
 
 function scanNotice() {
+  if (!document.getElementById('noticeSectionSelect') && !document.getElementById('noticeResRiskLevel')) return;
   const section = document.getElementById('noticeSectionSelect')?.value || '143_1';
   const demand = parseFloat(document.getElementById('noticeDemandAmount')?.value) || 0;
   const days = parseInt(document.getElementById('noticeDaysElapsed')?.value) || 5;
