@@ -50,7 +50,7 @@ const CATEGORY_META = {
     chips: [
       '⚡ AY 2026-27 Calibrated',
       '📑 100% AIS & 26AS Matching',
-      '🔒 Senior CA Pradeep Verified',
+      '🔒 Senior CA Supervised',
       '🛡️ Zero Defective Notice Assurance'
     ]
   },
