@@ -1201,12 +1201,16 @@
   font-weight: 800;
   color: var(--primary-950);
   margin-bottom: 0.5rem;
+  padding-right: 3.5rem; /* Dedicated clearance for close (X) button */
+  line-height: 1.25;
 }
 
 .modal-subtitle {
   font-size: 0.9375rem;
   color: var(--text-muted);
   margin-bottom: 1.85rem;
+  padding-right: 2rem;
+  line-height: 1.55;
 }
 
 .form-row-2col {
@@ -4300,6 +4304,20 @@ input, select, textarea, .form-control {
   .ca-exp-text {
     font-size: 0.7rem !important;
   }
+
+  /* Modal Close Button & Title Clearance */
+  .modal-title {
+    font-size: 1.35rem !important;
+    padding-right: 3.25rem !important;
+    line-height: 1.25 !important;
+  }
+  .modal-close-btn {
+    top: 1.15rem !important;
+    right: 1.15rem !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.15rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -4318,5 +4336,21 @@ input, select, textarea, .form-control {
   .btn-lg {
     font-size: 0.9rem !important;
     padding: 0.8rem 1rem !important;
+  }
+
+  .modal-card {
+    padding: 1.5rem 1rem !important;
+  }
+  .modal-title {
+    font-size: 1.25rem !important;
+    padding-right: 3rem !important;
+    line-height: 1.28 !important;
+  }
+  .modal-close-btn {
+    top: 0.95rem !important;
+    right: 0.95rem !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 1.1rem !important;
   }
 }
