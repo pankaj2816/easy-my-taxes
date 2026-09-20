@@ -97,6 +97,11 @@
   padding: 0;
 }
 
+p, h1, h2, h3, h4, h5, h6, span, a, button, li, label, strong, em {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -472,6 +477,8 @@ button {
   transition: all var(--trans-base);
   text-align: center;
   white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-primary {
