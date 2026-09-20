@@ -15,7 +15,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "5 - 7 Working Days",
     "govtPortal": "Ministry of Corporate Affairs (MCA)",
     "filingMode": "100% Online Paperless",
-    "overview": "Company incorporation in India is fully digital via the MCA SPICe+ unified portal. Easy My Taxes, directed by CA Pradeep Agarwal, manages name reservation, Digital Signature Certificates (DSC), Director Identification Numbers (DIN), drafting MOA & AOA, and post-incorporation tax registrations with 100% compliance guarantee.",
+    "overview": "Company incorporation in India is fully digital via the MCA SPICe+ unified portal. Easy My Taxes, directed by CA Pradeep Kumar Agrawal, manages name reservation, Digital Signature Certificates (DSC), Director Identification Numbers (DIN), drafting MOA & AOA, and post-incorporation tax registrations with 100% compliance guarantee.",
     "benefits": [
       {
         "title": "Limited Liability Protection",
@@ -328,7 +328,7 @@ const MASTER_SERVICES_DATA = {
       },
       {
         "q": "What happens if Form 3 (LLP Agreement) is not filed on time?",
-        "a": "The LLP Agreement must be executed and filed in Form 3 within 30 days of incorporation. Delay in filing attracts a penalty of \u20b9100 per day until rectified, which is why CA Pradeep Agarwal's team drafts and files it immediately upon incorporation."
+        "a": "The LLP Agreement must be executed and filed in Form 3 within 30 days of incorporation. Delay in filing attracts a penalty of \u20b9100 per day until rectified, which is why CA Pradeep Kumar Agrawal's team drafts and files it immediately upon incorporation."
       },
       {
         "q": "Can an LLP raise venture capital funding?",
@@ -847,7 +847,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "7 - 10 Days",
     "govtPortal": "MCA & DPIIT",
     "filingMode": "100% Online Paperless",
-    "overview": "Starting a tech or scalable business requires more than just ROC filing. Our comprehensive Startup Suite covers Company Incorporation, Co-founder Agreements with reverse vesting schedules, ESOP policy design, and Cap Table structuring led by CA Pradeep Agarwal.",
+    "overview": "Starting a tech or scalable business requires more than just ROC filing. Our comprehensive Startup Suite covers Company Incorporation, Co-founder Agreements with reverse vesting schedules, ESOP policy design, and Cap Table structuring led by CA Pradeep Kumar Agrawal.",
     "benefits": [
       {
         "title": "Ironclad Co-Founder Agreements",
@@ -1225,7 +1225,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "2 - 4 Weeks",
     "govtPortal": "RBI, MCA & Tax Department",
     "filingMode": "100% Online Paperless",
-    "overview": "Navigating Indian regulatory compliance for foreign businesses requires deep expertise in corporate law, Bilateral Double Tax Avoidance Agreements (DTAA), Equalization Levy, and Transfer Pricing. CA Pradeep Agarwal provides comprehensive foreign enterprise setup, directorship representation, and permanent establishment advisory.",
+    "overview": "Navigating Indian regulatory compliance for foreign businesses requires deep expertise in corporate law, Bilateral Double Tax Avoidance Agreements (DTAA), Equalization Levy, and Transfer Pricing. CA Pradeep Kumar Agrawal provides comprehensive foreign enterprise setup, directorship representation, and permanent establishment advisory.",
     "benefits": [
       {
         "title": "Avoid Permanent Establishment (PE) Risk",
@@ -1414,14 +1414,14 @@ const MASTER_SERVICES_DATA = {
       },
       {
         "q": "Can Easy My Taxes assist with appointing a Statutory Auditor?",
-        "a": "Yes! Under Section 139 of the Companies Act 2013, every company must appoint an independent Chartered Accountant in practice as its Statutory Auditor. CA Pradeep Agarwal's firm provides statutory audit and tax audit certification."
+        "a": "Yes! Under Section 139 of the Companies Act 2013, every company must appoint an independent Chartered Accountant in practice as its Statutory Auditor. CA Pradeep Kumar Agrawal's firm provides statutory audit and tax audit certification."
       },
       {
         "q": "What is the deadline for holding the Annual General Meeting (AGM)?",
         "a": "The AGM must be held within 6 months from the date of closing of the financial year (i.e. by 30th September each year, except for the first AGM which can be held within 9 months of the first FY close)."
       }
     ],
-    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Annual corporate compliance is mandatory for every <strong>Private Limited Company</strong> registered in India under the <strong>Companies Act 2013</strong>. Regardless of whether your company conducted multi-crore business operations or remained pre-revenue (nil transactions), you must statutorily file annual financial statements and annual returns with the Registrar of Companies (ROC).\n      </p>\n      <p>\n        Defaulting on annual compliance attracts severe consequences: daily late filing penalties of <strong>\u20b9100 per day per form with no upper cap</strong>, director disqualification for up to 5 years under Section 164(2), DIN deactivation, and risk of company strike-off by the ROC. Easy My Taxes, led by Senior Chartered Accountant <strong>CA Pradeep Agarwal</strong>, provides complete retainer management\u2014including AGM documentation, statutory audit coordination, and timely ROC e-filing.\n      </p>\n    ",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Annual corporate compliance is mandatory for every <strong>Private Limited Company</strong> registered in India under the <strong>Companies Act 2013</strong>. Regardless of whether your company conducted multi-crore business operations or remained pre-revenue (nil transactions), you must statutorily file annual financial statements and annual returns with the Registrar of Companies (ROC).\n      </p>\n      <p>\n        Defaulting on annual compliance attracts severe consequences: daily late filing penalties of <strong>\u20b9100 per day per form with no upper cap</strong>, director disqualification for up to 5 years under Section 164(2), DIN deactivation, and risk of company strike-off by the ROC. Easy My Taxes, led by Senior Chartered Accountant <strong>CA Pradeep Kumar Agrawal</strong>, provides complete retainer management\u2014including AGM documentation, statutory audit coordination, and timely ROC e-filing.\n      </p>\n    ",
     "whoIsItFor": [
       {
         "icon": "\ud83c\udfe2",
@@ -1704,7 +1704,7 @@ const MASTER_SERVICES_DATA = {
     "icon": "\ud83d\udd0d",
     "badge": "ICAI Certified Assurance",
     "title": "Statutory Audit & Tax Audit u/s 44AB",
-    "tagline": "Independent audit assurance, Form 3CA/3CB and 3CD tax audit reporting by CA Pradeep Agarwal.",
+    "tagline": "Independent audit assurance, Form 3CA/3CB and 3CD tax audit reporting by CA Pradeep Kumar Agrawal.",
     "timeline": "10 - 20 Days",
     "govtPortal": "Income Tax & MCA Portals",
     "filingMode": "100% Online Paperless",
@@ -1907,7 +1907,7 @@ const MASTER_SERVICES_DATA = {
       },
       {
         "title": "Scrutiny Protection",
-        "desc": "Handled by CA Pradeep Agarwal with exhaustive notes on accounts to eliminate notice risks."
+        "desc": "Handled by CA Pradeep Kumar Agrawal with exhaustive notes on accounts to eliminate notice risks."
       }
     ],
     "documents": [
@@ -3222,7 +3222,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "24 - 48 Hours",
     "govtPortal": "Income Tax Department (E-Filing 2.0)",
     "filingMode": "100% Online Paperless",
-    "overview": "Comprehensive income tax return filing for salaried employees calibrated for Assessment Year 2026-27. Directed by CA Pradeep Agarwal, we perform 100% reconciliation with Annual Information Statement (AIS) and Tax Information Summary (TIS), optimize Old vs New Tax Regime deductions, and ensure zero defective notices.",
+    "overview": "Comprehensive income tax return filing for salaried employees calibrated for Assessment Year 2026-27. Directed by CA Pradeep Kumar Agrawal, we perform 100% reconciliation with Annual Information Statement (AIS) and Tax Information Summary (TIS), optimize Old vs New Tax Regime deductions, and ensure zero defective notices.",
     "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        For <strong>Assessment Year 2026-27 (FY 2025-26)</strong>, the Revised New Tax Regime is the statutory default regime with a <strong>\u20b975,000 Standard Deduction</strong> for salaried employees and complete tax rebate up to \u20b97.75 Lakhs under Section 87A. However, if you claim significant deductions under Section 80C, 80D (health insurance), Section 24(b) (home loan interest), and HRA, the Old Regime may yield thousands in additional tax refunds.\n      </p>\n      <p>\n        Filing salary returns without CA verification frequently leads to <strong>defective return notices under Section 139(9)</strong> or demand notices under Section 143(1) due to mismatches between Form 16 and your AIS/26AS. Easy My Taxes conducts a line-by-line tax credit matching, reconciles multiple Form 16s across mid-year job switches, and handles complicated foreign ESOP perks accurately.\n      </p>\n    ",
     "whoIsItFor": [
       {
@@ -3283,7 +3283,7 @@ const MASTER_SERVICES_DATA = {
       },
       {
         "title": "Zero Defective Notice Guarantee",
-        "desc": "Every computation sheet is reviewed by Senior CA Pradeep Agarwal to guarantee 100% AIS reconciliation."
+        "desc": "Every computation sheet is reviewed by Senior CA Pradeep Kumar Agrawal to guarantee 100% AIS reconciliation."
       }
     ],
     "documents": [
@@ -3662,7 +3662,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "3 - 5 Days",
     "govtPortal": "Income Tax Department & CBDT",
     "filingMode": "100% Online Paperless",
-    "overview": "Specialized cross-border direct tax advisory for Non-Resident Indians (NRIs), Overseas Citizens of India (OCIs), and expatriates. Handled by Senior CA Pradeep Agarwal, we manage residential status determination under Section 6, Foreign Asset reporting under Schedule FA, Double Tax Avoidance Agreement (DTAA) treaty relief, and repatriation certificates (Form 15CA/CB).",
+    "overview": "Specialized cross-border direct tax advisory for Non-Resident Indians (NRIs), Overseas Citizens of India (OCIs), and expatriates. Handled by Senior CA Pradeep Kumar Agrawal, we manage residential status determination under Section 6, Foreign Asset reporting under Schedule FA, Double Tax Avoidance Agreement (DTAA) treaty relief, and repatriation certificates (Form 15CA/CB).",
     "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Determining your exact residential status under <strong>Section 6 of the Income Tax Act</strong> is the foundation of Indian taxation. For NRIs, only income that accrues, arises, or is received in India (such as rental income, capital gains on Indian stocks/property, or interest on NRO accounts) is taxable in India. Income earned outside India is 100% tax-exempt.\n      </p>\n      <p>\n        NRIs frequently suffer high <strong>TDS deductions (often 20% to 30% plus surcharge)</strong> on Indian income. We help you claim Double Tax Avoidance Agreement (DTAA) relief under Article 12/13, secure Tax Residency Certificates (TRC), claim full refunds of excess TDS, and provide Chartered Accountant certification under <strong>Form 15CB and Form 15CA</strong> for remitting funds from NRO to NRE or foreign accounts.\n      </p>\n    ",
     "whoIsItFor": [
       {
@@ -3803,11 +3803,11 @@ const MASTER_SERVICES_DATA = {
     "icon": "\u2696\ufe0f",
     "badge": "Direct Representation by Senior CA",
     "title": "Tax Notice & Scrutiny Resolution (143/139/148)",
-    "tagline": "Professional legal drafting, defective return rectification, and representation for income tax notices directly by CA Pradeep Agarwal.",
+    "tagline": "Professional legal drafting, defective return rectification, and representation for income tax notices directly by CA Pradeep Kumar Agrawal.",
     "timeline": "2 - 5 Days",
     "govtPortal": "Income Tax Department & ITAT",
     "filingMode": "100% Online Paperless",
-    "overview": "Defend against automated computer-generated demand notices, defective return intimations, AIS discrepancies, and reassessment notices. Handled personally by Senior Chartered Accountant CA Pradeep Agarwal (FCA), we formulate strong legal replies, file Section 154 rectification petitions, and prevent penalties or prosecution.",
+    "overview": "Defend against automated computer-generated demand notices, defective return intimations, AIS discrepancies, and reassessment notices. Handled personally by Senior Chartered Accountant CA Pradeep Kumar Agrawal (FCA), we formulate strong legal replies, file Section 154 rectification petitions, and prevent penalties or prosecution.",
     "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        With the deployment of the Income Tax Department's AI-driven <strong>Insight Portal and Faceless Assessment Scheme</strong>, notices are automatically generated for cash deposits, AIS mismatches, high-value credit card spends, unregistered crypto transactions, and disputed deduction claims.\n      </p>\n      <p>\n        Ignoring a tax notice or submitting an unverified reply can escalate into a formal ex-parte best judgment assessment under Section 144, an automatic freeze of your bank accounts, or penalties ranging up to <strong>200% of tax payable under Section 270A</strong>. Our practice provides thorough diagnostic analysis of your case, drafts rigorous legal and technical replies citing relevant ITAT/High Court case laws, and rectifies errors on the portal.\n      </p>\n    ",
     "whoIsItFor": [
       {
@@ -3860,7 +3860,7 @@ const MASTER_SERVICES_DATA = {
     "benefits": [
       {
         "title": "Direct Senior CA Representation",
-        "desc": "Handled directly by CA Pradeep Agarwal (FCA) with 10+ years of litigation and assessment experience."
+        "desc": "Handled directly by CA Pradeep Kumar Agrawal (FCA) with 10+ years of litigation and assessment experience."
       },
       {
         "title": "100% Demand Elimination",
@@ -3883,7 +3883,7 @@ const MASTER_SERVICES_DATA = {
       {
         "step": "1",
         "title": "Notice Diagnostic & Audit",
-        "desc": "CA Pradeep Agarwal examines the notice DIN, root cause, and AIS data mismatch."
+        "desc": "CA Pradeep Kumar Agrawal examines the notice DIN, root cause, and AIS data mismatch."
       },
       {
         "step": "2",
@@ -4089,7 +4089,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "3 - 5 Days",
     "govtPortal": "Income Tax Department & MCA",
     "filingMode": "100% Online Paperless",
-    "overview": "Mandatory annual corporate tax return filing in Form ITR-6 for all companies incorporated in India under the Companies Act 2013. Handled by CA Pradeep Agarwal, we ensure 100% alignment between your audited MCA financial statements (AOC-4), Tax Audit Report (Form 3CA/3CD), Minimum Alternate Tax (MAT), and Section 115BAA concessional tax provisions.",
+    "overview": "Mandatory annual corporate tax return filing in Form ITR-6 for all companies incorporated in India under the Companies Act 2013. Handled by CA Pradeep Kumar Agrawal, we ensure 100% alignment between your audited MCA financial statements (AOC-4), Tax Audit Report (Form 3CA/3CD), Minimum Alternate Tax (MAT), and Section 115BAA concessional tax provisions.",
     "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Every company registered in India must statutorily file <strong>Form ITR-6</strong>, irrespective of whether it made a profit, incurred a loss, or conducted zero commercial transactions during the fiscal year. Form ITR-6 is one of the most complex filings in Indian tax law, requiring digital certification via the Managing Director's Class-3 DSC.\n      </p>\n      <p>\n        We optimize your tax liability under the concessional <strong>Section 115BAA (22% corporate tax rate)</strong> or Section 115BAB (15% for new manufacturing companies), reconcile Section 43B statutory dues, verify MAT credit utilization under Section 115JAA, and ensure complete synchronization with your ROC filing (Form AOC-4).\n      </p>\n    ",
     "whoIsItFor": [
       {
@@ -4499,8 +4499,8 @@ const MASTER_SERVICES_DATA = {
     "timeline": "Monthly Retainer",
     "govtPortal": "ICAI & Ministry of Corporate Affairs",
     "filingMode": "100% Online Paperless",
-    "overview": "Get high-level strategic finance leadership, daily cloud bookkeeping, payroll compliance, and board-level MIS reporting directed by CA Pradeep Agarwal. Designed for high-growth startups, SMEs, and funded ventures requiring institutional financial controls without paying full-time executive salaries.",
-    "detailedOverview": "\n    <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n      A <strong>Virtual CFO (Chief Financial Officer)</strong> provides strategic finance leadership, operational accounting oversight, cash flow governance, and investor reporting on a flexible outsourced model. Led by <strong>CA Pradeep Agarwal (FCA)</strong>, our retainer service integrates seamlessly with your leadership team.\n    </p>\n    <p>\n      We transition your business to real-time cloud accounting (Zoho Books, Tally Prime on Cloud, or QuickBooks), establish internal financial controls, handle monthly payroll with statutory deductions (PF, ESIC, Professional Tax, TDS), formulate unit economics, and prepare investor-grade board reporting.\n    </p>\n  ",
+    "overview": "Get high-level strategic finance leadership, daily cloud bookkeeping, payroll compliance, and board-level MIS reporting directed by CA Pradeep Kumar Agrawal. Designed for high-growth startups, SMEs, and funded ventures requiring institutional financial controls without paying full-time executive salaries.",
+    "detailedOverview": "\n    <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n      A <strong>Virtual CFO (Chief Financial Officer)</strong> provides strategic finance leadership, operational accounting oversight, cash flow governance, and investor reporting on a flexible outsourced model. Led by <strong>CA Pradeep Kumar Agrawal (FCA)</strong>, our retainer service integrates seamlessly with your leadership team.\n    </p>\n    <p>\n      We transition your business to real-time cloud accounting (Zoho Books, Tally Prime on Cloud, or QuickBooks), establish internal financial controls, handle monthly payroll with statutory deductions (PF, ESIC, Professional Tax, TDS), formulate unit economics, and prepare investor-grade board reporting.\n    </p>\n  ",
     "whoIsItFor": [
       {
         "icon": "\ud83d\ude80",
@@ -4618,7 +4618,7 @@ const MASTER_SERVICES_DATA = {
       },
       {
         "q": "Can a Virtual CFO help during fundraising due diligence?",
-        "a": "Yes! CA Pradeep Agarwal has guided multiple startups through VC and angel investment rounds, preparing financial models, unit economics, data room documents, and resolving auditor queries."
+        "a": "Yes! CA Pradeep Kumar Agrawal has guided multiple startups through VC and angel investment rounds, preparing financial models, unit economics, data room documents, and resolving auditor queries."
       }
     ]
   },
@@ -4633,7 +4633,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "24 Hours (\u2122 Filing)",
     "govtPortal": "Controller General of Patents, Designs & Trademarks (CGPDTM)",
     "filingMode": "100% Online Paperless",
-    "overview": "Legally safeguard your business brand name, logo, device mark, and slogan across 45 statutory classes under the Trade Marks Act 1999. Managed by CA Pradeep Agarwal's IP practice, we conduct deep prior-art conflict searches, file Form TM-A electronically to grant immediate \u2122 symbol rights, and handle departmental examination objections.",
+    "overview": "Legally safeguard your business brand name, logo, device mark, and slogan across 45 statutory classes under the Trade Marks Act 1999. Managed by CA Pradeep Kumar Agrawal's IP practice, we conduct deep prior-art conflict searches, file Form TM-A electronically to grant immediate \u2122 symbol rights, and handle departmental examination objections.",
     "detailedOverview": "\n    <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n      A <strong>Registered Trademark (\u00ae symbol)</strong> is an exclusive statutory intellectual property right granted by the Government of India under the <strong>Trade Marks Act 1999</strong>. It confers exclusive legal ownership over your brand name, company name, logo, or tagline across India for 10 years (renewable indefinitely).\n    </p>\n    <p>\n      Without a registered trademark, competitors can freely copy your brand identity, launch copycat products, or even file a trademark first to legally ban you from using your own brand! Filing Form TM-A gives you the legal right to use the <strong>\u2122 symbol within 24 hours</strong>, blocks competitors, and allows enrollment in Amazon Brand Registry to ban counterfeit sellers.\n    </p>\n  ",
     "whoIsItFor": [
       {

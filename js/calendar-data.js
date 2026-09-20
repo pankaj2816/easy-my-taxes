@@ -164,7 +164,7 @@ const complianceCalendarData = [
 function getGoogleCalendarUrl(item) {
   const d = item.dueDate.replace(/-/g, '');
   const title = encodeURIComponent(`Tax Deadline: ${item.title}`);
-  const details = encodeURIComponent(`${item.description}\nPenalty: ${item.penalty}\nAssisted by Easy My Taxes (CA Pradeep Agarwal)`);
+  const details = encodeURIComponent(`${item.description}\nPenalty: ${item.penalty}\nAssisted by Easy My Taxes (CA Pradeep Kumar Agrawal)`);
   const location = encodeURIComponent('Income Tax / GST Portal India');
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${d}T090000Z/${d}T180000Z&details=${details}&location=${location}`;
 }
@@ -256,7 +256,7 @@ function renderComplianceCalendar(filter = 'all', searchQuery = '') {
           <span class="status-badge ${badgeClass}">${badgeText}</span>
         </td>
         <td>
-          <button class="btn btn-sm btn-outline" onclick="openConsultationModal('${(item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;')} (Assistance by CA Pradeep Agarwal)')">
+          <button class="btn btn-sm btn-outline" onclick="openConsultationModal('${(item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;')} (Assistance by CA Pradeep Kumar Agrawal)')">
             Get CA Assistance
           </button>
         </td>

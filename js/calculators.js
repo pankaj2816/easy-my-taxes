@@ -247,7 +247,7 @@ function sendTaxSummaryToWhatsApp() {
   const phone = "919891495092";
   const { grossSalary, totalNewTax, totalOldTax, diff, winner } = currentTaxState;
   
-  const text = `Hi CA Pradeep Agarwal & Easy My Taxes team,%0A%0A*AY 2026-27 Tax Calculation Summary:*%0A• Gross Annual Salary: ${formatINR(grossSalary)}%0A• New Regime Tax: ${formatINR(totalNewTax)}%0A• Old Regime Tax: ${formatINR(totalOldTax)}%0A• Recommended Choice: *${winner}*%0A• Estimated Tax Saved: *${formatINR(diff)}*%0A%0APlease review my Form 16 / investment proofs and help me optimize and file my return.`;
+  const text = `Hi CA Pradeep Kumar Agrawal & Easy My Taxes team,%0A%0A*AY 2026-27 Tax Calculation Summary:*%0A• Gross Annual Salary: ${formatINR(grossSalary)}%0A• New Regime Tax: ${formatINR(totalNewTax)}%0A• Old Regime Tax: ${formatINR(totalOldTax)}%0A• Recommended Choice: *${winner}*%0A• Estimated Tax Saved: *${formatINR(diff)}*%0A%0APlease review my Form 16 / investment proofs and help me optimize and file my return.`;
   
   window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
 }
@@ -381,7 +381,7 @@ const noticeDatabase = {
     badgeClass: 'high',
     icon: '🚨',
     analysis: 'Assessing Officer (AO) has initiated reassessment proceedings for past financial years based on high-value transaction data (Insights Portal / Cash / Property / Crypto).',
-    advice: 'Requires direct senior legal drafting by CA Pradeep Agarwal and filing formal objection challenging jurisdiction.',
+    advice: 'Requires direct senior legal drafting by CA Pradeep Kumar Agrawal and filing formal objection challenging jurisdiction.',
     roadmap: [
       { title: 'Reason to Believe Review', desc: 'Scrutinize AO recorded reasons and validity under Section 148A.' },
       { title: 'Jurisdiction Challenge', desc: 'Check limitation periods (3 years / 10 years threshold rules).' },
@@ -487,7 +487,7 @@ function sendNoticeToWhatsApp() {
   const days = parseInt(document.getElementById('noticeDaysElapsed')?.value) || 0;
   const data = noticeDatabase[section] || noticeDatabase['143_1'];
 
-  const text = `Hi CA Pradeep Agarwal & Easy My Taxes litigation desk,%0A%0A*Income Tax Notice Consultation Request:*%0A• Notice Section: *${data.name}*%0A• Demand Amount: ${formatINR(demand)}%0A• Days Elapsed: ${days} days%0A%0AI would like your office to review my notice and draft an official reply on the Income Tax portal.`;
+  const text = `Hi CA Pradeep Kumar Agrawal & Easy My Taxes litigation desk,%0A%0A*Income Tax Notice Consultation Request:*%0A• Notice Section: *${data.name}*%0A• Demand Amount: ${formatINR(demand)}%0A• Days Elapsed: ${days} days%0A%0AI would like your office to review my notice and draft an official reply on the Income Tax portal.`;
 
   window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
 }

@@ -55,7 +55,7 @@ const servicesCatalog = [
     icon: '⚖️',
     title: 'Tax Notice & Scrutiny Resolution',
     shortDesc: 'Professional legal drafting and representation for notices under Section 143(1), 139(9), 148, or 156.',
-    fullDesc: 'Handled directly by Senior Chartered Accountant CA Pradeep Agarwal to draft strong technical responses, rectify defective returns, and prevent unnecessary penalties or litigation.',
+    fullDesc: 'Handled directly by Senior Chartered Accountant CA Pradeep Kumar Agrawal to draft strong technical responses, rectify defective returns, and prevent unnecessary penalties or litigation.',
     deliverables: [
       'In-depth notice analysis and root cause diagnostic',
       'Drafting legally compliant replies on Income Tax Portal',
@@ -215,7 +215,7 @@ const testimonialsData = [
     category: 'nri',
     outcome: '15CA/CB Repatriation in 48 Hours',
     stars: 5,
-    text: "As an NRI living in Dubai with rental income and ancestral property sale proceeds in Bangalore, filing 15CA/CB felt daunting. CA Pradeep Agarwal managed the entire DTAA relief and repatriation certificate smoothly. Highly recommend for any NRI!",
+    text: "As an NRI living in Dubai with rental income and ancestral property sale proceeds in Bangalore, filing 15CA/CB felt daunting. CA Pradeep Kumar Agrawal managed the entire DTAA relief and repatriation certificate smoothly. Highly recommend for any NRI!",
     author: 'Vikram Kulkarni',
     role: 'Non-Resident Investor (Dubai, UAE)',
     avatar: 'VK',
@@ -457,7 +457,7 @@ function initServiceGrid(filter = 'all', search = '') {
           No CA services matching "<strong>${safeSearch}</strong>"
         </p>
         <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-          We offer bespoke corporate structuring and direct litigation advisory. Talk to CA Pradeep Agarwal directly.
+          We offer bespoke corporate structuring and direct litigation advisory. Talk to CA Pradeep Kumar Agrawal directly.
         </p>
         <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Custom Inquiry: ${safeSearch}')">
           Request Custom Service Consultation
@@ -864,7 +864,7 @@ function handleConsultationSubmit(e) {
   const service = document.getElementById('consultationService')?.value || document.getElementById('contactServicePref')?.value || 'General CA Consultation';
 
   // Show Toast Success
-  showToast(`Thank you, ${name}! Your request for "${service}" has been received. CA Pradeep Agarwal's office will call you at ${phone} within 2 hours.`);
+  showToast(`Thank you, ${name}! Your request for "${service}" has been received. CA Pradeep Kumar Agrawal's office will call you at ${phone} within 2 hours.`);
   
   // Close Modal
   closeConsultationModal();
@@ -878,8 +878,8 @@ function handleConsultationSubmit(e) {
 
 // WhatsApp Direct Connect
 function openWhatsAppInquiry(serviceName = 'General CA Consultation') {
-  const phone = "919891495092"; // Official CA Pradeep Agarwal Advisory Helpline
-  const message = encodeURIComponent(`Hi CA Pradeep Agarwal / Easy My Taxes team, I would like to consult regarding: ${serviceName}. Please share the process and fee details.`);
+  const phone = "919891495092"; // Official CA Pradeep Kumar Agrawal Advisory Helpline
+  const message = encodeURIComponent(`Hi CA Pradeep Kumar Agrawal / Easy My Taxes team, I would like to consult regarding: ${serviceName}. Please share the process and fee details.`);
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
 }
 

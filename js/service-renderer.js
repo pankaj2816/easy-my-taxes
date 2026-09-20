@@ -25,7 +25,7 @@ const CATEGORY_META = {
     icon: '⚡',
     badge: 'Directory of 52+ Statutory Services & Practice Areas (2026)',
     title: 'All Statutory Services & CA Advisory Directory',
-    tagline: 'Comprehensive portfolio of 52+ statutory offerings across Company Registrations, ROC Annual Compliances, Business Licenses, and Income Tax Returns supervised by CA Pradeep Agarwal.',
+    tagline: 'Comprehensive portfolio of 52+ statutory offerings across Company Registrations, ROC Annual Compliances, Business Licenses, and Income Tax Returns supervised by CA Pradeep Kumar Agrawal.',
     portal: 'Ministry of Corporate Affairs, CBDT & Central Registries',
     timeline: 'Fastrack CA Turnaround',
     chips: [
@@ -287,7 +287,7 @@ function renderCategoryHub(catKey, searchQuery = '') {
   });
 
   // 1. Page Title & Meta
-  document.title = `${meta.title} | Easy My Taxes & CA Pradeep Agarwal`;
+  document.title = `${meta.title} | Easy My Taxes & CA Pradeep Kumar Agrawal`;
   const metaDesc = document.getElementById('pageMetaDesc');
   if (metaDesc) metaDesc.setAttribute('content', `${meta.tagline} Direct CA advisory with 100% compliance guarantee.`);
 
@@ -411,7 +411,7 @@ function renderServiceCardHtml(s) {
     </li>
   `).join('');
 
-  const waMsg = encodeURIComponent(`Hello CA Pradeep Agarwal, I would like to inquire about ${s.title}. Please guide me through the documents and process.`);
+  const waMsg = encodeURIComponent(`Hello CA Pradeep Kumar Agrawal, I would like to inquire about ${s.title}. Please guide me through the documents and process.`);
 
   return `
     <div class="cat-card">
@@ -521,7 +521,7 @@ function renderAllServicesSmartView(grid, allServicesList, activeCat = currentHo
             <strong style="font-size: 0.85rem;">Need Structuring Help?</strong>
           </div>
           <p style="font-size: 0.78rem; color: var(--surface-300); line-height: 1.4; margin-bottom: 0.85rem;">
-            Speak directly with CA Pradeep Agarwal for guidance on which structure or license applies to you.
+            Speak directly with CA Pradeep Kumar Agrawal for guidance on which structure or license applies to you.
           </p>
           <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.75rem; padding: 0.5rem;" onclick="openConsultationModal('Explorer Sidebar Help')">
             Book CA Advisory
@@ -708,7 +708,7 @@ function renderSingleServicePage(serviceId) {
   });
 
   // 1. Page Title & Meta
-  document.title = `${data.title} | Easy My Taxes & CA Pradeep Agarwal`;
+  document.title = `${data.title} | Easy My Taxes & CA Pradeep Kumar Agrawal`;
   const metaDesc = document.getElementById('pageMetaDesc');
   if (metaDesc) metaDesc.setAttribute('content', `${data.tagline} End-to-end statutory CA filing with 100% compliance guarantee.`);
   const ogTitle = document.getElementById('ogTitle');
@@ -758,7 +758,7 @@ function renderSingleServicePage(serviceId) {
   const btnWhatsApp = document.getElementById('btnWhatsAppService');
   if (btnWhatsApp) {
     btnWhatsApp.onclick = () => {
-      const msg = encodeURIComponent(`Hello CA Pradeep Agarwal, I would like to inquire about ${data.title}. Please guide me through the documents and process.`);
+      const msg = encodeURIComponent(`Hello CA Pradeep Kumar Agrawal, I would like to inquire about ${data.title}. Please guide me through the documents and process.`);
       window.open(`https://wa.me/919891495092?text=${msg}`, '_blank');
     };
   }
@@ -777,7 +777,7 @@ function renderSingleServicePage(serviceId) {
         ${data.overview}
       </p>
       <p>
-        In India, statutory compliance and legal registration are administered under dedicated statutory authorities such as the <strong>${data.govtPortal}</strong>. When you register or file through <strong>Easy My Taxes</strong> under the direct stewardship of <strong>CA Pradeep Agarwal (FCA)</strong>, our chartered accountancy team conducts a thorough pre-scrutiny of all documents to ensure zero rejection, seamless regulatory approval, and complete protection against statutory notices.
+        In India, statutory compliance and legal registration are administered under dedicated statutory authorities such as the <strong>${data.govtPortal}</strong>. When you register or file through <strong>Easy My Taxes</strong> under the direct stewardship of <strong>CA Pradeep Kumar Agrawal (FCA)</strong>, our chartered accountancy team conducts a thorough pre-scrutiny of all documents to ensure zero rejection, seamless regulatory approval, and complete protection against statutory notices.
       </p>
       <div style="background: var(--surface-50); border-left: 4px solid var(--emerald-500); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-top: 1.25rem;">
         <strong style="color: var(--primary-950);">💡 Key Regulatory Advantage:</strong>
@@ -952,10 +952,10 @@ function renderSiblingServices(currentService) {
   section.style.display = 'block';
   if (tag) tag.textContent = `Related in ${currentService.categoryLabel}`;
   if (title) title.textContent = `Explore Other ${currentService.categoryLabel}`;
-  if (desc) desc.textContent = `Compare related corporate structures, regulatory compliances, and statutory licenses handled by CA Pradeep Agarwal.`;
+  if (desc) desc.textContent = `Compare related corporate structures, regulatory compliances, and statutory licenses handled by CA Pradeep Kumar Agrawal.`;
 
   grid.innerHTML = siblings.map(s => {
-    const waMsg = encodeURIComponent(`Hello CA Pradeep Agarwal, I would like to inquire about ${s.title}.`);
+    const waMsg = encodeURIComponent(`Hello CA Pradeep Kumar Agrawal, I would like to inquire about ${s.title}.`);
     return `
       <div class="cat-card">
         <div>
@@ -996,7 +996,7 @@ function handleServiceLeadSubmit(e) {
   const msg = encodeURIComponent(`*New Fastrack Service Application*\n\n*Client:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service:* ${service}\n*Notes:* ${notes || 'N/A'}`);
   window.open(`https://wa.me/919891495092?text=${msg}`, '_blank');
 
-  alert(`Thank you ${name}! Your request for ${service} has been forwarded to CA Pradeep Agarwal. We will connect with you in under 30 minutes.`);
+  alert(`Thank you ${name}! Your request for ${service} has been forwarded to CA Pradeep Kumar Agrawal. We will connect with you in under 30 minutes.`);
 }
 
 // Support browser back/forward buttons
