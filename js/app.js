@@ -348,7 +348,19 @@ document.addEventListener('DOMContentLoaded', () => {
   initMegaMenus();
   initMobileAccordions();
   initScrollToTop();
+  initCleanUrls();
 });
+
+// Clean URL Optimization: Clean 'index.html' from URL bar immediately without reload
+function initCleanUrls() {
+  const path = window.location.pathname;
+  if (path.endsWith('/index.html') || path === '/index.html') {
+    const cleanPath = path.replace(/\/index\.html$/, '') || '/';
+    const cleanUrl = cleanPath + window.location.search + window.location.hash;
+    window.history.replaceState(null, '', cleanUrl);
+  }
+}
+initCleanUrls(); // Run immediately on script load
 
 // Floating Back to Top Button & Quick Navigation
 function initScrollToTop() {
@@ -375,12 +387,24 @@ function initScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // Brand logo click action: scroll smoothly to top if already on Home
+  document.querySelectorAll('.brand-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const path = window.location.pathname;
+      const isHome = path === '/' || path.endsWith('/') || path.endsWith('index.html');
+      if (isHome) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
   // Mobile Bottom Bar Home action (scroll to top if already on Home, otherwise navigate)
   const homeBarBtn = document.getElementById('mobileBarHome');
   if (homeBarBtn) {
     homeBarBtn.addEventListener('click', (e) => {
       const path = window.location.pathname;
-      const isHome = path.endsWith('index.html') || path === '/' || path.endsWith('/');
+      const isHome = path === '/' || path.endsWith('/') || path.endsWith('index.html');
       if (isHome) {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
