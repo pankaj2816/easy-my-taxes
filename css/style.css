@@ -107,7 +107,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100vw;
   -webkit-text-size-adjust: 100%;
@@ -118,7 +118,7 @@ body {
   background-color: var(--surface-50);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100vw;
   position: relative;
@@ -282,7 +282,7 @@ button {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -913,6 +913,54 @@ button {
 .floating-whatsapp:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+}
+
+/* Floating Back to Top Button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 104px;
+  right: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(11, 21, 40, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 98;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all var(--trans-base);
+}
+
+.scroll-to-top-btn:hover {
+  background: var(--emerald-600);
+  border-color: var(--emerald-400);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.45);
+}
+
+.scroll-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: calc(134px + env(safe-area-inset-bottom, 0px));
+    right: 18px;
+    width: 44px;
+    height: 44px;
+  }
 }
 
 /* Mobile Drawer */

@@ -347,7 +347,47 @@ document.addEventListener('DOMContentLoaded', () => {
   initCalcTabs();
   initMegaMenus();
   initMobileAccordions();
+  initScrollToTop();
 });
+
+// Floating Back to Top Button & Quick Navigation
+function initScrollToTop() {
+  let btn = document.getElementById('backToTopBtn');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'backToTopBtn';
+    btn.className = 'scroll-to-top-btn';
+    btn.setAttribute('aria-label', 'Scroll back to top');
+    btn.title = 'Back to top';
+    btn.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>`;
+    document.body.appendChild(btn);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Mobile Bottom Bar Home action (scroll to top if already on Home, otherwise navigate)
+  const homeBarBtn = document.getElementById('mobileBarHome');
+  if (homeBarBtn) {
+    homeBarBtn.addEventListener('click', (e) => {
+      const path = window.location.pathname;
+      const isHome = path.endsWith('index.html') || path === '/' || path.endsWith('/');
+      if (isHome) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+}
 
 // Sticky Header
 function initStickyHeader() {
@@ -358,7 +398,7 @@ function initStickyHeader() {
     } else {
       header?.classList.remove('scrolled');
     }
-  });
+  }, { passive: true });
 }
 
 // Live Statutory Countdown Timer (Target: 31st July 2026)
