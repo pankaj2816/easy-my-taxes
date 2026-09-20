@@ -3807,7 +3807,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "2 - 5 Days",
     "govtPortal": "Income Tax Department & ITAT",
     "filingMode": "100% Online Paperless",
-    "overview": "Defend against automated computer-generated demand notices, defective return intimations, AIS discrepancies, and reassessment notices. Handled personally by Senior Chartered Accountant CA Pradeep Agarwal (FCA, DISA), we formulate strong legal replies, file Section 154 rectification petitions, and prevent penalties or prosecution.",
+    "overview": "Defend against automated computer-generated demand notices, defective return intimations, AIS discrepancies, and reassessment notices. Handled personally by Senior Chartered Accountant CA Pradeep Agarwal (FCA), we formulate strong legal replies, file Section 154 rectification petitions, and prevent penalties or prosecution.",
     "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        With the deployment of the Income Tax Department's AI-driven <strong>Insight Portal and Faceless Assessment Scheme</strong>, notices are automatically generated for cash deposits, AIS mismatches, high-value credit card spends, unregistered crypto transactions, and disputed deduction claims.\n      </p>\n      <p>\n        Ignoring a tax notice or submitting an unverified reply can escalate into a formal ex-parte best judgment assessment under Section 144, an automatic freeze of your bank accounts, or penalties ranging up to <strong>200% of tax payable under Section 270A</strong>. Our practice provides thorough diagnostic analysis of your case, drafts rigorous legal and technical replies citing relevant ITAT/High Court case laws, and rectifies errors on the portal.\n      </p>\n    ",
     "whoIsItFor": [
       {
@@ -3860,7 +3860,7 @@ const MASTER_SERVICES_DATA = {
     "benefits": [
       {
         "title": "Direct Senior CA Representation",
-        "desc": "Handled directly by CA Pradeep Agarwal (FCA, DISA) with 15+ years of litigation and assessment experience."
+        "desc": "Handled directly by CA Pradeep Agarwal (FCA) with 10+ years of litigation and assessment experience."
       },
       {
         "title": "100% Demand Elimination",
@@ -4500,7 +4500,7 @@ const MASTER_SERVICES_DATA = {
     "govtPortal": "ICAI & Ministry of Corporate Affairs",
     "filingMode": "100% Online Paperless",
     "overview": "Get high-level strategic finance leadership, daily cloud bookkeeping, payroll compliance, and board-level MIS reporting directed by CA Pradeep Agarwal. Designed for high-growth startups, SMEs, and funded ventures requiring institutional financial controls without paying full-time executive salaries.",
-    "detailedOverview": "\n    <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n      A <strong>Virtual CFO (Chief Financial Officer)</strong> provides strategic finance leadership, operational accounting oversight, cash flow governance, and investor reporting on a flexible outsourced model. Led by <strong>CA Pradeep Agarwal (FCA, DISA)</strong>, our retainer service integrates seamlessly with your leadership team.\n    </p>\n    <p>\n      We transition your business to real-time cloud accounting (Zoho Books, Tally Prime on Cloud, or QuickBooks), establish internal financial controls, handle monthly payroll with statutory deductions (PF, ESIC, Professional Tax, TDS), formulate unit economics, and prepare investor-grade board reporting.\n    </p>\n  ",
+    "detailedOverview": "\n    <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n      A <strong>Virtual CFO (Chief Financial Officer)</strong> provides strategic finance leadership, operational accounting oversight, cash flow governance, and investor reporting on a flexible outsourced model. Led by <strong>CA Pradeep Agarwal (FCA)</strong>, our retainer service integrates seamlessly with your leadership team.\n    </p>\n    <p>\n      We transition your business to real-time cloud accounting (Zoho Books, Tally Prime on Cloud, or QuickBooks), establish internal financial controls, handle monthly payroll with statutory deductions (PF, ESIC, Professional Tax, TDS), formulate unit economics, and prepare investor-grade board reporting.\n    </p>\n  ",
     "whoIsItFor": [
       {
         "icon": "\ud83d\ude80",

@@ -1,6 +1,6 @@
 # 💼 Easy My Taxes — Professional Chartered Accountant & Tax Advisory Platform
 
-A state-of-the-art, high-converting, professional Chartered Accountant & Tax Consultancy website built for **Easy My Taxes** under the leadership of **CA Pradeep Agarwal (FCA, DISA)**.
+A state-of-the-art, high-converting, professional Chartered Accountant & Tax Consultancy website built for **Easy My Taxes** under the leadership of **CA Pradeep Agarwal (FCA)**.
 
 ---
 
@@ -39,8 +39,8 @@ A state-of-the-art, high-converting, professional Chartered Accountant & Tax Con
 ### 7. 🎯 Filterable Verified Client Case Studies & Reviews
 - Real outcomes categorized by **Salaried Tech (ESOPs)**, **Startups & Virtual CFO**, **NRI Repatriation (15CA/CB)**, **F&O Traders**, and **Notice Resolutions**.
 
-### 8. 👨‍💼 Meet Lead CA — CA Pradeep Agarwal (FCA, DISA)
-- Senior Managing Partner with 15+ years of CA practice. Official Helpline: **+91 98914 95092**.
+### 8. 👨‍💼 Meet Lead CA — CA Pradeep Agarwal (FCA)
+- Senior Managing Partner with 10+ years of CA practice. Official Helpline: **+91 98914 95092**.
 
 ---
 

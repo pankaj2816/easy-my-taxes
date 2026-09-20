@@ -777,7 +777,7 @@ function renderSingleServicePage(serviceId) {
         ${data.overview}
       </p>
       <p>
-        In India, statutory compliance and legal registration are administered under dedicated statutory authorities such as the <strong>${data.govtPortal}</strong>. When you register or file through <strong>Easy My Taxes</strong> under the direct stewardship of <strong>CA Pradeep Agarwal (FCA, DISA)</strong>, our chartered accountancy team conducts a thorough pre-scrutiny of all documents to ensure zero rejection, seamless regulatory approval, and complete protection against statutory notices.
+        In India, statutory compliance and legal registration are administered under dedicated statutory authorities such as the <strong>${data.govtPortal}</strong>. When you register or file through <strong>Easy My Taxes</strong> under the direct stewardship of <strong>CA Pradeep Agarwal (FCA)</strong>, our chartered accountancy team conducts a thorough pre-scrutiny of all documents to ensure zero rejection, seamless regulatory approval, and complete protection against statutory notices.
       </p>
       <div style="background: var(--surface-50); border-left: 4px solid var(--emerald-500); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-top: 1.25rem;">
         <strong style="color: var(--primary-950);">💡 Key Regulatory Advantage:</strong>
