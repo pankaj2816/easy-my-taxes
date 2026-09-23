@@ -304,7 +304,7 @@ function renderCategoryHub(catKey, searchQuery = '') {
     if (catHubCrumb) catHubCrumb.style.display = 'none';
   } else {
     if (catHubServicesCrumb) {
-      catHubServicesCrumb.innerHTML = `<a href="service.html?category=all" onclick="event.preventDefault(); switchCategory('all');" class="breadcrumb-link">Services</a>`;
+      catHubServicesCrumb.innerHTML = `<a href="service?category=all" onclick="event.preventDefault(); switchCategory('all');" class="breadcrumb-link">Services</a>`;
     }
     if (catHubCrumbSep) catHubCrumbSep.style.display = 'inline';
     if (catHubCrumb) {
@@ -430,7 +430,7 @@ function renderServiceCardHtml(s) {
         </ul>
       </div>
       <div class="cat-card-footer">
-        <a href="service.html?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
+        <a href="service?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
           Explore &amp; Apply &rarr;
         </a>
         <a href="https://wa.me/919891495092?text=${waMsg}" target="_blank" class="btn-cat-wa" title="WhatsApp Inquiry" aria-label="WhatsApp Inquiry">
@@ -719,7 +719,7 @@ function renderSingleServicePage(serviceId) {
   // 2. Breadcrumbs with link to Category Hub
   const crumbCategory = document.getElementById('crumbCategory');
   if (crumbCategory) {
-    crumbCategory.innerHTML = `<a href="service.html?category=${data.category}" onclick="event.preventDefault(); switchCategory('${data.category}');" class="breadcrumb-link">${data.categoryLabel}</a>`;
+    crumbCategory.innerHTML = `<a href="service?category=${data.category}" onclick="event.preventDefault(); switchCategory('${data.category}');" class="breadcrumb-link">${data.categoryLabel}</a>`;
   }
   const crumbTitle = document.getElementById('crumbTitle');
   if (crumbTitle) crumbTitle.textContent = data.title;
@@ -970,7 +970,7 @@ function renderSiblingServices(currentService) {
           <p class="cat-card-tagline" style="font-size: 0.84rem;">${s.tagline}</p>
         </div>
         <div class="cat-card-footer">
-          <a href="service.html?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
+          <a href="service?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
             View Details &rarr;
           </a>
           <a href="https://wa.me/919891495092?text=${waMsg}" target="_blank" class="btn-cat-wa" title="WhatsApp Inquiry" aria-label="WhatsApp Inquiry">

@@ -351,11 +351,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initCleanUrls();
 });
 
-// Clean URL Optimization: Clean 'index.html' from URL bar immediately without reload
+// Clean URL Optimization: Strip '.html' from URL bar across all pages immediately without reload
 function initCleanUrls() {
   const path = window.location.pathname;
-  if (path.endsWith('/index.html') || path === '/index.html') {
-    const cleanPath = path.replace(/\/index\.html$/, '') || '/';
+  if (path.endsWith('.html')) {
+    let cleanPath;
+    if (path.endsWith('/index.html') || path === '/index.html') {
+      cleanPath = path.replace(/\/index\.html$/, '') || '/';
+    } else {
+      cleanPath = path.replace(/\.html$/, '');
+    }
     const cleanUrl = cleanPath + window.location.search + window.location.hash;
     window.history.replaceState(null, '', cleanUrl);
   }
