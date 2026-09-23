@@ -22,12 +22,13 @@
     (function() {
       const p = window.location.pathname.toLowerCase();
       if (p === '/index' || p === '/home' || p.endsWith('/index.html') || p === '/index.html') {
-        window.location.replace('/' + window.location.search + window.location.hash);
+        const cleanRoot = p.replace(/\/index\.html$/, '').replace(/\/+$/, '') || '/';
+        window.location.replace(cleanRoot + window.location.search + window.location.hash);
         return;
       }
       const trimmed = p.replace(/\/+$/, '').replace(/\.html$/, '');
       const validRoutes = ['/calculators', '/service', '/due-dates', '/about-ca'];
-      if (validRoutes.includes(trimmed)) {
+      if (validRoutes.includes(trimmed) || trimmed.startsWith('/service/')) {
         window.location.replace(trimmed + window.location.search + window.location.hash);
       }
     })();
@@ -42,7 +43,7 @@
       </a>
       <div class="nav-actions">
         <a href="/" class="btn btn-outline btn-sm">Home</a>
-        <a href="service?category=all" class="btn btn-primary btn-sm">All Services</a>
+        <a href="service" class="btn btn-primary btn-sm">All Services</a>
       </div>
     </div>
   </header>
@@ -69,7 +70,7 @@
         <a href="calculators" class="btn btn-outline" style="padding: 0.875rem 1.75rem;">
           Tax Calculators Suite (AY 2026-27)
         </a>
-        <a href="service?category=all" class="btn btn-outline" style="padding: 0.875rem 1.75rem;">
+        <a href="service" class="btn btn-outline" style="padding: 0.875rem 1.75rem;">
           Browse 52 CA Services
         </a>
       </div>

@@ -201,8 +201,22 @@ let currentHoverExplorerCategory = 'registrations';
  */
 function initServicePageRouter() {
   const urlParams = new URLSearchParams(window.location.search);
-  const categoryParam = urlParams.get('category');
-  const serviceId = urlParams.get('id');
+  let categoryParam = urlParams.get('category');
+  let serviceId = urlParams.get('id');
+
+  // Check URL pathname for clean routes: /service/<slug> or /service/<cat>
+  // e.g. /service/itr-capital-gains, /service/registrations, /service/
+  const cleanPath = window.location.pathname.replace(/\/+$/, '');
+  const segments = cleanPath.split('/').filter(Boolean);
+  const lastSegment = segments.length > 0 ? segments[segments.length - 1] : '';
+
+  if (lastSegment && lastSegment !== 'service' && lastSegment !== 'service.html' && lastSegment !== 'index.html') {
+    if (typeof MASTER_SERVICES_DATA !== 'undefined' && MASTER_SERVICES_DATA[lastSegment]) {
+      serviceId = lastSegment;
+    } else if (typeof CATEGORY_META !== 'undefined' && CATEGORY_META[lastSegment]) {
+      categoryParam = lastSegment;
+    }
+  }
 
   // Handle explicit category requests
   if (categoryParam && CATEGORY_META[categoryParam]) {
@@ -254,8 +268,8 @@ function switchCategory(catKey) {
   const searchInput = document.getElementById('catHubSearchInput');
   if (searchInput) searchInput.value = '';
 
-  // Update browser URL without reloading
-  const newUrl = `${window.location.pathname}?category=${catKey}`;
+  // Update browser URL without reloading to clean path
+  const newUrl = catKey === 'all' ? '/service' : `/service/${catKey}`;
   window.history.pushState({ category: catKey }, '', newUrl);
 
   renderCategoryHub(catKey);
@@ -304,7 +318,7 @@ function renderCategoryHub(catKey, searchQuery = '') {
     if (catHubCrumb) catHubCrumb.style.display = 'none';
   } else {
     if (catHubServicesCrumb) {
-      catHubServicesCrumb.innerHTML = `<a href="service?category=all" onclick="event.preventDefault(); switchCategory('all');" class="breadcrumb-link">Services</a>`;
+      catHubServicesCrumb.innerHTML = `<a href="service" onclick="event.preventDefault(); switchCategory('all');" class="breadcrumb-link">Services</a>`;
     }
     if (catHubCrumbSep) catHubCrumbSep.style.display = 'inline';
     if (catHubCrumb) {
@@ -430,7 +444,7 @@ function renderServiceCardHtml(s) {
         </ul>
       </div>
       <div class="cat-card-footer">
-        <a href="service?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
+        <a href="service/${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
           Explore &amp; Apply &rarr;
         </a>
         <a href="https://wa.me/919891495092?text=${waMsg}" target="_blank" class="btn-cat-wa" title="WhatsApp Inquiry" aria-label="WhatsApp Inquiry">
@@ -675,8 +689,8 @@ function handleCatSearch(val) {
  * Navigate to Single Service View smoothly
  */
 function navigateToService(e, serviceId) {
-  e.preventDefault();
-  const newUrl = `${window.location.pathname}?id=${serviceId}`;
+  if (e && e.preventDefault) e.preventDefault();
+  const newUrl = `/service/${serviceId}`;
   window.history.pushState({ serviceId: serviceId }, '', newUrl);
   renderSingleServicePage(serviceId);
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -719,7 +733,7 @@ function renderSingleServicePage(serviceId) {
   // 2. Breadcrumbs with link to Category Hub
   const crumbCategory = document.getElementById('crumbCategory');
   if (crumbCategory) {
-    crumbCategory.innerHTML = `<a href="service?category=${data.category}" onclick="event.preventDefault(); switchCategory('${data.category}');" class="breadcrumb-link">${data.categoryLabel}</a>`;
+    crumbCategory.innerHTML = `<a href="service/${data.category}" onclick="event.preventDefault(); switchCategory('${data.category}');" class="breadcrumb-link">${data.categoryLabel}</a>`;
   }
   const crumbTitle = document.getElementById('crumbTitle');
   if (crumbTitle) crumbTitle.textContent = data.title;
@@ -970,7 +984,7 @@ function renderSiblingServices(currentService) {
           <p class="cat-card-tagline" style="font-size: 0.84rem;">${s.tagline}</p>
         </div>
         <div class="cat-card-footer">
-          <a href="service?id=${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
+          <a href="service/${s.id}" class="btn-cat-details" onclick="navigateToService(event, '${s.id}')">
             View Details &rarr;
           </a>
           <a href="https://wa.me/919891495092?text=${waMsg}" target="_blank" class="btn-cat-wa" title="WhatsApp Inquiry" aria-label="WhatsApp Inquiry">
