@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visiting Card Back Render</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 1050px;
+      height: 600px;
+      overflow: hidden;
+      background: #071120;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card-back {
+      width: 1050px;
+      height: 600px;
+      background: #071120;
+      color: #ffffff;
+      padding: 48px 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .card-back::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 75%);
+      pointer-events: none;
+    }
+    .card-back::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 10px;
+      height: 100%;
+      background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa8214 100%);
+    }
+
+    /* Back Header */
+    .back-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+      padding-bottom: 18px;
+    }
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-logo-mark {
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa8214 100%);
+      color: #071120;
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 1;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    }
+    .back-brand-name {
+      font-family: 'Cinzel', serif;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .back-brand-name span {
+      background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa8214 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .back-pill {
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #d4af37;
+      background: rgba(212, 175, 55, 0.12);
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(212, 175, 55, 0.4);
+    }
+
+    /* Pillars */
+    .back-pillars-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #d4af37;
+      margin: 18px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .back-pillars-title::after {
+      content: '';
+      flex: 1;
+      height: 1.5px;
+      background: rgba(212, 175, 55, 0.3);
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 40px;
+    }
+    .pillar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: #cbd5e1;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+    .pillar-item strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .pillar-bullet {
+      color: #d4af37;
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 1px;
+    }
+
+    /* Back Footer */
+    .back-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1.5px solid rgba(255, 255, 255, 0.08);
+      padding-top: 18px;
+    }
+    .back-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: #94a3b8;
+      letter-spacing: 0.02em;
+    }
+    .back-url {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-back">
+    <!-- Header -->
+    <div class="back-header">
+      <div class="brand-block">
+        <div class="brand-logo-mark">
+          <span>E</span>
+        </div>
+        <div class="back-brand-name">
+          Easy My <span>Taxes</span>
+        </div>
+      </div>
+      <div class="back-pill">Direct CA Practice</div>
+    </div>
+
+    <!-- Pillars -->
+    <div>
+      <div class="back-pillars-title">
+        <span>Core Statutory Specializations</span>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <div>
+            <strong>Direct Tax Litigation:</strong><br>
+            148 Reassessment, 143(1) &amp; Appeals
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <div>
+            <strong>Company Incorporation:</strong><br>
+            Pvt Ltd, LLP, Section 8, Foreign Subsidiary
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <div>
+            <strong>Statutory &amp; Tax Audits:</strong><br>
+            Section 44AB, 3CD &amp; MCA AOC-4
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <div>
+            <strong>Cross-Border &amp; NRI Tax:</strong><br>
+            15CA / 15CB Foreign Remittances
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <div>
+            <strong>Virtual CFO &amp; Governance:</strong><br>
+            Due Diligence, MIS &amp; Tax Structuring
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <div>
+            <strong>Corporate Compliance:</strong><br>
+            Monthly GST, TDS 24Q/26Q &amp; DIR-3 KYC
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="back-footer">
+      <div class="back-tagline">
+        "Proactive Compliance. Zero Notice Vulnerability."
+      </div>
+      <div class="back-url">
+        easymytaxes.com
+      </div>
+    </div>
+  </div>
+</body>
+</html>
