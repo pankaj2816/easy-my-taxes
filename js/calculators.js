@@ -28,6 +28,7 @@ let currentTaxState = {
 };
 
 function calculateTax() {
+  if (!document.getElementById('calcGrossSalary') && !document.getElementById('resNewTax')) return;
   const grossSalary = parseFloat(document.getElementById('calcGrossSalary')?.value) || 0;
   const otherIncome = parseFloat(document.getElementById('calcOtherIncome')?.value) || 0;
   const deduction80C = Math.min(parseFloat(document.getElementById('calc80C')?.value) || 0, 150000);
@@ -257,6 +258,7 @@ function sendTaxSummaryToWhatsApp() {
 // --------------------------------------------------------------------------
 
 function calculateAdvanceTax(estimatedAnnualTax) {
+  if (!document.getElementById('advTaxAnnualAmount') && !document.getElementById('advResQ1') && estimatedAnnualTax === undefined) return;
   const baseTax = estimatedAnnualTax !== undefined 
     ? estimatedAnnualTax 
     : (parseFloat(document.getElementById('advTaxAnnualAmount')?.value) || 120000);
@@ -292,6 +294,7 @@ function calculateAdvanceTax(estimatedAnnualTax) {
 // --------------------------------------------------------------------------
 
 function calculate44ADA() {
+  if (!document.getElementById('adaGrossReceipts') && !document.getElementById('adaResProfitADA')) return;
   const grossReceipts = parseFloat(document.getElementById('adaGrossReceipts')?.value) || 0;
   const actualExpenses = parseFloat(document.getElementById('adaActualExpenses')?.value) || 0;
 
@@ -498,6 +501,7 @@ function sendNoticeToWhatsApp() {
 // --------------------------------------------------------------------------
 
 function calculateGST() {
+  if (!document.getElementById('gstAmount') && !document.getElementById('gstResNet')) return;
   const baseAmount = parseFloat(document.getElementById('gstAmount')?.value) || 0;
   const gstRate = parseFloat(document.getElementById('gstRate')?.value) || 18;
   const gstType = document.querySelector('input[name="gstType"]:checked')?.value || 'exclusive';
@@ -540,6 +544,7 @@ function calculateGST() {
 // --------------------------------------------------------------------------
 
 function calculateHRA() {
+  if (!document.getElementById('hraBasic') && !document.getElementById('hraResExempt')) return;
   const basicSalary = parseFloat(document.getElementById('hraBasic')?.value) || 0;
   const da = parseFloat(document.getElementById('hraDA')?.value) || 0;
   const hraReceived = parseFloat(document.getElementById('hraReceived')?.value) || 0;

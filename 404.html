@@ -21,15 +21,34 @@
     // Auto-recovery for clean URLs, legacy routes, and trailing-slash requests
     (function() {
       const p = window.location.pathname.toLowerCase();
+      const redirectKey = '_emt_404_last';
+      const lastAttempt = sessionStorage.getItem(redirectKey);
+      if (lastAttempt === window.location.href) {
+        sessionStorage.removeItem(redirectKey);
+        return; // Halt redirect loop and display 404 page safely
+      }
+
       if (p === '/index' || p === '/home' || p.endsWith('/index.html') || p === '/index.html') {
+        sessionStorage.setItem(redirectKey, window.location.href);
         const cleanRoot = p.replace(/\/index\.html$/, '').replace(/\/+$/, '') || '/';
         window.location.replace(cleanRoot + window.location.search + window.location.hash);
         return;
       }
+
       const trimmed = p.replace(/\/+$/, '').replace(/\.html$/, '');
-      const validRoutes = ['/calculators', '/service', '/due-dates', '/about-ca'];
-      if (validRoutes.includes(trimmed) || trimmed.startsWith('/service/')) {
-        window.location.replace(trimmed + window.location.search + window.location.hash);
+      const validRoutes = ['/calculators', '/service', '/due-dates', '/about-ca', '/visiting-card'];
+      
+      if (validRoutes.includes(trimmed)) {
+        sessionStorage.setItem(redirectKey, window.location.href);
+        window.location.replace(trimmed + '.html' + window.location.search + window.location.hash);
+        return;
+      }
+      
+      if (trimmed.startsWith('/service/')) {
+        sessionStorage.setItem(redirectKey, window.location.href);
+        const slug = trimmed.replace('/service/', '');
+        const targetUrl = '/service.html?id=' + encodeURIComponent(slug) + (window.location.search ? '&' + window.location.search.substring(1) : '') + window.location.hash;
+        window.location.replace(targetUrl);
       }
     })();
   </script>
