@@ -400,50 +400,36 @@
 
     .brand-block {
       display: flex;
-      align-items: center;
-      gap: 0.08in;
-    }
-
-    .brand-logo-mark {
-      width: 0.32in;
-      height: 0.32in;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      background: var(--c-gold-gradient);
-      color: #071120;
-      font-family: 'Cinzel', serif;
-      font-weight: 900;
-      font-size: 0.15in;
-      line-height: 1;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    }
-
-    .brand-text-wrap {
-      display: flex;
       flex-direction: column;
+      align-items: flex-start;
+      gap: 0.02in;
     }
 
-    .brand-name {
-      font-family: 'Cinzel', 'Playfair Display', serif;
-      font-size: 0.13in;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: var(--c-text-primary);
-      line-height: 1.1;
-      text-transform: uppercase;
+    .brand-logo-img {
+      height: 0.20in;
+      width: auto;
+      object-fit: contain;
+      display: block;
     }
 
-    .brand-name span {
-      background: var(--c-gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .theme-navy .logo-for-light,
+    .theme-obsidian .logo-for-light {
+      display: none !important;
+    }
+    .theme-navy .logo-for-dark,
+    .theme-obsidian .logo-for-dark {
+      display: block !important;
+    }
+    .theme-emerald .logo-for-dark {
+      display: none !important;
+    }
+    .theme-emerald .logo-for-light {
+      display: block !important;
     }
 
     .brand-tagline {
-      font-size: 0.055in;
-      font-weight: 600;
+      font-size: 0.046in;
+      font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--c-text-muted);
@@ -632,43 +618,29 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--c-border-gold);
-      padding-bottom: 0.08in;
-    }
-
-    .back-brand-name {
-      font-family: 'Cinzel', serif;
-      font-size: 0.14in;
-      font-weight: 800;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--c-text-primary);
-    }
-    .back-brand-name span {
-      background: var(--c-gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      padding-bottom: 0.06in;
     }
 
     .back-pill {
-      font-size: 0.052in;
+      font-size: 0.048in;
       font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--c-gold);
       background: rgba(212, 175, 55, 0.1);
-      padding: 0.03in 0.08in;
+      padding: 0.025in 0.07in;
       border-radius: 999px;
       border: 1px solid var(--c-border-gold);
     }
 
     /* Middle: Practice Competencies Grid */
     .back-pillars-title {
-      font-size: 0.062in;
+      font-size: 0.056in;
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--c-gold);
-      margin: 0.06in 0 0.04in;
+      margin: 0.04in 0 0.05in;
       display: flex;
       align-items: center;
       gap: 0.05in;
@@ -684,25 +656,33 @@
     .pillars-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.035in 0.12in;
-      margin-bottom: 0.05in;
+      gap: 0.055in 0.12in;
+      margin-bottom: 0.04in;
     }
 
     .pillar-item {
       display: flex;
-      align-items: flex-start;
-      gap: 0.04in;
-      font-size: 0.056in;
-      color: var(--c-text-secondary);
-      font-weight: 600;
-      line-height: 1.25;
+      align-items: center;
+      gap: 0.045in;
+      font-size: 0.055in;
+      color: var(--c-text-primary);
+      font-weight: 700;
+      line-height: 1.2;
     }
 
     .pillar-bullet {
       color: var(--c-gold);
-      font-size: 0.065in;
+      font-size: 0.044in;
       line-height: 1;
-      margin-top: -1px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 0.095in;
+      height: 0.095in;
+      border-radius: 2px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 0.5px solid var(--c-border-gold);
     }
 
     /* Bottom: Philosophy & Direct Web URL */
@@ -960,13 +940,9 @@
         <!-- Top Bar: Easy My Taxes Brand + ICAI Member Badge -->
         <div class="card-top-bar">
           <div class="brand-block">
-            <div class="brand-logo-mark">
-              <span>E</span>
-            </div>
-            <div class="brand-text-wrap">
-              <div class="brand-name">Easy My <span>Taxes</span></div>
-              <div class="brand-tagline">Chartered Accountancy &amp; Corporate Advisory</div>
-            </div>
+            <img src="assets/logo-new-dark.png" alt="EasyMyTaxes Logo" class="brand-logo-img logo-for-dark">
+            <img src="assets/logo-new-transparent.png" alt="EasyMyTaxes Logo" class="brand-logo-img logo-for-light">
+            <div class="brand-tagline">Chartered Accountancy &amp; Corporate Advisory</div>
           </div>
 
           <div class="icai-badge-wrap">
@@ -1071,72 +1047,60 @@
           <div class="safe-zone-box"></div>
         </div>
 
-        <!-- Back Header: EMT Brand Monogram + Tagline -->
+        <!-- Back Header: EMT Brand Logo + Tagline -->
         <div class="back-header">
           <div class="brand-block">
-            <div class="brand-logo-mark" style="width: 0.28in; height: 0.28in; font-size: 0.13in;">
-              <span>E</span>
-            </div>
-            <div class="back-brand-name">
-              Easy My <span>Taxes</span>
-            </div>
+            <img src="assets/logo-new-dark.png" alt="EasyMyTaxes Logo" class="brand-logo-img logo-for-dark" style="height: 0.18in;">
+            <img src="assets/logo-new-transparent.png" alt="EasyMyTaxes Logo" class="brand-logo-img logo-for-light" style="height: 0.18in;">
           </div>
-          <div class="back-pill">Direct CA Practice</div>
+          <div class="back-pill">Chartered Accountants &amp; Advisory</div>
         </div>
 
-        <!-- Middle: 5 Core Practice Areas Grid -->
+        <!-- Middle: 8 Core Practice Areas Grid -->
         <div>
           <div class="back-pillars-title">
-            <span>Core Statutory Specializations</span>
+            <span>Corporate &amp; Statutory Practice Areas</span>
           </div>
 
           <div class="pillars-grid">
+            <!-- Row 1 -->
             <div class="pillar-item">
               <span class="pillar-bullet">◆</span>
-              <div>
-                <strong>Direct Tax Litigation:</strong><br>
-                148 Reassessment, 143(1) &amp; Appeals
-              </div>
+              <span>Bookkeeping, Audit &amp; Assurance</span>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-bullet">◆</span>
+              <span>Direct &amp; Indirect Tax Litigations</span>
             </div>
 
+            <!-- Row 2 -->
             <div class="pillar-item">
               <span class="pillar-bullet">◆</span>
-              <div>
-                <strong>Company Incorporation:</strong><br>
-                Pvt Ltd, LLP, Section 8, Foreign Subsidiary
-              </div>
+              <span>Incorporation Services</span>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-bullet">◆</span>
+              <span>IPO &amp; Startup Advisory Services</span>
             </div>
 
+            <!-- Row 3 -->
             <div class="pillar-item">
               <span class="pillar-bullet">◆</span>
-              <div>
-                <strong>Statutory &amp; Tax Audits:</strong><br>
-                Section 44AB, 3CD &amp; MCA AOC-4
-              </div>
+              <span>Corporate &amp; Tax Compliances</span>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-bullet">◆</span>
+              <span>Virtual CFO Services</span>
             </div>
 
+            <!-- Row 4 -->
             <div class="pillar-item">
               <span class="pillar-bullet">◆</span>
-              <div>
-                <strong>Cross-Border &amp; NRI Tax:</strong><br>
-                15CA / 15CB Foreign Remittances
-              </div>
+              <span>International Taxation</span>
             </div>
-
             <div class="pillar-item">
               <span class="pillar-bullet">◆</span>
-              <div>
-                <strong>Virtual CFO &amp; Governance:</strong><br>
-                Due Diligence, MIS &amp; Tax Structuring
-              </div>
-            </div>
-
-            <div class="pillar-item">
-              <span class="pillar-bullet">◆</span>
-              <div>
-                <strong>Corporate Compliance:</strong><br>
-                Monthly GST, TDS 24Q/26Q &amp; DIR-3 KYC
-              </div>
+              <span>Financial Due Diligence</span>
             </div>
           </div>
         </div>
@@ -1144,7 +1108,7 @@
         <!-- Back Footer: Philosophy & Clean URL -->
         <div class="back-footer">
           <div class="back-tagline">
-            "Proactive Compliance. Zero Notice Vulnerability."
+            "Strategic Finance • Flawless Compliance • Pan-India Assurance"
           </div>
           <div class="back-url">
             easymytaxes.com

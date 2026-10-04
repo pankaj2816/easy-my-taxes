@@ -57,53 +57,26 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 2px solid rgba(212, 175, 55, 0.4);
-      padding-bottom: 20px;
+      padding-bottom: 18px;
     }
     .brand-block {
       display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .brand-logo-mark {
-      width: 64px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa8214 100%);
-      color: #071120;
-      font-family: 'Cinzel', serif;
-      font-weight: 900;
-      font-size: 34px;
-      line-height: 1;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-    }
-    .brand-text-wrap {
-      display: flex;
       flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
     }
-    .brand-name {
-      font-family: 'Cinzel', serif;
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: #ffffff;
-      line-height: 1.1;
-      text-transform: uppercase;
-    }
-    .brand-name span {
-      background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa8214 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .brand-logo-img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      display: block;
     }
     .brand-tagline {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #94a3b8;
-      margin-top: 4px;
     }
 
     .icai-badge-wrap {
@@ -250,13 +223,8 @@
     <!-- Top Bar: Brand & ICAI Crest -->
     <div class="card-top-bar">
       <div class="brand-block">
-        <div class="brand-logo-mark">
-          <span>E</span>
-        </div>
-        <div class="brand-text-wrap">
-          <div class="brand-name">Easy My <span>Taxes</span></div>
-          <div class="brand-tagline">Chartered Accountancy &amp; Corporate Advisory</div>
-        </div>
+        <img src="assets/logo-new-dark.png" alt="EasyMyTaxes Logo" class="brand-logo-img">
+        <div class="brand-tagline">Chartered Accountancy &amp; Corporate Advisory</div>
       </div>
 
       <div class="icai-badge-wrap">
