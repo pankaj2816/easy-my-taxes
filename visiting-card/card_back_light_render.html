@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visiting Card Back Light Render</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 1050px;
+      height: 600px;
+      overflow: hidden;
+      background: #ffffff;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card-back {
+      width: 1050px;
+      height: 600px;
+      background: #ffffff;
+      color: #0f172a;
+      padding: 44px 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      border: 1px solid #e2e8f0;
+    }
+    /* Subtle luxury radial corner warmth */
+    .card-back::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500px;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(8, 166, 172, 0.06), transparent 70%);
+      pointer-events: none;
+    }
+    /* Left executive metallic stripe: Navy to Cyan with Gold pinstripe */
+    .card-back::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background: linear-gradient(180deg, #003062 0%, #08a6ac 70%, #d4af37 100%);
+    }
+
+    /* Back Header */
+    .back-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 18px;
+    }
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .back-pill {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #003062;
+      background: rgba(0, 48, 98, 0.06);
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(0, 48, 98, 0.18);
+    }
+
+    /* Pillars */
+    .back-pillars-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #003062;
+      margin: 0 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .back-pillars-title::after {
+      content: '';
+      flex: 1;
+      height: 1.5px;
+      background: #e2e8f0;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 48px;
+    }
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 15.5px;
+      color: #0f172a;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+    }
+    .pillar-bullet {
+      color: #08a6ac;
+      font-size: 12px;
+      line-height: 1;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: rgba(8, 166, 172, 0.1);
+      border: 1.5px solid rgba(8, 166, 172, 0.35);
+    }
+
+    /* Back Footer */
+    .back-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1.5px solid #e2e8f0;
+      padding-top: 16px;
+    }
+    .back-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 15.5px;
+      color: #475569;
+      letter-spacing: 0.02em;
+    }
+    .back-url {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 17px;
+      font-weight: 700;
+      color: #003062;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-back">
+    <!-- Header -->
+    <div class="back-header">
+      <div class="brand-block">
+        <img src="assets/logo-new-transparent.png" alt="EasyMyTaxes Logo" class="brand-logo-img">
+      </div>
+      <div class="back-pill">Chartered Accountants &amp; Advisory</div>
+    </div>
+
+    <!-- 8 Core Services Grid -->
+    <div>
+      <div class="back-pillars-title">
+        <span>Corporate &amp; Statutory Practice Areas</span>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Row 1 -->
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>Bookkeeping, Audit &amp; Assurance</span>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>Direct &amp; Indirect Tax Litigations</span>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>Incorporation Services</span>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>IPO &amp; Startup Advisory Services</span>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>Corporate &amp; Tax Compliances</span>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>Virtual CFO Services</span>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>International Taxation</span>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-bullet">◆</span>
+          <span>Financial Due Diligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="back-footer">
+      <div class="back-tagline">
+        "Strategic Finance • Flawless Compliance • Pan-India Assurance"
+      </div>
+      <div class="back-url">
+        www.easymytaxes.com
+      </div>
+    </div>
+  </div>
+</body>
+</html>

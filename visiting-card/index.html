@@ -317,23 +317,25 @@
       --c-text-secondary: #cbd5e1;
       --c-text-muted: #8494a8;
       --c-border-gold: rgba(212, 175, 55, 0.35);
+      --c-border-divider: rgba(255, 255, 255, 0.08);
       --c-accent-line: #d4af37;
     }
 
     /* ==========================================================================
-       4. THEME B: CLASSIC CHARTERED (Pearl White & Forest Emerald)
+       4. THEME B: EXECUTIVE LIGHT (Crisp White & Royal Navy)
        ========================================================================== */
     .theme-emerald {
       --c-bg: #ffffff;
       --c-bg-subtle: #f8fafc;
       --c-card-surface: #ffffff;
-      --c-gold: #064e3b;
-      --c-gold-gradient: linear-gradient(135deg, #064e3b 0%, #059669 100%);
-      --c-text-primary: #091e14;
+      --c-gold: #003062;
+      --c-gold-gradient: linear-gradient(180deg, #003062 0%, #08a6ac 70%, #d4af37 100%);
+      --c-text-primary: #0f172a;
       --c-text-secondary: #1e293b;
       --c-text-muted: #64748b;
-      --c-border-gold: rgba(5, 150, 105, 0.35);
-      --c-accent-line: #059669;
+      --c-border-gold: #cbd5e1;
+      --c-border-divider: #e2e8f0;
+      --c-accent-line: #003062;
     }
 
     /* ==========================================================================
@@ -349,6 +351,7 @@
       --c-text-secondary: #e2e8f0;
       --c-text-muted: #94a3b8;
       --c-border-gold: rgba(224, 169, 109, 0.4);
+      --c-border-divider: rgba(255, 255, 255, 0.08);
       --c-accent-line: #e0a96d;
     }
 
@@ -440,7 +443,7 @@
       display: flex;
       align-items: center;
       gap: 0.06in;
-      background: rgba(255, 255, 255, 0.04);
+      background: var(--c-bg-subtle);
       border: 1px solid var(--c-border-gold);
       padding: 0.03in 0.08in;
       border-radius: 4px;
@@ -514,7 +517,7 @@
       gap: 0.15in;
       align-items: flex-end;
       padding-top: 0.05in;
-      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      border-top: 1px solid var(--c-border-divider);
     }
 
     .contact-list {
@@ -690,7 +693,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid var(--c-border-divider);
       padding-top: 0.06in;
     }
 
@@ -855,7 +858,7 @@
           👑 Royal Navy &amp; Gold
         </button>
         <button class="btn-option" onclick="setTheme('theme-emerald', this)">
-          💎 Pearl &amp; Emerald
+          ☀️ Executive White &amp; Navy
         </button>
         <button class="btn-option" onclick="setTheme('theme-obsidian', this)">
           ⚡ Obsidian Platinum
