@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Connect with CA Pradeep Kumar Agrawal | Easy My Taxes</title>
+  <meta name="description" content="Digital Business Card & Direct Contact Hub for CA Pradeep Kumar Agrawal, Senior Managing Partner at Easy My Taxes. Save contact, call, WhatsApp, or schedule consultation.">
+  <meta name="theme-color" content="#002147">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="CA Pradeep Kumar Agrawal — Easy My Taxes">
+  <meta property="og:description" content="Senior Managing Partner & Chief Tax Strategist. Save contact or connect directly.">
+  <meta property="og:image" content="assets/logo-new.png">
+  <meta property="og:url" content="https://easymytaxes.com/connect">
+  <meta property="og:type" content="profile">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy-deep: #002147;
+      --navy-rich: #003062;
+      --cyan-brand: #08a6ac;
+      --cyan-light: #e0f7f8;
+      --gold-accent: #d4af37;
+      --gold-light: #fef9e7;
+      --slate-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-subtle: #e2e8f0;
+      --shadow-card: 0 10px 30px -5px rgba(0, 33, 71, 0.08), 0 4px 6px -2px rgba(0, 33, 71, 0.04);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 1rem 3rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .connect-container {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* Main Digital Business Card */
+    .profile-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -10px rgba(0, 33, 71, 0.12), 0 0 0 1px rgba(0, 33, 71, 0.05);
+      position: relative;
+    }
+
+    /* Card Top Banner */
+    .card-banner {
+      background: linear-gradient(135deg, #002147 0%, #003062 60%, #08a6ac 100%);
+      padding: 1.75rem 1.5rem 2.25rem;
+      position: relative;
+      text-align: center;
+    }
+    .card-banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #003062 0%, #08a6ac 70%, #d4af37 100%);
+    }
+
+    .brand-logo-wrap {
+      display: inline-block;
+      background: #ffffff;
+      padding: 10px 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1.25rem;
+    }
+    .brand-logo-wrap img {
+      height: 38px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .verified-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 4px 14px;
+      border-radius: 999px;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Profile Info Body */
+    .profile-body {
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
+
+    .profile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--navy-deep);
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .profile-designation {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #b8860b;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .profile-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Primary Save Contact CTA */
+    .btn-save-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(135deg, #003062 0%, #002147 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      padding: 0.95rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 48, 98, 0.3);
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-save-contact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(0, 48, 98, 0.4);
+      background: linear-gradient(135deg, #08a6ac 0%, #003062 100%);
+    }
+
+    /* Quick Action Grid */
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .action-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.85rem 0.5rem;
+      text-decoration: none;
+      color: var(--navy-deep);
+      font-size: 0.75rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .action-btn:hover {
+      background: #ffffff;
+      border-color: var(--cyan-brand);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(8, 166, 172, 0.15);
+    }
+    .action-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+    .icon-call { background: linear-gradient(135deg, #10b981, #059669); }
+    .icon-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); }
+    .icon-email { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+    .icon-map { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+    /* Contact Details Section */
+    .details-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy-rich);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-subtle);
+    }
+
+    .contact-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      padding: 0.6rem 0.75rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .contact-row:hover {
+      background: #f8fafc;
+    }
+
+    .row-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(0, 48, 98, 0.06);
+      color: var(--navy-rich);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .row-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .row-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .row-value {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--navy-deep);
+    }
+
+    /* Practice Areas Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .service-pill {
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--navy-deep);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.3;
+    }
+    .service-pill span.bullet {
+      color: var(--cyan-brand);
+      font-size: 0.7rem;
+    }
+
+    /* Footer */
+    .connect-footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+    .connect-footer a {
+      color: var(--navy-rich);
+      font-weight: 700;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="connect-container">
+    
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <div class="card-banner">
+        <div class="brand-logo-wrap">
+          <img src="assets/logo-new.png" alt="EasyMyTaxes Logo">
+        </div>
+        <div>
+          <span class="verified-pill">Chartered Accountants &amp; Advisory</span>
+        </div>
+      </div>
+
+      <div class="profile-body">
+        <h1 class="profile-name">CA Pradeep Kumar Agrawal</h1>
+        <div class="profile-designation">Senior Managing Partner &amp; Chief Tax Strategist</div>
+        <div class="profile-sub">Direct Tax Litigation • Corporate Restructuring • Virtual CFO</div>
+
+        <!-- Primary 1-Tap Save Contact -->
+        <a href="CA_Pradeep_Kumar_Agrawal.vcf" download="CA_Pradeep_Kumar_Agrawal.vcf" class="btn-save-contact" id="btnSaveContact">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+          Save to Contacts (vCard)
+        </a>
+
+        <!-- Quick 4 Action Buttons -->
+        <div class="quick-actions">
+          <a href="tel:+919891495092" class="action-btn">
+            <span class="action-icon icon-call">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+            Call
+          </a>
+
+          <a href="https://wa.me/919891495092?text=Hello%20CA%20Pradeep%20Agrawal,%20I%20connected%20via%20your%20visiting%20card%20and%20would%20like%20to%20consult." target="_blank" rel="noopener" class="action-btn">
+            <span class="action-icon icon-whatsapp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </span>
+            WhatsApp
+          </a>
+
+          <a href="mailto:easymytaxes@gmail.com?subject=Inquiry%20from%20Visiting%20Card" class="action-btn">
+            <span class="action-icon icon-email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            Email
+          </a>
+
+          <a href="https://maps.google.com/?q=Ocus+Quantum+Sector+51+Gurugram" target="_blank" rel="noopener" class="action-btn">
+            <span class="action-icon icon-map">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            Directions
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Information Details Card -->
+    <div class="details-card">
+      <div class="section-title">Direct Contact Information</div>
+      <div class="contact-rows">
+        
+        <a href="tel:+919891495092" class="contact-row">
+          <div class="row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="row-content">
+            <span class="row-label">Direct Phone / Mobile</span>
+            <span class="row-value">+91 98914 95092</span>
+          </div>
+        </a>
+
+        <a href="mailto:easymytaxes@gmail.com" class="contact-row">
+          <div class="row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div class="row-content">
+            <span class="row-label">Official Email</span>
+            <span class="row-value">easymytaxes@gmail.com</span>
+          </div>
+        </a>
+
+        <a href="https://maps.google.com/?q=Ocus+Quantum+Sector+51+Gurugram" target="_blank" rel="noopener" class="contact-row">
+          <div class="row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="row-content">
+            <span class="row-label">Head Office Address</span>
+            <span class="row-value">509, Ocus Quantum, Sector 51, Gurugram, NCR 122002</span>
+          </div>
+        </a>
+
+        <a href="https://easymytaxes.com" target="_blank" class="contact-row">
+          <div class="row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <div class="row-content">
+            <span class="row-label">Web Portal</span>
+            <span class="row-value">www.easymytaxes.com</span>
+          </div>
+        </a>
+
+        <div class="contact-row">
+          <div class="row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="row-content">
+            <span class="row-label">Support Model</span>
+            <span class="row-value">24/7 Fastrack CA Desk</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Corporate Practice Areas Card -->
+    <div class="details-card">
+      <div class="section-title">Corporate &amp; Statutory Practice Areas</div>
+      <div class="services-grid">
+        <div class="service-pill"><span class="bullet">◆</span> Bookkeeping, Audit &amp; Assurance</div>
+        <div class="service-pill"><span class="bullet">◆</span> Direct &amp; Indirect Tax Litigations</div>
+        <div class="service-pill"><span class="bullet">◆</span> Incorporation Services</div>
+        <div class="service-pill"><span class="bullet">◆</span> IPO &amp; Startup Advisory Services</div>
+        <div class="service-pill"><span class="bullet">◆</span> Corporate &amp; Tax Compliances</div>
+        <div class="service-pill"><span class="bullet">◆</span> Virtual CFO Services</div>
+        <div class="service-pill"><span class="bullet">◆</span> International Taxation</div>
+        <div class="service-pill"><span class="bullet">◆</span> Financial Due Diligence</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="connect-footer">
+      <p>&copy; 2026 Easy My Taxes &bull; All Rights Reserved.</p>
+      <p><a href="https://easymytaxes.com">www.easymytaxes.com</a></p>
+    </div>
+
+  </div>
+
+</body>
+</html>
