@@ -893,6 +893,13 @@ button {
   color: var(--text-subtle);
 }
 
+.footer-bottom > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+}
+
 /* Floating WhatsApp Button */
 .floating-whatsapp {
   position: fixed;
