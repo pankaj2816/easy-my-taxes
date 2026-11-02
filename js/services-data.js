@@ -2845,6 +2845,169 @@ const MASTER_SERVICES_DATA = {
       }
     ]
   },
+  "lmpc-registration": {
+    "id": "lmpc-registration",
+    "category": "licenses",
+    "categoryLabel": "Licenses & Certifications",
+    "icon": "📦",
+    "badge": "Legal Metrology Act, 2009",
+    "title": "LMPC Registration (Legal Metrology Packaged Commodities)",
+    "tagline": "Mandatory Manufacturer, Packer & Importer License under Legal Metrology Act, 2009 & Packaged Commodities Rules, 2011.",
+    "timeline": "7 - 10 Working Days",
+    "govtPortal": "Department of Consumer Affairs & State Legal Metrology",
+    "filingMode": "100% Online CA Assisted",
+    "overview": "Under the Legal Metrology (Packaged Commodities) Rules, 2011 in India, obtaining an LMPC (Legal Metrology Packaged Commodities) Manufacturer, Packer, or Importer registration is a statutory prerequisite for any entity that deals with pre-packed goods intended for retail or wholesale sale. Governed by the Legal Metrology Act, 2009, this registration guarantees that product packaging bears all statutorily mandated consumer declarations—including Maximum Retail Price (MRP), Net Weight/Volume, Name and Address of Manufacturer/Importer, Month & Year of Packaging, and Consumer Care details. For importers, obtaining an LMPC Importer Registration under Rule 27 is compulsory prior to customs clearance to prevent consignment detention, heavy demurrage, and port seizure.",
+    "benefits": [
+      {
+        "title": "Seamless Indian Customs Clearance",
+        "desc": "Mandatory for customs clearance of imported pre-packaged commodities; eliminates port detention, cargo hold-ups, and demurrage penalties."
+      },
+      {
+        "title": "Shield from Jan Vishwas Penalties",
+        "desc": "Shields your enterprise from departmental warnings, compounding fines (₹2,500 to ₹5,00,000+), and potential imprisonment under the Legal Metrology Act."
+      },
+      {
+        "title": "Mandatory for E-Commerce & Retail Chains",
+        "desc": "Essential compliance credential required for seller onboarding on Amazon, Flipkart, Blinkit, Zepto, modern trade supermarkets, and D2C portals."
+      },
+      {
+        "title": "Zero Seizure & Full Labeling Compliance",
+        "desc": "Guarantees 100% compliance with Rule 6 packaging declarations, preventing surprise market raids, stock confiscation, and product recalls."
+      }
+    ],
+    "whoFor": [
+      {
+        "icon": "🚢",
+        "title": "Importers of Pre-Packed Goods",
+        "desc": "Entities importing packaged consumer products, food, cosmetics, electronics, or lifestyle goods into India (Rule 27)."
+      },
+      {
+        "icon": "🏭",
+        "title": "Domestic Manufacturers",
+        "desc": "Enterprises manufacturing and packing commodities in pouches, boxes, bottles, or cans for wholesale or retail distribution."
+      },
+      {
+        "icon": "📦",
+        "title": "Third-Party Packers & Brand Owners",
+        "desc": "Businesses that procure loose or bulk goods and pre-pack, label, or re-brand them for distribution under their trademark."
+      },
+      {
+        "icon": "🛒",
+        "title": "D2C & E-Commerce Merchants",
+        "desc": "Online direct-to-consumer brands that retail packaged commodities across online digital marketplaces and brand portals."
+      }
+    ],
+    "eligibility": [
+      {
+        "icon": "🏢",
+        "label": "Business Constitution",
+        "value": "Any Commercial Entity",
+        "desc": "Proprietorship, Partnership Firm, LLP, Private Limited, or Public Company with valid GSTIN and PAN."
+      },
+      {
+        "icon": "🚢",
+        "label": "Import/Export Credential",
+        "value": "Valid IEC (For Importers)",
+        "desc": "Active 10-digit DGFT Import Export Code is statutorily mandatory for all Importer LMPC applications."
+      },
+      {
+        "icon": "📍",
+        "label": "Premises / Warehouse Proof",
+        "value": "Operational Address Proof",
+        "desc": "Registered factory license, DIC/MSME certificate, commercial trade license, or warehouse rent agreement with owner NOC."
+      },
+      {
+        "icon": "🏷️",
+        "label": "Sample Packaging Artwork",
+        "value": "Rule 6 Label Draft",
+        "desc": "Proposed product label or packaging digital mockup displaying all mandatory statutory declarations."
+      }
+    ],
+    "documents": [
+      "Certificate of Incorporation, Partnership Deed, or GST Registration Certificate",
+      "Import Export Code (IEC) issued by DGFT (mandatory for Importers)",
+      "PAN Card & Aadhaar Card of Authorized Director / Partner / Proprietor",
+      "Factory License / Municipal Trade License / FSSAI (for food) / Pollution Consent (for Manufacturers)",
+      "Proof of Registered Office & Warehouse Premises (Electricity Bill + Rent Agreement + Landlord NOC)",
+      "Sample Packaging Artwork / Product Label Mockup showing all Rule 6 statutory declarations",
+      "List of products, brand names, package sizes, net weights, and measurement units",
+      "Board Resolution / Authorization Letter appointing authorized signatory"
+    ],
+    "steps": [
+      {
+        "step": "1",
+        "title": "Label Audit & Rule 6 Compliance Review",
+        "desc": "Our legal metrology team reviews your product packaging artwork to verify all mandatory declarations: MRP, Net Quantity, Country of Origin, Consumer Care, and Month/Year of Manufacture/Import."
+      },
+      {
+        "step": "2",
+        "title": "Documentation & Portal Application",
+        "desc": "Drafting statutory affidavits, compiling director declarations, and filing the formal application on the Central or State Legal Metrology portal."
+      },
+      {
+        "step": "3",
+        "title": "Departmental Scrutiny & Query Resolution",
+        "desc": "CA Pradeep Kumar Agrawal's team liaises directly with the Legal Metrology Controller to promptly address departmental queries and ensure approval."
+      },
+      {
+        "step": "4",
+        "title": "Grant of LMPC Registration Certificate",
+        "desc": "Official issuance of the LMPC Manufacturer, Packer, or Importer Registration Certificate with unique government registration number."
+      }
+    ],
+    "deliverables": [
+      "Official LMPC Registration Certificate (Manufacturer, Packer, or Importer License)",
+      "Vetted & Approved Product Label Artwork compliant with Rule 6",
+      "Legal Metrology Compliance Checklist for Customs & Market Inspections",
+      "Statutory Advisory on Unit Sale Price (USP) and e-commerce packaging declarations"
+    ],
+    "postCompliances": [
+      {
+        "badge": "Mandatory",
+        "timeline": "On Every Package",
+        "title": "Rule 6 Mandatory Package Declarations",
+        "desc": "Prominently print Name & Address of Manufacturer/Importer, Common Generic Name, Net Quantity in standard units, Month/Year of import/pack, MRP (inclusive of all taxes), Unit Sale Price, and Consumer Care details."
+      },
+      {
+        "badge": "Statutory Notice",
+        "timeline": "Within 30 Days",
+        "title": "Intimation of Alterations",
+        "desc": "Notify the Controller of Legal Metrology in writing within 30 days of any alteration in warehouse address, directors, or product packaging formats."
+      },
+      {
+        "badge": "Legal Defense",
+        "timeline": "Continuous",
+        "title": "Jan Vishwas & Legal Metrology Penalties Shield",
+        "desc": "Failing to obtain or maintain LMPC registration attracts compounding fines from ₹2,500 to ₹25,000 for 1st offense, escalating to ₹1,00,000–₹5,00,000+ and up to 1–3 years imprisonment for repeat offenses, plus customs consignment seizure."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is LMPC Registration and why is it mandatory?",
+        "a": "LMPC stands for Legal Metrology (Packaged Commodities) registration. Under the Legal Metrology Act, 2009 and the Packaged Commodities Rules, 2011, any entity manufacturing, pre-packing, or importing packaged goods in India must register with the Legal Metrology Department. It ensures packages carry standard truthful information so consumers are not deceived regarding net weight, volume, or retail price."
+      },
+      {
+        "q": "What are the penalties for not having an LMPC license or non-compliant packaging?",
+        "a": "Failing to obtain an LMPC license or selling non-compliant packages carries severe statutory consequences:\n• First Offense: Under recent reforms (including the Jan Vishwas framework), minor or first-time infractions may draw an improvement warning or direct departmental compounding fines ranging from ₹2,500 to ₹25,000.\n• Second and Subsequent Offenses: Fines escalate sharply to ₹1,00,000 to ₹5,00,000+, or imprisonment up to 1 year (and up to 3 years under Section 27 for severe unapproved manufacturing deviations).\n• Operational Disruptions: Customs detention and stoppage of imported consignments, seizure of goods from warehouses or retail shelves, and court prosecution for non-compoundable offenses."
+      },
+      {
+        "q": "What declarations are statutorily required on the package under Rule 6?",
+        "a": "Every pre-packaged commodity in India must declare:\n1. Name and complete address of the Manufacturer, Packer, and/or Importer.\n2. Common or generic name of the commodity.\n3. Net quantity in terms of standard unit of weight, measure, or number.\n4. Month and year of manufacture, packing, or import.\n5. Maximum Retail Price (MRP) in Indian Rupees, inclusive of all taxes.\n6. Unit Sale Price (USP) where mandated (e.g. per gram, per ml, per unit).\n7. Country of origin for imported commodities.\n8. Name, address, phone number, and email of the consumer grievance cell."
+      },
+      {
+        "q": "Is LMPC registration required before or after importing goods into India?",
+        "a": "Under Rule 27 of the Legal Metrology (Packaged Commodities) Rules, 2011, an importer must apply for and obtain LMPC registration before the goods arrive at the Indian port, or within 90 days from the commencement of import. However, in practice, Indian Customs authorities mandate the LMPC registration number at the Bill of Entry filing stage, and shipments without it risk immediate port detention and heavy demurrage."
+      },
+      {
+        "q": "Is LMPC Registration a Central or State government license?",
+        "a": "It depends on the distribution footprint: Importers must register centrally with the Director of Legal Metrology, New Delhi. Manufacturers and Packers who distribute goods across multiple states also apply at the Central level, whereas entities manufacturing and distributing exclusively within a single state can register with the State Controller of Legal Metrology."
+      },
+      {
+        "q": "Does LMPC registration apply to e-commerce marketplaces and D2C brands?",
+        "a": "Yes. The Legal Metrology Rules explicitly mandate that e-commerce marketplaces and direct-to-consumer websites must display all Rule 6 declarations (including MRP, Net Quantity, Country of Origin, and Manufacturer/Importer name) on their digital product display pages. Both sellers and platforms face notices and fines for non-compliance."
+      }
+    ]
+  },
   "iso-certification": {
     "id": "iso-certification",
     "category": "licenses",

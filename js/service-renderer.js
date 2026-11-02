@@ -23,17 +23,17 @@ const CATEGORY_META = {
     name: 'All CA Services',
     shortName: 'All Services',
     icon: '⚡',
-    badge: 'Directory of 52+ Statutory Services & Practice Areas (2026)',
+    badge: 'Directory of 53+ Statutory Services & Practice Areas (2026)',
     title: 'All Statutory Services & CA Advisory Directory',
-    tagline: 'Comprehensive portfolio of 52+ statutory offerings across Company Registrations, ROC Annual Compliances, Business Licenses, and Income Tax Returns supervised by CA Pradeep Kumar Agrawal.',
+    tagline: 'Comprehensive portfolio of 53+ statutory offerings across Company Registrations, ROC Annual Compliances, Business Licenses, and Income Tax Returns supervised by CA Pradeep Kumar Agrawal.',
     portal: 'Ministry of Corporate Affairs, CBDT & Central Registries',
     timeline: 'Fastrack CA Turnaround',
     chips: [
-      '⚡ 52+ Total Offerings',
+      '⚡ 53+ Total Offerings',
       '📝 9 ITR Filings',
       '🏢 16 Company Registrations',
       '⚖️ 13 Compliances',
-      '📜 14 Business Licenses',
+      '📜 15 Business Licenses',
       '🔒 Direct CA Supervision'
     ]
   },
@@ -99,7 +99,7 @@ const CATEGORY_META = {
     portal: 'DGFT, FSSAI, MSME & Municipal Authorities',
     timeline: '24 Hours to 15 Working Days',
     chips: [
-      '⚡ 10 Statutory Licenses',
+      '⚡ 11 Statutory Licenses',
       '🚀 Fastrack Approval Guarantee',
       '📄 100% Paperless Online Processing',
       '🏛️ Government Approved Certification'
@@ -208,9 +208,12 @@ function initServicePageRouter() {
   // e.g. /service/itr-capital-gains, /service/registrations, /service/
   const cleanPath = window.location.pathname.replace(/\/+$/, '');
   const segments = cleanPath.split('/').filter(Boolean);
-  const lastSegment = segments.length > 0 ? segments[segments.length - 1] : '';
+  let lastSegment = segments.length > 0 ? segments[segments.length - 1] : '';
+  if (lastSegment === 'index.html' && segments.length >= 2) {
+    lastSegment = segments[segments.length - 2];
+  }
 
-  if (lastSegment && lastSegment !== 'service' && lastSegment !== 'service.html' && lastSegment !== 'index.html') {
+  if (lastSegment && lastSegment !== 'service' && lastSegment !== 'service.html') {
     if (typeof MASTER_SERVICES_DATA !== 'undefined' && MASTER_SERVICES_DATA[lastSegment]) {
       serviceId = lastSegment;
     } else if (typeof CATEGORY_META !== 'undefined' && CATEGORY_META[lastSegment]) {
@@ -366,7 +369,7 @@ function renderCategoryHub(catKey, searchQuery = '') {
   const searchInput = document.getElementById('catHubSearchInput');
   if (searchInput && !currentSearchQuery) {
     searchInput.placeholder = catKey === 'all'
-      ? 'Search across all 52 services by name, keyword or form...'
+      ? 'Search across all statutory services by name, keyword or form...'
       : `Filter ${meta.shortName} by name, keyword or form...`;
   }
 
@@ -375,7 +378,7 @@ function renderCategoryHub(catKey, searchQuery = '') {
     catHubCount.textContent = currentSearchQuery 
       ? `Found ${services.length} matching services` 
       : (catKey === 'all' 
-          ? `Showing all 52 statutory services across 4 practice areas` 
+          ? `Showing all ${services.length} statutory services across 4 practice areas` 
           : `Showing all ${services.length} statutory services in ${meta.shortName}`);
   }
 
