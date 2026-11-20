@@ -1,5 +1,5 @@
-# Easy My Taxes - Robots Exclusion File
+# RegisterBizTax - Robots Exclusion File
 User-agent: *
 Allow: /
 
-Sitemap: https://easymytaxes.com/sitemap.xml
+Sitemap: https://registerbiztax.com/sitemap.xml

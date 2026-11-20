@@ -1,6 +1,6 @@
-# 💼 Easy My Taxes — Professional Chartered Accountant & Tax Advisory Platform
+# 💼 RegisterBizTax — Professional Chartered Accountant & Tax Advisory Platform
 
-A state-of-the-art, high-converting, professional Chartered Accountant & Tax Consultancy website built for **Easy My Taxes** under the leadership of **CA Pradeep Kumar Agrawal (FCA)**.
+A state-of-the-art, high-converting, professional Chartered Accountant & Tax Consultancy website built for **RegisterBizTax** under the leadership of **CA Pradeep Kumar Agrawal (FCA)**.
 
 ---
 

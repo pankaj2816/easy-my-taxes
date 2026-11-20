@@ -1,5 +1,5 @@
 /**
- * EASY MY TAXES - APPLICATION CONTROLLER & INTERACTION MANAGER
+ * REGISTERBIZTAX - APPLICATION CONTROLLER & INTERACTION MANAGER
  */
 
 // Master Services Data (2026 Edition)
@@ -193,7 +193,7 @@ const testimonialsData = [
     category: 'salaried',
     outcome: 'Saved ₹1.85 Lakhs on ESOPs & Multi-Form 16',
     stars: 5,
-    text: "I had complicated stock options (ESOPs) from a US tech employer, multi-state salary transitions, and crypto transactions. Easy My Taxes assigned a senior CA under CA Pradeep who reconciled my Schedule FA and saved me over ₹1.8 Lakhs in taxes legally. Seamless and completely stress-free!",
+    text: "I had complicated stock options (ESOPs) from a US tech employer, multi-state salary transitions, and crypto transactions. RegisterBizTax assigned a senior CA under CA Pradeep who reconciled my Schedule FA and saved me over ₹1.8 Lakhs in taxes legally. Seamless and completely stress-free!",
     author: 'Rahul Gambhir',
     role: 'Principal Software Architect, Microsoft',
     avatar: 'RG',
@@ -248,7 +248,7 @@ const testimonialsData = [
     category: 'freelancer',
     outcome: 'Saved ₹1.4L Tax u/s 44ADA + 0% GST on Exports',
     stars: 5,
-    text: "As a remote UI/UX consultant billing US and UK clients, Easy My Taxes setup my Letter of Undertaking (LUT) for zero GST and filed my return under 44ADA 50% presumptive profit. Top-tier advisory!",
+    text: "As a remote UI/UX consultant billing US and UK clients, RegisterBizTax setup my Letter of Undertaking (LUT) for zero GST and filed my return under 44ADA 50% presumptive profit. Top-tier advisory!",
     author: 'Kunal Joshi',
     role: 'Freelance Product Designer, Pune',
     avatar: 'KJ',
@@ -948,7 +948,7 @@ function handleConsultationSubmit(e) {
 // WhatsApp Direct Connect
 function openWhatsAppInquiry(serviceName = 'General CA Consultation') {
   const phone = "919891495092"; // Official CA Pradeep Kumar Agrawal Advisory Helpline
-  const message = encodeURIComponent(`Hi CA Pradeep Kumar Agrawal / Easy My Taxes team, I would like to consult regarding: ${serviceName}. Please share the process and fee details.`);
+  const message = encodeURIComponent(`Hi CA Pradeep Kumar Agrawal / RegisterBizTax team, I would like to consult regarding: ${serviceName}. Please share the process and fee details.`);
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
 }
 

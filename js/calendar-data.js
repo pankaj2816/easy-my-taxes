@@ -1,5 +1,5 @@
 /**
- * EASY MY TAXES - STATUTORY TAX COMPLIANCE CALENDAR & DUE DATES (2026–2027)
+ * REGISTERBIZTAX - STATUTORY TAX COMPLIANCE CALENDAR & DUE DATES (2026–2027)
  * Indian Regulatory Master Calendar for Income Tax, GST, MCA/ROC, TDS & Advance Tax
  */
 
@@ -164,7 +164,7 @@ const complianceCalendarData = [
 function getGoogleCalendarUrl(item) {
   const d = item.dueDate.replace(/-/g, '');
   const title = encodeURIComponent(`Tax Deadline: ${item.title}`);
-  const details = encodeURIComponent(`${item.description}\nPenalty: ${item.penalty}\nAssisted by Easy My Taxes (CA Pradeep Kumar Agrawal)`);
+  const details = encodeURIComponent(`${item.description}\nPenalty: ${item.penalty}\nAssisted by RegisterBizTax (CA Pradeep Kumar Agrawal)`);
   const location = encodeURIComponent('Income Tax / GST Portal India');
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${d}T090000Z/${d}T180000Z&details=${details}&location=${location}`;
 }

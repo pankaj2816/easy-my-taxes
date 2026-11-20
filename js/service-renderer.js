@@ -1,5 +1,5 @@
 /**
- * SERVICE & CATEGORY DIRECTORY ENGINE - EASY MY TAXES (2026 EDITION)
+ * SERVICE & CATEGORY DIRECTORY ENGINE - REGISTERBIZTAX (2026 EDITION)
  * Direct CA Advisory & Statutory Services Portal
  *
  * Provides:
@@ -304,7 +304,7 @@ function renderCategoryHub(catKey, searchQuery = '') {
   });
 
   // 1. Page Title & Meta
-  document.title = `${meta.title} | Easy My Taxes & CA Pradeep Kumar Agrawal`;
+  document.title = `${meta.title} | RegisterBizTax & CA Pradeep Kumar Agrawal`;
   const metaDesc = document.getElementById('pageMetaDesc');
   if (metaDesc) metaDesc.setAttribute('content', `${meta.tagline} Direct CA advisory with 100% compliance guarantee.`);
 
@@ -725,11 +725,11 @@ function renderSingleServicePage(serviceId) {
   });
 
   // 1. Page Title & Meta
-  document.title = `${data.title} | Easy My Taxes & CA Pradeep Kumar Agrawal`;
+  document.title = `${data.title} | RegisterBizTax & CA Pradeep Kumar Agrawal`;
   const metaDesc = document.getElementById('pageMetaDesc');
   if (metaDesc) metaDesc.setAttribute('content', `${data.tagline} End-to-end statutory CA filing with 100% compliance guarantee.`);
   const ogTitle = document.getElementById('ogTitle');
-  if (ogTitle) ogTitle.setAttribute('content', `${data.title} | Easy My Taxes`);
+  if (ogTitle) ogTitle.setAttribute('content', `${data.title} | RegisterBizTax`);
   const ogDesc = document.getElementById('ogDesc');
   if (ogDesc) ogDesc.setAttribute('content', data.tagline);
 
@@ -794,7 +794,7 @@ function renderSingleServicePage(serviceId) {
         ${data.overview}
       </p>
       <p>
-        In India, statutory compliance and legal registration are administered under dedicated statutory authorities such as the <strong>${data.govtPortal}</strong>. When you register or file through <strong>Easy My Taxes</strong> under the direct stewardship of <strong>CA Pradeep Kumar Agrawal (FCA)</strong>, our chartered accountancy team conducts a thorough pre-scrutiny of all documents to ensure zero rejection, seamless regulatory approval, and complete protection against statutory notices.
+        In India, statutory compliance and legal registration are administered under dedicated statutory authorities such as the <strong>${data.govtPortal}</strong>. When you register or file through <strong>RegisterBizTax</strong> under the direct stewardship of <strong>CA Pradeep Kumar Agrawal (FCA)</strong>, our chartered accountancy team conducts a thorough pre-scrutiny of all documents to ensure zero rejection, seamless regulatory approval, and complete protection against statutory notices.
       </p>
       <div style="background: var(--surface-50); border-left: 4px solid var(--emerald-500); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-top: 1.25rem;">
         <strong style="color: var(--primary-950);">💡 Key Regulatory Advantage:</strong>

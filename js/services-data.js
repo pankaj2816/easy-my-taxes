@@ -1,5 +1,5 @@
 /**
- * MASTER SERVICES REPOSITORY - EASY MY TAXES (2026 EDITION)
+ * MASTER SERVICES REPOSITORY - REGISTERBIZTAX (2026 EDITION)
  * Comprehensive statutory data for Company Registrations, Compliance, and Licenses
  */
 
@@ -15,7 +15,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "5 - 7 Working Days",
     "govtPortal": "Ministry of Corporate Affairs (MCA)",
     "filingMode": "100% Online Paperless",
-    "overview": "Company incorporation in India is fully digital via the MCA SPICe+ unified portal. Easy My Taxes, directed by CA Pradeep Kumar Agrawal, manages name reservation, Digital Signature Certificates (DSC), Director Identification Numbers (DIN), drafting MOA & AOA, and post-incorporation tax registrations with 100% compliance guarantee.",
+    "overview": "Company incorporation in India is fully digital via the MCA SPICe+ unified portal. RegisterBizTax, directed by CA Pradeep Kumar Agrawal, manages name reservation, Digital Signature Certificates (DSC), Director Identification Numbers (DIN), drafting MOA & AOA, and post-incorporation tax registrations with 100% compliance guarantee.",
     "benefits": [
       {
         "title": "Limited Liability Protection",
@@ -714,7 +714,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "4 - 7 Days",
     "govtPortal": "State Registrar of Firms (ROF)",
     "filingMode": "100% Online Paperless",
-    "overview": "Governed by the Indian Partnership Act 1932, a partnership firm is formed by two or more individuals agreeing to share business profits and management duties. Easy My Taxes crafts legally sound Partnership Deeds addressing profit ratios, dispute resolution, capital interest, and retirement rules.",
+    "overview": "Governed by the Indian Partnership Act 1932, a partnership firm is formed by two or more individuals agreeing to share business profits and management duties. RegisterBizTax crafts legally sound Partnership Deeds addressing profit ratios, dispute resolution, capital interest, and retirement rules.",
     "benefits": [
       {
         "title": "Customizable Partner Terms",
@@ -1091,7 +1091,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "10 - 15 Days",
     "govtPortal": "MCA, RBI FIRMS & DGFT",
     "filingMode": "100% Online Paperless",
-    "overview": "Global companies expanding to the vibrant Indian market can set up a Wholly Owned Subsidiary (WOS). Under the Automatic Route, up to 100% Foreign Direct Investment (FDI) is permitted in most sectors without prior government approval. Easy My Taxes handles MCA incorporation, apostilled document verification, RBI FIRMS portal filings, and Form FC-GPR equity allotment.",
+    "overview": "Global companies expanding to the vibrant Indian market can set up a Wholly Owned Subsidiary (WOS). Under the Automatic Route, up to 100% Foreign Direct Investment (FDI) is permitted in most sectors without prior government approval. RegisterBizTax handles MCA incorporation, apostilled document verification, RBI FIRMS portal filings, and Form FC-GPR equity allotment.",
     "benefits": [
       {
         "title": "100% Foreign Equity Ownership",
@@ -1354,7 +1354,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "Annual Retainer / Per Filing",
     "govtPortal": "Ministry of Corporate Affairs (MCA)",
     "filingMode": "100% Online Paperless",
-    "overview": "Every registered Private Limited Company must complete mandatory annual compliances under the Companies Act 2013 regardless of turnover or business activity. Easy My Taxes takes full charge of preparing Financial Statements, drafting Director's Report, filing Form AOC-4 (Financials) and Form MGT-7/7A (Annual Return), and maintaining statutory secretarial registers.",
+    "overview": "Every registered Private Limited Company must complete mandatory annual compliances under the Companies Act 2013 regardless of turnover or business activity. RegisterBizTax takes full charge of preparing Financial Statements, drafting Director's Report, filing Form AOC-4 (Financials) and Form MGT-7/7A (Annual Return), and maintaining statutory secretarial registers.",
     "benefits": [
       {
         "title": "Zero \u20b9100/Day Delay Penalties",
@@ -1413,7 +1413,7 @@ const MASTER_SERVICES_DATA = {
         "a": "The Ministry of Corporate Affairs imposes a mandatory statutory late fee of \u20b9100 per day for each delayed form. Since there is no statutory ceiling, a delay of one year can accumulate over \u20b972,000 in government fines alone."
       },
       {
-        "q": "Can Easy My Taxes assist with appointing a Statutory Auditor?",
+        "q": "Can RegisterBizTax assist with appointing a Statutory Auditor?",
         "a": "Yes! Under Section 139 of the Companies Act 2013, every company must appoint an independent Chartered Accountant in practice as its Statutory Auditor. CA Pradeep Kumar Agrawal's firm provides statutory audit and tax audit certification."
       },
       {
@@ -1421,7 +1421,7 @@ const MASTER_SERVICES_DATA = {
         "a": "The AGM must be held within 6 months from the date of closing of the financial year (i.e. by 30th September each year, except for the first AGM which can be held within 9 months of the first FY close)."
       }
     ],
-    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Annual corporate compliance is mandatory for every <strong>Private Limited Company</strong> registered in India under the <strong>Companies Act 2013</strong>. Regardless of whether your company conducted multi-crore business operations or remained pre-revenue (nil transactions), you must statutorily file annual financial statements and annual returns with the Registrar of Companies (ROC).\n      </p>\n      <p>\n        Defaulting on annual compliance attracts severe consequences: daily late filing penalties of <strong>\u20b9100 per day per form with no upper cap</strong>, director disqualification for up to 5 years under Section 164(2), DIN deactivation, and risk of company strike-off by the ROC. Easy My Taxes, led by Senior Chartered Accountant <strong>CA Pradeep Kumar Agrawal</strong>, provides complete retainer management\u2014including AGM documentation, statutory audit coordination, and timely ROC e-filing.\n      </p>\n    ",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Annual corporate compliance is mandatory for every <strong>Private Limited Company</strong> registered in India under the <strong>Companies Act 2013</strong>. Regardless of whether your company conducted multi-crore business operations or remained pre-revenue (nil transactions), you must statutorily file annual financial statements and annual returns with the Registrar of Companies (ROC).\n      </p>\n      <p>\n        Defaulting on annual compliance attracts severe consequences: daily late filing penalties of <strong>\u20b9100 per day per form with no upper cap</strong>, director disqualification for up to 5 years under Section 164(2), DIN deactivation, and risk of company strike-off by the ROC. RegisterBizTax, led by Senior Chartered Accountant <strong>CA Pradeep Kumar Agrawal</strong>, provides complete retainer management\u2014including AGM documentation, statutory audit coordination, and timely ROC e-filing.\n      </p>\n    ",
     "whoIsItFor": [
       {
         "icon": "\ud83c\udfe2",
@@ -1775,7 +1775,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "Monthly Retainer",
     "govtPortal": "GST Portal (GSTN)",
     "filingMode": "100% Online Paperless",
-    "overview": "Staying compliant under Goods & Services Tax (GST) requires monthly outward supply reporting in GSTR-1, tax liability clearance in GSTR-3B, and rigorous 100% invoice matching with GSTR-2B. Easy My Taxes safeguards your business against Input Tax Credit (ITC) blocks under Rule 86A and notice demands.",
+    "overview": "Staying compliant under Goods & Services Tax (GST) requires monthly outward supply reporting in GSTR-1, tax liability clearance in GSTR-3B, and rigorous 100% invoice matching with GSTR-2B. RegisterBizTax safeguards your business against Input Tax Credit (ITC) blocks under Rule 86A and notice demands.",
     "benefits": [
       {
         "title": "100% ITC Reconciliation",
@@ -1835,7 +1835,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "Quarterly (July, Oct, Jan, May)",
     "govtPortal": "TRACES & Income Tax Portal",
     "filingMode": "100% Online Paperless",
-    "overview": "Entities deducting Tax at Source (TDS) under Section 192 (Salary), 194C (Contractors), 194J (Professional fees), 194I (Rent), or collecting TCS must file quarterly returns on TRACES. Easy My Taxes computes exact monthly tax liabilities, generates challans, and prepares quarterly returns without short-deduction notices.",
+    "overview": "Entities deducting Tax at Source (TDS) under Section 192 (Salary), 194C (Contractors), 194J (Professional fees), 194I (Rent), or collecting TCS must file quarterly returns on TRACES. RegisterBizTax computes exact monthly tax liabilities, generates challans, and prepares quarterly returns without short-deduction notices.",
     "benefits": [
       {
         "title": "Shield Against \u20b9200/Day Sec 234E Late Fee",
@@ -1895,7 +1895,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "By 31st October (or 30th Nov for Transfer Pricing)",
     "govtPortal": "Income Tax e-Filing Portal",
     "filingMode": "100% Online Paperless",
-    "overview": "Corporate income tax filing requires meticulous computation of Minimum Alternate Tax (MAT), Section 115BAA concessional rates, brought-forward loss set-offs, and depreciation schedules. Easy My Taxes ensures your corporate tax return is audited and e-verified with 100% AIS/TIS alignment.",
+    "overview": "Corporate income tax filing requires meticulous computation of Minimum Alternate Tax (MAT), Section 115BAA concessional rates, brought-forward loss set-offs, and depreciation schedules. RegisterBizTax ensures your corporate tax return is audited and e-verified with 100% AIS/TIS alignment.",
     "benefits": [
       {
         "title": "Preserve 8-Year Loss Carry Forward",
@@ -2197,7 +2197,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "By 15th July Annually (or 30 days post-FDI)",
     "govtPortal": "RBI FIRMS & FLAIR Portals",
     "filingMode": "100% Online Paperless",
-    "overview": "Any Indian company or LLP that has received Foreign Direct Investment (FDI) or made overseas direct investments (ODI) must file the mandatory Foreign Liabilities and Assets (FLA) Return with the Reserve Bank of India on the FLAIR portal by 15th July every year. Easy My Taxes also handles Form FC-GPR (share allotment to foreigners) and Form FC-TRS (share transfer between resident and non-resident).",
+    "overview": "Any Indian company or LLP that has received Foreign Direct Investment (FDI) or made overseas direct investments (ODI) must file the mandatory Foreign Liabilities and Assets (FLA) Return with the Reserve Bank of India on the FLAIR portal by 15th July every year. RegisterBizTax also handles Form FC-GPR (share allotment to foreigners) and Form FC-TRS (share transfer between resident and non-resident).",
     "benefits": [
       {
         "title": "Prevent Triple FEMA Penalties",
@@ -2257,7 +2257,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "3 - 10 Days",
     "govtPortal": "Central & State Licensing Authorities",
     "filingMode": "100% Online Paperless",
-    "overview": "Operating a commercial establishment in India requires specific municipal, state, and central government licenses based on your business sector. Easy My Taxes provides an end-to-end licensing concierge led by seasoned regulatory compliance professionals.",
+    "overview": "Operating a commercial establishment in India requires specific municipal, state, and central government licenses based on your business sector. RegisterBizTax provides an end-to-end licensing concierge led by seasoned regulatory compliance professionals.",
     "benefits": [
       {
         "title": "100% Legal Protection",
@@ -2318,7 +2318,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "3 - 7 Working Days",
     "govtPortal": "FSSAI FoSCoS Portal",
     "filingMode": "100% Online Paperless",
-    "overview": "Under the Food Safety and Standards Act 2006, any business handling food\u2014including restaurants, bakeries, cloud kitchens, food processors, retail grocery stores, and Swiggy/Zomato food delivery vendors\u2014must obtain a 14-digit FSSAI license. Easy My Taxes provides fast-track FoSCoS filing.",
+    "overview": "Under the Food Safety and Standards Act 2006, any business handling food\u2014including restaurants, bakeries, cloud kitchens, food processors, retail grocery stores, and Swiggy/Zomato food delivery vendors\u2014must obtain a 14-digit FSSAI license. RegisterBizTax provides fast-track FoSCoS filing.",
     "benefits": [
       {
         "title": "Mandatory for Swiggy & Zomato",
@@ -2368,7 +2368,7 @@ const MASTER_SERVICES_DATA = {
       },
       {
         "q": "Can I start selling food on Swiggy and Zomato with just the application number?",
-        "a": "No. Major platforms like Swiggy and Zomato mandate an active 14-digit FSSAI license certificate. However, Easy My Taxes fast-tracks FSSAI issuance within 3 to 7 working days so you can go live without delay."
+        "a": "No. Major platforms like Swiggy and Zomato mandate an active 14-digit FSSAI license certificate. However, RegisterBizTax fast-tracks FSSAI issuance within 3 to 7 working days so you can go live without delay."
       },
       {
         "q": "What is the validity period of an FSSAI license?",
@@ -3139,7 +3139,7 @@ const MASTER_SERVICES_DATA = {
     "timeline": "5 - 10 Days",
     "govtPortal": "Foreign Corporate Registrars & RBI",
     "filingMode": "100% Online Paperless",
-    "overview": "Expanding your business globally unlocks access to international payment gateways (Stripe, Mercury, Wise), venture capital investment, and 0% to low corporate tax jurisdictions. Easy My Taxes manages foreign company incorporation, local registered agents, corporate bank accounts, and RBI Overseas Direct Investment (ODI) compliance under FEMA.",
+    "overview": "Expanding your business globally unlocks access to international payment gateways (Stripe, Mercury, Wise), venture capital investment, and 0% to low corporate tax jurisdictions. RegisterBizTax manages foreign company incorporation, local registered agents, corporate bank accounts, and RBI Overseas Direct Investment (ODI) compliance under FEMA.",
     "benefits": [
       {
         "title": "Global Stripe & US Banking Access",
@@ -3206,7 +3206,7 @@ const MASTER_SERVICES_DATA = {
     "govtPortal": "Income Tax Department (E-Filing 2.0)",
     "filingMode": "100% Online Paperless",
     "overview": "Comprehensive income tax return filing for salaried employees calibrated for Assessment Year 2026-27. Directed by CA Pradeep Kumar Agrawal, we perform 100% reconciliation with Annual Information Statement (AIS) and Tax Information Summary (TIS), optimize Old vs New Tax Regime deductions, and ensure zero defective notices.",
-    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        For <strong>Assessment Year 2026-27 (FY 2025-26)</strong>, the Revised New Tax Regime is the statutory default regime with a <strong>\u20b975,000 Standard Deduction</strong> for salaried employees and complete tax rebate up to \u20b97.75 Lakhs under Section 87A. However, if you claim significant deductions under Section 80C, 80D (health insurance), Section 24(b) (home loan interest), and HRA, the Old Regime may yield thousands in additional tax refunds.\n      </p>\n      <p>\n        Filing salary returns without CA verification frequently leads to <strong>defective return notices under Section 139(9)</strong> or demand notices under Section 143(1) due to mismatches between Form 16 and your AIS/26AS. Easy My Taxes conducts a line-by-line tax credit matching, reconciles multiple Form 16s across mid-year job switches, and handles complicated foreign ESOP perks accurately.\n      </p>\n    ",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        For <strong>Assessment Year 2026-27 (FY 2025-26)</strong>, the Revised New Tax Regime is the statutory default regime with a <strong>\u20b975,000 Standard Deduction</strong> for salaried employees and complete tax rebate up to \u20b97.75 Lakhs under Section 87A. However, if you claim significant deductions under Section 80C, 80D (health insurance), Section 24(b) (home loan interest), and HRA, the Old Regime may yield thousands in additional tax refunds.\n      </p>\n      <p>\n        Filing salary returns without CA verification frequently leads to <strong>defective return notices under Section 139(9)</strong> or demand notices under Section 143(1) due to mismatches between Form 16 and your AIS/26AS. RegisterBizTax conducts a line-by-line tax credit matching, reconciles multiple Form 16s across mid-year job switches, and handles complicated foreign ESOP perks accurately.\n      </p>\n    ",
     "whoIsItFor": [
       {
         "icon": "\ud83d\udcbc",
@@ -3502,7 +3502,7 @@ const MASTER_SERVICES_DATA = {
     "govtPortal": "Income Tax Department",
     "filingMode": "100% Online Paperless",
     "overview": "Designed for software consultants, doctors, lawyers, architects, designers, freelancers, and small business owners. We leverage presumptive taxation schemes under Section 44ADA and 44AD to declare simplified net profit, claim legitimate business deductions, and eliminate the requirement to maintain complex accounting ledgers or statutory audits.",
-    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Under <strong>Section 44ADA</strong>, specified professionals (software consultants, web developers, doctors, lawyers, technical consultants, interior designers) with gross receipts up to <strong>\u20b975 Lakhs</strong> (if digital receipts exceed 95%) can declare just <strong>50% of their gross receipts as taxable profit</strong>. The remaining 50% is treated as statutory business expenses with zero requirement to maintain physical bills or undergo an audit.\n      </p>\n      <p>\n        Similarly, under <strong>Section 44AD</strong>, small commercial businesses, traders, and contractors with turnover up to <strong>\u20b93 Crores</strong> (if digital transactions exceed 95%) can declare profit at a nominal <strong>6% for digital receipts</strong> (8% for cash receipts). Easy My Taxes ensures your presumptive filing is calibrated with Form 26AS TDS credits under Section 194J and 194C.\n      </p>\n    ",
+    "detailedOverview": "\n      <p style=\"font-size: 1.1rem; color: var(--primary-950); font-weight: 600; line-height: 1.75;\">\n        Under <strong>Section 44ADA</strong>, specified professionals (software consultants, web developers, doctors, lawyers, technical consultants, interior designers) with gross receipts up to <strong>\u20b975 Lakhs</strong> (if digital receipts exceed 95%) can declare just <strong>50% of their gross receipts as taxable profit</strong>. The remaining 50% is treated as statutory business expenses with zero requirement to maintain physical bills or undergo an audit.\n      </p>\n      <p>\n        Similarly, under <strong>Section 44AD</strong>, small commercial businesses, traders, and contractors with turnover up to <strong>\u20b93 Crores</strong> (if digital transactions exceed 95%) can declare profit at a nominal <strong>6% for digital receipts</strong> (8% for cash receipts). RegisterBizTax ensures your presumptive filing is calibrated with Form 26AS TDS credits under Section 194J and 194C.\n      </p>\n    ",
     "whoIsItFor": [
       {
         "icon": "\ud83d\udcbb",
@@ -4596,7 +4596,7 @@ const MASTER_SERVICES_DATA = {
         "a": "Our Virtual CFO service encompasses complete bookkeeping oversight, weekly accounts payable/receivable management, payroll processing with statutory deductions (PF, ESIC, TDS), monthly financial MIS reports, budgeting, cash flow forecasting, and direct representation before auditors and investors."
       },
       {
-        "q": "How does Easy My Taxes access our financial data securely?",
+        "q": "How does RegisterBizTax access our financial data securely?",
         "a": "We operate strictly on secure cloud accounting platforms (Zoho Books, Tally on Cloud, QuickBooks) with role-based user access. Your bank credentials are never shared; we only utilize read-only bank feeds or monthly statements."
       },
       {
